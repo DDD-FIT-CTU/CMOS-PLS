@@ -1,0 +1,140 @@
+*** TEST 003 ***
+*
+* ngSPICE test for PLS experiments
+*
+* MajorityVoter PLS test for moving laser and real distances
+*
+* Author: Jan Belohoubek, 01/2019
+* jan.belohoubek@fit.cvut.cz
+*
+* https://users.fit.cvut.cz/~belohja4/
+*
+*
+* **************************************
+
+.include ../models.lib
+.include ../tsmc180nmcmos.lib
+.include maj.spice
+
+* **************************************
+* --- Test ---
+* **************************************
+
+* --- Settings
+* * set to 0 or 1 or 2 ... or 5
+.param laserLocationX = 0
+* * set to 0 or 1
+.param laserlocationY = 1
+* * set to 0 or 1
+.param majorityInputValue = 0
+* set to 1 to show plots
+.param showPlots = 1
+* redefine ...
+.include test003_settings.inc
+.csparam showPlots = {showPlots}
+.global showPlots
+* --- End of Settins
+
+Vtrig LaserTrig 0 0 PWL(0ns 0V 40ns 0V 42ns SUPP 62ns SUPP 64ns 0V 100ns 0V)
+
+* NAND gate width
+.param gateW = 3
+ * NAND gate width
+.param gateH = 10
+
+* laser center position
+.param laserX = 'laserLocationX * gateW + gateW/2'
+
+* gate center position
+.param Gate1X = '0 * gateW + gateW/2'
+.param Gate2X = '1 * gateW + gateW/2'
+.param Gate3X = '2 * gateW + gateW/2'
+.param Gate4X = '3 * gateW + gateW/2'
+.param Gate5X = '4 * gateW + gateW/2'
+.param Gate6X = '5 * gateW + gateW/2'
+
+.param distGate1Top = 'sqrt( ((laserX-Gate1X)*(laserX-Gate1X)) + (laserlocationY * gateH) )'
+.param distGate2Top = 'sqrt( ((laserX-Gate2X)*(laserX-Gate2X)) + (laserlocationY * gateH) )'
+.param distGate3Top = 'sqrt( ((laserX-Gate3X)*(laserX-Gate3X)) + (laserlocationY * gateH) )'
+.param distGate4Top = 'sqrt( ((laserX-Gate4X)*(laserX-Gate4X)) + (laserlocationY * gateH) )'
+.param distGate5Top = 'sqrt( ((laserX-Gate5X)*(laserX-Gate5X)) + (laserlocationY * gateH) )'
+.param distGate6Top = 'sqrt( ((laserX-Gate6X)*(laserX-Gate6X)) + (laserlocationY * gateH) )'
+
+.param distGate1Bot = 'sqrt( ((laserX-Gate1X)*(laserX-Gate1X)) + (abs(laserlocationY - 1) * gateH) )'
+.param distGate2Bot = 'sqrt( ((laserX-Gate2X)*(laserX-Gate2X)) + (abs(laserlocationY - 1) * gateH) )'
+.param distGate3Bot = 'sqrt( ((laserX-Gate3X)*(laserX-Gate3X)) + (abs(laserlocationY - 1) * gateH) )'
+.param distGate4Bot = 'sqrt( ((laserX-Gate4X)*(laserX-Gate4X)) + (abs(laserlocationY - 1) * gateH) )'
+.param distGate5Bot = 'sqrt( ((laserX-Gate5X)*(laserX-Gate5X)) + (abs(laserlocationY - 1) * gateH) )'
+.param distGate6Bot = 'sqrt( ((laserX-Gate6X)*(laserX-Gate6X)) + (abs(laserlocationY - 1) * gateH) )'
+
+.global LaserTrig distGate1Top distGate2Top distGate3Top distGate4Top distGate5Top distGate6Top distGate1Bot distGate2Bot distGate3Bot distGate4Bot distGate5Bot distGate6Bot
+
+* --- inputs
+.if (majorityInputValue == 1)
+    Vvin0 in0 0 0 PWL(0ns 0V 20ns SUPP 22ns SUPP)
+    Vvin1 in1 0 0 PWL(0ns 0V 21ns SUPP 23ns SUPP)
+    Vvin2 in2 0 0 PWL(0ns 0V 22ns SUPP 24ns SUPP)
+.endif
+
+.if (majorityInputValue == 0)
+    Vvin0 in0 0 0 PWL(0ns SUPP 20ns 0V 22ns 0V)
+    Vvin1 in1 0 0 PWL(0ns SUPP 21ns 0V 23ns 0V)
+    Vvin2 in2 0 0 PWL(0ns SUPP 22ns 0V 24ns 0V)
+.endif
+
+* --- outputs
+*R1 VSS out 1000000
+C1 VSS out 10fF
+
+* --- majority circuit layout model
+Xmaj in0 in1 in2 out VSS VDD MAJ180nm
+
+
+* **************************************
+* --- Simulation Settings ---
+* **************************************
+
+.tran .1ns 100ns
+.param SIMSTEP = '100ns/0.1ns'
+.csparam SIMSTEP = {SIMSTEP}
+
+* **************************************
+* --- Simulation Control ---
+* **************************************
+
+.control
+    run
+    if ('showPlots' > 0)
+        set hcopydevtype=postscript
+        set hcopypscolor=0
+        
+        set color1=rgb:0/0/0
+        set color0=rgb:f/f/f
+        set hcopywidth=600
+	    set hcopyheight=400 
+    
+        plot i(vvdd) i(vvss)
+        plot v(vss) v(vdd) v(LaserTrig)
+        plot v(in0) v(in1) v(in2) v(out)
+        
+        hardcopy current.ps i(vvdd) i(vvss)
+        hardcopy vPower.ps v(vss) v(vdd) v(LaserTrig)
+        hardcopy vSignals.ps v(in0) v(in1) v(in2) v(out)
+        
+        plot v(xmaj.nand2x1_1_y)
+        plot v(xmaj.nand2x1_2_y)
+        plot v(xmaj.nand2x1_3_y)
+        plot v(xmaj.nand2x1_4_y)
+        plot v(xmaj.nand2x1_5_y)
+        plot v(OUT)
+    end
+    
+    print i(vvdd)[500]
+    
+    if ('showPlots' < 1)
+        quit
+    end
+    
+.endc
+
+.end

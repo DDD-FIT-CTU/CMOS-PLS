@@ -1,0 +1,21 @@
+aag 9 3 0 1 6
+2
+4
+6
+19
+9 2 6
+11 2 4
+13 4 6
+15 9 11
+17 15 15
+19 17 13
+c
+
+This file was written by hand by belohoub :-)
+Spec.: http://fmv.jku.at/papers/Biere-FMV-TR-07-1.pdf
+AAG header: aag M I L O A
+MAXIMUM VARIABLE INDEX: 9 (M) <-- 18/2
+INPUTS: 3 (I) -- 2,4,6
+LATCHES: 0 (L) 
+OUTPUTS: 1 (O) --
+GATES 6 (A) -- 8,10,12,14,16,18

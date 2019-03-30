@@ -1,0 +1,319 @@
+* **************************************
+*
+* ngSPICE models for PLS experiments
+*
+* Author: Jan Belohoubek, 01/2019
+* jan.belohoubek@fit.cvut.cz
+*
+* https://users.fit.cvut.cz/~belohja4/
+*
+*
+* **************************************
+
+
+* **************************************
+* --- Common globals ---
+* **************************************
+
+.param SUPP = 1.2V
+.csparam SUPP = {SUPP}
+
+VVDD VDDR 0 SUPP
+R_VDD VDDR VDD 0.001
+VVSS VSS 0 0V
+
+.global VDD VSS
+.temp 25
+
+* --- Technology selection
+.param TECHNOLOGY_TSMC180nm = 0
+.param TECHNOLOGY_PTM90nm = 1
+
+.param TECHNOLOGY = 'TECHNOLOGY_TSMC180nm'
+
+.param LENS_5X = 0
+.param LENS_20X = 1
+.param LENS_100X = 2
+
+.param LENS = 'LENS_20X'
+
+* --- PN area junction (use [um]!)
+.if (TECHNOLOGY == TECHNOLOGY_TSMC180nm)
+  .param NplusPsubJunctionW = 2
+  .param NplusPsubJunctionL = 0.4
+  
+  .param PplusNwellJunctionW = 2
+  .param PplusNwellJunctionL = 0.4
+  
+  .param PsubNwellJunctionW = 3
+  .param PsubNwellJunctionL = 5.7
+.endif
+
+.param NplusPsubJunctionS = 'NplusPsubJunctionW * NplusPsubJunctionL'
+.csparam NplusPsubJunctionS = {NplusPsubJunctionS}
+
+.param PplusNwellJunctionS = 'PplusNwellJunctionW * PplusNwellJunctionL'
+.csparam PplusNwellJunctionS = {PplusNwellJunctionS}
+
+.param PsubNwellJunctionS = 'PsubNwellJunctionW * PsubNwellJunctionL'
+.csparam PsubNwellJunctionS = {PsubNwellJunctionS}
+
+* --- NMOS parameters
+* W = width
+* L = length
+* PD = drain perimeter
+* AD = drain area
+* AS = source area
+* PS = source perimeter
+
+.if (TECHNOLOGY == TECHNOLOGY_TSMC180nm)
+  .param NMOSw  = '2.0u'
+  .param NMOSl  = '0.2u'
+  .param NMOSad = '1.2p'
+  .param NMOSpd = '5.2u'
+  .param NMOSas = '2p'
+  .param NMOSps = '10u'
+.endif
+
+* **************************************
+* --- PLS Params ---
+* **************************************
+
+* --- laserPower in [mW] ---
+.param pLaser = 1250
+.csparam pLaser = {pLaser}
+
+* following parameters were found in:
+* https://www.emse.fr/~dutertre/doc_recherche/J_2013_2_talk_ESREF13_paper35_Sarafianos_Dutertre.pdf
+* --- equation (1) params N+/Psub ---
+.param p = '4/1000000000'
+.param q = '-5/10000000'
+.param r = '9/1000000'
+.param s = '4/1000000'
+
+* --- equation (1) params P+/Nwell ---
+.param p2 = '9/100000'
+.param q2 = '2/10000'
+.param r2 = '-5/1000000'
+.param s2 = '1.2/1000'
+
+* --- equation (1) params Nwell/Psub ---
+.param p3 = '6/100000000000'
+.param q3 = '9/1000000000'
+.param r3 = '1/10000000'
+.param s3 = '6/100000000'
+
+* equation (2) N+/Psub ---
+.param a = 'p * pLaser * pLaser + q * pLaser + r'
+.csparam a = {a}
+* equation (3)
+.param b = 'pLaser * s'
+.csparam b = {b}
+
+* equation (2) P+/Nwell ---
+.param a2 = 'p2 * pLaser/1000 * pLaser/1000 + q2 * pLaser/1000 + r2'
+.csparam a2 = {a2}
+* equation (3)
+.param b2 = 'pLaser/1000 * s2'
+.csparam b2 = {b2}
+
+* equation (2) Nwell/Psub ---
+.param a3 = '0.007'
+.csparam a3 = {a3}
+* equation (3)
+.param b3 = '0.002'
+.csparam b3 = {b3}
+
+* --- equation (3) params: spatial dependence ---
+.if (LENS == LENS_5X)
+  .param beta = '0.4'
+  .param gamma = '0.6'
+  .param c1 = '2.5'
+  .param c2 = '55'
+.endif
+
+.if (LENS == LENS_20X)
+  .param beta = '0.6'
+  .param gamma = '0.4'
+  .param c1 = '23.8'
+  .param c2 = '654'
+.endif
+
+
+.if (LENS == LENS_100X)
+  .param beta = '0.7'
+  .param gamma = '0.3'
+  .param c1 = '1000'
+  .param c2 = '15000'
+.endif
+
+* .param distance = '1'
+* .param alpha = 'beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2)'
+
+
+
+* **************************************
+* --- Device models ---
+* **************************************
+
+* --- Ideal SW model ---
+* roff rersistivity remains default
+.model idealSw sw vt='SUPP/2' vh=0.1 ron=1
+
+
+* **************************************
+* --- Subckts ---
+* **************************************
+
+.subckt SUBCKT_Iph_nplus_psub nplus psub laser_trig transConductance = 1 constCurrent = 0 distance = 0 PNArea = NplusPsubJunctionS
+  Vvconst vconst 0 1.0V
+
+  * model was fitted for 10um PN junction -> the PNArea paramter must be /10
+  * model was fitted for laser width 3um -> the pulse width paramter must be /3
+
+  G1 nplus psub ctrl psub 'transConductance * (beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2)) * PNArea/10'
+  G2 nplus psub ctrl2 VSS 'constCurrent * (beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2)) * PNArea/10'
+  
+  S1 nplus ctrl laser_trig VSS idealSw OFF
+  S2 ctrl psub VDD laser_trig idealSw ON
+  
+  S3 vconst ctrl2 laser_trig VSS idealSw OFF
+  S4 ctrl2 VSS VDD laser_trig idealSw ON
+.ends
+
+.subckt SUBCKT_Iph_Psub_Nwell psub nwell laser_trig transConductance = 1 constCurrent = 0 distance = 0 PNArea = 1
+
+  Vvconst vconst 0 1.0V
+
+  * model was fitted for 12um x 12um PN junction -> the PNArea paramter must be /144
+
+  G1 psub nwell ctrl nwell 'transConductance * (beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2)) * PNArea/144'
+  G2 psub nwell VSS ctrl2 'constCurrent * (beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2)) * PNArea/144'
+  
+  S1 psub ctrl laser_trig VSS idealSw OFF
+  S2 ctrl nwell VDD laser_trig idealSw ON
+  
+  S3 vconst ctrl2 laser_trig VSS idealSw OFF
+  S4 ctrl2 VSS VDD laser_trig idealSw ON
+.ends
+
+.subckt SUBCKT_Iph_Pplus_Nwell pplus nwell laser_trig transConductance = 1 constCurrent = 0 distance = 0 PNArea = 1
+  Vvconst vconst 0 1.0V
+
+  * model was fitted for 10um PN junction -> the PNArea paramter must be /10
+  * model was fitted for laser width 3um -> the pulse width paramter must be /3
+
+  G1 pplus nwell ctrl nwell 'transConductance * (beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2)) * PNArea/10'
+  G2 pplus nwell ctrl2 VSS 'constCurrent * (beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2)) * PNArea/10'
+  
+  S1 pplus ctrl laser_trig VSS idealSw OFF
+  S2 ctrl nwell VDD laser_trig idealSw ON
+  
+  S3 vconst ctrl2 laser_trig VSS idealSw OFF
+  S4 ctrl2 VSS VDD laser_trig idealSw ON
+.ends
+
+
+.subckt SUBCKT_SD drain source psubOut
+  * following values are approximation from published graphs 
+  * just read from bad graph by using my eyes ... :-(
+  Vvopen vopen 0 0.8V
+  * Rctrl psub ctrl 0.001
+
+  G2 psub source ctrl vopen 0.025
+  
+  * connect ctrl when above 0.8V
+  .model tmpSw sw vt=0.0V vh=0 ron=1
+  
+  S1 psub ctrl psub vopen tmpSw OFF
+  S2 vopen ctrl vopen psub tmpSw ON
+  
+  * I don't know here ...
+  R1 drain psub2 10k
+  S3 psub2 psub psub vopen tmpSw OFF
+  
+  Rmeas psub psubOut 0.001
+  
+.ends
+
+*
+* Note: set param commonDrain/commonSource to 2 if drain/source is common for two transistors in series
+*
+.subckt SUBCKT_NMOS drain source gate psub trig beamDistance = 0 commonDrain = 1 commonSource = 1
+
+  * NMOS model
+  * based on https://tel.archives-ouvertes.fr/tel-00958998/document; page 56
+  * my French == NULL ...  :-( This may be completelly buggy!
+
+.if (TECHNOLOGY == TECHNOLOGY_TSMC180nm)
+  M1 drain gate source psub TSMC180nmN w = NMOSw l = NMOSl ad = NMOSad pd = NMOSpd as = NMOSas ps = NMOSps
+.endif
+
+.if (TECHNOLOGY == TECHNOLOGY_PTM90nm)
+  M1 drain gate source psub PTM90nmNMOS w = NMOSw l = NMOSl ad = NMOSad pd = NMOSpd as = NMOSas ps = NMOSps
+.endif
+
+  R2 psubIn interRC 0.001
+  C1 interRC psub 1fF
+  R3 psubIn psub 10k
+
+  Xsd drain source psubIn SUBCKT_SD
+  XcsrcD drain psubIn trig SUBCKT_Iph_nplus_psub transConductance = a constCurrent = b distance = beamDistance PNArea = 'NplusPsubJunctionS/commonDrain'
+  XcsrcS psubIn source trig SUBCKT_Iph_nplus_psub transConductance = a constCurrent = b distance = beamDistance PNArea = 'NplusPsubJunctionS/commonSource'
+
+.ends
+
+*
+* Note: set param commonDrain/commonSource to 2 if drain/source is common for two transistors in series
+*
+.subckt SUBCKT_PMOS drain source gate nwell psub trig beamDistance = 0 commonDrain = 1 commonSource = 1
+
+  * PMOS model -- simplified
+  * check for bugs!
+  
+.if (TECHNOLOGY == TECHNOLOGY_TSMC180nm)
+  M1 drain gate source nwell TSMC180nmP w = NMOSw l = NMOSl ad = NMOSad pd = NMOSpd as = NMOSas ps = NMOSps
+.endif
+
+.if (TECHNOLOGY == TECHNOLOGY_PTM90nm)
+  M1 drain gate source nwell PTM90nmPMOS w = NMOSw l = NMOSl ad = NMOSad pd = NMOSpd as = NMOSas ps = NMOSps
+.endif
+  
+  
+  XDiodeD pplusD nwell trig SUBCKT_Iph_Pplus_Nwell transConductance = a2 constCurrent = b2 distance = beamDistance PNArea = 'PplusNwellJunctionS/commonDrain'
+  
+  XDiodeS pplusS nwell trig SUBCKT_Iph_Pplus_Nwell transConductance = a2 constCurrent = b2 distance = beamDistance PNArea = 'PplusNwellJunctionS/commonSource'
+  
+  R1 pplusD drain 0.001
+  R2 pplusS source 0.001
+  
+  *Rnp nwell psub 100000
+
+  XDiodePN psub nwell trig SUBCKT_Iph_Psub_Nwell transConductance = a3 constCurrent = b3 distance = beamDistance PNArea = PsubNwellJunctionS
+  
+.ends
+
+
+.subckt NAND2X1 Y VSS A B MIDDLE VDD beamDistanceTop = 0 beamDistanceBot = 0
+
+Xpmos1 Y VDD A VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop commonDrain = 2
+Xpmos2 Y VDD B VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop commonDrain = 2
+
+Xnmos1 MIDDLE VSS A VSS LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot commonDrain = 2
+Xnmos2 Y MIDDLE B VSS LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot commonSource = 2
+
+C0 MIDDLE Y 0.01fF
+C1 VSS Y 0.09fF
+C2 Y B 0.10fF
+C3 VSS A 0.05fF
+C4 Y A 0.08fF
+C5 Y VDD 0.57fF
+C6 B A 0.22fF
+C7 B VDD 0.27fF
+C8 A VDD 0.20fF
+C9 VSS VSS 0.17fF
+C10 Y VSS 0.11fF
+C11 B VSS 0.19fF
+C12 A VSS 0.25fF
+C13 VDD VSS 1.73fF
+.ends

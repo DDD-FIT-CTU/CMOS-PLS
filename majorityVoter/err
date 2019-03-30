@@ -1,0 +1,1860 @@
+Original line no.: 26, new internal line no.: 36:
+Undefined number [nand]
+Original line no.: 26, new internal line no.: 36:
+ Expression err: 3 * nand gate width
+Original line no.: 26, new internal line no.: 36:
+ Formula() error.
+      .param gatew=3 * nand gate width
+Original line no.: 27, new internal line no.: 37:
+Undefined number [nand]
+Original line no.: 27, new internal line no.: 37:
+ Expression err: 10 * nand gate width
+Original line no.: 27, new internal line no.: 37:
+ Formula() error.
+      .param gateh=10 * nand gate width
+Original line no.: 35, new internal line no.: 49:
+Undefined number [gatew]
+Original line no.: 35, new internal line no.: 49:
+ Expression err: laserlocationx*gatew+gatew/2
+Original line no.: 35, new internal line no.: 49:
+ Formula() error.
+      .param laserx={laserlocationx*gatew+gatew/2}
+Original line no.: 38, new internal line no.: 50:
+Undefined number [gatew]
+Original line no.: 38, new internal line no.: 50:
+ Expression err: 0*gatew+gatew/2
+Original line no.: 38, new internal line no.: 50:
+ Formula() error.
+      .param gate1x={0*gatew+gatew/2}
+Original line no.: 39, new internal line no.: 51:
+Undefined number [gatew]
+Original line no.: 39, new internal line no.: 51:
+ Expression err: 1*gatew+gatew/2
+Original line no.: 39, new internal line no.: 51:
+ Formula() error.
+      .param gate2x={1*gatew+gatew/2}
+Original line no.: 40, new internal line no.: 52:
+Undefined number [gatew]
+Original line no.: 40, new internal line no.: 52:
+ Expression err: 2*gatew+gatew/2
+Original line no.: 40, new internal line no.: 52:
+ Formula() error.
+      .param gate3x={2*gatew+gatew/2}
+Original line no.: 41, new internal line no.: 53:
+Undefined number [gatew]
+Original line no.: 41, new internal line no.: 53:
+ Expression err: 3*gatew+gatew/2
+Original line no.: 41, new internal line no.: 53:
+ Formula() error.
+      .param gate4x={3*gatew+gatew/2}
+Original line no.: 42, new internal line no.: 54:
+Undefined number [gatew]
+Original line no.: 42, new internal line no.: 54:
+ Expression err: 4*gatew+gatew/2
+Original line no.: 42, new internal line no.: 54:
+ Formula() error.
+      .param gate5x={4*gatew+gatew/2}
+Original line no.: 43, new internal line no.: 55:
+Undefined number [gatew]
+Original line no.: 43, new internal line no.: 55:
+ Expression err: 5*gatew+gatew/2
+Original line no.: 43, new internal line no.: 55:
+ Formula() error.
+      .param gate6x={5*gatew+gatew/2}
+Original line no.: 45, new internal line no.: 56:
+Undefined number [laserx]
+Original line no.: 45, new internal line no.: 56:
+ Expression err: laserx-gate1x)*(laserx-gate1x))+(laserlocationy*gateh))
+Original line no.: 45, new internal line no.: 56:
+ Expression err: (laserx-gate1x)*(laserx-gate1x))+(laserlocationy*gateh))
+Original line no.: 45, new internal line no.: 56:
+ Expression err: ((laserx-gate1x)*(laserx-gate1x))+(laserlocationy*gateh))
+Original line no.: 45, new internal line no.: 56:
+ Formula() error.
+      .param distgate1top={sqrt(((laserx-gate1x)*(laserx-gate1x))+(laserlocationy*gateh))}
+Original line no.: 46, new internal line no.: 57:
+Undefined number [laserx]
+Original line no.: 46, new internal line no.: 57:
+ Expression err: laserx-gate2x)*(laserx-gate2x))+(laserlocationy*gateh))
+Original line no.: 46, new internal line no.: 57:
+ Expression err: (laserx-gate2x)*(laserx-gate2x))+(laserlocationy*gateh))
+Original line no.: 46, new internal line no.: 57:
+ Expression err: ((laserx-gate2x)*(laserx-gate2x))+(laserlocationy*gateh))
+Original line no.: 46, new internal line no.: 57:
+ Formula() error.
+      .param distgate2top={sqrt(((laserx-gate2x)*(laserx-gate2x))+(laserlocationy*gateh))}
+Original line no.: 47, new internal line no.: 58:
+Undefined number [laserx]
+Original line no.: 47, new internal line no.: 58:
+ Expression err: laserx-gate3x)*(laserx-gate3x))+(laserlocationy*gateh))
+Original line no.: 47, new internal line no.: 58:
+ Expression err: (laserx-gate3x)*(laserx-gate3x))+(laserlocationy*gateh))
+Original line no.: 47, new internal line no.: 58:
+ Expression err: ((laserx-gate3x)*(laserx-gate3x))+(laserlocationy*gateh))
+Original line no.: 47, new internal line no.: 58:
+ Formula() error.
+      .param distgate3top={sqrt(((laserx-gate3x)*(laserx-gate3x))+(laserlocationy*gateh))}
+Original line no.: 48, new internal line no.: 59:
+Undefined number [laserx]
+Original line no.: 48, new internal line no.: 59:
+ Expression err: laserx-gate4x)*(laserx-gate4x))+(laserlocationy*gateh))
+Original line no.: 48, new internal line no.: 59:
+ Expression err: (laserx-gate4x)*(laserx-gate4x))+(laserlocationy*gateh))
+Original line no.: 48, new internal line no.: 59:
+ Expression err: ((laserx-gate4x)*(laserx-gate4x))+(laserlocationy*gateh))
+Original line no.: 48, new internal line no.: 59:
+ Formula() error.
+      .param distgate4top={sqrt(((laserx-gate4x)*(laserx-gate4x))+(laserlocationy*gateh))}
+Original line no.: 49, new internal line no.: 60:
+Undefined number [laserx]
+Original line no.: 49, new internal line no.: 60:
+ Expression err: laserx-gate5x)*(laserx-gate5x))+(laserlocationy*gateh))
+Original line no.: 49, new internal line no.: 60:
+ Expression err: (laserx-gate5x)*(laserx-gate5x))+(laserlocationy*gateh))
+Original line no.: 49, new internal line no.: 60:
+ Expression err: ((laserx-gate5x)*(laserx-gate5x))+(laserlocationy*gateh))
+Original line no.: 49, new internal line no.: 60:
+ Formula() error.
+      .param distgate5top={sqrt(((laserx-gate5x)*(laserx-gate5x))+(laserlocationy*gateh))}
+Original line no.: 50, new internal line no.: 61:
+Undefined number [laserx]
+Original line no.: 50, new internal line no.: 61:
+ Expression err: laserx-gate6x)*(laserx-gate6x))+(laserlocationy*gateh))
+Original line no.: 50, new internal line no.: 61:
+ Expression err: (laserx-gate6x)*(laserx-gate6x))+(laserlocationy*gateh))
+Original line no.: 50, new internal line no.: 61:
+ Expression err: ((laserx-gate6x)*(laserx-gate6x))+(laserlocationy*gateh))
+Original line no.: 50, new internal line no.: 61:
+ Formula() error.
+      .param distgate6top={sqrt(((laserx-gate6x)*(laserx-gate6x))+(laserlocationy*gateh))}
+Original line no.: 52, new internal line no.: 62:
+Undefined number [laserx]
+Original line no.: 52, new internal line no.: 62:
+ Expression err: laserx-gate1x)*(laserx-gate1x))+(abs(laserlocationy-1)*gateh))
+Original line no.: 52, new internal line no.: 62:
+ Expression err: (laserx-gate1x)*(laserx-gate1x))+(abs(laserlocationy-1)*gateh))
+Original line no.: 52, new internal line no.: 62:
+ Expression err: ((laserx-gate1x)*(laserx-gate1x))+(abs(laserlocationy-1)*gateh))
+Original line no.: 52, new internal line no.: 62:
+ Formula() error.
+      .param distgate1bot={sqrt(((laserx-gate1x)*(laserx-gate1x))+(abs(laserlocationy-1)*gateh))}
+Original line no.: 53, new internal line no.: 63:
+Undefined number [laserx]
+Original line no.: 53, new internal line no.: 63:
+ Expression err: laserx-gate2x)*(laserx-gate2x))+(abs(laserlocationy-1)*gateh))
+Original line no.: 53, new internal line no.: 63:
+ Expression err: (laserx-gate2x)*(laserx-gate2x))+(abs(laserlocationy-1)*gateh))
+Original line no.: 53, new internal line no.: 63:
+ Expression err: ((laserx-gate2x)*(laserx-gate2x))+(abs(laserlocationy-1)*gateh))
+Original line no.: 53, new internal line no.: 63:
+ Formula() error.
+      .param distgate2bot={sqrt(((laserx-gate2x)*(laserx-gate2x))+(abs(laserlocationy-1)*gateh))}
+Original line no.: 54, new internal line no.: 64:
+Undefined number [laserx]
+Original line no.: 54, new internal line no.: 64:
+ Expression err: laserx-gate3x)*(laserx-gate3x))+(abs(laserlocationy-1)*gateh))
+Original line no.: 54, new internal line no.: 64:
+ Expression err: (laserx-gate3x)*(laserx-gate3x))+(abs(laserlocationy-1)*gateh))
+Original line no.: 54, new internal line no.: 64:
+ Expression err: ((laserx-gate3x)*(laserx-gate3x))+(abs(laserlocationy-1)*gateh))
+Original line no.: 54, new internal line no.: 64:
+ Formula() error.
+      .param distgate3bot={sqrt(((laserx-gate3x)*(laserx-gate3x))+(abs(laserlocationy-1)*gateh))}
+Original line no.: 55, new internal line no.: 65:
+Undefined number [laserx]
+Original line no.: 55, new internal line no.: 65:
+ Expression err: laserx-gate4x)*(laserx-gate4x))+(abs(laserlocationy-1)*gateh))
+Original line no.: 55, new internal line no.: 65:
+ Expression err: (laserx-gate4x)*(laserx-gate4x))+(abs(laserlocationy-1)*gateh))
+Original line no.: 55, new internal line no.: 65:
+ Expression err: ((laserx-gate4x)*(laserx-gate4x))+(abs(laserlocationy-1)*gateh))
+Original line no.: 55, new internal line no.: 65:
+ Formula() error.
+      .param distgate4bot={sqrt(((laserx-gate4x)*(laserx-gate4x))+(abs(laserlocationy-1)*gateh))}
+Original line no.: 56, new internal line no.: 66:
+Undefined number [laserx]
+Original line no.: 56, new internal line no.: 66:
+ Expression err: laserx-gate5x)*(laserx-gate5x))+(abs(laserlocationy-1)*gateh))
+Original line no.: 56, new internal line no.: 66:
+ Expression err: (laserx-gate5x)*(laserx-gate5x))+(abs(laserlocationy-1)*gateh))
+Original line no.: 56, new internal line no.: 66:
+ Expression err: ((laserx-gate5x)*(laserx-gate5x))+(abs(laserlocationy-1)*gateh))
+Original line no.: 56, new internal line no.: 66:
+ Formula() error.
+      .param distgate5bot={sqrt(((laserx-gate5x)*(laserx-gate5x))+(abs(laserlocationy-1)*gateh))}
+Original line no.: 57, new internal line no.: 67:
+Undefined number [laserx]
+Original line no.: 57, new internal line no.: 67:
+ Expression err: laserx-gate6x)*(laserx-gate6x))+(abs(laserlocationy-1)*gateh))
+Original line no.: 57, new internal line no.: 67:
+ Expression err: (laserx-gate6x)*(laserx-gate6x))+(abs(laserlocationy-1)*gateh))
+Original line no.: 57, new internal line no.: 67:
+ Expression err: ((laserx-gate6x)*(laserx-gate6x))+(abs(laserlocationy-1)*gateh))
+Original line no.: 57, new internal line no.: 67:
+ Formula() error.
+      .param distgate6bot={sqrt(((laserx-gate6x)*(laserx-gate6x))+(abs(laserlocationy-1)*gateh))}
+Original line no.: 0, new internal line no.: 320:
+Undefined number [distgate6top]
+Original line no.: 0, new internal line no.: 320:
+ Formula() error.
+      beamdistancetop=distgate6top;beamdistancebot=distgate6bot;
+Original line no.: 0, new internal line no.: 266:
+Undefined number [beamdistancetop]
+Original line no.: 0, new internal line no.: 266:
+ Formula() error.
+      beamdistance=beamdistancetop;commondrain=2;commonsource=1;
+Original line no.: 0, new internal line no.: 255:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 255:
+ Formula() error.
+      transconductance=a2;constcurrent=b2;distance=beamdistance;pnarea=pplusnwelljunctions/commondrain;
+Original line no.: 0, new internal line no.: 193:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 193:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 194:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 194:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 256:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 256:
+ Formula() error.
+      transconductance=a2;constcurrent=b2;distance=beamdistance;pnarea=pplusnwelljunctions/commonsource;
+Original line no.: 0, new internal line no.: 193:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 193:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 194:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 194:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 260:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 260:
+ Formula() error.
+      transconductance=a3;constcurrent=b3;distance=beamdistance;pnarea=psubnwelljunctions;
+Original line no.: 0, new internal line no.: 177:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 177:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 177:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 177:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 177:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 178:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 178:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 178:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 178:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 178:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 267:
+Undefined number [beamdistancetop]
+Original line no.: 0, new internal line no.: 267:
+ Formula() error.
+      beamdistance=beamdistancetop;commondrain=2;commonsource=1;
+Original line no.: 0, new internal line no.: 255:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 255:
+ Formula() error.
+      transconductance=a2;constcurrent=b2;distance=beamdistance;pnarea=pplusnwelljunctions/commondrain;
+Original line no.: 0, new internal line no.: 193:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 193:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 194:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 194:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 256:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 256:
+ Formula() error.
+      transconductance=a2;constcurrent=b2;distance=beamdistance;pnarea=pplusnwelljunctions/commonsource;
+Original line no.: 0, new internal line no.: 193:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 193:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 194:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 194:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 260:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 260:
+ Formula() error.
+      transconductance=a3;constcurrent=b3;distance=beamdistance;pnarea=psubnwelljunctions;
+Original line no.: 0, new internal line no.: 177:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 177:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 177:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 177:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 177:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 178:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 178:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 178:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 178:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 178:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 268:
+Undefined number [beamdistancebot]
+Original line no.: 0, new internal line no.: 268:
+ Formula() error.
+      beamdistance=beamdistancebot;commondrain=2;commonsource=1;
+Original line no.: 0, new internal line no.: 236:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 236:
+ Formula() error.
+      transconductance=a;constcurrent=b;distance=beamdistance;pnarea=npluspsubjunctions/commondrain;
+Original line no.: 0, new internal line no.: 161:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 161:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 162:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 162:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 237:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 237:
+ Formula() error.
+      transconductance=a;constcurrent=b;distance=beamdistance;pnarea=npluspsubjunctions/commonsource;
+Original line no.: 0, new internal line no.: 161:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 161:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 162:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 162:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 269:
+Undefined number [beamdistancebot]
+Original line no.: 0, new internal line no.: 269:
+ Formula() error.
+      beamdistance=beamdistancebot;commondrain=1;commonsource=2;
+Original line no.: 0, new internal line no.: 236:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 236:
+ Formula() error.
+      transconductance=a;constcurrent=b;distance=beamdistance;pnarea=npluspsubjunctions/commondrain;
+Original line no.: 0, new internal line no.: 161:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 161:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 162:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 162:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 237:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 237:
+ Formula() error.
+      transconductance=a;constcurrent=b;distance=beamdistance;pnarea=npluspsubjunctions/commonsource;
+Original line no.: 0, new internal line no.: 161:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 161:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 162:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 162:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 321:
+Undefined number [distgate5top]
+Original line no.: 0, new internal line no.: 321:
+ Formula() error.
+      beamdistancetop=distgate5top;beamdistancebot=distgate5bot;
+Original line no.: 0, new internal line no.: 266:
+Undefined number [beamdistancetop]
+Original line no.: 0, new internal line no.: 266:
+ Formula() error.
+      beamdistance=beamdistancetop;commondrain=2;commonsource=1;
+Original line no.: 0, new internal line no.: 255:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 255:
+ Formula() error.
+      transconductance=a2;constcurrent=b2;distance=beamdistance;pnarea=pplusnwelljunctions/commondrain;
+Original line no.: 0, new internal line no.: 193:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 193:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 194:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 194:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 256:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 256:
+ Formula() error.
+      transconductance=a2;constcurrent=b2;distance=beamdistance;pnarea=pplusnwelljunctions/commonsource;
+Original line no.: 0, new internal line no.: 193:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 193:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 194:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 194:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 260:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 260:
+ Formula() error.
+      transconductance=a3;constcurrent=b3;distance=beamdistance;pnarea=psubnwelljunctions;
+Original line no.: 0, new internal line no.: 177:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 177:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 177:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 177:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 177:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 178:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 178:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 178:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 178:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 178:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 267:
+Undefined number [beamdistancetop]
+Original line no.: 0, new internal line no.: 267:
+ Formula() error.
+      beamdistance=beamdistancetop;commondrain=2;commonsource=1;
+Original line no.: 0, new internal line no.: 255:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 255:
+ Formula() error.
+      transconductance=a2;constcurrent=b2;distance=beamdistance;pnarea=pplusnwelljunctions/commondrain;
+Original line no.: 0, new internal line no.: 193:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 193:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 194:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 194:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 256:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 256:
+ Formula() error.
+      transconductance=a2;constcurrent=b2;distance=beamdistance;pnarea=pplusnwelljunctions/commonsource;
+Original line no.: 0, new internal line no.: 193:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 193:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 194:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 194:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 260:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 260:
+ Formula() error.
+      transconductance=a3;constcurrent=b3;distance=beamdistance;pnarea=psubnwelljunctions;
+Original line no.: 0, new internal line no.: 177:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 177:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 177:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 177:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 177:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 178:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 178:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 178:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 178:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 178:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 268:
+Undefined number [beamdistancebot]
+Original line no.: 0, new internal line no.: 268:
+ Formula() error.
+      beamdistance=beamdistancebot;commondrain=2;commonsource=1;
+Original line no.: 0, new internal line no.: 236:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 236:
+ Formula() error.
+      transconductance=a;constcurrent=b;distance=beamdistance;pnarea=npluspsubjunctions/commondrain;
+Original line no.: 0, new internal line no.: 161:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 161:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 162:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 162:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 237:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 237:
+ Formula() error.
+      transconductance=a;constcurrent=b;distance=beamdistance;pnarea=npluspsubjunctions/commonsource;
+Original line no.: 0, new internal line no.: 161:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 161:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 162:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 162:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 269:
+Undefined number [beamdistancebot]
+Original line no.: 0, new internal line no.: 269:
+ Formula() error.
+      beamdistance=beamdistancebot;commondrain=1;commonsource=2;
+Original line no.: 0, new internal line no.: 236:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 236:
+ Formula() error.
+      transconductance=a;constcurrent=b;distance=beamdistance;pnarea=npluspsubjunctions/commondrain;
+Original line no.: 0, new internal line no.: 161:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 161:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 162:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 162:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 237:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 237:
+ Formula() error.
+      transconductance=a;constcurrent=b;distance=beamdistance;pnarea=npluspsubjunctions/commonsource;
+Original line no.: 0, new internal line no.: 161:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 161:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 162:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 162:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 322:
+Undefined number [distgate4top]
+Original line no.: 0, new internal line no.: 322:
+ Formula() error.
+      beamdistancetop=distgate4top;beamdistancebot=distgate4bot;
+Original line no.: 0, new internal line no.: 266:
+Undefined number [beamdistancetop]
+Original line no.: 0, new internal line no.: 266:
+ Formula() error.
+      beamdistance=beamdistancetop;commondrain=2;commonsource=1;
+Original line no.: 0, new internal line no.: 255:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 255:
+ Formula() error.
+      transconductance=a2;constcurrent=b2;distance=beamdistance;pnarea=pplusnwelljunctions/commondrain;
+Original line no.: 0, new internal line no.: 193:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 193:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 194:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 194:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 256:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 256:
+ Formula() error.
+      transconductance=a2;constcurrent=b2;distance=beamdistance;pnarea=pplusnwelljunctions/commonsource;
+Original line no.: 0, new internal line no.: 193:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 193:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 194:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 194:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 260:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 260:
+ Formula() error.
+      transconductance=a3;constcurrent=b3;distance=beamdistance;pnarea=psubnwelljunctions;
+Original line no.: 0, new internal line no.: 177:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 177:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 177:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 177:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 177:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 178:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 178:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 178:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 178:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 178:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 267:
+Undefined number [beamdistancetop]
+Original line no.: 0, new internal line no.: 267:
+ Formula() error.
+      beamdistance=beamdistancetop;commondrain=2;commonsource=1;
+Original line no.: 0, new internal line no.: 255:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 255:
+ Formula() error.
+      transconductance=a2;constcurrent=b2;distance=beamdistance;pnarea=pplusnwelljunctions/commondrain;
+Original line no.: 0, new internal line no.: 193:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 193:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 194:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 194:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 256:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 256:
+ Formula() error.
+      transconductance=a2;constcurrent=b2;distance=beamdistance;pnarea=pplusnwelljunctions/commonsource;
+Original line no.: 0, new internal line no.: 193:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 193:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 194:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 194:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 260:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 260:
+ Formula() error.
+      transconductance=a3;constcurrent=b3;distance=beamdistance;pnarea=psubnwelljunctions;
+Original line no.: 0, new internal line no.: 177:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 177:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 177:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 177:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 177:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 178:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 178:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 178:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 178:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 178:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 268:
+Undefined number [beamdistancebot]
+Original line no.: 0, new internal line no.: 268:
+ Formula() error.
+      beamdistance=beamdistancebot;commondrain=2;commonsource=1;
+Original line no.: 0, new internal line no.: 236:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 236:
+ Formula() error.
+      transconductance=a;constcurrent=b;distance=beamdistance;pnarea=npluspsubjunctions/commondrain;
+Original line no.: 0, new internal line no.: 161:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 161:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 162:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 162:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 237:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 237:
+ Formula() error.
+      transconductance=a;constcurrent=b;distance=beamdistance;pnarea=npluspsubjunctions/commonsource;
+Original line no.: 0, new internal line no.: 161:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 161:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 162:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 162:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 269:
+Undefined number [beamdistancebot]
+Original line no.: 0, new internal line no.: 269:
+ Formula() error.
+      beamdistance=beamdistancebot;commondrain=1;commonsource=2;
+Original line no.: 0, new internal line no.: 236:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 236:
+ Formula() error.
+      transconductance=a;constcurrent=b;distance=beamdistance;pnarea=npluspsubjunctions/commondrain;
+Original line no.: 0, new internal line no.: 161:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 161:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 162:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 162:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 237:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 237:
+ Formula() error.
+      transconductance=a;constcurrent=b;distance=beamdistance;pnarea=npluspsubjunctions/commonsource;
+Original line no.: 0, new internal line no.: 161:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 161:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 162:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 162:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 323:
+Undefined number [distgate1top]
+Original line no.: 0, new internal line no.: 323:
+ Formula() error.
+      beamdistancetop=distgate1top;beamdistancebot=distgate1bot;
+Original line no.: 0, new internal line no.: 266:
+Undefined number [beamdistancetop]
+Original line no.: 0, new internal line no.: 266:
+ Formula() error.
+      beamdistance=beamdistancetop;commondrain=2;commonsource=1;
+Original line no.: 0, new internal line no.: 255:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 255:
+ Formula() error.
+      transconductance=a2;constcurrent=b2;distance=beamdistance;pnarea=pplusnwelljunctions/commondrain;
+Original line no.: 0, new internal line no.: 193:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 193:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 194:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 194:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 256:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 256:
+ Formula() error.
+      transconductance=a2;constcurrent=b2;distance=beamdistance;pnarea=pplusnwelljunctions/commonsource;
+Original line no.: 0, new internal line no.: 193:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 193:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 194:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 194:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 260:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 260:
+ Formula() error.
+      transconductance=a3;constcurrent=b3;distance=beamdistance;pnarea=psubnwelljunctions;
+Original line no.: 0, new internal line no.: 177:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 177:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 177:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 177:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 177:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 178:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 178:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 178:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 178:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 178:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 267:
+Undefined number [beamdistancetop]
+Original line no.: 0, new internal line no.: 267:
+ Formula() error.
+      beamdistance=beamdistancetop;commondrain=2;commonsource=1;
+Original line no.: 0, new internal line no.: 255:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 255:
+ Formula() error.
+      transconductance=a2;constcurrent=b2;distance=beamdistance;pnarea=pplusnwelljunctions/commondrain;
+Original line no.: 0, new internal line no.: 193:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 193:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 194:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 194:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 256:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 256:
+ Formula() error.
+      transconductance=a2;constcurrent=b2;distance=beamdistance;pnarea=pplusnwelljunctions/commonsource;
+Original line no.: 0, new internal line no.: 193:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 193:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 194:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 194:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 260:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 260:
+ Formula() error.
+      transconductance=a3;constcurrent=b3;distance=beamdistance;pnarea=psubnwelljunctions;
+Original line no.: 0, new internal line no.: 177:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 177:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 177:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 177:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 177:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 178:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 178:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 178:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 178:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 178:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 268:
+Undefined number [beamdistancebot]
+Original line no.: 0, new internal line no.: 268:
+ Formula() error.
+      beamdistance=beamdistancebot;commondrain=2;commonsource=1;
+Original line no.: 0, new internal line no.: 236:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 236:
+ Formula() error.
+      transconductance=a;constcurrent=b;distance=beamdistance;pnarea=npluspsubjunctions/commondrain;
+Original line no.: 0, new internal line no.: 161:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 161:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 162:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 162:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 237:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 237:
+ Formula() error.
+      transconductance=a;constcurrent=b;distance=beamdistance;pnarea=npluspsubjunctions/commonsource;
+Original line no.: 0, new internal line no.: 161:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 161:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 162:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 162:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 269:
+Undefined number [beamdistancebot]
+Original line no.: 0, new internal line no.: 269:
+ Formula() error.
+      beamdistance=beamdistancebot;commondrain=1;commonsource=2;
+Original line no.: 0, new internal line no.: 236:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 236:
+ Formula() error.
+      transconductance=a;constcurrent=b;distance=beamdistance;pnarea=npluspsubjunctions/commondrain;
+Original line no.: 0, new internal line no.: 161:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 161:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 162:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 162:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 237:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 237:
+ Formula() error.
+      transconductance=a;constcurrent=b;distance=beamdistance;pnarea=npluspsubjunctions/commonsource;
+Original line no.: 0, new internal line no.: 161:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 161:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 162:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 162:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 324:
+Undefined number [distgate2top]
+Original line no.: 0, new internal line no.: 324:
+ Formula() error.
+      beamdistancetop=distgate2top;beamdistancebot=distgate2bot;
+Original line no.: 0, new internal line no.: 266:
+Undefined number [beamdistancetop]
+Original line no.: 0, new internal line no.: 266:
+ Formula() error.
+      beamdistance=beamdistancetop;commondrain=2;commonsource=1;
+Original line no.: 0, new internal line no.: 255:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 255:
+ Formula() error.
+      transconductance=a2;constcurrent=b2;distance=beamdistance;pnarea=pplusnwelljunctions/commondrain;
+Original line no.: 0, new internal line no.: 193:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 193:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 194:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 194:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 256:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 256:
+ Formula() error.
+      transconductance=a2;constcurrent=b2;distance=beamdistance;pnarea=pplusnwelljunctions/commonsource;
+Original line no.: 0, new internal line no.: 193:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 193:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 194:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 194:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 260:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 260:
+ Formula() error.
+      transconductance=a3;constcurrent=b3;distance=beamdistance;pnarea=psubnwelljunctions;
+Original line no.: 0, new internal line no.: 177:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 177:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 177:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 177:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 177:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 178:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 178:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 178:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 178:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 178:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 267:
+Undefined number [beamdistancetop]
+Original line no.: 0, new internal line no.: 267:
+ Formula() error.
+      beamdistance=beamdistancetop;commondrain=2;commonsource=1;
+Original line no.: 0, new internal line no.: 255:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 255:
+ Formula() error.
+      transconductance=a2;constcurrent=b2;distance=beamdistance;pnarea=pplusnwelljunctions/commondrain;
+Original line no.: 0, new internal line no.: 193:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 193:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 194:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 194:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 256:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 256:
+ Formula() error.
+      transconductance=a2;constcurrent=b2;distance=beamdistance;pnarea=pplusnwelljunctions/commonsource;
+Original line no.: 0, new internal line no.: 193:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 193:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 194:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 194:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 260:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 260:
+ Formula() error.
+      transconductance=a3;constcurrent=b3;distance=beamdistance;pnarea=psubnwelljunctions;
+Original line no.: 0, new internal line no.: 177:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 177:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 177:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 177:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 177:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 178:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 178:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 178:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 178:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 178:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 268:
+Undefined number [beamdistancebot]
+Original line no.: 0, new internal line no.: 268:
+ Formula() error.
+      beamdistance=beamdistancebot;commondrain=2;commonsource=1;
+Original line no.: 0, new internal line no.: 236:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 236:
+ Formula() error.
+      transconductance=a;constcurrent=b;distance=beamdistance;pnarea=npluspsubjunctions/commondrain;
+Original line no.: 0, new internal line no.: 161:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 161:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 162:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 162:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 237:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 237:
+ Formula() error.
+      transconductance=a;constcurrent=b;distance=beamdistance;pnarea=npluspsubjunctions/commonsource;
+Original line no.: 0, new internal line no.: 161:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 161:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 162:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 162:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 269:
+Undefined number [beamdistancebot]
+Original line no.: 0, new internal line no.: 269:
+ Formula() error.
+      beamdistance=beamdistancebot;commondrain=1;commonsource=2;
+Original line no.: 0, new internal line no.: 236:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 236:
+ Formula() error.
+      transconductance=a;constcurrent=b;distance=beamdistance;pnarea=npluspsubjunctions/commondrain;
+Original line no.: 0, new internal line no.: 161:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 161:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 162:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 162:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 237:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 237:
+ Formula() error.
+      transconductance=a;constcurrent=b;distance=beamdistance;pnarea=npluspsubjunctions/commonsource;
+Original line no.: 0, new internal line no.: 161:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 161:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 162:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 162:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 325:
+Undefined number [distgate3top]
+Original line no.: 0, new internal line no.: 325:
+ Formula() error.
+      beamdistancetop=distgate3top;beamdistancebot=distgate3bot;
+Original line no.: 0, new internal line no.: 266:
+Undefined number [beamdistancetop]
+Original line no.: 0, new internal line no.: 266:
+ Formula() error.
+      beamdistance=beamdistancetop;commondrain=2;commonsource=1;
+Original line no.: 0, new internal line no.: 255:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 255:
+ Formula() error.
+      transconductance=a2;constcurrent=b2;distance=beamdistance;pnarea=pplusnwelljunctions/commondrain;
+Original line no.: 0, new internal line no.: 193:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 193:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 194:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 194:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 256:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 256:
+ Formula() error.
+      transconductance=a2;constcurrent=b2;distance=beamdistance;pnarea=pplusnwelljunctions/commonsource;
+Original line no.: 0, new internal line no.: 193:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 193:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 194:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 194:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 260:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 260:
+ Formula() error.
+      transconductance=a3;constcurrent=b3;distance=beamdistance;pnarea=psubnwelljunctions;
+Original line no.: 0, new internal line no.: 177:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 177:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 177:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 177:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 177:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 178:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 178:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 178:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 178:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 178:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 267:
+Undefined number [beamdistancetop]
+Original line no.: 0, new internal line no.: 267:
+ Formula() error.
+      beamdistance=beamdistancetop;commondrain=2;commonsource=1;
+Original line no.: 0, new internal line no.: 255:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 255:
+ Formula() error.
+      transconductance=a2;constcurrent=b2;distance=beamdistance;pnarea=pplusnwelljunctions/commondrain;
+Original line no.: 0, new internal line no.: 193:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 193:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 194:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 194:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 256:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 256:
+ Formula() error.
+      transconductance=a2;constcurrent=b2;distance=beamdistance;pnarea=pplusnwelljunctions/commonsource;
+Original line no.: 0, new internal line no.: 193:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 193:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 193:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 194:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 194:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 194:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 260:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 260:
+ Formula() error.
+      transconductance=a3;constcurrent=b3;distance=beamdistance;pnarea=psubnwelljunctions;
+Original line no.: 0, new internal line no.: 177:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 177:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 177:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 177:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 177:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 178:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 178:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 178:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 178:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 178:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 268:
+Undefined number [beamdistancebot]
+Original line no.: 0, new internal line no.: 268:
+ Formula() error.
+      beamdistance=beamdistancebot;commondrain=2;commonsource=1;
+Original line no.: 0, new internal line no.: 236:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 236:
+ Formula() error.
+      transconductance=a;constcurrent=b;distance=beamdistance;pnarea=npluspsubjunctions/commondrain;
+Original line no.: 0, new internal line no.: 161:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 161:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 162:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 162:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 237:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 237:
+ Formula() error.
+      transconductance=a;constcurrent=b;distance=beamdistance;pnarea=npluspsubjunctions/commonsource;
+Original line no.: 0, new internal line no.: 161:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 161:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 162:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 162:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 269:
+Undefined number [beamdistancebot]
+Original line no.: 0, new internal line no.: 269:
+ Formula() error.
+      beamdistance=beamdistancebot;commondrain=1;commonsource=2;
+Original line no.: 0, new internal line no.: 236:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 236:
+ Formula() error.
+      transconductance=a;constcurrent=b;distance=beamdistance;pnarea=npluspsubjunctions/commondrain;
+Original line no.: 0, new internal line no.: 161:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 161:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 162:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 162:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 237:
+Undefined number [beamdistance]
+Original line no.: 0, new internal line no.: 237:
+ Formula() error.
+      transconductance=a;constcurrent=b;distance=beamdistance;pnarea=npluspsubjunctions/commonsource;
+Original line no.: 0, new internal line no.: 161:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 161:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+ Expression err: transconductance*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 161:
+Cannot compute substitute
+Original line no.: 0, new internal line no.: 162:
+Undefined number [distance]
+Original line no.: 0, new internal line no.: 162:
+ Expression err: -1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+ Expression err: constcurrent*(beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2))*pnarea/10}
+Original line no.: 0, new internal line no.: 162:
+Cannot compute substitute
+
+ERROR: fatal error in ngspice, exit(1)
+******
+** ngspice-28 : Circuit level simulation program
+** The U. C. Berkeley CAD Group
+** Copyright 1985-1994, Regents of the University of California.
+** Please get your ngspice manual from http://ngspice.sourceforge.net/docs.html
+** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html
+** Creation Date: Sat Jul 14 17:20:54 UTC 2018
+******
+
+Circuit: *** test 003 ***
+
+ Copies=395 Evals=1935 Placeholders=58 Symbols=173 Errors=867
+Numparam expansion errors: Run Spice anyway? y/n ?

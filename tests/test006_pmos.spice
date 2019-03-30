@@ -1,0 +1,54 @@
+*** TEST 006 ***
+*
+* ngSPICE test for PLS experiments
+*
+* This test allows to simulate PMOS transistor under PLS
+*
+*
+* Author: Jan Belohoubek, 01/2019
+* jan.belohoubek@fit.cvut.cz
+*
+* https://users.fit.cvut.cz/~belohja4/
+*
+*
+* **************************************
+
+.include ../models.lib
+.include ../90nm_bulk.lib
+
+* **************************************
+* --- Test ---
+* **************************************
+
+VVNWELL VNWELL 0 SUPP
+VVSUB VSUB 0 0.0V
+
+Vtrig LaserTrig 0 0 PWL(0ns 0V 40ns 0V 42ns SUPP 62ns SUPP 64ns 0V 100ns 0V)
+
+R_WELL nwell VNWELL 0.001
+R_SUB psub VSUB 0.001
+
+Xpmos VSS VDD VDD nwell psub LaserTrig SUBCKT_PMOS
+
+* **************************************
+* --- Simulation Settings ---
+* **************************************
+
+.tran .1ns 100ns
+.param SIMSTEP = '100ns/0.1ns'
+.csparam SIMSTEP = {SIMSTEP}
+
+* **************************************
+* --- Simulation Control ---
+* **************************************
+
+.control
+    run
+    plot i(vvdd) i(vvss) i(vvsub) i(vvnwell)
+    plot v(vss) v(vdd)
+    plot v(xpmos.xdiodeD.ctrl) v(xpmos.xdiodeD.ctrl2)
+    plot v(xpmos.xdiodeS.ctrl) v(xpmos.xdiodeS.ctrl2)
+
+.endc
+
+.end

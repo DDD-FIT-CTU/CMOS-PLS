@@ -1,0 +1,30 @@
+*** TEST 001 ***
+*
+* ngSPICE test for PLS experiments
+*
+* Author: Jan Belohoubek, 01/2019
+* jan.belohoubek@fit.cvut.cz
+*
+* https://users.fit.cvut.cz/~belohja4/
+*
+*
+* **************************************
+
+.include ../models.lib
+
+
+* **************************************
+* --- Test ---
+* **************************************
+
+Vtrig TRIG 0 0 PWL(0ns 0V 50ns 0V 55ns SUPP 100ns SUPP)
+
+Xcsrc VDD VSS TRIG SUBCKT_Iph_nplus_psub transConductance = 100
+
+* **************************************
+* --- Simulation ---
+* **************************************
+
+.tran .1ns 100ns
+
+.end

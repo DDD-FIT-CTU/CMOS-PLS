@@ -1,0 +1,67 @@
+*** TEST 003 ***
+*
+* ngSPICE test for PLS experiments
+*
+* This test allows to replicate Figure 13 in paper (1)
+*
+*
+* Author: Jan Belohoubek, 01/2019
+* jan.belohoubek@fit.cvut.cz
+*
+* https://users.fit.cvut.cz/~belohja4/
+*
+*
+* **************************************
+
+.include ../models.lib
+
+* **************************************
+* --- Test ---
+* **************************************
+
+VTEST TEST 0 SUPP
+
+Xsd VDD VSS TEST SUBCKT_SD
+
+* **************************************
+* --- Simulation Settings ---
+* **************************************
+
+.dc VTEST 0V 'SUPP' .01V
+.param SIMSTEP = '(SUPP - 0V)/0.01V'
+.csparam SIMSTEP = {SIMSTEP}
+
+* **************************************
+* --- Simulation Control ---
+* **************************************
+
+* --- final value of Iph
+.param iph = '0.4*0.025'
+.csparam Iph = {Iph}
+
+.param 
+
+.control
+    run
+    plot i(vvss) i(VTEST)
+    plot v(xsd.ctrl) v(xsd.vopen) v(test)
+
+    echo "MAX base voltage [V]: "
+    print SUPP
+    
+    echo "Iph [mA]:"
+    print Iph
+    
+    let check = 'Iph'
+    let check2 = i(VVSS)[SIMSTEP]
+
+    * small difference may occur
+    if ('check2 - check' < 0.000001)
+         echo PASSED
+    else
+         echo FAILED
+    end
+
+.endc
+
+.end

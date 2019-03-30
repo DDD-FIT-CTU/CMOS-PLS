@@ -1,0 +1,91 @@
+*** TEST 001 ***
+*
+* ngSPICE test for PLS experiments
+*
+* MajorityVoter PLS test for dummy distances and logic 1 input
+*
+* Author: Jan Belohoubek, 01/2019
+* jan.belohoubek@fit.cvut.cz
+*
+* https://users.fit.cvut.cz/~belohja4/
+*
+*
+* **************************************
+
+.include ../models.lib
+.include ../tsmc180nmcmos.lib
+.include maj.spice
+
+* **************************************
+* --- Test ---
+* **************************************
+
+Vtrig LaserTrig 0 0 PWL(0ns 0V 40ns 0V 42ns SUPP 62ns SUPP 64ns 0V 100ns 0V)
+
+.param distGate1Top = 2
+.param distGate2Top = 1
+.param distGate3Top = 0
+.param distGate4Top = 1
+.param distGate5Top = 2
+.param distGate6Top = 3
+ 
+.param distGate1Bot = 2
+.param distGate2Bot = 1
+.param distGate3Bot = 0
+.param distGate4Bot = 1
+.param distGate5Bot = 2
+.param distGate6Bot = 3
+
+* .param distGate1Top = 20
+* .param distGate2Top = 10
+* .param distGate3Top = 0
+* .param distGate4Top = 10
+* .param distGate5Top = 20
+* .param distGate6Top = 30
+* 
+* .param distGate1Bot = 25
+* .param distGate2Bot = 15
+* .param distGate3Bot = 5
+* .param distGate4Bot = 15
+* .param distGate5Bot = 25
+* .param distGate6Bot = 35
+
+.global LaserTrig distGate1Top distGate2Top distGate3Top distGate4Top distGate5Top distGate6Top distGate1Bot distGate2Bot distGate3Bot distGate4Bot distGate5Bot distGate6Bot
+
+
+* --- inputs
+Vvin0 in0 0 0 PWL(0ns 0V 20ns SUPP 22ns SUPP)
+Vvin1 in1 0 0 PWL(0ns 0V 21ns SUPP 23ns SUPP)
+Vvin2 in2 0 0 PWL(0ns 0V 22ns SUPP 24ns SUPP)
+
+* --- outputs
+R1 VSS out 1000000
+C1 VSS out 1pF
+
+* --- majority circuit layout model
+Xmaj in0 in1 in2 out VSS VDD MAJ180nm
+
+
+* **************************************
+* --- Simulation Settings ---
+* **************************************
+
+.tran 1.0ns 100ns
+.param SIMSTEP = '100ns/1.0ns'
+.csparam SIMSTEP = {SIMSTEP}
+
+* **************************************
+* --- Simulation Control ---
+* **************************************
+
+.control
+    run
+    plot i(vvdd) i(vvss)
+    plot v(vss) v(vdd) v(LaserTrig)
+    plot v(in0) v(in1) v(in2) v(out)
+
+    print i(vvdd)[120]
+    
+.endc
+
+.end

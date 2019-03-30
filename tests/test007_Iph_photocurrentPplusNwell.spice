@@ -1,0 +1,91 @@
+*** TEST 007 ***
+*
+* ngSPICE test for PLS experiments
+*
+* This test allows to replicate Figure 7 in paper (2)
+*
+* Author: Jan Belohoubek, 01/2019
+* jan.belohoubek@fit.cvut.cz
+*
+* https://users.fit.cvut.cz/~belohja4/
+*
+*
+* **************************************
+
+.include ../models.lib
+
+
+* **************************************
+* --- Test Parameters ---
+* **************************************
+
+* --- laser beam distance [um]
+.param beamDistance = 1
+.csparam beamDistance = 'beamDistance'
+
+* --- PN junction area [um2]
+.param junctionW = 1
+.param junctionL = 10
+.param junctionS = 'junctionL * junctionW'
+.csparam junctionS = 'junctionS'
+
+* **************************************
+* --- Test ---
+* **************************************
+
+VTEST TEST 0 SUPP
+Vtrig TRIG 0 SUPP
+
+Xcsrc VSS TEST TRIG SUBCKT_Iph_Pplus_Nwell transConductance = a2 constCurrent = b2 distance = beamDistance PNArea = junctionS
+
+* **************************************
+* --- Simulation Settings ---
+* **************************************
+
+.dc VTEST 0V 'SUPP' .01V
+.param SIMSTEP = '(SUPP - 0V)/0.01V'
+.csparam SIMSTEP = {SIMSTEP}
+
+* **************************************
+* --- Simulation Control ---
+* **************************************
+
+* --- final value of Iph
+.param iph = '(a2*SUPP + b2) * (beta*exp(-1*beamDistance*beamDistance/c1)+gamma*exp(-1*beamDistance*beamDistance/c2)) * junctionS/10'
+.csparam Iph = {Iph}
+
+.control
+    run
+    plot i(vvss) i(vvdd) i(VTEST)
+    plot v(xcsrc.ctrl) v(xcsrc.ctrl2)
+
+    echo "Laser power [mW]:"
+    print pLaser
+    echo "Reverse PN voltage [V]: "
+    print SUPP
+    echo "a and b parameters:"
+    print a3
+    print b3
+    echo "Laser beam distance:"
+    print beamDistance
+    echo "PN junction area [um2]:"
+    print junctionS
+
+    let check = 'Iph'
+    let check2 = i(VVSS)[SIMSTEP]
+
+    echo "Iph [mA]:"
+    print check
+    print check2
+    print 'abs(check2 - check)'
+
+    * small difference may occur
+    if ('abs(check2 - check)' < 0.000001)
+         echo PASSED
+    else
+         echo FAILED
+    end
+
+.endc
+
+.end
