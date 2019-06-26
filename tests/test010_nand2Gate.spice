@@ -1,0 +1,65 @@
+*** TEST 010 - NAND2X1 test ***
+*
+* ngSPICE test for PLS experiments
+*
+* NAND2X1 test
+*
+* Author: Jan Belohoubek, 04/2019
+* jan.belohoubek@fit.cvut.cz
+*
+* https://users.fit.cvut.cz/~belohja4/
+*
+*
+* **************************************
+
+.include ../models.lib
+.include ../tsmc180nmcmos.lib
+
+* **************************************
+* --- Test Parameters ---
+* **************************************
+
+VvinA A 0 0 PWL(0ns 0V 10ns 0V 12ns SUPP 20ns SUPP 22ns 0V 30ns 0V 32ns SUPP )
+Vvinb B 0 0 PWL(0ns 0V 20ns 0V 22ns SUPP)
+
+* **************************************
+* --- Test ---
+* **************************************
+
+*Vtrig LaserTrig 0 0 PWL(0ns 0V 40ns 0V 42ns SUPP 62ns SUPP 64ns 0V 100ns 0V)
+
+.global LaserTrig 
+
+* --- outputs
+R1 VSS Y 1000000
+C1 VSS Y 1pF
+
+* --- circuit layout model
+* --- circuit layout model
+xnand Y VSS A B VDD NAND2X1 beamDistanceTop = 0 beamDistanceBot = 0
+
+* **************************************
+* --- Simulation Settings ---
+* **************************************
+
+.tran 0.1ns 100ns
+.param SIMSTEP = '100ns/0.10ns'
+.csparam SIMSTEP = {SIMSTEP}
+
+* **************************************
+* --- Simulation Control ---
+* **************************************
+
+* --- final value of Iph
+
+.control
+    run
+    
+    plot i(vvdd) i(vvss)
+    plot v(vss) v(vdd)
+    plot v(A) 
+    plot v(B)
+    plot v(Y)
+.endc
+
+.end

@@ -1,0 +1,83 @@
+*** TEST 001 ***
+*
+* ngSPICE test for PLS experiments
+*
+* NAND3 gate under PLS
+*
+* Author: Jan Belohoubek, 04/2019
+* jan.belohoubek@fit.cvut.cz
+*
+* https://users.fit.cvut.cz/~belohja4/
+*
+*
+* **************************************
+
+.include ../models.lib
+.include ../tsmc180nmcmos.lib
+
+* **************************************
+* --- Test ---
+* **************************************
+
+* --- Settings
+.param showPlots = 1
+* redefine ...
+.include test00X_settings.inc
+.csparam showPlots = {showPlots}
+.global showPlots
+* --- End of Settins
+
+Vtrig LaserTrig 0 0 PWL(0ns 0V 40ns 0V 42ns SUPP 62ns SUPP 64ns 0V 100ns 0V)
+
+.global LaserTrig 
+
+* --- outputs
+*R1 VSS out 1000000
+C1 VSS out 1pF
+
+* --- circuit layout model
+xnand out VSS A B VDD NAND2X1 beamDistanceTop = 0 beamDistanceBot = 0
+
+*XDiodePN VSS VDD LaserTrig SUBCKT_Iph_Psub_Nwell transConductance = a3 constCurrent = b3 distance = 0 PNArea = 'PsubNwellJunctionS_NAND2X1'
+
+
+* **************************************
+* --- Simulation Settings ---
+* **************************************
+
+* --- inputs
+* Vvin0 A 0 0 PWL(0ns 0V 20ns SUPP 22ns SUPP)
+* Vvin1 B 0 0 PWL(0ns 0V 21ns SUPP 23ns SUPP)
+
+.tran 0.10ns 100ns
+.param SIMSTEP = '100ns/1.0ns'
+.csparam SIMSTEP = {SIMSTEP}
+
+* **************************************
+* --- Simulation Control ---
+* **************************************
+
+.control
+    run
+    
+    if ('showPlots' > 0)
+      plot i(vvdd) i(vvss)
+      plot v(vss) v(vdd) v(LaserTrig)
+      plot v(A) v(B) v(out)
+    end
+    
+    print '(i(vvdd)[length(i(vvdd)) - 1] + i(vvdd)[length(i(vvdd)) - 2])/2'
+    print '(i(vvss)[length(i(vvss)) - 1] + i(vvss)[length(i(vvss)) - 2])/2'
+    
+    print i(vvdd)[length(i(vvdd))/2]
+    print i(vvss)[length(i(vvss))/2]
+    
+    print v(out)[length(v(out))/2]
+    
+    if ('showPlots' < 1)
+        quit
+    end
+    
+.endc
+
+.end

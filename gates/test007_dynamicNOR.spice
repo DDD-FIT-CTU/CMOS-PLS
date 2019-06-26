@@ -1,0 +1,113 @@
+*** TEST 007 ***
+*
+* ngSPICE test for PLS experiments
+*
+* dynamic NOR gate (not a standard cell (!!!) - it's a pseudo cell) under PLS
+*
+* Author: Jan Belohoubek, 04/2019
+* jan.belohoubek@fit.cvut.cz
+*
+* https://users.fit.cvut.cz/~belohja4/
+*
+*
+* **************************************
+
+.include ../models.lib
+.include ../tsmc180nmcmos.lib
+
+* **************************************
+* --- Test ---
+* **************************************
+
+* --- Settings
+.param showPlots = 1
+* redefine ...
+.include test00X_settings.inc
+.csparam showPlots = {showPlots}
+.global showPlots
+* --- End of Settins
+
+Vtrig LaserTrig 0 0 PWL(0ns 0V 40ns 0V 42ns SUPP 62ns SUPP 64ns 0V 100ns 0V)
+*Vtrig LaserTrig 0 0V
+
+.global LaserTrig 
+
+* --- outputs
+*R1 VSS out 1000000
+C1 VSS out 1pF
+
+
+*
+* 2-input NOR Gate
+*
+.subckt dynamicNOR Y VSS A B CLK VDD beamDistanceTop = 0 beamDistanceBot = 0
+
+Xpmos1 Y CLK VDD VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=2u ch_l=0.2u mos_ad=2.2p mos_pd=10.2u mos_as=2.52p mos_ps=13.4u
+
+Xnmos1 Y A VSS VSS LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=1u ch_ l=0.2u mos_ad=0.6p mos_pd=3.2u mos_as=1.32p mos_ps=9.2u
+Xnmos2 VSS B Y VSS LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=1u ch_ l=0.2u mos_ad=0p mos_pd=0u mos_as=0p mos_ps=0u
+
+C0 Y B 0.12fF
+C1 A B 0.18fF
+C3 Y A 0.07fF
+C4 B vdd 0.12fF
+C5 Y vdd 0.43fF
+C6 A vdd 0.12fF
+C7 vdd VSS 1.91fF
+C8 Y VSS 0.11fF
+C9 B VSS 0.28fF
+C10 A VSS 0.30fF
+
+.ends
+
+
+* --- circuit layout model
+xNOR out VSS A B CLK VDD dynamicNOR
+
+
+* **************************************
+* --- Simulation Settings ---
+* **************************************
+
+* --- inputs
+*Vvin0 A 0 0 PWL(0ns 0V 20ns SUPP 22ns SUPP)
+*Vvin1 B 0 0 PWL(0ns 0V 21ns SUPP 23ns SUPP)
+
+* precharge to 1
+Vvck CLK 0 0 PWL(0ns 0V 15ns 0V 17ns SUPP)
+
+* open pull-up transistor
+*Vvck CLK 0 0 PWL(0ns 0V 15ns 0V 17ns 0V)
+
+.tran 0.1ns 100ns
+.param SIMSTEP = '100ns/0.1ns'
+.csparam SIMSTEP = {SIMSTEP}
+
+* **************************************
+* --- Simulation Control ---
+* **************************************
+
+.control
+    run
+    
+    if ('showPlots' > 0)
+      plot i(vvdd) i(vvss)
+      plot v(vss) v(vdd) v(LaserTrig)
+      plot v(A) v(B) v(CLK) v(out)
+    end
+    
+    print '(i(vvdd)[length(i(vvdd)) - 1] + i(vvdd)[length(i(vvdd)) - 2])/2'
+    print '(i(vvss)[length(i(vvss)) - 1] + i(vvss)[length(i(vvss)) - 2])/2'
+    
+    print i(vvdd)[length(i(vvdd))/2]
+    print i(vvss)[length(i(vvss))/2]
+    
+    print v(out)[length(v(out))/2]
+    
+    if ('showPlots' < 1)
+        quit
+    end
+    
+.endc
+
+.end

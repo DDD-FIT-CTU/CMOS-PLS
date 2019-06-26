@@ -1,10 +1,10 @@
-*** TEST 002 ***
+*** TEST 009 - INVX1 test ***
 *
 * ngSPICE test for PLS experiments
 *
-* Current direction demonstration
+* INVX1 test
 *
-* Author: Jan Belohoubek, 01/2019
+* Author: Jan Belohoubek, 04/2019
 * jan.belohoubek@fit.cvut.cz
 *
 * https://users.fit.cvut.cz/~belohja4/
@@ -13,37 +13,49 @@
 * **************************************
 
 .include ../models.lib
-
+.include ../tsmc180nmcmos.lib
 
 * **************************************
 * --- Test Parameters ---
 * **************************************
 
+Vvin0 A 0 0 PWL(0ns 0V 20ns SUPP 22ns SUPP)
+
 * **************************************
 * --- Test ---
 * **************************************
 
-R1 VSS VDD 100
+*Vtrig LaserTrig 0 0 PWL(0ns 0V 40ns 0V 42ns SUPP 62ns SUPP 64ns 0V 100ns 0V)
+
+.global LaserTrig 
+
+* --- outputs
+R1 VSS Y 1000000
+C1 VSS Y 1pF
+
+* --- circuit layout model
+xinv Y VSS A VDD INVX1 beamDistanceTop = 0 beamDistanceBot = 0
 
 * **************************************
 * --- Simulation Settings ---
 * **************************************
 
-.tran .1ns 100ns
+.tran 0.1ns 100ns
+.param SIMSTEP = '100ns/0.1ns'
+.csparam SIMSTEP = {SIMSTEP}
 
 * **************************************
 * --- Simulation Control ---
 * **************************************
 
+* --- final value of Iph
+
 .control
     run
-    plot i(vvss) i(vvdd)
-
-    echo "Current flow FROM the NODE is NEGATIVE"
-    echo "Current flow TO   the NODE is POSITIVE"
-
-    echo PASSED
     
+    plot i(vvdd) i(vvss)
+    plot v(vss) v(vdd)
+    plot v(A) v(Y)
 .endc
 
 .end

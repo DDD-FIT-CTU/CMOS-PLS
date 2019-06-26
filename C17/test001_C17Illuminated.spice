@@ -1,0 +1,94 @@
+*** TEST 001 ***
+*
+* ngSPICE test for PLS experiments
+*
+* C17 PLS test - C17 area illuminated
+*
+* Author: Jan Belohoubek, 04/2019
+* jan.belohoubek@fit.cvut.cz
+*
+* https://users.fit.cvut.cz/~belohja4/
+*
+*
+* **************************************
+
+.include ../models.lib
+.include ../tsmc180nmcmos.lib
+.include C17.spice
+
+* **************************************
+* --- Test ---
+* **************************************
+
+* --- Settings
+.param showPlots = 1
+* redefine ...
+.include test00X_settings.inc
+.csparam showPlots = {showPlots}
+.global showPlots
+* --- End of Settins
+
+Vtrig LaserTrig 0 0 PWL(0ns 0V 40ns 0V 42ns SUPP 62ns SUPP 64ns 0V 100ns 0V)
+
+.param distGate1Top = 0
+.param distGate2Top = 0
+.param distGate3Top = 0
+.param distGate4Top = 0
+.param distGate5Top = 0
+.param distGate6Top = 0
+ 
+.param distGate1Bot = 0
+.param distGate2Bot = 0
+.param distGate3Bot = 0
+.param distGate4Bot = 0
+.param distGate5Bot = 0
+.param distGate6Bot = 0
+
+.global LaserTrig distGate1Top distGate2Top distGate3Top distGate4Top distGate5Top distGate6Top distGate1Bot distGate2Bot distGate3Bot distGate4Bot distGate5Bot distGate6Bot
+
+* --- inputs
+* Vvin0 in0 0 0 PWL(0ns 0V 20ns SUPP 22ns SUPP)
+* Vvin1 in1 0 0 PWL(0ns 0V 21ns SUPP 23ns SUPP)
+* Vvin2 in2 0 0 PWL(0ns 0V 22ns 0V   24ns 0V  )
+* Vvin3 in3 0 0 PWL(0ns 0V 22ns SUPP 24ns SUPP)
+* Vvin4 in4 0 0 PWL(0ns 0V 22ns 0V   24ns 0V  )
+
+* --- outputs
+C1 VSS out0 10fF
+C1 VSS out1 10fF
+
+* --- circuit layout model
+XC17 in0 in1 in2 in3 in4 out0 out1 VSS VDD C17_180nm
+
+
+* **************************************
+* --- Simulation Settings ---
+* **************************************
+
+.tran 0.1ns 100ns
+.param SIMSTEP = '100ns/0.1ns'
+.csparam SIMSTEP = {SIMSTEP}
+
+* **************************************
+* --- Simulation Control ---
+* **************************************
+
+.control
+    run
+    
+    if ('showPlots' > 0)   
+        plot i(vvdd) i(vvss)
+        
+        plot v(in0) v(in1) v(in2) 
+        plot v(out0) v(out1)
+    end
+    
+    print i(vvdd)[500]
+    
+    if ('showPlots' < 1)
+        quit
+    end
+    
+.endc
+
+.end

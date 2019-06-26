@@ -1,4 +1,4 @@
-.param laserLocationX = 5
-.param laserlocationY = 1
+.param laserLocationX = 3
+.param laserlocationY = 0
 .param majorityInputValue = 0
-.param showPlots = 1
+.param showPlots = 0

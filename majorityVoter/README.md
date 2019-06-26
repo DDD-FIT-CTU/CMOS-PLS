@@ -1,0 +1,1 @@
+This is conventional majority voter circuit composed of 6 2-input NAND gates.

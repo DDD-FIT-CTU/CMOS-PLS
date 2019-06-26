@@ -1,0 +1,71 @@
+*** TEST 008 - short current(s) ***
+*
+* ngSPICE test for PLS experiments
+*
+* This test allows to simulate CMOS short currents;
+*
+* For different behaviour simulation comment(-out) subcircuit instances
+* or change Vvin0/Vvio1/Vtrig voltage sources
+*
+* Author: Jan Belohoubek, 04/2019
+* jan.belohoubek@fit.cvut.cz
+*
+* https://users.fit.cvut.cz/~belohja4/
+*
+*
+* **************************************
+
+.include ../models.lib
+.include ../tsmc180nmcmos.lib
+
+* **************************************
+* --- Test Parameters ---
+* **************************************
+
+Vvin0 A 0 0 PWL(0ns 0V 20ns 0V 22ns 0V)
+Vvin1 B 0 0 PWL(0ns 0V 21ns SUPP 22ns SUPP)
+
+* **************************************
+* --- Test ---
+* **************************************
+
+*Vtrig LaserTrig 0 0 PWL(0ns 0V 40ns 0V 42ns SUPP 62ns SUPP 64ns 0V 100ns 0V)
+
+.global LaserTrig 
+
+* --- outputs
+R1 VSS Y 1000000
+C1 VSS Y 1pF
+
+* --- circuit layout model
+Xpmos1 Y A VDD VDD VSS LaserTrig SUBCKT_PMOS beamDistance = 0 ch_w=2u ch_l=0.2u mos_ad=1.2p mos_pd=5.2u mos_as=2p mos_ps=10u
+*Xpmos2 Y A VDD VDD VSS LaserTrig SUBCKT_PMOS beamDistance = 0 ch_w=2u ch_l=0.2u mos_ad=0p mos_pd=0u mos_as=0p mos_ps=0u
+
+*XDiodePN VSS VDD LaserTrig SUBCKT_Iph_Psub_Nwell transConductance = a3 constCurrent = b3 distance = 0 PNArea = 'PsubNwellJunctionS_NAND2X1'
+
+Xnmos1 MIDDLE B VSS VSS LaserTrig SUBCKT_NMOS beamDistance = 0 ch_w=2u ch_l=0.2u mos_ad=0.6p mos_pd=4.6u mos_as=1p mos_ps=5u
+Xnmos2 Y B MIDDLE VSS LaserTrig SUBCKT_NMOS beamDistance = 0 ch_w=2u ch_l=0.2u mos_ad=1p mos_pd=5u mos_as=0p mos_ps=0u
+
+* **************************************
+* --- Simulation Settings ---
+* **************************************
+
+.tran 0.1ns 100ns
+.param SIMSTEP = '100ns/0.1ns'
+.csparam SIMSTEP = {SIMSTEP}
+
+* **************************************
+* --- Simulation Control ---
+* **************************************
+
+* --- final value of Iph
+
+.control
+    run
+    
+    plot i(vvdd) i(vvss)
+    plot v(vss) v(vdd)
+    plot v(A) v(B) v(Y)
+.endc
+
+.end

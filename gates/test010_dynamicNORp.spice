@@ -1,0 +1,113 @@
+*** TEST 010 ***
+*
+* ngSPICE test for PLS experiments
+*
+* dynamic NOR (positive) gate (not a standard cell (!!!) - it's a pseudo cell) under PLS
+*
+* Author: Jan Belohoubek, 04/2019
+* jan.belohoubek@fit.cvut.cz
+*
+* https://users.fit.cvut.cz/~belohja4/
+*
+*
+* **************************************
+
+.include ../models.lib
+.include ../tsmc180nmcmos.lib
+
+* **************************************
+* --- Test ---
+* **************************************
+
+* --- Settings
+.param showPlots = 1
+* redefine ...
+.include test00X_settings.inc
+.csparam showPlots = {showPlots}
+.global showPlots
+* --- End of Settins
+
+Vtrig LaserTrig 0 0 PWL(0ns 0V 40ns 0V 42ns SUPP 62ns SUPP 64ns 0V 100ns 0V)
+*Vtrig LaserTrig 0 0V
+
+.global LaserTrig 
+
+* --- outputs
+*R1 VSS out 1000000
+C1 VSS out 1pF
+
+
+*
+* 2-input NOR Gate
+*
+.subckt dynamicNORp Y VSS A B CLK VDD beamDistanceTop = 0 beamDistanceBot = 0
+
+Xpmos1 MIDDLE A VDD VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=4u ch_l=0.2u mos_ad=1.2p mos_pd=8.6u mos_as=2.32p mos_ps=12.2u
+Xpmos2 Y B MIDDLE VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=4u ch_l=0.2u mos_ad=2p mos_pd=9u mos_as=0p mos_ps=0u
+
+Xnmos1 Y CLK VSS VSS LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=1u ch_l=0.2u mos_ad=0.6p mos_pd=3.2u mos_as=1.32p mos_ps=9.2u
+
+C0 Y B 0.12fF
+C1 A B 0.18fF
+C2 Y MIDDLE 0.01fF
+C3 Y A 0.07fF
+C4 B vdd 0.12fF
+C5 Y vdd 0.43fF
+C6 A vdd 0.12fF
+C7 vdd VSS 1.91fF
+C8 Y VSS 0.11fF
+C9 B VSS 0.28fF
+C10 A VSS 0.30fF
+
+.ends
+
+
+* --- circuit layout model
+xNOR out VSS A B CLK VDD dynamicNORp
+
+
+* **************************************
+* --- Simulation Settings ---
+* **************************************
+
+* --- inputs
+*Vvin0 A 0 0 PWL(0ns 0V 20ns SUPP 22ns SUPP)
+*Vvin1 B 0 0 PWL(0ns 0V 21ns SUPP 23ns SUPP)
+
+* precharge to 0
+VvCK CLK 0 0 PWL(0ns SUPP 15ns SUPP 17ns 0V)
+* open pull-down transistor
+*VvCK CLK 0 0 PWL(0ns SUPP 15ns SUPP 17ns SUPP)
+
+.tran 0.1ns 100ns
+.param SIMSTEP = '100ns/0.1ns'
+.csparam SIMSTEP = {SIMSTEP}
+
+* **************************************
+* --- Simulation Control ---
+* **************************************
+
+.control
+    run
+    
+    if ('showPlots' > 0)
+      plot i(vvdd) i(vvss)
+      plot v(vss) v(vdd) v(LaserTrig)
+      plot v(A) v(B) v(CLK) v(out)
+    end
+    
+    print '(i(vvdd)[length(i(vvdd)) - 1] + i(vvdd)[length(i(vvdd)) - 2])/2'
+    print '(i(vvss)[length(i(vvss)) - 1] + i(vvss)[length(i(vvss)) - 2])/2'
+    
+    print i(vvdd)[length(i(vvdd))/2]
+    print i(vvss)[length(i(vvss))/2]
+    
+    print v(out)[length(v(out))/2]
+    
+    if ('showPlots' < 1)
+        quit
+    end
+    
+.endc
+
+.end

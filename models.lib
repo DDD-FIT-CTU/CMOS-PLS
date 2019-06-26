@@ -35,28 +35,25 @@ VVSS VSS 0 0V
 .param LENS_20X = 1
 .param LENS_100X = 2
 
-.param LENS = 'LENS_20X'
+.param LENS = 'LENS_5X'
 
 * --- PN area junction (use [um]!)
 .if (TECHNOLOGY == TECHNOLOGY_TSMC180nm)
-  .param NplusPsubJunctionW = 2
-  .param NplusPsubJunctionL = 0.4
+  .param PsubNwellJunctionS_INVX1 = '3 * 5.7'
+  .csparam PsubNwellJunctionS_INVX1 = {PsubNwellJunctionS_INVX1}
   
-  .param PplusNwellJunctionW = 2
-  .param PplusNwellJunctionL = 0.4
+  .param PsubNwellJunctionS_NAND2X1 = '3 * 5.7'
+  .csparam PsubNwellJunctionS_NAND2X1 = {PsubNwellJunctionS_NAND2X1}
   
-  .param PsubNwellJunctionW = 3
-  .param PsubNwellJunctionL = 5.7
+  .param PsubNwellJunctionS_NAND3X1 = '4.8 * 5.7'
+  .csparam PsubNwellJunctionS_NAND3X1 = {PsubNwellJunctionS_NAND3X1}
+  
+  .param PsubNwellJunctionS_NOR2X1 = '4 * 5.7'
+  .csparam PsubNwellJunctionS_NOR2X1 = {PsubNwellJunctionS_NOR2X1}
+  
+  .param PsubNwellJunctionS_NOR3X1 = '7.5 * 5.7'
+  .csparam PsubNwellJunctionS_NOR3X1 = {PsubNwellJunctionS_NOR3X1}
 .endif
-
-.param NplusPsubJunctionS = 'NplusPsubJunctionW * NplusPsubJunctionL'
-.csparam NplusPsubJunctionS = {NplusPsubJunctionS}
-
-.param PplusNwellJunctionS = 'PplusNwellJunctionW * PplusNwellJunctionL'
-.csparam PplusNwellJunctionS = {PplusNwellJunctionS}
-
-.param PsubNwellJunctionS = 'PsubNwellJunctionW * PsubNwellJunctionL'
-.csparam PsubNwellJunctionS = {PsubNwellJunctionS}
 
 * --- NMOS parameters
 * W = width
@@ -80,7 +77,7 @@ VVSS VSS 0 0V
 * **************************************
 
 * --- laserPower in [mW] ---
-.param pLaser = 1250
+.param pLaser = 50
 .csparam pLaser = {pLaser}
 
 * following parameters were found in:
@@ -228,7 +225,7 @@ VVSS VSS 0 0V
   S1 psub ctrl psub vopen tmpSw OFF
   S2 vopen ctrl vopen psub tmpSw ON
   
-  * I don't know here ...
+  * I'm not sure here ...
   R1 drain psub2 10k
   S3 psub2 psub psub vopen tmpSw OFF
   
@@ -239,68 +236,87 @@ VVSS VSS 0 0V
 *
 * Note: set param commonDrain/commonSource to 2 if drain/source is common for two transistors in series
 *
-.subckt SUBCKT_NMOS drain source gate psub trig beamDistance = 0 commonDrain = 1 commonSource = 1
+.subckt SUBCKT_NMOS drain gate source psub trig beamDistance = 0 placeDiodes = 1 ch_w = NMOSw ch_l = NMOSl mos_ad = NMOSad mos_pd = NMOSpd mos_as = NMOSas mos_ps = NMOSps
 
   * NMOS model
   * based on https://tel.archives-ouvertes.fr/tel-00958998/document; page 56
   * my French == NULL ...  :-( This may be completelly buggy!
 
 .if (TECHNOLOGY == TECHNOLOGY_TSMC180nm)
-  M1 drain gate source psub TSMC180nmN w = NMOSw l = NMOSl ad = NMOSad pd = NMOSpd as = NMOSas ps = NMOSps
+  M1 drain gate source psub TSMC180nmN w = ch_w l = ch_l ad = mos_ad pd = mos_pd as = mos_as ps = mos_ps
 .endif
 
 .if (TECHNOLOGY == TECHNOLOGY_PTM90nm)
-  M1 drain gate source psub PTM90nmNMOS w = NMOSw l = NMOSl ad = NMOSad pd = NMOSpd as = NMOSas ps = NMOSps
+  M1 drain gate source psub PTM90nmNMOS w = ch_w l = ch_l ad = mos_ad pd = mos_pd as = mos_as ps = mos_ps
 .endif
 
+  * Xsd drain source psubIn SUBCKT_SD
+  
+.if (placeDiodes > 0)
   R2 psubIn interRC 0.001
   C1 interRC psub 1fF
   R3 psubIn psub 10k
-
-  Xsd drain source psubIn SUBCKT_SD
-  XcsrcD drain psubIn trig SUBCKT_Iph_nplus_psub transConductance = a constCurrent = b distance = beamDistance PNArea = 'NplusPsubJunctionS/commonDrain'
-  XcsrcS psubIn source trig SUBCKT_Iph_nplus_psub transConductance = a constCurrent = b distance = beamDistance PNArea = 'NplusPsubJunctionS/commonSource'
+  
+  .if (mos_ad > 0p)
+    XcsrcD drain psubIn trig SUBCKT_Iph_nplus_psub transConductance = a constCurrent = b distance = beamDistance PNArea = 'mos_ad * 10^12'
+  .endif
+  
+  .if (mos_as > 0p)
+    XcsrcS psubIn source trig SUBCKT_Iph_nplus_psub transConductance = a constCurrent = b distance = beamDistance PNArea = 'mos_as * 10^12'
+  .endif
+.endif
 
 .ends
 
 *
 * Note: set param commonDrain/commonSource to 2 if drain/source is common for two transistors in series
 *
-.subckt SUBCKT_PMOS drain source gate nwell psub trig beamDistance = 0 commonDrain = 1 commonSource = 1
+.subckt SUBCKT_PMOS drain gate source nwell psub trig beamDistance = 0 placeDiodes = 1 ch_w = NMOSw ch_l = NMOSl mos_ad = NMOSad mos_pd = NMOSpd mos_as = NMOSas mos_ps = NMOSps
 
   * PMOS model -- simplified
   * check for bugs!
   
 .if (TECHNOLOGY == TECHNOLOGY_TSMC180nm)
-  M1 drain gate source nwell TSMC180nmP w = NMOSw l = NMOSl ad = NMOSad pd = NMOSpd as = NMOSas ps = NMOSps
+  M1 drain gate source nwell TSMC180nmP w = ch_w l = ch_l ad = mos_ad pd = mos_pd as = mos_as ps = mos_ps
 .endif
 
 .if (TECHNOLOGY == TECHNOLOGY_PTM90nm)
-  M1 drain gate source nwell PTM90nmPMOS w = NMOSw l = NMOSl ad = NMOSad pd = NMOSpd as = NMOSas ps = NMOSps
+  M1 drain gate source nwell PTM90nmPMOS w = ch_w l = ch_l ad = mos_ad pd = mos_pd as = mos_as ps = mos_ps
 .endif
   
   
-  XDiodeD pplusD nwell trig SUBCKT_Iph_Pplus_Nwell transConductance = a2 constCurrent = b2 distance = beamDistance PNArea = 'PplusNwellJunctionS/commonDrain'
+.if (placeDiodes > 0)
+  .if (mos_ad > 0p)
+    XDiodeD pplusD nwell trig SUBCKT_Iph_Pplus_Nwell transConductance = a2 constCurrent = b2 distance = beamDistance PNArea = 'mos_ad * 10^12'
+  .endif
   
-  XDiodeS pplusS nwell trig SUBCKT_Iph_Pplus_Nwell transConductance = a2 constCurrent = b2 distance = beamDistance PNArea = 'PplusNwellJunctionS/commonSource'
+  .if (mos_as > 0p)
+    XDiodeS pplusS nwell trig SUBCKT_Iph_Pplus_Nwell transConductance = a2 constCurrent = b2 distance = beamDistance PNArea = 'mos_as * 10^12'
+  .endif
   
   R1 pplusD drain 0.001
   R2 pplusS source 0.001
   
+.endif
+  
   *Rnp nwell psub 100000
 
-  XDiodePN psub nwell trig SUBCKT_Iph_Psub_Nwell transConductance = a3 constCurrent = b3 distance = beamDistance PNArea = PsubNwellJunctionS
+  *XDiodePN psub nwell trig SUBCKT_Iph_Psub_Nwell transConductance = a3 constCurrent = b3 distance = beamDistance PNArea = 'PsubNwellJunctionS'
   
 .ends
 
+*
+* 2-input NAND Gate
+*
+.subckt NAND2X1 Y VSS A B VDD beamDistanceTop = 0 beamDistanceBot = 0
 
-.subckt NAND2X1 Y VSS A B MIDDLE VDD beamDistanceTop = 0 beamDistanceBot = 0
+Xpmos1 Y A VDD VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=2u ch_l=0.2u mos_ad=1.2p mos_pd=5.2u mos_as=2p mos_ps=10u
+Xpmos2 VDD B Y VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=2u ch_l=0.2u mos_ad=0p mos_pd=0u mos_as=0p mos_ps=0u
 
-Xpmos1 Y VDD A VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop commonDrain = 2
-Xpmos2 Y VDD B VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop commonDrain = 2
+*XDiodePN VSS VDD LaserTrig SUBCKT_Iph_Psub_Nwell transConductance = a3 constCurrent = b3 distance = beamDistanceTop PNArea = 'PsubNwellJunctionS_NAND2X1'
 
-Xnmos1 MIDDLE VSS A VSS LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot commonDrain = 2
-Xnmos2 Y MIDDLE B VSS LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot commonSource = 2
+Xnmos1 MIDDLE A VSS VSS LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=2u ch_l=0.2u mos_ad=0.6p mos_pd=4.6u mos_as=1p mos_ps=5u
+Xnmos2 Y B MIDDLE VSS LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=2u ch_l=0.2u mos_ad=1p mos_pd=5u mos_as=0p mos_ps=0u
 
 C0 MIDDLE Y 0.01fF
 C1 VSS Y 0.09fF
@@ -316,4 +332,184 @@ C10 Y VSS 0.11fF
 C11 B VSS 0.19fF
 C12 A VSS 0.25fF
 C13 VDD VSS 1.73fF
+.ends
+
+*
+* 3-input NAND Gate
+*
+.subckt NAND3X1 Y VSS A B C VDD beamDistanceTop = 0 beamDistanceBot = 0
+
+Xpmos1 Y A VDD VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=2u ch_l=0.2u mos_ad=2.2p mos_pd=10.2u mos_as=2.52p mos_ps=13.4u
+Xpmos2 VDD B Y VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=2u ch_l=0.2u mos_ad=0p mos_pd=0u mos_as=0p mos_ps=0u
+Xpmos3 Y C VDD VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=2u ch_l=0.2u mos_ad=0p mos_pd=0u mos_as=0p mos_ps=0u
+
+*XDiodePN VSS VDD LaserTrig SUBCKT_Iph_Psub_Nwell transConductance = a3 constCurrent = b3 distance = beamDistanceTop PNArea = 'PsubNwellJunctionS_NAND3X1'
+
+Xnmos1 MIDDLE A VSS VSS LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=3u ch_ l=0.2u mos_ad=0.9p mos_pd=6.6u mos_as=1.82p mos_ps=10.2u
+Xnmos2 MIDDLE2 B MIDDLE VSS LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=3u lch_=0.2u mos_ad=0.9p mos_pd=6.6u mos_as=0p mos_ps=0u
+Xnmos3 Y C MIDDLE2 VSS LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=3u ch_l=0.2u mos_ad=1.5p mos_pd=7u mos_as=0p mos_ps=0u
+
+C0 A B 0.31fF
+C1 vdd A 0.27fF
+C2 Y C 0.16fF
+C3 Y B 0.02fF
+C4 C B 0.10fF
+C5 Y vdd 0.96fF
+C6 vdd C 0.27fF
+C7 vdd B 0.22fF
+C8 vdd VSS 2.29fF
+C9 Y VSS 0.09fF
+C10 C VSS 0.15fF
+C11 B VSS 0.17fF
+C12 A VSS 0.11fF
+
+.ends
+
+*
+* 2-input NOR Gate
+*
+.subckt NOR2X1 Y VSS A B VDD beamDistanceTop = 0 beamDistanceBot = 0
+
+Xpmos1 MIDDLE A VDD VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=4u ch_l=0.2u mos_ad=1.2p mos_pd=8.6u mos_as=2.32p mos_ps=12.2u
+Xpmos2 Y B MIDDLE VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=4u ch_l=0.2u mos_ad=2p mos_pd=9u mos_as=0p mos_ps=0u
+
+*XDiodePN VSS VDD LaserTrig SUBCKT_Iph_Psub_Nwell transConductance = a3 constCurrent = b3 distance = beamDistanceTop PNArea = 'PsubNwellJunctionS_NOR2X1'
+
+Xnmos1 Y A VSS VSS LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=1u ch_l=0.2u mos_ad=0.6p mos_pd=3.2u mos_as=1.32p mos_ps=9.2u
+Xnmos2 VSS B Y VSS LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=1u ch_l=0.2u mos_ad=0p mos_pd=0u mos_as=0p mos_ps=0u
+
+C0 Y B 0.12fF
+C1 A B 0.18fF
+C2 Y MIDDLE 0.01fF
+C3 Y A 0.07fF
+C4 B vdd 0.12fF
+C5 Y vdd 0.43fF
+C6 A vdd 0.12fF
+C7 vdd VSS 1.91fF
+C8 Y VSS 0.11fF
+C9 B VSS 0.28fF
+C10 A VSS 0.30fF
+
+.ends
+
+
+*
+* 3-input NOR Gate
+*
+.subckt NOR3X1 Y VSS A B C VDD beamDistanceTop = 0 beamDistanceBot = 0
+
+Xpmos1 VDD A MIDDLE VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=3u ch_l=0.2u mos_ad=2.44p mos_pd=13.6u mos_as=4.78p mos_ps=21.2u
+Xpmos2 MIDDLE A VDD VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=3u ch_l=0.2u mos_ad=0p mos_pd=0u mos_as=0p mos_ps=0u
+
+Xpmos3 MIDDLE2 B MIDDLE VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=3u ch_l=0.2u mos_ad=4.8p  mos_pd=21.2u mos_as=0p    mos_ps=0u
+Xpmos4 MIDDLE B MIDDLE2 VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=3u ch_l=0.2u mos_ad=0p mos_pd=0u mos_as=0p    mos_ps=0u
+
+Xpmos5 Y C MIDDLE2 VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=3u ch_l=0.2u mos_ad=1.8p mos_pd=7.2u mos_as=0p    mos_ps=0u
+Xpmos6 MIDDLE2 C Y VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=3u ch_l=0.2u mos_ad=0p mos_pd=0u mos_as=0p mos_ps=0u
+
+*XDiodePN VSS VDD LaserTrig SUBCKT_Iph_Psub_Nwell transConductance = a3 constCurrent = b3 distance = beamDistanceTop PNArea = 'PsubNwellJunctionS_NOR3X1'
+
+Xnmos1 Y A VSS VSS LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=1u ch_l=0.2u mos_ad=1.1p mos_pd=6.2u mos_as=1.74p mos_ps=12.6u
+Xnmos2 VSS B Y VSS LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=1u ch_l=0.2u mos_ad=0p mos_pd=0u mos_as=0p mos_ps=0u
+Xnmos3 Y C VSS VSS LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=1u ch_l=0.2u mos_ad=0p mos_pd=0u mos_as=0p mos_ps=0u
+
+C0 MIDDLE2 MIDDLE 0.94fF
+C1 B vdd 0.22fF
+C2 A vdd 0.24fF
+C3 C B 0.16fF
+C4 MIDDLE vdd 1.16fF
+C5 MIDDLE2 vdd 0.45fF
+C6 B Y 0.02fF
+C7 MIDDLE2 C 0.02fF
+C8 Y A 0.01fF
+C9 MIDDLE2 Y 0.76fF
+C10 C vdd 0.30fF
+C11 Y vdd 0.51fF
+C12 B A 0.23fF
+C13 MIDDLE B 0.03fF
+C14 C Y 0.12fF
+C15 MIDDLE A 0.03fF
+C16 MIDDLE2 B 0.02fF
+C17 vdd VSS 3.59fF
+C18 Y VSS 0.18fF
+C19 C VSS 0.29fF
+C20 MIDDLE2 VSS 0.00fF
+C21 MIDDLE VSS 0.00fF
+C22 B VSS 0.29fF
+C23 A VSS 0.29fF
+
+.ends
+
+*
+* INV Gate
+*
+.subckt INVX1 Y VSS A VDD beamDistanceTop = 0 beamDistanceBot = 0
+
+Xpmos Y A VDD VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=2u ch_l=0.2u mos_ad=1p mos_pd=5u mos_as=1.16p mos_ps=6.6u
+
+*XDiodePN VSS VDD LaserTrig SUBCKT_Iph_Psub_Nwell transConductance = a3 constCurrent = b3 distance = beamDistanceTop PNArea = 'PsubNwellJunctionS_INVX1'
+
+Xnmos Y A VSS VSS LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=1u ch_l=0.2u mos_ad=0.5p mos_pd=3u mos_as=0.66p mos_ps=4.6u
+
+C0 A Y 0.08fF
+C1 A vdd 0.26fF
+C2 Y vdd 0.55fF
+C3 vdd VSS 1.64fF
+C4 Y VSS 0.07fF
+C5 A VSS 0.23fF
+
+.ends
+
+
+*
+* 2-input XOR Gate
+*
+.subckt XOR2X1 Y VSS A B VDD beamDistanceTop = 0 beamDistanceBot = 0
+
+Xpmos0 VDD A A_NEG vdd VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=4u ch_l=0.2u mos_ad=6.24p mos_pd=25.2u mos_as=2p mos_ps=9u
+
+Xpmos1 2 B_NEG vdd vdd VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=4u ch_l=0.2u mos_ad=1.2p mos_pd=8.6u mos_as=0p mos_ps=0u
+
+Xpmos2 Y A 2 vdd VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=4u ch_l=0.2u mos_ad=4p mos_pd=10u mos_as=0p mos_ps=0u
+
+Xpmos3 4 A_NEG Y vdd VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=4u ch_l=0.2u mos_ad=1.2p mos_pd=8.6u mos_as=0p mos_ps=0u
+
+Xpmos4 vdd B 4 vdd VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=4u ch_l=0.2u mos_ad=0p mos_pd=0u mos_as=0p mos_ps=0u
+
+Xpmos5 B_NEG B VDD VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=4u ch_l=0.2u mos_ad=2p mos_pd=9u mos_as=0p mos_ps=0u
+
+
+Xnmos0 VSS A A_NEG VSS LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=2u ch_l=0.2u mos_ad=3.44p mos_pd=17.2u mos_as=1p mos_ps=5u
+
+Xnmos1 5 B_NEG VSS VSS LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=2u ch_l=0.2u mos_ad=0.6p mos_pd=4.6u mos_as=0p mos_ps=0u
+
+Xnmos2 Y A_NEG 5 VSS LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=2u ch_l=0.2u mos_ad=2p mos_pd=6u mos_as=0p mos_ps=0u
+
+Xnmos3 6 A Y VSS LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=2u ch_l=0.2u mos_ad=0.6p mos_pd=4.6u mos_as=0p mos_ps=0u
+
+Xnmos4 VSS B 6 VSS LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=2u ch_l=0.2u mos_ad=0p mos_pd=0u mos_as=0p mos_ps=0u
+
+Xnmos5 B_NEG B VSS VSS LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=2u ch_l=0.2u mos_ad=1p mos_pd=5u mos_as=0p mos_ps=0u
+
+C0 B vdd 0.16fF
+C1 B A_NEG 0.15fF
+C2 B B_NEG 0.14fF
+C3 B A 0.04fF
+C4 Y vdd 0.26fF
+C5 A_NEG vdd 0.94fF
+C6 B_NEG vdd 0.91fF
+C7 A vdd 0.13fF
+C8 Y A_NEG 0.22fF
+C9 Y B_NEG 0.05fF
+C10 A_NEG B_NEG 0.68fF
+C11 Y A 0.09fF
+C12 A_NEG A 0.32fF
+C13 B_NEG A 0.39fF
+C14 vdd VSS 3.41fF
+C15 Y VSS 0.07fF
+C16 B VSS 0.29fF
+C17 A_NEG VSS 0.34fF
+C18 B_NEG VSS 0.30fF
+C19 A VSS 0.49fF
+
 .ends
