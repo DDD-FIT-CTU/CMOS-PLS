@@ -1,0 +1,35 @@
+*** static inverter ***
+*
+* ngSPICE another 3-inverter chain optimized by hand
+*
+*
+* Author: Jan Belohoubek, 01/2020
+* jan.belohoubek@fit.cvut.cz
+*
+* https://users.fit.cvut.cz/~belohja4/
+*
+*
+* **************************************
+
+.subckt BUFF A O VSS VDD
+
+*** Compensation Inverter Chain ***
+XpmosCINV O1 A VDD VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=2u ch_l=0.2u mos_ad=1p mos_pd=5u mos_as=1.16p mos_ps=6.6u
+XnmosCINV O1 A VSS VSS psubIn LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=1u ch_l=0.2u mos_ad=0.5p mos_pd=3u mos_as=0.66p mos_ps=4.6u
+
+XpmosCINV2 O2 O1 VDD VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=2u ch_l=0.2u mos_ad=1p mos_pd=5u mos_as=1.16p mos_ps=6.6u
+XnmosCINV2 O2 O1 VSS VSS psubIn LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=1u ch_l=0.2u mos_ad=0.5p mos_pd=3u mos_as=0.66p mos_ps=4.6u
+
+XpmosCINV3 O3 O2 VDD VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=2u ch_l=0.2u mos_ad=1p mos_pd=5u mos_as=1.16p mos_ps=6.6u
+XnmosCINV3 O3 O2 VSS VSS psubIn LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=1u ch_l=0.2u mos_ad=0.5p mos_pd=3u mos_as=0.66p mos_ps=4.6u
+
+XpmosCINV4 O4 O3 VDD VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=2u ch_l=0.2u mos_ad=1p mos_pd=5u mos_as=1.16p mos_ps=6.6u
+XnmosCINV4 O4 O3 VSS VSS psubIn LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=1u ch_l=0.2u mos_ad=0.5p mos_pd=3u mos_as=0.66p mos_ps=4.6u
+
+XpmosCINV5 O O4 VDD VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=2u ch_l=0.2u mos_ad=1p mos_pd=5u mos_as=1.16p mos_ps=6.6u
+XnmosCINV5 O O4 VSS VSS psubIn LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=1u ch_l=0.2u mos_ad=0.5p mos_pd=3u mos_as=0.66p mos_ps=4.6u
+
+* common NMOS substarte virtual node
+XpsubIn psubIn VSS PSUB_IN
+
+.ends

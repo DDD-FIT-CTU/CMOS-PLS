@@ -41,7 +41,6 @@ R1 VSS VDD 100
 
     echo "Current flow FROM the NODE is NEGATIVE"
     echo "Current flow TO   the NODE is POSITIVE"
-
     echo PASSED
     
 .endc

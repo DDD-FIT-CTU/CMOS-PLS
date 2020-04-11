@@ -1,0 +1,115 @@
+*** TEST 007 : DualRail Wire Reset ***
+*
+* ngSPICE test for PLS experiments
+*
+* DualRail Reset PLS test - gate area illuminated
+*
+* Author: Jan Belohoubek, 01/2020
+* jan.belohoubek@fit.cvut.cz
+*
+* https://users.fit.cvut.cz/~belohja4/
+*
+*
+* **************************************
+
+* input high/low value
+.param INHIGH = 1.8V
+.param INLOW = 0V
+.csparam INHIGH = {INHIGH}
+
+.csparam INLOW = {INLOW}
+
+.include ../models.lib
+.include ../tsmc180nmcmos.lib
+.include models/buffer.spice
+
+* **************************************
+* --- Test ---
+* **************************************
+
+* --- Settings
+.param showPlots = 1
+.param writeFile = 0
+.param pLaser = 200
+.csparam pLaser = {pLaser}
+* redefine ...
+*.include test00X_settings.inc
+.csparam showPlots = {showPlots}
+.csparam writeFile = {writeFile}
+.global showPlots writeFile
+* --- End of Settins
+
+Vtrig LaserTrig 0 0 PWL(0ns 0V 40ns 0V 42ns SUPP 62ns SUPP 64ns 0V 100ns 0V)
+
+.param beamDistanceTop = 0
+.param beamDistanceBot = 0
+
+.global LaserTrig beamDistanceTop beamDistanceBot
+
+* --- inputs
+Vvin0 A  0 0 PWL(0ns 0V 30ns 0V 31ns SUPP)
+Vvin1 A_ 0 0 PWL(0ns 0V 30ns 0V 31ns 0V)
+
+
+* --- outputs
+C1 VSS Oin 10fF
+C1 VSS O_in 10fF
+
+* --- circuit layout model
+R1 A  Oin  100000
+R2 A_ O_in 100000
+
+Xbuff1 Oin  O  VSS VDD BUFF
+Xbuff2 O_in O_ VSS VDD BUFF
+
+XnmosSHUNT1 Oin VSS VSS_BOT VSS LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=2u ch_l=0.2u mos_ad=0.8p mos_pd=4.8u mos_as=0.5p mos_ps=2.5u
+
+XnmosSHUNT2 O_in VSS VSS_BOT VSS LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=2u ch_l=0.2u mos_ad=0.8p mos_pd=4.8u mos_as=0.5p mos_ps=2.5u
+
+
+* **************************************
+* --- Simulation Settings ---
+* **************************************
+
+.tran 0.1ns 100ns
+.param SIMSTEP = '100ns/0.1ns'
+.csparam SIMSTEP = {SIMSTEP}
+
+* **************************************
+* --- Simulation Control ---
+* **************************************
+
+.control
+    run
+    
+    if ('showPlots' > 0)   
+        plot i(vvdd) i(vvss)
+        
+        plot v(A) v(A_)
+        plot v(O) v(O_)
+        plot v(Oin) v(O_in)
+    end
+    
+    let timeIndex = 0
+    while time[timeIndex] < 55ns
+      let timeIndex= timeIndex + 1
+    end
+    
+    print 'i(VVDD)[$&timeIndex] + i(VVIN0)[$&timeIndex] + i(VVIN1)[$&timeIndex]'
+    print i(VVSS)[$&timeIndex]
+    print v(O)[$&timeIndex]
+    print v(Xbuff.O1)[$&timeIndex]
+    print time[$&timeIndex]
+    
+    if ('writeFile' > 0)   
+      wrdata ivdd.out i(vvdd)
+      wrdata ivss.out i(vvss)
+    end
+    
+    if ('showPlots' < 1)
+        quit
+    end
+    
+.endc
+
+.end

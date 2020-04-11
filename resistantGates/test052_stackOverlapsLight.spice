@@ -1,0 +1,121 @@
+*** TEST 051 : NMOS stack Overlaps under illumination evaluation ***
+*
+* ngSPICE test for PLS experiments
+*
+* ...
+*
+* Author: Jan Belohoubek, 01/2020
+* jan.belohoubek@fit.cvut.cz
+*
+* https://users.fit.cvut.cz/~belohja4/
+*
+*
+* **************************************
+
+.include ../models.lib
+.include ../tsmc180nmcmos.lib
+
+.param pLaser = 300
+
+* **************************************
+* --- Test ---
+* **************************************
+
+* --- Settings
+.param showPlots = 1
+.param writeFile = 1
+* redefine ...
+.include test051_settings.inc
+.csparam showPlots = {showPlots}
+.csparam writeFile = {writeFile}
+.global showPlots writeFile
+* --- End of Settins
+
+Vtrig LaserTrig 0 0 PWL(0ns 0V 40ns 0V 42ns SUPP 62ns SUPP 64ns 0V 100ns 0V)
+Vprecharge CLK 0 0 PWL(0ns 0V 10ns 0V 11ns SUPP)
+
+
+.param beamDistanceTop = 0
+.param beamDistanceBot = 0
+
+.global LaserTrig beamDistanceTop beamDistanceBot
+
+* --- inputs
+*Vvin0 A 0 0 PWL(0ns 0V 30ns 0V 31ns SUPP)
+
+* --- outputs
+C1 VSS O 10fF
+Ro Y O 1
+
+* Common "precharge" PMOS
+Xpmos2 VDD CLK Y VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=2u ch_l=0.2u mos_ad=0.6p mos_pd=0u mos_as=1p mos_ps=0u
+
+* common NMOS substarte virtual node
+XpsubIn psubIn VSS PSUB_IN
+
+.if (gateVersion == 0)
+Xnmos1 MIDDLE A VSS VSS psubIn LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=2u ch_l=0.2u mos_ad=0.6p mos_pd=4.6u mos_as=1p mos_ps=5u
+Xnmos2 Y B MIDDLE VSS psubIn LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=2u ch_l=0.2u mos_ad=1p mos_pd=5u mos_as=0.6p mos_ps=0u
+.endif
+
+.if (gateVersion == 1)
+Xnmos1 MIDDLE A VSS VSS psubIn LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=2u ch_l=0.2u mos_ad=0.3p mos_pd=4.6u mos_as=1p mos_ps=5u
+Xnmos2 Y B MIDDLE VSS psubIn LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=2u ch_l=0.2u mos_ad=1p mos_pd=5u mos_as=0.3p mos_ps=0u
+.endif
+
+.if (gateVersion == 2)
+Xnmos1 MIDDLE A VSS VSS psubIn LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=2u ch_l=0.2u mos_ad=0.6p mos_pd=4.6u mos_as=1p mos_ps=5u
+Xnmos2 Y B MIDDLE VSS psubIn LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=2u ch_l=0.2u mos_ad=1p mos_pd=5u mos_as=0p mos_ps=0u
+.endif
+
+.if (gateVersion == 3)
+Xnmos1 MIDDLE A VSS VSS psubIn LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=2u ch_l=0.2u mos_ad=0p mos_pd=4.6u mos_as=1p mos_ps=5u
+Xnmos2 Y B MIDDLE VSS psubIn LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=2u ch_l=0.2u mos_ad=1p mos_pd=5u mos_as=0.6p mos_ps=0u
+.endif
+
+
+
+* **************************************
+* --- Simulation Settings ---
+* **************************************
+
+.tran 0.1ns 100ns
+.param SIMSTEP = '100ns/0.1ns'
+.csparam SIMSTEP = {SIMSTEP}
+
+* **************************************
+* --- Simulation Control ---
+* **************************************
+
+.control
+    run
+    
+    if ('showPlots' > 0)   
+        plot i(vvdd) i(vvss)
+        
+        plot v(A)
+        plot v(O) 
+    end
+    
+    let timeIndex = 0
+    while time[timeIndex] < 55ns
+      let timeIndex= timeIndex + 1
+    end
+    
+    print i(VVDD)[$&timeIndex]
+    print v(O)[$&timeIndex]
+    print v(Y)[$&timeIndex]
+    print time[$&timeIndex]
+    
+    if ('writeFile' > 0)   
+      wrdata ivdd.out i(vvdd)
+      wrdata ivss.out i(vvss)
+    end
+    
+    if ('showPlots' < 1)
+        quit
+    end
+    
+.endc
+
+.end

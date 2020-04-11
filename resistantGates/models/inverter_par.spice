@@ -1,0 +1,23 @@
+*** static inverter ***
+*
+* ngSPICE compensed 3-inverter inverter with parallel inverter
+*
+*
+* Author: Jan Belohoubek, 01/2020
+* jan.belohoubek@fit.cvut.cz
+*
+* https://users.fit.cvut.cz/~belohja4/
+*
+*
+* **************************************
+
+.subckt INV A O VSS VDD
+
+*** Compensation Inverter Chain ***
+Xinv0 O1 VSS A  VDD INVX1
+Xinv1 O11 VSS O1 VDD INVX1
+Xinv2 O  VSS O11 VDD INVX1
+
+Xinv3 O11 VSS O1 VDD INVX1
+
+.ends

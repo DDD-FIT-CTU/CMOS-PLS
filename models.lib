@@ -15,8 +15,14 @@
 * --- Common globals ---
 * **************************************
 
-.param SUPP = 1.2V
+.param SUPP = 1.8V
 .csparam SUPP = {SUPP}
+
+* default test input high/low values
+.param INHIGH = 'SUPP'
+.param INLOW = 0V
+.csparam INHIGH = {INHIGH}
+.csparam INLOW = {INLOW}
 
 VVDD VDDR 0 SUPP
 R_VDD VDDR VDD 0.001
@@ -53,6 +59,10 @@ VVSS VSS 0 0V
   
   .param PsubNwellJunctionS_NOR3X1 = '7.5 * 5.7'
   .csparam PsubNwellJunctionS_NOR3X1 = {PsubNwellJunctionS_NOR3X1}
+  
+  * default value: for evaluation only!
+  .param NplusPsubJunctionS = '2 * 0.4'
+  .csparam NplusPsubJunctionS = {NplusPsubJunctionS}
 .endif
 
 * --- NMOS parameters
@@ -236,7 +246,16 @@ VVSS VSS 0 0V
 *
 * Note: set param commonDrain/commonSource to 2 if drain/source is common for two transistors in series
 *
-.subckt SUBCKT_NMOS drain gate source psub trig beamDistance = 0 placeDiodes = 1 ch_w = NMOSw ch_l = NMOSl mos_ad = NMOSad mos_pd = NMOSpd mos_as = NMOSas mos_ps = NMOSps
+* drain
+* gate
+* source
+* psub NMOS substrate (in most cases use VSS)
+* psubIn - virtual substarte node for photocurrent simulation
+*
+* commonDrain - is transistor drain common with neighbouring stacked transistor?
+* commonSource - is transistor source common with neighbouring stacked transistor?
+*
+.subckt SUBCKT_NMOS drain gate source psub psubIn trig beamDistance = 0 placeDiodes = 1 commonDrain = 0 commonSource = 0 ch_w = NMOSw ch_l = NMOSl mos_ad = NMOSad mos_pd = NMOSpd mos_as = NMOSas mos_ps = NMOSps
 
   * NMOS model
   * based on https://tel.archives-ouvertes.fr/tel-00958998/document; page 56
@@ -250,28 +269,38 @@ VVSS VSS 0 0V
   M1 drain gate source psub PTM90nmNMOS w = ch_w l = ch_l ad = mos_ad pd = mos_pd as = mos_as ps = mos_ps
 .endif
 
-  * Xsd drain source psubIn SUBCKT_SD
+  Xsd drain source psubIn SUBCKT_SD
   
 .if (placeDiodes > 0)
-  R2 psubIn interRC 0.001
-  C1 interRC psub 1fF
-  R3 psubIn psub 10k
-  
   .if (mos_ad > 0p)
-    XcsrcD drain psubIn trig SUBCKT_Iph_nplus_psub transConductance = a constCurrent = b distance = beamDistance PNArea = 'mos_ad * 10^12'
+    XcsrcD drain psubIn trig SUBCKT_Iph_nplus_psub transConductance = a constCurrent = b distance = beamDistance PNArea = '(commonDrain * 1 + 1) * mos_ad * 10^12'
   .endif
   
   .if (mos_as > 0p)
-    XcsrcS psubIn source trig SUBCKT_Iph_nplus_psub transConductance = a constCurrent = b distance = beamDistance PNArea = 'mos_as * 10^12'
+    XcsrcS psubIn source trig SUBCKT_Iph_nplus_psub transConductance = a constCurrent = b distance = beamDistance PNArea = '(commonSource * 1 + 1) * mos_as * 10^12'
   .endif
 .endif
 
 .ends
 
 *
+* NMOS substrate internal Virtual Node
+*
+* psubIn - virtual substarte node  for photocurrent simulation
+* psub - NMOS substrate rail connection (in most cases VSS)
+*
+.subckt PSUB_IN psubIn psub
+
+  R2 psubIn interRC 0.001
+  C1 interRC psub 1fF
+  R3 psubIn psub 10k
+
+.ends
+
+*
 * Note: set param commonDrain/commonSource to 2 if drain/source is common for two transistors in series
 *
-.subckt SUBCKT_PMOS drain gate source nwell psub trig beamDistance = 0 placeDiodes = 1 ch_w = NMOSw ch_l = NMOSl mos_ad = NMOSad mos_pd = NMOSpd mos_as = NMOSas mos_ps = NMOSps
+.subckt SUBCKT_PMOS drain gate source nwell psub trig beamDistance = 0 placeDiodes = 1 commonDrain = 0 commonSource = 0 ch_w = NMOSw ch_l = NMOSl mos_ad = NMOSad mos_pd = NMOSpd mos_as = NMOSas mos_ps = NMOSps
 
   * PMOS model -- simplified
   * check for bugs!
@@ -287,11 +316,11 @@ VVSS VSS 0 0V
   
 .if (placeDiodes > 0)
   .if (mos_ad > 0p)
-    XDiodeD pplusD nwell trig SUBCKT_Iph_Pplus_Nwell transConductance = a2 constCurrent = b2 distance = beamDistance PNArea = 'mos_ad * 10^12'
+    XDiodeD pplusD nwell trig SUBCKT_Iph_Pplus_Nwell transConductance = a2 constCurrent = b2 distance = beamDistance PNArea = '(commonDrain * 1 + 1) * mos_ad * 10^12'
   .endif
   
   .if (mos_as > 0p)
-    XDiodeS pplusS nwell trig SUBCKT_Iph_Pplus_Nwell transConductance = a2 constCurrent = b2 distance = beamDistance PNArea = 'mos_as * 10^12'
+    XDiodeS pplusS nwell trig SUBCKT_Iph_Pplus_Nwell transConductance = a2 constCurrent = b2 distance = beamDistance PNArea = '(commonSource * 1 + 1) * mos_as * 10^12'
   .endif
   
   R1 pplusD drain 0.001
@@ -310,13 +339,16 @@ VVSS VSS 0 0V
 *
 .subckt NAND2X1 Y VSS A B VDD beamDistanceTop = 0 beamDistanceBot = 0
 
-Xpmos1 Y A VDD VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=2u ch_l=0.2u mos_ad=1.2p mos_pd=5.2u mos_as=2p mos_ps=10u
-Xpmos2 VDD B Y VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=2u ch_l=0.2u mos_ad=0p mos_pd=0u mos_as=0p mos_ps=0u
+Xpmos1 Y A VDD VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=2u ch_l=0.2u mos_ad=0.6p mos_pd=2.6u mos_as=1p mos_ps=5u commonDrain = 1
+Xpmos2 VDD B Y VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=2u ch_l=0.2u mos_ad=0.6p mos_pd=2.6u mos_as=1p mos_ps=5u commonDrain = 1
 
 *XDiodePN VSS VDD LaserTrig SUBCKT_Iph_Psub_Nwell transConductance = a3 constCurrent = b3 distance = beamDistanceTop PNArea = 'PsubNwellJunctionS_NAND2X1'
 
-Xnmos1 MIDDLE A VSS VSS LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=2u ch_l=0.2u mos_ad=0.6p mos_pd=4.6u mos_as=1p mos_ps=5u
-Xnmos2 Y B MIDDLE VSS LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=2u ch_l=0.2u mos_ad=1p mos_pd=5u mos_as=0p mos_ps=0u
+Xnmos1 MIDDLE A VSS VSS psubIn LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=2u ch_l=0.2u mos_ad=0.3p mos_pd=2.3u mos_as=1p   mos_ps=5u   commonDrain = 1 commonSource = 0
+Xnmos2 Y B MIDDLE VSS psubIn LaserTrig   SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=2u ch_l=0.2u mos_ad=1p   mos_pd=5u   mos_as=0.3p mos_ps=2.3u commonDrain = 0 commonSource = 1
+
+* common NMOS substarte virtual node
+XpsubIn psubIn VSS PSUB_IN
 
 C0 MIDDLE Y 0.01fF
 C1 VSS Y 0.09fF
@@ -339,15 +371,18 @@ C13 VDD VSS 1.73fF
 *
 .subckt NAND3X1 Y VSS A B C VDD beamDistanceTop = 0 beamDistanceBot = 0
 
-Xpmos1 Y A VDD VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=2u ch_l=0.2u mos_ad=2.2p mos_pd=10.2u mos_as=2.52p mos_ps=13.4u
-Xpmos2 VDD B Y VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=2u ch_l=0.2u mos_ad=0p mos_pd=0u mos_as=0p mos_ps=0u
-Xpmos3 Y C VDD VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=2u ch_l=0.2u mos_ad=0p mos_pd=0u mos_as=0p mos_ps=0u
+Xpmos1 Y A VDD VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=2u ch_l=0.2u mos_ad=0.8p mos_pd=3.4u mos_as=0.84p mos_ps=4.5u commonSource = 1
+Xpmos2 VDD B Y VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=2u ch_l=0.2u mos_ad=0.7p mos_pd=3.4u mos_as=0.84p mos_ps=4.5u commonSource = 1 commonDrain = 1
+Xpmos3 Y C VDD VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=2u ch_l=0.2u mos_ad=0.7p mos_pd=3.4u mos_as=0.84p mos_ps=4.4u commonDrain = 1
 
 *XDiodePN VSS VDD LaserTrig SUBCKT_Iph_Psub_Nwell transConductance = a3 constCurrent = b3 distance = beamDistanceTop PNArea = 'PsubNwellJunctionS_NAND3X1'
 
-Xnmos1 MIDDLE A VSS VSS LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=3u ch_ l=0.2u mos_ad=0.9p mos_pd=6.6u mos_as=1.82p mos_ps=10.2u
-Xnmos2 MIDDLE2 B MIDDLE VSS LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=3u lch_=0.2u mos_ad=0.9p mos_pd=6.6u mos_as=0p mos_ps=0u
-Xnmos3 Y C MIDDLE2 VSS LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=3u ch_l=0.2u mos_ad=1.5p mos_pd=7u mos_as=0p mos_ps=0u
+Xnmos1 MIDDLE A VSS VSS psubIn     LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot     ch_w=3u ch_l=0.2u mos_ad=0.45p  mos_pd=6.6u  mos_as=1.82p   mos_ps=3.4u commonDrain = 1 commonSource = 0
+Xnmos2 MIDDLE2 B MIDDLE VSS psubIn LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=3u ch_l=0.2u mos_ad=0.45p  mos_pd=6.6u  mos_as=0.45p   mos_ps=3.4u commonDrain = 1 commonSource = 1
+Xnmos3 Y C MIDDLE2 VSS psubIn      LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot      ch_w=3u ch_l=0.2u mos_ad=1.5p   mos_pd=7u    mos_as=0.45p   mos_ps=3.4u commonDrain = 0 commonSource = 1
+
+* common NMOS substarte virtual node
+XpsubIn psubIn VSS PSUB_IN
 
 C0 A B 0.31fF
 C1 vdd A 0.27fF
@@ -370,13 +405,16 @@ C12 A VSS 0.11fF
 *
 .subckt NOR2X1 Y VSS A B VDD beamDistanceTop = 0 beamDistanceBot = 0
 
-Xpmos1 MIDDLE A VDD VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=4u ch_l=0.2u mos_ad=1.2p mos_pd=8.6u mos_as=2.32p mos_ps=12.2u
-Xpmos2 Y B MIDDLE VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=4u ch_l=0.2u mos_ad=2p mos_pd=9u mos_as=0p mos_ps=0u
+Xpmos1 MIDDLE A VDD VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=4u ch_l=0.2u mos_ad=0.6p mos_pd=8.6u mos_as=2.32p mos_ps=6.1u commonDrain = 1
+Xpmos2 Y B MIDDLE VDD VSS LaserTrig   SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=4u ch_l=0.2u mos_ad=2p   mos_pd=9u   mos_as=0.6p  mos_ps=6.1u commonSource = 1
 
 *XDiodePN VSS VDD LaserTrig SUBCKT_Iph_Psub_Nwell transConductance = a3 constCurrent = b3 distance = beamDistanceTop PNArea = 'PsubNwellJunctionS_NOR2X1'
 
-Xnmos1 Y A VSS VSS LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=1u ch_l=0.2u mos_ad=0.6p mos_pd=3.2u mos_as=1.32p mos_ps=9.2u
-Xnmos2 VSS B Y VSS LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=1u ch_l=0.2u mos_ad=0p mos_pd=0u mos_as=0p mos_ps=0u
+Xnmos1 Y A VSS VSS psubIn LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=1u ch_l=0.2u mos_ad=0.3p mos_pd=1.6u mos_as=0.66p mos_ps=4.6u commonDrain = 1
+Xnmos2 VSS B Y VSS psubIn LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=1u ch_l=0.2u mos_ad=0.3p mos_pd=1.6u mos_as=0.66p mos_ps=4.6u commonDrain = 1
+
+* common NMOS substarte virtual node
+XpsubIn psubIn VSS PSUB_IN
 
 C0 Y B 0.12fF
 C1 A B 0.18fF
@@ -396,6 +434,9 @@ C10 A VSS 0.30fF
 *
 * 3-input NOR Gate
 *
+* Note: NOR3 is not symmetrized by hand!
+*
+*
 .subckt NOR3X1 Y VSS A B C VDD beamDistanceTop = 0 beamDistanceBot = 0
 
 Xpmos1 VDD A MIDDLE VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=3u ch_l=0.2u mos_ad=2.44p mos_pd=13.6u mos_as=4.78p mos_ps=21.2u
@@ -409,9 +450,12 @@ Xpmos6 MIDDLE2 C Y VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop 
 
 *XDiodePN VSS VDD LaserTrig SUBCKT_Iph_Psub_Nwell transConductance = a3 constCurrent = b3 distance = beamDistanceTop PNArea = 'PsubNwellJunctionS_NOR3X1'
 
-Xnmos1 Y A VSS VSS LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=1u ch_l=0.2u mos_ad=1.1p mos_pd=6.2u mos_as=1.74p mos_ps=12.6u
-Xnmos2 VSS B Y VSS LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=1u ch_l=0.2u mos_ad=0p mos_pd=0u mos_as=0p mos_ps=0u
-Xnmos3 Y C VSS VSS LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=1u ch_l=0.2u mos_ad=0p mos_pd=0u mos_as=0p mos_ps=0u
+Xnmos1 Y A VSS VSS psubIn LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=1u ch_l=0.2u mos_ad=1.1p mos_pd=6.2u mos_as=1.74p mos_ps=12.6u
+Xnmos2 VSS B Y VSS psubIn LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=1u ch_l=0.2u mos_ad=0p mos_pd=0u mos_as=0p mos_ps=0u
+Xnmos3 Y C VSS VSS psubIn LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=1u ch_l=0.2u mos_ad=0p mos_pd=0u mos_as=0p mos_ps=0u
+
+* common NMOS substarte virtual node
+XpsubIn psubIn VSS PSUB_IN
 
 C0 MIDDLE2 MIDDLE 0.94fF
 C1 B vdd 0.22fF
@@ -449,7 +493,10 @@ Xpmos Y A VDD VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=
 
 *XDiodePN VSS VDD LaserTrig SUBCKT_Iph_Psub_Nwell transConductance = a3 constCurrent = b3 distance = beamDistanceTop PNArea = 'PsubNwellJunctionS_INVX1'
 
-Xnmos Y A VSS VSS LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=1u ch_l=0.2u mos_ad=0.5p mos_pd=3u mos_as=0.66p mos_ps=4.6u
+Xnmos Y A VSS VSS psubIn LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=1u ch_l=0.2u mos_ad=0.5p mos_pd=3u mos_as=0.66p mos_ps=4.6u
+
+* common NMOS substarte virtual node
+XpsubIn psubIn VSS PSUB_IN
 
 C0 A Y 0.08fF
 C1 A vdd 0.26fF
@@ -463,6 +510,8 @@ C5 A VSS 0.23fF
 
 *
 * 2-input XOR Gate
+*
+* Note: XOR is not symmetrized by hand!
 *
 .subckt XOR2X1 Y VSS A B VDD beamDistanceTop = 0 beamDistanceBot = 0
 
@@ -479,17 +528,20 @@ Xpmos4 vdd B 4 vdd VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w
 Xpmos5 B_NEG B VDD VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=4u ch_l=0.2u mos_ad=2p mos_pd=9u mos_as=0p mos_ps=0u
 
 
-Xnmos0 VSS A A_NEG VSS LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=2u ch_l=0.2u mos_ad=3.44p mos_pd=17.2u mos_as=1p mos_ps=5u
+Xnmos0 VSS A A_NEG VSS psubIn LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=2u ch_l=0.2u mos_ad=3.44p mos_pd=17.2u mos_as=1p mos_ps=5u
 
-Xnmos1 5 B_NEG VSS VSS LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=2u ch_l=0.2u mos_ad=0.6p mos_pd=4.6u mos_as=0p mos_ps=0u
+Xnmos1 5 B_NEG VSS VSS psubIn LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=2u ch_l=0.2u mos_ad=0.6p mos_pd=4.6u mos_as=0p mos_ps=0u
 
-Xnmos2 Y A_NEG 5 VSS LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=2u ch_l=0.2u mos_ad=2p mos_pd=6u mos_as=0p mos_ps=0u
+Xnmos2 Y A_NEG 5 VSS psubIn LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=2u ch_l=0.2u mos_ad=2p mos_pd=6u mos_as=0p mos_ps=0u
 
-Xnmos3 6 A Y VSS LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=2u ch_l=0.2u mos_ad=0.6p mos_pd=4.6u mos_as=0p mos_ps=0u
+Xnmos3 6 A Y VSS psubIn LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=2u ch_l=0.2u mos_ad=0.6p mos_pd=4.6u mos_as=0p mos_ps=0u
 
-Xnmos4 VSS B 6 VSS LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=2u ch_l=0.2u mos_ad=0p mos_pd=0u mos_as=0p mos_ps=0u
+Xnmos4 VSS B 6 VSS psubIn LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=2u ch_l=0.2u mos_ad=0p mos_pd=0u mos_as=0p mos_ps=0u
 
-Xnmos5 B_NEG B VSS VSS LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=2u ch_l=0.2u mos_ad=1p mos_pd=5u mos_as=0p mos_ps=0u
+Xnmos5 B_NEG B VSS VSS psubIn LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=2u ch_l=0.2u mos_ad=1p mos_pd=5u mos_as=0p mos_ps=0u
+
+* common NMOS substarte virtual node
+XpsubIn psubIn VSS PSUB_IN
 
 C0 B vdd 0.16fF
 C1 B A_NEG 0.15fF

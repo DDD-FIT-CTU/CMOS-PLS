@@ -1,0 +1,3 @@
+[submodule "submodules/CMOS-SPICE-Model-Collections"]
+	path = submodules/CMOS-SPICE-Model-Collections
+	url = https://github.com/DDD-FIT-CTU/CMOS-SPICE-Model-Collections

@@ -1,0 +1,35 @@
+*** NAND2 domino gate ***
+*
+* ngSPICE domino-like NAND gate
+*
+*
+* Author: Jan Belohoubek, 01/2020
+* jan.belohoubek@fit.cvut.cz
+*
+* https://users.fit.cvut.cz/~belohja4/
+*
+*
+* **************************************
+
+.subckt NAND2 A B O CLK VSS VDD
+
+*** Serial PMOS - TOP ***
+XpmosTOP Y CLK VDD VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=1u ch_l=0.2u mos_ad=0.5p mos_pd=2.5u mos_as=0.7p mos_ps=3.3u
+
+*** Serial NMOS - BOT ***
+XnmosBOT VSS_BOT CLK VSS VSS psubIn LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=1u ch_l=0.2u mos_ad=0.3p mos_pd=3.3u mos_as=0.5p mos_ps=2.5u
+
+*** block N ***
+Xnmos1 MIDDLE A VSS_BOT VSS psubIn LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=1u ch_l=0.2u mos_ad=0.15p mos_pd=1.65u mos_as=0.5p mos_ps=2.5u commonDrain = 1 commonSource = 0
+Xnmos2 Y B MIDDLE VSS psubIn LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=1u ch_l=0.2u mos_ad=0.5p mos_pd=2.5u mos_as=0.15p mos_ps=1.65u commonDrain = 0 commonSource = 1
+
+Xnmos1c MIDDLE2 B VSS_BOT VSS psubIn LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=1u ch_l=0.2u mos_ad=0.15p mos_pd=1.65u mos_as=0.5p mos_ps=2.5u commonDrain = 1 commonSource = 0
+Xnmos2c Y A MIDDLE2 VSS psubIn LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=1u ch_l=0.2u mos_ad=0.5p mos_pd=2.5u mos_as=0.15p mos_ps=1.65u commonDrain = 0 commonSource = 1
+
+*** common NMOS substarte virtual node ***
+XpsubIn psubIn VSS PSUB_IN
+
+*** Output ***
+R10 Y O 1
+
+.ends

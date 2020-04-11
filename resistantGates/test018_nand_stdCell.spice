@@ -1,0 +1,93 @@
+*** TEST 018 : NAND2X1 stdCell test ***
+*
+* ngSPICE test for PLS experiments
+*
+* NAND PLS test - gate area illuminated
+*
+* Author: Jan Belohoubek, 01/2020
+* jan.belohoubek@fit.cvut.cz
+*
+* https://users.fit.cvut.cz/~belohja4/
+*
+*
+* **************************************
+
+.include ../models.lib
+.include ../tsmc180nmcmos.lib
+
+* **************************************
+* --- Test ---
+* **************************************
+
+* --- Settings
+.param showPlots = 1
+.param writeFile = 1
+* redefine ...
+.include test01X_settings.inc
+.csparam showPlots = {showPlots}
+.csparam writeFile = {writeFile}
+.global showPlots writeFile
+* --- End of Settins
+
+Vtrig LaserTrig 0 0 PWL(0ns 0V 40ns 0V 42ns SUPP 62ns SUPP 64ns 0V 100ns 0V)
+
+.param beamDistanceTop = 0
+.param beamDistanceBot = 0
+
+.global LaserTrig beamDistanceTop beamDistanceBot
+
+* --- inputs
+*Vvin0 A 0 0 PWL(0ns 0V 30ns 0V 31ns SUPP)
+*Vvin1 B 0 0 PWL(0ns 0V 30ns 0V 31ns SUPP)
+
+* --- outputs
+C1 VSS O 10fF
+
+* --- circuit layout model
+Xnand Y VSS A B VDD NAND2X1 beamDistanceTop = 0 beamDistanceBot = 0
+R1 Y O 1
+
+* **************************************
+* --- Simulation Settings ---
+* **************************************
+
+.tran 0.1ns 100ns
+.param SIMSTEP = '100ns/0.1ns'
+.csparam SIMSTEP = {SIMSTEP}
+
+* **************************************
+* --- Simulation Control ---
+* **************************************
+
+.control
+    run
+    
+    if ('showPlots' > 0)   
+        plot i(vvdd) i(vvss)
+        
+        plot v(A)
+        plot v(O) 
+    end
+    
+    let timeIndex = 0
+    while time[timeIndex] < 55ns
+      let timeIndex= timeIndex + 1
+    end
+    
+    print i(VVDD)[$&timeIndex]
+    print v(O)[$&timeIndex]
+    print v(Y)[$&timeIndex]
+    print time[$&timeIndex]
+    
+    if ('writeFile' > 0)   
+      wrdata ivdd.out i(vvdd)
+      wrdata ivss.out i(vvss)
+    end
+    
+    if ('showPlots' < 1)
+        quit
+    end
+    
+.endc
+
+.end

@@ -1,1 +1,3 @@
-These are conventional 180 nm TSMC CMOS gates netlists/simulation-related resources
+# Conventional Gates
+
+This directory contains netlists and simulation-related resources for the conventional TSMC180nm CMOS gates.

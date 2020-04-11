@@ -22,10 +22,12 @@
 
 * --- Settings
 .param showPlots = 1
+.param writeFile = 1
 * redefine ...
 .include test00X_settings.inc
 .csparam showPlots = {showPlots}
-.global showPlots
+.csparam writeFile = {writeFile}
+.global showPlots writeFile
 * --- End of Settins
 
 Vtrig LaserTrig 0 0 PWL(0ns 0V 40ns 0V 42ns SUPP 62ns SUPP 64ns 0V 100ns 0V)
@@ -55,7 +57,7 @@ Vtrig LaserTrig 0 0 PWL(0ns 0V 40ns 0V 42ns SUPP 62ns SUPP 64ns 0V 100ns 0V)
 
 * --- outputs
 C1 VSS out0 10fF
-C1 VSS out1 10fF
+C2 VSS out1 10fF
 
 * --- circuit layout model
 XC17 in0 in1 in2 in3 in4 out0 out1 VSS VDD C17_180nm
@@ -84,6 +86,11 @@ XC17 in0 in1 in2 in3 in4 out0 out1 VSS VDD C17_180nm
     end
     
     print i(vvdd)[500]
+    
+    if ('writeFile' > 0)   
+      wrdata ivdd.out i(vvdd)
+      wrdata ivss.out i(vvss)
+    end
     
     if ('showPlots' < 1)
         quit

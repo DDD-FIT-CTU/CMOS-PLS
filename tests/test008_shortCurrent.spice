@@ -43,8 +43,10 @@ Xpmos1 Y A VDD VDD VSS LaserTrig SUBCKT_PMOS beamDistance = 0 ch_w=2u ch_l=0.2u 
 
 *XDiodePN VSS VDD LaserTrig SUBCKT_Iph_Psub_Nwell transConductance = a3 constCurrent = b3 distance = 0 PNArea = 'PsubNwellJunctionS_NAND2X1'
 
-Xnmos1 MIDDLE B VSS VSS LaserTrig SUBCKT_NMOS beamDistance = 0 ch_w=2u ch_l=0.2u mos_ad=0.6p mos_pd=4.6u mos_as=1p mos_ps=5u
-Xnmos2 Y B MIDDLE VSS LaserTrig SUBCKT_NMOS beamDistance = 0 ch_w=2u ch_l=0.2u mos_ad=1p mos_pd=5u mos_as=0p mos_ps=0u
+XpsubIn psubIn VSS PSUB_IN
+
+Xnmos1 MIDDLE B VSS VSS psubIn LaserTrig SUBCKT_NMOS beamDistance = 0 ch_w=2u ch_l=0.2u mos_ad=0.6p mos_pd=4.6u mos_as=1p mos_ps=5u
+Xnmos2 Y B MIDDLE VSS psubIn LaserTrig SUBCKT_NMOS beamDistance = 0 ch_w=2u ch_l=0.2u mos_ad=1p mos_pd=5u mos_as=0p mos_ps=0u
 
 * **************************************
 * --- Simulation Settings ---

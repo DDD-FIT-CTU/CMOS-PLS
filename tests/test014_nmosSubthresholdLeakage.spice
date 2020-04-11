@@ -1,0 +1,55 @@
+*** TEST 014 ***
+*
+* ngSPICE test for PLS experiments
+*
+* This test allows to simulate NMOS transistor subthreshold leakage
+*
+*
+* Author: Jan Belohoubek, 03/2020
+* jan.belohoubek@fit.cvut.cz
+*
+* https://users.fit.cvut.cz/~belohja4/
+*
+*
+* **************************************
+
+.include ../models.lib
+.include ../tsmc180nmcmos.lib
+
+* **************************************
+* --- Test ---
+* **************************************
+
+Vtrig LaserTrig 0 0.0V
+Vgate gate 0 0.0V
+
+Vsub psub 0 0.0V
+#Vsub psub 0 -0.1V
+#Vsub psub 0 -0.2V
+#Vsub psub 0 -0.3V
+#Vsub psub 0 -0.4V
+#Vsub psub 0 -0.5V
+
+XpsubIn psubIn VSS PSUB_IN
+Xnmos VDD GATE VSS psub psubIn LaserTrig SUBCKT_NMOS
+
+*M1 VDD gate VSS VSS TSMC180nmN w = NMOSw l = NMOSl ad = NMOSad pd = NMOSpd as = NMOSas ps = NMOSps
+
+* **************************************
+* --- Simulation Settings ---
+* **************************************
+
+.dc Vgate 0 0.354505 0.01
+
+* **************************************
+* --- Simulation Control ---
+* **************************************
+
+.control
+    run
+    
+    plot i(vvdd) i(vvss) i(vsub)
+    plot v(vss) v(vdd) v(gate)
+.endc
+
+.end

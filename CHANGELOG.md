@@ -1,4 +1,12 @@
-# DSD2019 version
+# Changelog
+
+## DDECS2020 version
+  * models ([models.lib](models.lib)) were altered to closely reflect the reality -- see [models docs](doc/MODELS.md)
+  * attack-resistant structures were designed and evaluated -- see the [test-set description](resistantGates/README.md) -- described in paper [C]
+  * subthreshold Leakage [model](tests/test014_nmosSubthresholdLeakage.gnuplot) and [SPICE simulation](tests/test014_nmosSubthresholdLeakage.spice) were added into the [tests](tests/README.md) directory
+  * additional minor fixes
+
+## DSD2019 version
 
   * in DDECS2019 version, PN junction areas were given as additional parameters (layout hand measurement), now technology parameters ad/as were used 
   * authors of referenced papers used (probably) the "projection" of the area, not the "surface", but their transistors are huge, thus the relative difference is (in case) small

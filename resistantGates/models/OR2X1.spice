@@ -1,0 +1,47 @@
+*** static buffer ***
+*
+* ngSPICE OR2X1 cell
+*
+* SPICE3 file originally created from OR2X1.ext by Magic - technology: scmos
+*
+* Author: Jan Belohoubek, 01/2020
+* jan.belohoubek@fit.cvut.cz
+*
+* https://users.fit.cvut.cz/~belohja4/
+*
+*
+* **************************************
+
+.subckt OR2X1 A B O VSS VDD
+
+X1000 MIDDLE A Y VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=4u ch_l=0.2u mos_ad=2.2p mos_pd=8.6u mos_as=0.6p mos_ps=9u
+X1001 VDD B MIDDLE VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=4u ch_l=0.2u mos_ad=0.6p mos_pd=9.2u mos_as=2.0p mos_ps=0u
+X1002 O Y VDD VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=2u ch_l=0.2u mos_ad=2.2p mos_pd=5u mos_as=0.2p mos_ps=0u
+
+X1003 Y A VSS VSS psubIn LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=1u ch_l=0.2u mos_ad=0.3p mos_pd=3.2u mos_as=0.6p mos_ps=6.2u commonDrain = 1 commonSource = 0
+X1004 VSS B Y VSS psubIn LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=1u ch_l=0.2u mos_ad=0.3p mos_pd=0u mos_as=0.3p mos_ps=0u commonDrain = 1 commonSource = 1
+X1005 O Y VSS VSS psubIn LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=1u ch_l=0.2u mos_ad=0.6p mos_pd=3u mos_as=0.3p mos_ps=0u commonDrain = 0 commonSource = 1
+
+*** common NMOS substarte virtual node ***
+XpsubIn psubIn VSS PSUB_IN
+
+C0 VSS A 0.05fF
+C1 O VDD 0.41fF
+C2 Y A 0.06fF
+C3 VDD Y 0.45fF
+C4 Y B 0.30fF
+C5 VDD A 0.07fF
+C6 A B 0.22fF
+C7 VDD B 0.07fF
+C8 VSS O 0.16fF
+C9 VSS Y 0.29fF
+C10 O Y 0.37fF
+C11 VSS VSS 0.20fF
+C12 O VSS 0.13fF
+C13 Y VSS 0.39fF
+C14 B VSS 0.32fF
+C15 A VSS 0.31fF
+C16 VDD VSS 1.73fF
+
+.ends
+

@@ -1,0 +1,291 @@
+*** TEST 011 ***
+*
+* ngSPICE test for PLS experiments
+*
+* MonteCarlo simulation of NAND2 gate under PLS
+*
+* Author: Jan Belohoubek, 07/2019
+* jan.belohoubek@fit.cvut.cz
+*
+* https://users.fit.cvut.cz/~belohja4/
+*
+*
+* **************************************
+
+.include ../models.lib
+.include ../tsmc180nmcmos.lib
+
+* **************************************
+* --- Test ---
+* **************************************
+
+* --- Settings
+.param showPlots = 1
+.param pLaser = 50
+.param pLaserStep = 50
+.param pLaserStart = 50
+.param pLaserMax = 1000
+.csparam pLaser = {pLaser}
+.csparam pLaserStep = {pLaserStep}
+.csparam pLaserStart = {pLaserStart}
+.csparam pLaserMax = {pLaserMax}
+
+.csparam showPlots = {showPlots}
+.global showPlots
+* --- End of Settins
+
+Vtrig LaserTrig 0 0 PWL(0ns 0V 40ns 0V 42ns SUPP 62ns SUPP 64ns 0V 100ns 0V)
+
+.global LaserTrig 
+
+* --- outputs
+C1 VSS out 1pF
+
+* --- circuit layout model
+xnand out VSS A B VDD NAND2X1 beamDistanceTop = 0 beamDistanceBot = 0
+
+* **************************************
+* --- Simulation Settings ---
+* **************************************
+
+* --- inputs
+Vvin0 A 0 0 PWL(0ns 0V 18ns 0V 22ns 0V 22ns 0V)
+Vvin1 B 0 0 PWL(0ns 0V 18ns 0V 22ns 0V 22ns 0V)
+
+*.tran 0.10ns 100ns
+.param SIMSTEP = '100ns/1.0ns'
+.csparam SIMSTEP = {SIMSTEP}
+
+* **************************************
+* --- Simulation Control ---
+* **************************************
+
+.options noacct
+.control              
+  let mc_runs = 25                   $ number of runs for monte carlo
+  let run = 0                       $ number of actual run
+  let mc_inputSet = 0               $ variable to alter inputs
+  let mc_pLaser = pLaser
+  
+  let timeIndex = 0                 $ time for reading stable/constant current value
+ 
+  set curplot = new                 $ create a new plot
+  set curplottitle = "Currents"
+  set curplotname = "currs"
+  set pltMCcurrents = $curplot      $ store curplot to name 'pltMCcurrents'
+  
+  set curplot = new                 $ create a new plot
+  set curplottitle = "Current/Power Dependency"
+  set curplotname = "currpow"
+  set pltMCCurrentDependency = $curplot      $ store curplot to name 'pltMCCurrentDependency'
+  
+  set curplot = new                 $ create a new plot
+  set curplottitle = "vars"
+  set curplotname = "vars"
+  set vars = $curplot      $ store curplot to name 'pltMCcurrents'
+  
+  let mc_runsp = mc_runs + 1
+
+* define distributions for random numbers:
+* unif: uniform distribution, deviation relativ to nominal value
+* aunif: uniform distribution, deviation absolut
+* gauss: Gaussian distribution, deviation relativ to nominal value
+* agauss: Gaussian distribution, deviation absolut
+  define unif(nom, var) (nom + (nom*var) * sunif(0))
+  define aunif(nom, avar) (nom + avar * sunif(0))
+  *define gauss(nom, var, sig) (nom + (nom*var)/sig * sgauss(0))
+  *define agauss(nom, avar, sig) (nom + avar/sig * sgauss(0))
+  * redefined by JB
+  define gauss(nom, var) (nom + (nom*var) * sgauss(0))
+  define agauss(nom, avar) (nom + avar * sgauss(0))
+  
+  dowhile run <= mc_runs
+    setplot $vars
+    * first run with nominal parameters
+    if run > 0
+      if mc_pLaser = pLaserMax and mc_inputSet = 3
+         echo "Generating new MC model parameters: "
+         .include ./mc_gauss/agauss_p
+         .include ./mc_gauss/agauss_n
+         
+         * Echo new parameters once here
+         .include ./mc_gauss/echo_p
+         .include ./mc_gauss/echo_n
+      end
+         * always include generated model parameters !
+         .include ./mc_gauss/altermod_p
+         .include ./mc_gauss/altermod_n
+    end
+    
+    * change Gate inputs
+    if mc_inputSet = 0
+      echo inputs are set to 00
+      
+      * next inputs ...
+      let foo = @Vvin0[PWL]
+      let foo[5] = 0V
+      let foo[7] = 0V
+      alter @Vvin0[PWL] = foo
+      let foo = @Vvin1[PWL]
+      let foo[5] = 0V
+      let foo[7] = 0V
+      alter @Vvin1[PWL] = foo
+    end
+    
+    if mc_inputSet = 1
+      echo inputs are set to 01
+      
+      
+      * next inputs ...
+      let foo = @Vvin0[PWL]
+      let foo[5] = SUPP
+      let foo[7] = SUPP
+      alter @Vvin0[PWL] = foo
+      let foo = @Vvin1[PWL]
+      let foo[5] = 0V
+      let foo[7] = 0V
+      alter @Vvin1[PWL] = foo
+    end
+    
+    if mc_inputSet = 2
+      echo inputs are set to 10
+    
+      
+      * next inputs ...
+      let foo = @Vvin0[PWL]
+      let foo[5] = 0V
+      let foo[7] = 0V
+      alter @Vvin0[PWL] = foo
+      let foo = @Vvin1[PWL]
+      let foo[5] = SUPP
+      let foo[7] = SUPP
+      alter @Vvin1[PWL] = foo
+    end
+    
+    if mc_inputSet = 3
+      echo inputs are set to 11
+      
+      * next inputs ...
+      let foo = @Vvin0[PWL]
+      let foo[5] = SUPP
+      let foo[7] = SUPP
+      alter @Vvin0[PWL] = foo
+      let foo = @Vvin1[PWL]
+      let foo[5] = SUPP
+      let foo[7] = SUPP
+      alter @Vvin1[PWL] = foo
+    end
+    
+    set run ="$&run"             $ create a variable from the vector
+    set mc_runs ="$&mc_runs"     $ create a variable from the vector
+    set mc_inputSet ="$&mc_inputSet"  $ create a variable from the vector
+    set mc_pLaser ="$&mc_pLaser"      $ create a variable from the vector
+    echo simulationc run no. $run of $mc_runs ( inputs = $&mc_inputSet , power = $&mc_pLaser )
+    
+    * stop simulation when signals are stable
+    tran 0.10ns 100ns
+    
+    echo Simulation status $sim_status
+    let simstat = $sim_status
+    if simstat = 1
+      echo go to next run
+      echo "Going NEXT!"
+      goto next
+    end
+    
+    set dt = $curplot
+    setplot $pltMCcurrents
+    if run=0
+       let time={$dt}.time
+       
+       let timeIndex = 0
+       while time[timeIndex] < 60ns
+         let timeIndex= timeIndex + 1
+       end
+    end
+    
+    *let ivss{$run}_{$mc_inputSet}_{$mc_pLaser}={$dt}.i(vvss)
+    let ivdd{$run}_{$mc_inputSet}_{$mc_pLaser}={$dt}.i(vvdd)
+    let vA{$run}_{$mc_inputSet}={$dt}.v(A)
+    let vB{$run}_{$mc_inputSet}={$dt}.v(B)
+    *let vOUT{$run}_{$mc_inputSet}={$dt}.v(OUT)
+    
+    * Laser power dependency
+    setplot $pltMCCurrentDependency
+    if run=0
+       let time={$dt}.time
+    end
+    
+    if mc_pLaser = pLaserStart and mc_inputSet = 0
+      
+      let in00Dep_{$run} = unitvec('1+(pLaserMax - pLaserStart)/pLaserStep')     $ requires vector as parameter
+      let in01Dep_{$run} = unitvec('1+(pLaserMax - pLaserStart)/pLaserStep')     $ requires vector as parameter
+      let in10Dep_{$run} = unitvec('1+(pLaserMax - pLaserStart)/pLaserStep')     $ requires vector as parameter
+      let in11Dep_{$run} = unitvec('1+(pLaserMax - pLaserStart)/pLaserStep')     $ requires vector as parameter
+      
+      settype current in00Dep_{$run}
+      settype current in01Dep_{$run}
+      settype current in10Dep_{$run}
+      settype current in11Dep_{$run}
+    end
+    
+    set index = '({$mc_pLaser}-pLaserStart)/pLaserStep'
+    if mc_inputSet = 0
+      let in00Dep_{$run}[$index] = '{$dt}.i(vvdd)[$&timeIndex]'
+    end
+    
+    if mc_inputSet = 1
+      let in01Dep_{$run}[$index] = '{$dt}.i(vvdd)[$&timeIndex]'
+    end
+    
+    if mc_inputSet = 2
+      let in10Dep_{$run}[$index] = '{$dt}.i(vvdd)[$&timeIndex]'
+    end
+    
+    if mc_inputSet = 3
+      let in11Dep_{$run}[$index] = '{$dt}.i(vvdd)[$&timeIndex]'
+    end
+    
+    destroy $dt
+
+    let mc_inputSet = mc_inputSet + 1
+    if mc_inputSet = 4
+      set mc_pLaser ="$&mc_pLaser"
+      
+      let mc_pLaser = mc_pLaser + pLaserStep
+      
+      let mc_inputSet = 0
+      
+      if mc_pLaser > pLaserMax
+        let run = run + 1
+        let mc_pLaser = pLaserStart
+      end
+      
+      echo New laser power is $&mc_pLaser
+      alterparam pLaser = $&mc_pLaser
+    end
+    
+    label next
+    reset
+  end
+  
+  set color0=white
+  set color1=black
+  
+  echo plot ALL simulated currents
+  setplot $pltMCcurrents
+  plot alli
+
+  setplot $pltMCCurrentDependency
+  let len = '1+(pLaserMax - pLaserStart)/pLaserStep'
+  let start = 'pLaserStart/1000'
+  let step = 'pLaserStep/1000'
+  compose xvec start={$&start} step={$&step} lin={$&len}
+  
+  settype power xvec
+  *plot in00dep_0 in01dep_0 in10dep_0 in11dep_0 vs xvec xlabel 'power [mW]'
+  plot alli vs xvec xlabel 'Laser Power [mW]'
+    
+.endc
+
+.end

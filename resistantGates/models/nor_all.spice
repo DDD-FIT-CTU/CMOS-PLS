@@ -1,0 +1,51 @@
+*** OR2 gate ***
+*
+* ngSPICE compensed NOR structure
+*
+*
+* Author: Jan Belohoubek, 01/2020
+* jan.belohoubek@fit.cvut.cz
+*
+* https://users.fit.cvut.cz/~belohja4/
+*
+*
+* **************************************
+
+.subckt NOR2 A B O VSS VDD
+
+*** block P ***
+Xpmos1 MIDDLE A VDD_TOP VDD_TOP VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=2u ch_l=0.2u mos_ad=0.6p mos_pd=8.6u mos_as=2.32p mos_ps=12.2u
+Xpmos2 Y B MIDDLE VDD_TOP VSS LaserTrig       SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=2u ch_l=0.2u mos_ad=2p mos_pd=9u mos_as=0.6p mos_ps=0u
+
+Xpmos3 MIDDLE2 B VDD_TOP VDD_TOP VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=2u ch_l=0.2u mos_ad=0.6p mos_pd=8.6u mos_as=2.32p mos_ps=12.2u
+Xpmos4 Y A MIDDLE2 VDD_TOP VSS LaserTrig       SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=2u ch_l=0.2u mos_ad=2p mos_pd=9u mos_as=0.6p mos_ps=0u
+
+*** block N ***
+Xnmos1 Y A VSS_BOT VSS psubIn LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=1u ch_l=0.2u mos_ad=0.3p mos_pd=1.6u mos_as=0.6p mos_ps=4.6u
+Xnmos2 VSS_BOT B Y VSS psubIn LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=1u ch_l=0.2u mos_ad=0.3p mos_pd=1.6u mos_as=0.7p mos_ps=4.6u
+
+*** Compensation Serial PMOS - TOP ***
+Rtop VDD_TOP VDD 0.001
+*XpmosTOP VDD_TOP VSS VDD VDD VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=1u ch_l=0.2u mos_ad=1.1p mos_pd=5u mos_as=1.1p mos_ps=5u
+
+*** Compensation Serial NMOS - BOT ***
+XnmosBOT VSS_BOT SCTRL VSS VSS psubIn LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=0.2u ch_l=0.2u mos_ad=0.1p mos_pd=2.5u mos_as=0.1p mos_ps=2.5u
+
+*** Compensation Parallel PMOS ***
+XpmosSHUNT Y SCTRL VDD VDD_TOP VSS LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=4u ch_l=0.2u mos_ad=2.2p mos_pd=10u mos_as=2.2p mos_ps=10u
+
+*** Compensation Light-Sensitive Inverter ***
+XpmosLSINV SCTRL VSS VDD VDD VSS    LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=0.2u ch_l=0.2u mos_ad=0.2p mos_pd=0.25u mos_as=0.2p mos_ps=0.25u
+XnmosLSINV SCTRL VSS VSS VSS psubIn LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=1u   ch_l=0.2u mos_ad=0.5p mos_pd=2.5u  mos_as=0.5p mos_ps=2.5u
+
+*** Output ***
+R1 Y O 1
+
+*** common NMOS substarte virtual node ***
+XpsubIn psubIn VSS PSUB_IN
+
+
+*** Output ***
+R1 Y O 1
+
+.ends

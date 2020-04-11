@@ -51,7 +51,7 @@ Xcsrc VSS TEST TRIG SUBCKT_Iph_Pplus_Nwell transConductance = a2 constCurrent = 
 * **************************************
 
 * --- final value of Iph
-.param iph = '(a2*SUPP + b2) * (beta*exp(-1*beamDistance*beamDistance/c1)+gamma*exp(-1*beamDistance*beamDistance/c2)) * junctionS/10'
+.param iph = '(a2 *SUPP - b2) * (beta*exp(-1*beamDistance*beamDistance/c1)+gamma*exp(-1*beamDistance*beamDistance/c2)) * junctionS/10'
 .csparam Iph = {Iph}
 
 .control

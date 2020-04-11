@@ -1,0 +1,166 @@
+*** TEST 050 : leakage for different NAND gate layouts ***
+*
+* ngSPICE test for PLS experiments
+*
+* NAND gate versions leakage test - gate area NOT illuminated
+*
+* Author: Jan Belohoubek, 01/2020
+* jan.belohoubek@fit.cvut.cz
+*
+* https://users.fit.cvut.cz/~belohja4/
+*
+*
+* **************************************
+
+* input high/low value
+.param INHIGH = 1.8V
+.param INLOW = 0V
+.csparam INHIGH = {INHIGH}
+
+.csparam INLOW = {INLOW}
+
+.param gateVersion_AND2X1 = 0
+.param gateVersion_NAND2X1 = 1
+.param gateVersion_NAND2X1_INV = 2
+.param gateVersion_NAND2X1_SYMMETRY = 3
+.param gateVersion_NAND2X1_SYMMETRY_INV = 4
+.param gateVersion_NAND2X1_SYMMETRY_INV_SERIALR = 5
+.param gateVersion_NAND_ALL = 6
+.param gateVersion_INVX1 = 7
+.param gateVersion_2INVX1 = 8
+
+.include ../models.lib
+.include ../tsmc180nmcmos.lib
+
+* **************************************
+* --- Test ---
+* **************************************
+
+* --- Settings
+.param INLOW = 0.3V
+.csparam INLOW = {INLOW}
+
+.param showPlots = 1
+.param writeFile = 1
+* redefine ...
+.include test050_settings.inc
+.csparam showPlots = {showPlots}
+.csparam writeFile = {writeFile}
+.global showPlots writeFile
+* --- End of Settins
+
+Vtrig LaserTrig 0 0 PWL(0ns 0V 40ns 0V 42ns OV 62ns 0V 64ns 0V 100ns 0V)
+
+.param beamDistanceTop = 0
+.param beamDistanceBot = 0
+
+.global LaserTrig beamDistanceTop beamDistanceBot
+
+* --- inputs
+*Vvin0 A 0 0 PWL(0ns 0V 30ns 0V 31ns SUPP)
+
+* --- outputs
+C1 VSS O 10fF
+
+.if (gateVersion == gateVersion_INVX1)
+Xinv1 Y VSS A VDD INVX1
+Rout Y O 0.001
+.endif
+
+.if (gateVersion == gateVersion_2INVX1)
+Xinv Y VSS A VDD INVX1
+Xinv2 O VSS Y VDD INVX1
+.endif
+
+.if (gateVersion == gateVersion_AND2X1)
+.include models/AND2X1.spice
+
+Xgate A B O VSS VDD AND2X1
+R1 Y Xgate.Y 1
+.endif
+
+.if (gateVersion == gateVersion_NAND2X1)
+Xnand Y VSS A B VDD NAND2X1
+R1 Y O 1
+.endif
+
+.if (gateVersion == gateVersion_NAND2X1_INV)
+Xnand Y VSS A B VDD NAND2X1
+Xinv O VSS Y VDD INVX1
+.endif
+
+.if (gateVersion == gateVersion_NAND2X1_SYMMETRY)
+.include models/nand_symmetry.spice
+Xgate A B O VSS VDD NAND2
+R1 Xgate.Y Y 1
+.endif
+
+.if (gateVersion == gateVersion_NAND2X1_SYMMETRY_INV)
+.include models/nand_symmetry.spice
+Xgate A B Y VSS VDD NAND2
+Xinv O VSS Y VDD INVX1
+Xinv2 O VSS Y VDD INVX1
+Xinv3 O VSS Y VDD INVX1
+.endif
+
+.if (gateVersion == gateVersion_NAND2X1_SYMMETRY_INV_SERIALR)
+models/nand_symmetry_serialR.spice
+Xgate A B Y VSS VDD NAND2
+Xinv O VSS Y VDD INVX1
+Xinv2 O VSS Y VDD INVX1
+Xinv3 O VSS Y VDD INVX1
+.endif
+
+.if (gateVersion == gateVersion_NAND_ALL)
+.include models/nand_all.spice
+
+Xgate A B Y VSS VDD NAND2
+Xinv O VSS Y VDD INVX1
+Xinv2 O VSS Y VDD INVX1
+Xinv3 O VSS Y VDD INVX1
+.endif
+
+* **************************************
+* --- Simulation Settings ---
+* **************************************
+
+.tran 0.1ns 100ns
+.param SIMSTEP = '100ns/0.1ns'
+.csparam SIMSTEP = {SIMSTEP}
+
+* **************************************
+* --- Simulation Control ---
+* **************************************
+
+.control
+    run
+    
+    if ('showPlots' > 0)   
+        plot i(vvdd) i(vvss)
+        
+        plot v(A)
+        plot v(O) 
+    end
+    
+    let timeIndex = 0
+    while time[timeIndex] < 55ns
+      let timeIndex= timeIndex + 1
+    end
+    
+    print i(VVDD)[$&timeIndex]
+    print v(O)[$&timeIndex]
+    print v(Y)[$&timeIndex]
+    print time[$&timeIndex]
+    
+    if ('writeFile' > 0)   
+      wrdata ivdd.out i(vvdd)
+      wrdata ivss.out i(vvss)
+    end
+    
+    if ('showPlots' < 1)
+        quit
+    end
+    
+.endc
+
+.end

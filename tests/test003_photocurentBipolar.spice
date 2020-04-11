@@ -15,6 +15,11 @@
 
 .include ../models.lib
 
+.param SUPP = 1.2V
+.csparam SUPP = {SUPP}
+.param pLaser = 1250
+.csparam pLaser = {pLaser}
+
 * **************************************
 * --- Test ---
 * **************************************

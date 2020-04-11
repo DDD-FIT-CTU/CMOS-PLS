@@ -26,7 +26,8 @@ Vtrig LaserTrig 0 0 PWL(0ns 0V 40ns 0V 42ns SUPP 62ns SUPP 64ns 0V 100ns 0V)
 
 R_SUB psub VSUB 0.001
 
-Xnmos VDD VSS VSS psub LaserTrig SUBCKT_NMOS
+XpsubIn psubIn VSS PSUB_IN
+Xnmos VDD VSS VSS psub psubIn LaserTrig SUBCKT_NMOS
 
 * **************************************
 * --- Simulation Settings ---
@@ -43,9 +44,9 @@ Xnmos VDD VSS VSS psub LaserTrig SUBCKT_NMOS
 .control
     run
     plot i(vvdd) i(vvss) i(vvsub) i(vvsub)+i(vvss)
-    plot v(xnmos.psubIn) v(psub)
+    plot v(psubIn) v(psub)
     plot v(vss) v(vdd)
-    plot ((v(xnmos.xsd.psub)-v(xnmos.psubIn))/0.001)
+    plot ((v(xnmos.xsd.psub)-v(psubIn))/0.001)
     plot v(xnmos.xsd.ctrl)
 
 .endc
