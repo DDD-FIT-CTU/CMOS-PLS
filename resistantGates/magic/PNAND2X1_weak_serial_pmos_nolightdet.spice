@@ -1,0 +1,64 @@
+* NGSPICE file created from PNAND2X1_weak_serial_pmos_nolightdet.ext - technology: scmos
+
+.subckt PNAND2X1_weak_serial_pmos_nolightdet
+X1000 VGND1 VDD GND GND NMOS_MAGIC w=1u l=0.2u
++  ad=0.3p pd=2.6u as=1.6p ps=8.2u
+**devattr s=S d=D
+X1001 VGND2 VDD GND GND NMOS_MAGIC w=1u l=0.2u
++  ad=0.3p pd=2.6u as=0p ps=0u
+**devattr s=S d=D
+X1002 Y B VVDD VDD PMOS_MAGIC w=2.4u l=0.2u
++  ad=3.44p pd=16u as=4.64p ps=22u
+**devattr s=S d=D
+X1003 Y A VVDD VDD PMOS_MAGIC w=2.4u l=0.2u
++  ad=0p pd=0u as=0p ps=0u
+**devattr s=S d=D
+X1004 Y B a_n60_500# GND NMOS_MAGIC w=1u l=0.2u
++  ad=1p pd=6u as=0.3p ps=2.6u
+**devattr s=S d=D
+X1005 a_n152_500# B VGND1 GND NMOS_MAGIC w=1u l=0.2u
++  ad=0.3p pd=2.6u as=0p ps=0u
+**devattr s=S d=D
+X1006 Y VDD VVDD VDD PMOS_MAGIC w=2u l=0.2u
++  ad=0p pd=0u as=0p ps=0u
+**devattr s=S d=D
+X1007 a_n60_500# A VGND2 GND NMOS_MAGIC w=1u l=0.2u
++  ad=0p pd=0u as=0p ps=0u
+**devattr s=S d=D
+X1008 VVDD GND VDD VDD PMOS_MAGIC w=1.2u l=0.2u
++  ad=0p pd=0u as=3.2p ps=15.8u
+**devattr s=S d=D
+X1009 O Y VDD VDD PMOS_MAGIC w=4u l=0.2u
++  ad=2p pd=9u as=0p ps=0u
+**devattr s=S d=D
+X1010 O Y GND GND NMOS_MAGIC w=2u l=0.2u
++  ad=1p pd=5u as=0p ps=0u
+**devattr s=S d=D
+X1011 Y VDD VVDD VDD PMOS_MAGIC w=2u l=0.2u
++  ad=0p pd=0u as=0p ps=0u
+**devattr s=S d=D
+X1012 Y A a_n152_500# GND NMOS_MAGIC w=1u l=0.2u
++  ad=0p pd=0u as=0p ps=0u
+**devattr s=S d=D
+X1013 VVDD GND VDD VDD PMOS_MAGIC w=1.2u l=0.2u
++  ad=0p pd=0u as=0p ps=0u
+**devattr s=S d=D
+C0 A VVDD 0.01fF
+C1 Y VVDD 1.04fF
+C2 Y O 0.05fF
+C3 VDD B 0.78fF
+C4 VDD A 0.48fF
+C5 B A 0.80fF
+C6 VDD Y 0.82fF
+C7 VDD VVDD 0.90fF
+C8 B Y 0.04fF
+C9 VDD O 0.54fF
+C10 A Y 0.04fF
+C11 B VVDD 0.01fF
+C12 O GND -0.32fF
+C13 Y GND 0.52fF
+C14 A GND 0.55fF
+C15 B GND 0.56fF
+C16 VDD GND 4.03fF
+.ends
+

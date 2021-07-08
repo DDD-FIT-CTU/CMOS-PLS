@@ -1,0 +1,62 @@
+* SPICE3 file created from PNAND2X1.ext - technology: scmos
+
+
+* Top level circuit PNAND2X1
+
+* PSTACK
+M1000 vvdd A Y vdd pfet w=2u l=0.2u ad=4.19p pd=20.4u as=3.2p ps=15.2u
+M1013 Y B vvdd vdd pfet w=2u l=0.2u ad=0p pd=0u as=0p ps=0u
+
+* top PMOS
+M1001 vdd gnd vvdd vdd pfet w=0.9u l=0.2u ad=1.99p pd=11u as=0p ps=0u
+M1004 vvdd gnd vdd vdd pfet w=1u l=0.2u ad=0p pd=0u as=0p ps=0u
+
+* paralel PMOS
+M1007 vvdd CTRL Y vdd pfet w=2u l=0.2u ad=0p pd=0u as=0p ps=0u
+M1010 Y CTRL vvdd vdd pfet w=2u l=0.2u ad=0p pd=0u as=0p ps=0u
+
+* NSTACK
+M1014 vgnd1 B a_n152_496# gnd nfet w=1u l=0.2u ad=0p pd=0u as=0p ps=0u
+M1006 a_n152_496# A Y gnd nfet w=1u l=0.2u ad=0.3p pd=2.6u as=0p ps=0u
+
+M1012 a_n60_496# A vgnd2 gnd nfet w=1u l=0.2u ad=0p pd=0u as=0.3p ps=2.6u
+M1003 Y B a_n60_496# gnd nfet w=1u l=0.2u ad=1p pd=6u as=0.3p ps=2.6u
+
+* bottom NMOS
+M1008 gnd CTRL vgnd1 gnd nfet w=1u l=0.2u ad=0p pd=0u as=0.3p ps=2.6u
+M1015 vgnd2 CTRL gnd gnd nfet w=1u l=0.2u ad=0p pd=0u as=0p ps=0u
+
+* output inverter
+M1002 O Y gnd gnd nfet w=1u l=0.2u ad=0.5p pd=3u as=1.2p ps=6.4u
+M1005 O Y vdd vdd pfet w=2u l=0.2u ad=1p pd=5u as=0p ps=0u
+
+* ctrl inverter
+M1009 gnd gnd CTRL gnd nfet w=1u l=0.2u ad=0p pd=0u as=0.5p ps=3u
+M1011 vdd gnd CTRL vdd pfet w=0.4u l=0.2u ad=0p pd=0u as=0.2p ps=1.8u
+
+
+C0 vvdd vdd 0.79fF
+C1 Y vdd 0.57fF
+C2 vvdd Y 0.95fF
+C3 A vdd 0.22fF
+C4 vvdd A 0.01fF
+C5 B vdd 0.39fF
+C6 vdd O 0.39fF
+C7 Y A 0.04fF
+C8 vvdd B 0.01fF
+C9 CTRL vdd 1.10fF
+C10 Y B 0.04fF
+C11 Y O 0.05fF
+C12 A B 0.86fF
+C13 Y CTRL 0.48fF
+C14 A CTRL 0.30fF
+C15 B CTRL 0.65fF
+C16 O gnd 0.17fF
+C17 vvdd gnd 0.01fF
+C18 Y gnd 1.19fF
+C19 A gnd 0.66fF
+C20 B gnd 0.47fF
+C21 CTRL gnd 0.85fF
+C22 vdd gnd 5.24fF
+.end
+

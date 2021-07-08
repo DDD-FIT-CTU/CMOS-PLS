@@ -1,0 +1,2 @@
+P [mW]; data_bin; data_hex; data_dec; hamming_in; hamming_out; time [ns]; I (static) [A]; I (dynamic) [A]; time [ns]; I (laser) [A]
+0; 11100100; E4; 228; 4; 4; 2.0005e-08; 6.133598745e-06; -0.003971577226426454; 3.0000000000000004e-08; 0.001777755255

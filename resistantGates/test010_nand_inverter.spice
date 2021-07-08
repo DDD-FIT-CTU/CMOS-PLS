@@ -42,9 +42,11 @@ Vtrig LaserTrig 0 0 PWL(0ns 0V 40ns 0V 42ns SUPP 62ns SUPP 64ns 0V 100ns 0V)
 * --- outputs
 C1 VSS O 10fF
 
+
 * --- circuit layout model
 Xnand Y VSS A B VDD NAND2X1
 Xinv O VSS Y VDD INVX1
+Xinv2 O VSS Y VDD INVX1
 
 
 * **************************************

@@ -15,6 +15,15 @@
 
 .include ../models.lib
 .include ../90nm_bulk.lib
+.include ../tsmc180nmcmos.lib
+
+* --- Settings
+.param showPlots = 1
+* redefine ...
+.include test004_settings.inc
+.csparam showPlots = {showPlots}
+.global showPlots
+* --- End of Settins
 
 * **************************************
 * --- Test ---
@@ -43,12 +52,27 @@ Xnmos VDD VSS VSS psub psubIn LaserTrig SUBCKT_NMOS
 
 .control
     run
-    plot i(vvdd) i(vvss) i(vvsub) i(vvsub)+i(vvss)
-    plot v(psubIn) v(psub)
-    plot v(vss) v(vdd)
-    plot ((v(xnmos.xsd.psub)-v(psubIn))/0.001)
-    plot v(xnmos.xsd.ctrl)
-
+    
+    if ('showPlots'> 0)
+        plot i(vvdd) i(vvss) i(vvsub) i(vvsub)+i(vvss)
+        plot v(psubIn) v(psub)
+        plot v(vss) v(vdd)
+        plot ((v(xnmos.xsd.psub)-v(psubIn))/0.001)
+        plot v(xnmos.xsd.ctrl)
+    end
+    
+    let timeIndex = 0
+    while time[timeIndex] < 55ns
+      let timeIndex= timeIndex + 1
+    end
+    
+    print i(VVDD)[$&timeIndex]
+    print time[$&timeIndex]
+    
+    if ('showPlots' < 1)
+        quit
+    end
+    
 .endc
 
 .end

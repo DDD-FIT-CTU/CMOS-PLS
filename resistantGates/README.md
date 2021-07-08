@@ -78,11 +78,33 @@ The test groups can be executed by [run_tests.sh](run_tests.sh), the generated g
     * voltage graph: one of the internal node voltage and the output voltage node is provided
     * current graph: VDD node currents for bot input patterns are provided
 
-| Test Name | Test Description                                     | Test Output                   |
-| :---:     | :---                                                 | :---                          |
-| 030       | Domino AND gate                                      | [test030](output/test030.pdf) |
-| 031       | Domino AND gate with weak keeper                     | [test031](output/test031.pdf) |
+| Test Name | Test Description                                     | Test Output                         |
+| :---:     | :---                                                 | :---                                |
+| 030       | Domino AND gate                                      | [test030](output/test030.pdf)       |
+| 031       | Domino AND gate with weak keeper                     | [test031](output/test031.pdf)       |
+| 030 + 031 | A combined current graph                             | [test030+31](output/test030+31.pdf) |
 
+
+## Evaluation of netlists exported directly from layout
+  * those tests are used for evaluation of netlists exported directly from magic - not netlists synthetized (partially) by hand as in 00X, 01X and 02X cases
+  * those tests are denoted "04X"
+  * test running script name: "test04X.sh"
+  * Gnuplot script: "test04X.gnuplot"
+  * three graphs are provided as the test output:
+    * voltage graph: one of the internal node voltage and the output voltage node is provided
+    * current graph: VDD node currents for all input patterns are provided
+    * voltage graph: CTRL node voltage (light-sensitive inverter output or it's inverted value)
+    
+| Test Name | Magic Source File                | LEF File (Technology File)       | EXT File (Magic Extaracted netlist) |  Test Description                                                                                                       | Test Output                   |
+| :---:     | :---                             | :---                             | :---                                | :---                                                                                                                    | :---                          |
+| 041       | --                               | --                               | --                                  | Protected AND gate simulation for all input patterns with increased supply voltage                                      | [test041](output/test041.pdf) |
+| 042       | --                               | --                               | --                                  | Protected OR gate simulation for all input patterns with increased supply voltage                                       | [test042](output/test042.pdf) |
+| 043       | [PAND2X1.mag](magic/PAND2X1.mag) | [PAND2X1.lef](magic/PAND2X1.lef) | [PAND2X1.ext](magic/PAND2X1.ext)    | Protected AND gate simulation for all input patterns                                                                    | [test043](output/test043.pdf) |
+| 044       | [POR2X1.mag](magic/POR2X1.mag)   | [POR2X1.lef](magic/POR2X1.lef)   | [POR2X1.ext](magic/POR2X1.ext)      | Protected OR gate simulation for all input patterns                                                                     | [test044](output/test044.pdf) |
+| 045       | [PAND2X1.mag](magic/PAND2X1.mag) | [PAND2X1.lef](magic/PAND2X1.lef) | [PAND2X1.ext](magic/PAND2X1.ext)    | Protected AND gate simulation for all input patterns with voltage drops @ gate inputs                                   | [test045](output/test045.pdf) |
+| 046       | [POR2X1.mag](magic/POR2X1.mag)   | [POR2X1.lef](magic/POR2X1.lef)   | [POR2X1.ext](magic/POR2X1.ext)      | Protected OR gate simulation for all input patterns  with voltage drops @ gate inputs                                   | [test046](output/test046.pdf) |
+| 047       | --                               | --                               | --                                  | Protected OR gate simulation for all input patterns with increased supply voltage and 3rd/4th control inverter          | [test047](output/test047.pdf) |
+| 048       | --                               | --                               | --                                  | Protected AND gate simulation for all input patterns with increased supply voltage and 3rd/4th control inverter         | [test048](output/test048.pdf) |
 
 ## Leakage and Model Correctness Validation
   * tests for validation of NMOS leakage and stack effects are denoted "05X"
@@ -92,3 +114,17 @@ The test groups can be executed by [run_tests.sh](run_tests.sh), the generated g
 | 050       | test050.sh | test050.gnuplot | leakage simulation for different NAND gate layouts    | [test050](output/test050.pdf) |
 | 051       | test051.sh | test051.gnuplot | NMOS stack Overlaps evaluation - subthreshold leakage | [test051](output/test051.pdf) |
 | 052       | test052.sh | test052.gnuplot | NMOS illuminated stack Overlaps evaluation            | [test051](output/test052.pdf) |
+
+## SecLib Evaluation
+  * tests for SecLib evaluation "06X"
+  * those tests are denoted "06X"
+  * test running script name: "test06X.sh"
+  * Gnuplot script: "test06X.gnuplot"
+  * two graphs are provided as the test output:
+    * voltage graph: both dual-rail output voltages
+    * current graph: VDD/VSS node currents for all input patterns are provided
+    
+| Test Name |  Test Description                                                                                                                                                 | Test Output                                                                                                                   |
+| :---:     | :---                                                                                                                                                              | :---                                                                                                                          |
+| 060       | Dual-Rail SecLib simulation; dual-rail gate composed of dynamic C-elements;                                                                                       | [test060](output/test060.pdf) |
+| 061       | Dual-Rail SecLib simulation; dual-rail gate composed of dynamic C-elements + one additional C-element is used to balance zero-input generation symetrization      | [test061](output/test061.pdf) |

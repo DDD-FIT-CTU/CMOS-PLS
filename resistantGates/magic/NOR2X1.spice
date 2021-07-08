@@ -1,0 +1,27 @@
+* SPICE3 file created from NOR2X1.ext - technology: scmos
+
+
+* Top level circuit NOR2X1
+.subckt NOR2X1_MAG VDD GND B A Y
+
+X0 Y B a_36_216# vdd PMOS_MAGIC ad=2p pd=9u as=1.2p ps=8.6u w=4u l=0.2u
+**devattr s=S d=D
+X1 Y B gnd gnd NMOS_MAGIC ad=0.6p pd=3.2u as=1p ps=6u w=1u l=0.2u
+**devattr s=S d=D
+X2 Y A gnd gnd NMOS_MAGIC ad=0p pd=0u as=0p ps=0u w=1u l=0.2u
+**devattr s=S d=D
+X3 a_36_216# A vdd vdd PMOS_MAGIC ad=0p pd=0u as=2p ps=9u w=4u l=0.2u
+**devattr s=S d=D
+C0 vdd B 0.12fF
+C1 vdd A 0.07fF
+C2 A B 0.18fF
+C3 vdd Y 0.17fF
+C4 B Y 0.12fF
+C5 A Y 0.07fF
+C6 a_36_216# Y 0.01fF
+C7 Y gnd 0.12fF
+C8 B gnd 0.28fF
+C9 A gnd 0.31fF
+C10 vdd gnd 1.45fF
+.ends
+

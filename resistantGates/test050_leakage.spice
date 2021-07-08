@@ -28,6 +28,7 @@
 .param gateVersion_NAND_ALL = 6
 .param gateVersion_INVX1 = 7
 .param gateVersion_2INVX1 = 8
+.param gateVersion_NAND_ALL_CTRL_CENTER = 9
 
 .include ../models.lib
 .include ../tsmc180nmcmos.lib
@@ -39,6 +40,9 @@
 * --- Settings
 .param INLOW = 0.3V
 .csparam INLOW = {INLOW}
+
+.param INHIGH = 1.45V
+.csparam INHIGH = {INHIGH}
 
 .param showPlots = 1
 .param writeFile = 1
@@ -113,6 +117,15 @@ Xinv3 O VSS Y VDD INVX1
 
 .if (gateVersion == gateVersion_NAND_ALL)
 .include models/nand_all.spice
+
+Xgate A B Y VSS VDD NAND2
+Xinv O VSS Y VDD INVX1
+Xinv2 O VSS Y VDD INVX1
+Xinv3 O VSS Y VDD INVX1
+.endif
+
+.if (gateVersion == gateVersion_NAND_ALL_CTRL_CENTER)
+.include models/nand_all_ctrl_center.spice
 
 Xgate A B Y VSS VDD NAND2
 Xinv O VSS Y VDD INVX1

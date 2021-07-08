@@ -1,0 +1,136 @@
+*** TEST 003 gen-snapshot ***
+*
+* ngSPICE test for PLS experiments
+*
+* AES SBOX PLS test init file generator - protected dualRail SBOX area illuminated
+*
+* Author: Jan Belohoubek, 08/2020
+* jan.belohoubek@fit.cvut.cz
+*
+* https://users.fit.cvut.cz/~belohja4/
+*
+*
+* **************************************
+
+.include ../models.lib
+.include ../tsmc180nmcmos.lib
+.include layout/dualRail.spice
+
+* **************************************
+* --- Test ---
+* **************************************
+
+* --- Settings
+.param showPlots = 1
+.param writeFile = 1
+.param run_inputSet = 0
+
+* redefine defaults ...
+.include test00X_settings.inc
+
+.csparam showPlots = {showPlots}
+.csparam writeFile = {writeFile}
+.csparam run_inputSet = {run_inputSet}
+
+.global showPlots writeFile run_inputSet
+
+* --- End of Settins
+
+Vtrig LaserTrig 0 0 PWL(0ns 0V 20ns 0V 21ns SUPP)
+
+.param beamDistanceTop = 0
+.param beamDistanceBot = 0
+
+.global LaserTrig beamDistanceTop beamDistanceBot
+
+* --- inputs
+Vvin0 in0 0 0 PWL(0ns 0V 5ns  0V 7ns  0V)
+Vvin1 in1 0 0 PWL(0ns 0V 6ns  0V 8ns  0V)
+Vvin2 in2 0 0 PWL(0ns 0V 7ns  0V 9ns  0V)
+Vvin3 in3 0 0 PWL(0ns 0V 8ns  0V 10ns 0V)
+Vvin4 in4 0 0 PWL(0ns 0V 9ns  0V 11ns 0V)
+Vvin5 in5 0 0 PWL(0ns 0V 10ns 0V 12ns 0V)
+Vvin6 in6 0 0 PWL(0ns 0V 11ns 0V 13ns 0V)
+Vvin7 in7 0 0 PWL(0ns 0V 12ns 0V 14ns 0V)
+
+Vvin0D in0D 0 0 PWL(0ns 0V 5ns  0V 7ns  0V)
+Vvin1D in1D 0 0 PWL(0ns 0V 6ns  0V 8ns  0V)
+Vvin2D in2D 0 0 PWL(0ns 0V 7ns  0V 9ns  0V)
+Vvin3D in3D 0 0 PWL(0ns 0V 8ns  0V 10ns 0V)
+Vvin4D in4D 0 0 PWL(0ns 0V 9ns  0V 11ns 0V)
+Vvin5D in5D 0 0 PWL(0ns 0V 10ns 0V 12ns 0V)
+Vvin6D in6D 0 0 PWL(0ns 0V 11ns 0V 13ns 0V)
+Vvin7D in7D 0 0 PWL(0ns 0V 12ns 0V 14ns 0V)
+
+
+* --- outputs
+C0 VSS out0 10fF
+C1 VSS out1 10fF
+C2 VSS out2 10fF
+C3 VSS out3 10fF
+C4 VSS out4 10fF
+C5 VSS out5 10fF
+C6 VSS out6 10fF
+C7 VSS out7 10fF
+
+C0d VSS out0d 10fF
+C1d VSS out1d 10fF
+C2d VSS out2d 10fF
+C3d VSS out3d 10fF
+C4d VSS out4d 10fF
+C5d VSS out5d 10fF
+C6d VSS out6d 10fF
+C7d VSS out7d 10fF
+
+* --- circuit layout model
+Xsbox in0 in1 in2 in3 in4 in5 in6 in7 in0d in1d in2d in3d in4d in5d in6d in7d out0 out1 out2 out3 out4 out5 out6 out7 out0d out1d out2d out3d out4d out5d out6d out7d VDD VSS AES_SBOX
+
+
+* **************************************
+* --- Simulation Settings ---
+* **************************************
+
+.param SIM_LEN = 35ns
+.csparam SIM_LEN = {SIM_LEN}
+
+.tran 0.1ns 'SIM_LEN'
+.param SIMSTEP = 'SIM_LEN/0.1ns'
+.csparam SIMSTEP = {SIMSTEP}
+
+* **************************************
+* --- Simulation Control ---
+* **************************************
+
+.control
+    .include ./inputsD.inc
+
+    run
+    
+    if ('showPlots' > 0)   
+        plot i(vvdd) i(vvss)
+        
+        plot v(in0) v(in1) v(in1d) 
+        plot v(out0) v(out1)
+    end
+    
+    let timeIndex = 0
+    while time[timeIndex] < 30ns
+      let timeIndex= timeIndex + 1
+    end
+    
+    print i(vvdd)[$&timeIndex]
+    print time[$&timeIndex]
+    
+    if ('writeFile' > 0)   
+      wrdata ivdd.out i(vvdd)
+      wrdata ivss.out i(vvss)
+      *snsave sim.snap
+    end
+    
+    if ('showPlots' < 1)
+        quit
+    end
+       
+.endc
+
+.end

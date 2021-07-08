@@ -1,0 +1,102 @@
+*** TEST 004 partitioning ***
+*
+* ngSPICE test for PLS experiments
+*
+* AES SBOX PLS test init file generator - protected dualRail SBOX area illuminated
+*
+* Author: Jan Belohoubek, 08/2020
+* jan.belohoubek@fit.cvut.cz
+*
+* https://users.fit.cvut.cz/~belohja4/
+*
+*
+* **************************************
+
+.include ../../models.lib
+.include ../../tsmc180nmcmos.lib
+.include pDualRail.spice
+
+* **************************************
+* --- Test ---
+* **************************************
+
+* --- Settings
+.param showPlots = 0
+.param writeFile = 1
+.param run_inputSet = 0
+
+* redefine defaults ...
+.include test00X_settings.inc
+
+.csparam showPlots = {showPlots}
+.csparam writeFile = {writeFile}
+.csparam run_inputSet = {run_inputSet}
+
+.global showPlots writeFile run_inputSet
+
+* --- End of Settins
+
+Vtrig LaserTrig 0 0 PWL(0ns 0V 20ns 0V 21ns SUPP)
+
+.param beamDistanceTop = 0
+.param beamDistanceBot = 0
+
+.global LaserTrig beamDistanceTop beamDistanceBot
+
+* --- inputs
+Vvin0 INPUT_0 0 0 PWL(0ns 0V 5ns  0V 7ns  0V)
+Vvin1 INPUT_1 0 0 PWL(0ns 0V 6ns  0V 8ns  0V)
+Vvin2 INPUT_2 0 0 PWL(0ns 0V 7ns  0V 9ns  0V)
+Vvin3 INPUT_3 0 0 PWL(0ns 0V 8ns  0V 10ns 0V)
+Vvin4 INPUT_4 0 0 PWL(0ns 0V 9ns  0V 11ns 0V)
+Vvin5 INPUT_5 0 0 PWL(0ns 0V 10ns 0V 12ns 0V)
+Vvin6 INPUT_6 0 0 PWL(0ns 0V 11ns 0V 13ns 0V)
+Vvin7 INPUT_7 0 0 PWL(0ns 0V 12ns 0V 14ns 0V)
+
+Vvin0D D_INPUT_0 0 0 PWL(0ns 0V 5ns  0V 7ns  0V)
+Vvin1D D_INPUT_1 0 0 PWL(0ns 0V 6ns  0V 8ns  0V)
+Vvin2D D_INPUT_2 0 0 PWL(0ns 0V 7ns  0V 9ns  0V)
+Vvin3D D_INPUT_3 0 0 PWL(0ns 0V 8ns  0V 10ns 0V)
+Vvin4D D_INPUT_4 0 0 PWL(0ns 0V 9ns  0V 11ns 0V)
+Vvin5D D_INPUT_5 0 0 PWL(0ns 0V 10ns 0V 12ns 0V)
+Vvin6D D_INPUT_6 0 0 PWL(0ns 0V 11ns 0V 13ns 0V)
+Vvin7D D_INPUT_7 0 0 PWL(0ns 0V 12ns 0V 14ns 0V)
+
+
+* --- circuit layout model
+
+
+* **************************************
+* --- Simulation Settings ---
+* **************************************
+
+.param SIM_LEN = 35ns
+.csparam SIM_LEN = {SIM_LEN}
+
+.tran 0.1ns 'SIM_LEN'
+.param SIMSTEP = 'SIM_LEN/0.1ns'
+.csparam SIMSTEP = {SIMSTEP}
+
+* **************************************
+* --- Simulation Control ---
+* **************************************
+
+.control
+    .include ../inputsD.inc
+
+    run
+    
+    if ('showPlots' > 0)
+        *plot V(INPUT_0) V(D_INPUT_0)
+    end
+    
+    print run_inputSet
+    
+    if run_inputSet < 111
+       print Ahoj
+    end
+    quit
+       
+.endc
+
+.end

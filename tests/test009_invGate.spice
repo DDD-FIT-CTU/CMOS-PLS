@@ -15,17 +15,25 @@
 .include ../models.lib
 .include ../tsmc180nmcmos.lib
 
+* --- Settings
+.param showPlots = 1
+* redefine ...
+.include test009_settings.inc
+.csparam showPlots = {showPlots}
+.global showPlots
+* --- End of Settins
+
 * **************************************
 * --- Test Parameters ---
 * **************************************
 
-Vvin0 A 0 0 PWL(0ns 0V 20ns SUPP 22ns SUPP)
+*Vvin0 A 0 0 PWL(0ns 0V 20ns SUPP 22ns SUPP)
 
 * **************************************
 * --- Test ---
 * **************************************
 
-*Vtrig LaserTrig 0 0 PWL(0ns 0V 40ns 0V 42ns SUPP 62ns SUPP 64ns 0V 100ns 0V)
+Vtrig LaserTrig 0 0 PWL(0ns 0V 40ns 0V 42ns SUPP 62ns SUPP 64ns 0V 100ns 0V)
 
 .global LaserTrig 
 
@@ -34,7 +42,15 @@ R1 VSS Y 1000000
 C1 VSS Y 1pF
 
 * --- circuit layout model
-xinv Y VSS A VDD INVX1 beamDistanceTop = 0 beamDistanceBot = 0
+*xinv Y VSS A VDD INVX1 beamDistanceTop = 0 beamDistanceBot = 0
+
+XpsubIn psubIn VSS PSUB_IN
+Xnmos1 Y A VSS VSS psubIn LaserTrig SUBCKT_NMOS
+*Xnmos2 Y A VSS VSS psubIn LaserTrig SUBCKT_NMOS
+*Xnmos3 Y A VSS VSS psubIn LaserTrig SUBCKT_NMOS
+
+Xpmos1 Y A VDD VDD VSS LaserTrig SUBCKT_PMOS
+*Xpmos2 Y A VDD VDD VSS LaserTrig SUBCKT_PMOS
 
 * **************************************
 * --- Simulation Settings ---
@@ -53,9 +69,24 @@ xinv Y VSS A VDD INVX1 beamDistanceTop = 0 beamDistanceBot = 0
 .control
     run
     
-    plot i(vvdd) i(vvss)
-    plot v(vss) v(vdd)
-    plot v(A) v(Y)
+    if ('showPlots'> 0)
+        plot i(vvdd) i(vvss)
+        plot v(vss) v(vdd)
+        plot v(A) v(Y)
+    end
+    
+    let timeIndex = 0
+    while time[timeIndex] < 55ns
+      let timeIndex= timeIndex + 1
+    end
+    
+    print i(VVDD)[$&timeIndex]
+    print time[$&timeIndex]
+    print v(Y)[$&timeIndex]
+    
+    if ('showPlots' < 1)
+        quit
+    end
 .endc
 
 .end

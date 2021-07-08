@@ -31,7 +31,7 @@
 * --- End of Settins
 
 Vtrig LaserTrig 0 0 PWL(0ns 0V 40ns 0V 42ns SUPP 62ns SUPP 64ns 0V 100ns 0V)
-Vprecharge CLK 0 0 PWL(0ns 0V 10ns 0V 11ns SUPP 20ns SUPP 21ns 0V 100ns 0V)
+Vprecharge CLK 0 0 PWL(0ns SUPP 10ns SUPP 11ns 0V 20ns 0V 21ns SUPP 100ns SUPP)
 
 .param beamDistanceTop = 0
 .param beamDistanceBot = 0

@@ -48,7 +48,7 @@ Xsd VDD VSS TEST SUBCKT_SD
 
 .control
     run
-    plot i(vvss) i(VTEST)
+    plot i(vvss) i(vvdd) i(VTEST)
     plot v(xsd.ctrl) v(xsd.vopen) v(test)
 
     echo "MAX base voltage [V]: "

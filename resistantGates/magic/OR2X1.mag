@@ -1,0 +1,8 @@
+magic
+tech scmos
+magscale 1 4
+timestamp 1613827319
+<< labels >>
+rlabel space 0 0 1 1 1 vdd
+rlabel space 0 0 1 1 1 gnd
+<< end >>

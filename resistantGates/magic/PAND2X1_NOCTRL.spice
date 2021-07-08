@@ -1,0 +1,46 @@
+* SPICE3 file created from PAND2X1_NOCTRL.ext - technology: scmos
+
+.subckt PAND2X1_NOCTRL VDD GND B A Y
+X0 Y O VDD VDD PMOS_MAGIC ad=1.95p pd=8.8u as=3.27p ps=14.8u w=3.9u l=0.2u
+**devattr s=S d=D
+X1 O GND GND GND NMOS_MAGIC ad=0.99p pd=6u as=2.52p ps=12.2u w=1.5u l=0.2u
+**devattr s=S d=D
+X2 a_48_324# GND VDD VDD PMOS_MAGIC ad=1.32p pd=7u as=0p ps=0u w=1.2u l=0.2u
+**devattr s=S d=D
+X3 Y O GND GND NMOS_MAGIC ad=1.1p pd=5.4u as=0p ps=0u w=2.2u l=0.2u
+**devattr s=S d=D
+X4 a_36_28# B a_8_28# GND NMOS_MAGIC ad=0.12p pd=1.4u as=0.99p ps=6u w=0.4u l=0.2u
+**devattr s=S d=D
+X5 a_88_28# A a_8_28# GND NMOS_MAGIC ad=0.12p pd=1.4u as=0p ps=0u w=0.4u l=0.2u
+**devattr s=S d=D
+X6 O B a_88_28# GND NMOS_MAGIC ad=0p pd=0u as=0p ps=0u w=0.4u l=0.2u
+**devattr s=S d=D
+X7 O A a_48_324# VDD PMOS_MAGIC ad=1.92p pd=9.4u as=0p ps=0u w=1.2u l=0.2u
+**devattr s=S d=D
+X8 O A a_36_28# GND NMOS_MAGIC ad=0p pd=0u as=0p ps=0u w=0.4u l=0.2u
+**devattr s=S d=D
+X9 O VDD VDD VDD PMOS_MAGIC ad=0p pd=0u as=0p ps=0u w=2.4u l=0.2u
+**devattr s=S d=D
+X10 O B a_48_324# VDD PMOS_MAGIC ad=0p pd=0u as=0p ps=0u w=1.2u l=0.2u
+**devattr s=S d=D
+X11 a_8_28# VDD GND GND NMOS_MAGIC ad=0p pd=0u as=0p ps=0u w=1.5u l=0.2u
+**devattr s=S d=D
+C0 O a_48_324# 0.27fF
+C1 VDD Y 0.54fF
+C2 O a_8_28# 0.06fF
+C3 VDD O 1.16fF
+C4 VDD a_48_324# 0.25fF
+C5 B O 0.06fF
+C6 A O 0.23fF
+C7 B a_48_324# 0.01fF
+C8 a_8_28# a_36_28# 0.00fF
+C9 A a_48_324# 0.01fF
+C10 B a_8_28# 0.01fF
+C11 VDD B 0.39fF
+C12 a_8_28# a_88_28# 0.00fF
+C13 A a_8_28# 0.01fF
+C14 VDD A 0.37fF
+C15 B A 0.83fF
+C16 Y O 0.05fF
+.ends
+

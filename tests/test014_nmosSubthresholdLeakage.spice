@@ -24,11 +24,11 @@ Vtrig LaserTrig 0 0.0V
 Vgate gate 0 0.0V
 
 Vsub psub 0 0.0V
-#Vsub psub 0 -0.1V
-#Vsub psub 0 -0.2V
-#Vsub psub 0 -0.3V
-#Vsub psub 0 -0.4V
-#Vsub psub 0 -0.5V
+*Vsub psub 0 -0.1V
+*Vsub psub 0 -0.2V
+*Vsub psub 0 -0.3V
+*Vsub psub 0 -0.4V
+*Vsub psub 0 -0.5V
 
 XpsubIn psubIn VSS PSUB_IN
 Xnmos VDD GATE VSS psub psubIn LaserTrig SUBCKT_NMOS
@@ -39,7 +39,7 @@ Xnmos VDD GATE VSS psub psubIn LaserTrig SUBCKT_NMOS
 * --- Simulation Settings ---
 * **************************************
 
-.dc Vgate 0 0.354505 0.01
+.dc Vgate 0 2.354505 0.01
 
 * **************************************
 * --- Simulation Control ---

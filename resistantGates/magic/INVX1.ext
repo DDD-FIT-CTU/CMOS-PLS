@@ -1,0 +1,20 @@
+timestamp 1527190831
+version 8.3
+tech scmos
+style TSMC0.18um(tsmc18)from:t11b
+scale 1000 1 2.5
+resistclasses 6700 7500 929000 929000 1 7700 7700 80 80 80 70 70 40
+parameters NMOS_MAGIC l=l w=w a1=as p1=ps a2=ad p2=pd
+parameters PMOS_MAGIC l=l w=w a1=as p1=ps a2=ad p2=pd
+node "xp_8_92#" 0 0 8 92 m1p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "xp_40_132#" 0 0 40 132 m1p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "Y" 45 298.269 36 24 ndif 800 120 1600 200 0 0 0 0 0 0 0 0 0 0 5632 736 0 0 0 0 0 0 0 0 0 0
+node "A" 355 367.624 8 76 pc 0 0 0 0 0 0 0 0 0 0 3264 792 0 0 512 96 0 0 0 0 0 0 0 0 0 0
+node "vdd" 1550 1516.2 -36 192 nw 256 64 1600 200 31920 736 0 0 0 0 0 0 0 0 3392 392 0 0 0 0 0 0 0 0 0 0
+substrate "gnd" 0 0 -8 -8 poc 800 120 256 64 0 0 0 0 0 0 0 0 0 0 2752 312 0 0 0 0 0 0 0 0 0 0
+cap "vdd" "Y" 389.13
+cap "A" "Y" 82.476
+cap "vdd" "A" 200.29
+device msubckt NMOS_MAGIC 28 24 29 25 l=8 w=40 "gnd" "A" 16 0 "gnd" 40 0 "Y" 40 0
+device msubckt PMOS_MAGIC 28 296 29 297 l=8 w=80 "vdd" "A" 16 0 "vdd" 80 0 "Y" 80 0
+subcap "Y" -224.547

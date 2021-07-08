@@ -1,0 +1,19 @@
+#-----------------------------------------------------
+# .magicrc startup file for OSU018 project under qflow
+#-----------------------------------------------------
+
+#path sys +/usr/local/share/qflow/tech/osu018
+#tech load SCN6M_SUBM.10 -noprompt
+
+path sys +$env(PROJ_WORK)/.magic/inc
+tech load SCN6M_SUBM.10_pls -noprompt
+
+scalegrid 1 4
+set GND gnd
+set VDD vdd
+
+drc euclidean on
+drc on
+
+addpath digital
+

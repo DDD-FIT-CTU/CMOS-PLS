@@ -1,5 +1,12 @@
 # Changelog
 
+## MICREL 2021 version
+  * there was an error in SUBCKT_Iph_nplus_psub used in NMOS source (XcsrcS) model; as it produced current in a wrong direction
+  * models were corrected so the shared area in the stack is not a problem anymore; source or drain area can be assigned to any of neighbouring transistor and the simulation output will be consistent: "commonDrain" and "commonSource" attributes are no longer required; this explanation is now deprecated: [models docs](doc/MODELS.md)
+  * thus models exported from Magic layout tool can be used directly - without any modiffication
+  * constant current offset for models when the pLaser is 0 was fixed
+  * SBOX models added and evaluation resources are provided
+
 ## DDECS2020 version
   * models ([models.lib](models.lib)) were altered to closely reflect the reality -- see [models docs](doc/MODELS.md)
   * attack-resistant structures were designed and evaluated -- see the [test-set description](resistantGates/README.md) -- described in paper [C]

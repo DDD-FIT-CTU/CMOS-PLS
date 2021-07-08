@@ -1,0 +1,238 @@
+magic
+tech scmos
+timestamp 1600452005
+<< nwell >>
+rect 12 66 134 105
+rect 12 48 135 66
+<< ntransistor >>
+rect 31 7 33 21
+rect 36 7 38 21
+rect 44 7 46 21
+rect 49 7 51 21
+rect 97 7 99 24
+rect 113 7 115 42
+rect 121 7 123 29
+<< ptransistor >>
+rect 31 79 33 93
+rect 36 79 38 93
+rect 44 79 46 93
+rect 49 79 51 93
+rect 57 79 59 93
+rect 73 68 75 93
+rect 81 68 83 93
+rect 97 89 99 93
+rect 113 89 115 93
+rect 121 66 123 93
+<< ndiffusion >>
+rect 30 7 31 21
+rect 33 7 36 21
+rect 38 7 39 21
+rect 43 7 44 21
+rect 46 7 49 21
+rect 51 7 52 21
+rect 96 7 97 24
+rect 99 7 100 24
+rect 112 7 113 42
+rect 115 7 116 42
+rect 120 7 121 29
+rect 123 7 124 29
+<< pdiffusion >>
+rect 30 79 31 93
+rect 33 79 36 93
+rect 38 79 39 93
+rect 43 79 44 93
+rect 46 79 49 93
+rect 51 79 52 93
+rect 56 79 57 93
+rect 59 79 60 93
+rect 72 68 73 93
+rect 75 68 76 93
+rect 80 68 81 93
+rect 83 68 84 93
+rect 96 89 97 93
+rect 99 89 100 93
+rect 112 89 113 93
+rect 115 89 116 93
+rect 120 66 121 93
+rect 123 66 124 93
+<< ndcontact >>
+rect 26 7 30 21
+rect 39 7 43 21
+rect 52 7 56 21
+rect 92 7 96 24
+rect 100 7 104 24
+rect 108 7 112 42
+rect 116 7 120 42
+rect 124 7 128 29
+<< pdcontact >>
+rect 26 79 30 93
+rect 39 79 43 93
+rect 52 79 56 93
+rect 60 79 64 93
+rect 68 68 72 93
+rect 76 68 80 93
+rect 84 68 88 93
+rect 92 89 96 93
+rect 100 89 104 94
+rect 108 89 112 93
+rect 116 66 120 93
+rect 124 66 128 93
+<< psubstratepcontact >>
+rect 33 -2 37 2
+<< nsubstratencontact >>
+rect 60 98 64 102
+rect 116 98 120 102
+<< polysilicon >>
+rect 31 93 33 95
+rect 36 93 38 95
+rect 44 93 46 95
+rect 49 93 51 95
+rect 57 93 59 95
+rect 73 93 75 95
+rect 81 93 83 95
+rect 97 93 99 95
+rect 31 50 33 79
+rect 31 21 33 46
+rect 36 42 38 79
+rect 44 50 46 79
+rect 49 42 51 79
+rect 36 24 39 26
+rect 43 24 46 26
+rect 36 21 38 24
+rect 44 21 46 24
+rect 49 21 51 38
+rect 31 5 33 7
+rect 36 5 38 7
+rect 44 5 46 7
+rect 49 5 51 7
+rect 57 2 59 79
+rect 113 93 115 95
+rect 121 93 123 95
+rect 73 47 75 68
+rect 81 47 83 68
+rect 73 45 83 47
+rect 76 44 80 45
+rect 97 24 99 89
+rect 113 42 115 89
+rect 121 35 123 66
+rect 121 31 124 35
+rect 121 29 123 31
+rect 97 2 99 7
+rect 113 2 115 7
+rect 121 5 123 7
+<< polycontact >>
+rect 29 46 33 50
+rect 42 46 46 50
+rect 36 38 40 42
+rect 49 38 53 42
+rect 39 24 43 28
+rect 76 40 80 44
+rect 124 31 128 35
+rect 56 -2 60 2
+rect 96 -2 100 2
+rect 112 -2 116 2
+<< metal1 >>
+rect 14 102 132 103
+rect 14 98 60 102
+rect 64 98 116 102
+rect 120 98 132 102
+rect 14 97 132 98
+rect 60 93 64 97
+rect 76 93 80 97
+rect 100 94 104 97
+rect 39 57 43 79
+rect 68 57 72 68
+rect 39 53 72 57
+rect 33 46 42 50
+rect 40 38 49 42
+rect 68 35 72 53
+rect 76 39 80 40
+rect 84 35 88 68
+rect 26 31 84 35
+rect 116 93 120 97
+rect 26 21 30 31
+rect 92 28 96 89
+rect 43 24 96 28
+rect 108 44 112 89
+rect 124 62 135 66
+rect 56 17 84 21
+rect 123 31 124 35
+rect 131 21 135 62
+rect 128 17 135 21
+rect 39 3 43 7
+rect 100 3 104 7
+rect 116 3 120 7
+rect 14 2 132 3
+rect 14 -2 33 2
+rect 37 -2 56 2
+rect 60 -2 96 2
+rect 100 -2 112 2
+rect 116 -2 132 2
+rect 14 -3 132 -2
+<< m2contact >>
+rect 26 81 30 85
+rect 52 81 56 85
+rect 76 40 80 44
+rect 84 31 88 35
+rect 108 42 112 44
+rect 108 40 112 42
+rect 84 17 88 21
+rect 124 31 128 35
+<< metal2 >>
+rect 30 81 52 85
+rect 80 40 108 44
+rect 76 39 80 40
+rect 88 31 124 35
+rect 84 21 88 31
+<< metal4 >>
+rect 59 2 65 3
+rect 56 -1 65 2
+rect 56 -2 60 -1
+<< labels >>
+rlabel space 1 -3 105 104 1 vdd
+rlabel space 1 -3 105 104 1 gnd
+rlabel metal1 35 100 35 100 1 VDD!
+port 1 n power bidirectional
+rlabel ptransistor 31 85 31 85 1 S$
+rlabel ptransistor 33 85 33 85 1 D$
+rlabel ptransistor 49 85 49 85 1 D$
+rlabel ptransistor 51 85 51 85 1 S$
+rlabel ptransistor 44 85 44 85 1 D$
+rlabel ptransistor 38 85 38 85 1 D$
+rlabel ptransistor 36 85 36 85 1 S$
+rlabel ptransistor 46 85 46 85 1 S$
+rlabel ptransistor 57 85 57 85 1 D$
+rlabel ptransistor 59 85 59 85 1 S$
+rlabel metal1 29 -1 29 -1 1 GND!
+port 2 n power bidirectional
+rlabel polycontact 29 46 29 50 1 B
+port 3 n signal input
+rlabel space -4 -3 110 105 1 vdd
+rlabel space -4 -3 110 105 1 gnd
+rlabel polycontact 36 38 36 42 1 A
+port 4 n signal input
+rlabel ptransistor 75 86 75 86 1 S$
+rlabel ptransistor 73 85 73 85 1 D$
+rlabel ntransistor 51 9 51 9 1 D$
+rlabel ntransistor 49 9 49 9 1 S$
+rlabel ntransistor 31 9 31 9 1 D$
+rlabel ntransistor 33 9 33 9 1 S$
+rlabel pdcontact 54 86 54 86 1 VVDD
+rlabel ntransistor 113 16 113 16 1 D$
+rlabel ntransistor 115 16 115 16 1 S$
+rlabel ptransistor 115 92 115 92 1 S$
+rlabel ptransistor 113 92 113 92 1 D$
+rlabel ptransistor 123 92 123 92 1 D$
+rlabel ptransistor 121 92 121 92 1 S$
+rlabel m2contact 86 33 86 33 1 O
+rlabel metal1 135 53 135 57 1 Y
+port 5 n signal output
+rlabel ptransistor 81 85 81 85 1 S$
+rlabel ptransistor 83 85 83 85 1 D$
+rlabel ptransistor 97 91 97 91 1 D$
+rlabel ptransistor 99 91 99 91 1 S$
+rlabel ntransistor 123 27 123 27 1 D$
+rlabel ntransistor 121 27 121 27 1 S$
+rlabel space -4 -3 135 105 1 vdd
+rlabel space -4 -3 135 105 1 gnd
+<< end >>

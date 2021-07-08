@@ -1,0 +1,643 @@
+<svg width="920" height="225" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern id="Hatch0.1x045"
+inkscape:stockid="Hatch 0.1 x 45°"
+x="0" y="0" width="0.5010992937542464" height="0.5010992937542464"
+patternUnits="userSpaceOnUse">
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,3.5433070866141736 3.5433070866141736,-3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,4.04440638036842 4.04440638036842,-3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.0422077928599274,4.04440638036842 4.04440638036842,-3.0422077928599274"/>
+</pattern>
+<pattern id="Hatch0.1x135"
+inkscape:stockid="Hatch 0.1 x -45°"
+x="0" y="0" width="0.5010992937542464" height="0.5010992937542464"
+patternUnits="userSpaceOnUse">
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.0422077928599274,-3.5433070866141736 4.04440638036842,3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,-3.5433070866141736 4.04440638036842,4.04440638036842"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,-3.0422077928599274 3.5433070866141736,4.04440638036842"/>
+</pattern>
+<pattern id="HatchCross0.1"
+inkscape:stockid="Cross hatch 0.1"
+x="0" y="0" width="0.5010992937542464" height="0.5010992937542464"
+patternUnits="userSpaceOnUse">
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,4.04440638036842 4.04440638036842,-3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,-3.5433070866141736 4.04440638036842,4.04440638036842"/>
+</pattern>
+<pattern id="Hatch0.1x045"
+inkscape:stockid="Hatch 0.1 x 45°"
+x="0" y="0" width="0.5959108454553884" height="0.5959108454553884"
+patternUnits="userSpaceOnUse">
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,3.5433070866141736 3.5433070866141736,-3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,4.139217932069562 4.139217932069562,-3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -2.9473962411587853,4.139217932069562 4.139217932069562,-2.9473962411587853"/>
+</pattern>
+<pattern id="Hatch0.1x135"
+inkscape:stockid="Hatch 0.1 x -45°"
+x="0" y="0" width="0.5959108454553884" height="0.5959108454553884"
+patternUnits="userSpaceOnUse">
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -2.9473962411587853,-3.5433070866141736 4.139217932069562,3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,-3.5433070866141736 4.139217932069562,4.139217932069562"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,-2.9473962411587853 3.5433070866141736,4.139217932069562"/>
+</pattern>
+<pattern id="HatchCross0.1"
+inkscape:stockid="Cross hatch 0.1"
+x="0" y="0" width="0.5959108454553884" height="0.5959108454553884"
+patternUnits="userSpaceOnUse">
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,4.139217932069562 4.139217932069562,-3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,-3.5433070866141736 4.139217932069562,4.139217932069562"/>
+</pattern>
+<pattern id="Hatch0.1x045"
+inkscape:stockid="Hatch 0.1 x 45°"
+x="0" y="0" width="0.7086614173228347" height="0.7086614173228347"
+patternUnits="userSpaceOnUse">
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,3.5433070866141736 3.5433070866141736,-3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,4.251968503937008 4.251968503937008,-3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -2.834645669291339,4.251968503937008 4.251968503937008,-2.834645669291339"/>
+</pattern>
+<pattern id="Hatch0.1x135"
+inkscape:stockid="Hatch 0.1 x -45°"
+x="0" y="0" width="0.7086614173228347" height="0.7086614173228347"
+patternUnits="userSpaceOnUse">
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -2.834645669291339,-3.5433070866141736 4.251968503937008,3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,-3.5433070866141736 4.251968503937008,4.251968503937008"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,-2.834645669291339 3.5433070866141736,4.251968503937008"/>
+</pattern>
+<pattern id="HatchCross0.1"
+inkscape:stockid="Cross hatch 0.1"
+x="0" y="0" width="0.7086614173228347" height="0.7086614173228347"
+patternUnits="userSpaceOnUse">
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,4.251968503937008 4.251968503937008,-3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,-3.5433070866141736 4.251968503937008,4.251968503937008"/>
+</pattern>
+<pattern id="Hatch0.2x045"
+inkscape:stockid="Hatch 0.2 x 45°"
+x="0" y="0" width="0.8427451996082276" height="0.8427451996082276"
+patternUnits="userSpaceOnUse">
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,3.5433070866141736 3.5433070866141736,-3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,4.386052286222402 4.386052286222402,-3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -2.700561887005946,4.386052286222402 4.386052286222402,-2.700561887005946"/>
+</pattern>
+<pattern id="Hatch0.2x135"
+inkscape:stockid="Hatch 0.2 x -45°"
+x="0" y="0" width="0.8427451996082276" height="0.8427451996082276"
+patternUnits="userSpaceOnUse">
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -2.700561887005946,-3.5433070866141736 4.386052286222402,3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,-3.5433070866141736 4.386052286222402,4.386052286222402"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,-2.700561887005946 3.5433070866141736,4.386052286222402"/>
+</pattern>
+<pattern id="HatchCross0.2"
+inkscape:stockid="Cross hatch 0.2"
+x="0" y="0" width="0.8427451996082276" height="0.8427451996082276"
+patternUnits="userSpaceOnUse">
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,4.386052286222402 4.386052286222402,-3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,-3.5433070866141736 4.386052286222402,4.386052286222402"/>
+</pattern>
+<pattern id="Hatch0.2x045"
+inkscape:stockid="Hatch 0.2 x 45°"
+x="0" y="0" width="1.0021985875084929" height="1.0021985875084929"
+patternUnits="userSpaceOnUse">
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,3.5433070866141736 3.5433070866141736,-3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,4.5455056741226665 4.5455056741226665,-3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -2.5411084991056807,4.5455056741226665 4.5455056741226665,-2.5411084991056807"/>
+</pattern>
+<pattern id="Hatch0.2x135"
+inkscape:stockid="Hatch 0.2 x -45°"
+x="0" y="0" width="1.0021985875084929" height="1.0021985875084929"
+patternUnits="userSpaceOnUse">
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -2.5411084991056807,-3.5433070866141736 4.5455056741226665,3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,-3.5433070866141736 4.5455056741226665,4.5455056741226665"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,-2.5411084991056807 3.5433070866141736,4.5455056741226665"/>
+</pattern>
+<pattern id="HatchCross0.2"
+inkscape:stockid="Cross hatch 0.2"
+x="0" y="0" width="1.0021985875084929" height="1.0021985875084929"
+patternUnits="userSpaceOnUse">
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,4.5455056741226665 4.5455056741226665,-3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,-3.5433070866141736 4.5455056741226665,4.5455056741226665"/>
+</pattern>
+<pattern id="Hatch0.2x045"
+inkscape:stockid="Hatch 0.2 x 45°"
+x="0" y="0" width="1.1918216909107768" height="1.1918216909107768"
+patternUnits="userSpaceOnUse">
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,3.5433070866141736 3.5433070866141736,-3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,4.735128777524951 4.735128777524951,-3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -2.3514853957033965,4.735128777524951 4.735128777524951,-2.3514853957033965"/>
+</pattern>
+<pattern id="Hatch0.2x135"
+inkscape:stockid="Hatch 0.2 x -45°"
+x="0" y="0" width="1.1918216909107768" height="1.1918216909107768"
+patternUnits="userSpaceOnUse">
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -2.3514853957033965,-3.5433070866141736 4.735128777524951,3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,-3.5433070866141736 4.735128777524951,4.735128777524951"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,-2.3514853957033965 3.5433070866141736,4.735128777524951"/>
+</pattern>
+<pattern id="HatchCross0.2"
+inkscape:stockid="Cross hatch 0.2"
+x="0" y="0" width="1.1918216909107768" height="1.1918216909107768"
+patternUnits="userSpaceOnUse">
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,4.735128777524951 4.735128777524951,-3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,-3.5433070866141736 4.735128777524951,4.735128777524951"/>
+</pattern>
+<pattern id="Hatch0.3x045"
+inkscape:stockid="Hatch 0.3 x 45°"
+x="0" y="0" width="1.4173228346456694" height="1.4173228346456694"
+patternUnits="userSpaceOnUse">
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,3.5433070866141736 3.5433070866141736,-3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,4.960629921259843 4.960629921259843,-3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -2.125984251968504,4.960629921259843 4.960629921259843,-2.125984251968504"/>
+</pattern>
+<pattern id="Hatch0.3x135"
+inkscape:stockid="Hatch 0.3 x -45°"
+x="0" y="0" width="1.4173228346456694" height="1.4173228346456694"
+patternUnits="userSpaceOnUse">
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -2.125984251968504,-3.5433070866141736 4.960629921259843,3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,-3.5433070866141736 4.960629921259843,4.960629921259843"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,-2.125984251968504 3.5433070866141736,4.960629921259843"/>
+</pattern>
+<pattern id="HatchCross0.3"
+inkscape:stockid="Cross hatch 0.3"
+x="0" y="0" width="1.4173228346456694" height="1.4173228346456694"
+patternUnits="userSpaceOnUse">
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,4.960629921259843 4.960629921259843,-3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,-3.5433070866141736 4.960629921259843,4.960629921259843"/>
+</pattern>
+<pattern id="Hatch0.3x045"
+inkscape:stockid="Hatch 0.3 x 45°"
+x="0" y="0" width="1.6854903992164552" height="1.6854903992164552"
+patternUnits="userSpaceOnUse">
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,3.5433070866141736 3.5433070866141736,-3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,5.228797485830629 5.228797485830629,-3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -1.8578166873977184,5.228797485830629 5.228797485830629,-1.8578166873977184"/>
+</pattern>
+<pattern id="Hatch0.3x135"
+inkscape:stockid="Hatch 0.3 x -45°"
+x="0" y="0" width="1.6854903992164552" height="1.6854903992164552"
+patternUnits="userSpaceOnUse">
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -1.8578166873977184,-3.5433070866141736 5.228797485830629,3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,-3.5433070866141736 5.228797485830629,5.228797485830629"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,-1.8578166873977184 3.5433070866141736,5.228797485830629"/>
+</pattern>
+<pattern id="HatchCross0.3"
+inkscape:stockid="Cross hatch 0.3"
+x="0" y="0" width="1.6854903992164552" height="1.6854903992164552"
+patternUnits="userSpaceOnUse">
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,5.228797485830629 5.228797485830629,-3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,-3.5433070866141736 5.228797485830629,5.228797485830629"/>
+</pattern>
+<pattern id="Hatch0.4x045"
+inkscape:stockid="Hatch 0.4 x 45°"
+x="0" y="0" width="2.0043971750169858" height="2.0043971750169858"
+patternUnits="userSpaceOnUse">
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,3.5433070866141736 3.5433070866141736,-3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,5.547704261631159 5.547704261631159,-3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -1.5389099115971878,5.547704261631159 5.547704261631159,-1.5389099115971878"/>
+</pattern>
+<pattern id="Hatch0.4x135"
+inkscape:stockid="Hatch 0.4 x -45°"
+x="0" y="0" width="2.0043971750169858" height="2.0043971750169858"
+patternUnits="userSpaceOnUse">
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -1.5389099115971878,-3.5433070866141736 5.547704261631159,3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,-3.5433070866141736 5.547704261631159,5.547704261631159"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,-1.5389099115971878 3.5433070866141736,5.547704261631159"/>
+</pattern>
+<pattern id="HatchCross0.4"
+inkscape:stockid="Cross hatch 0.4"
+x="0" y="0" width="2.0043971750169858" height="2.0043971750169858"
+patternUnits="userSpaceOnUse">
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,5.547704261631159 5.547704261631159,-3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,-3.5433070866141736 5.547704261631159,5.547704261631159"/>
+</pattern>
+<pattern id="Hatch0.5x045"
+inkscape:stockid="Hatch 0.5 x 45°"
+x="0" y="0" width="2.3836433818215537" height="2.3836433818215537"
+patternUnits="userSpaceOnUse">
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,3.5433070866141736 3.5433070866141736,-3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,5.926950468435727 5.926950468435727,-3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -1.15966370479262,5.926950468435727 5.926950468435727,-1.15966370479262"/>
+</pattern>
+<pattern id="Hatch0.5x135"
+inkscape:stockid="Hatch 0.5 x -45°"
+x="0" y="0" width="2.3836433818215537" height="2.3836433818215537"
+patternUnits="userSpaceOnUse">
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -1.15966370479262,-3.5433070866141736 5.926950468435727,3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,-3.5433070866141736 5.926950468435727,5.926950468435727"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,-1.15966370479262 3.5433070866141736,5.926950468435727"/>
+</pattern>
+<pattern id="HatchCross0.5"
+inkscape:stockid="Cross hatch 0.5"
+x="0" y="0" width="2.3836433818215537" height="2.3836433818215537"
+patternUnits="userSpaceOnUse">
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,5.926950468435727 5.926950468435727,-3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,-3.5433070866141736 5.926950468435727,5.926950468435727"/>
+</pattern>
+<pattern id="Hatch0.6x045"
+inkscape:stockid="Hatch 0.6 x 45°"
+x="0" y="0" width="2.834645669291339" height="2.834645669291339"
+patternUnits="userSpaceOnUse">
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,3.5433070866141736 3.5433070866141736,-3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,6.377952755905513 6.377952755905513,-3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -0.7086614173228347,6.377952755905513 6.377952755905513,-0.7086614173228347"/>
+</pattern>
+<pattern id="Hatch0.6x135"
+inkscape:stockid="Hatch 0.6 x -45°"
+x="0" y="0" width="2.834645669291339" height="2.834645669291339"
+patternUnits="userSpaceOnUse">
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -0.7086614173228347,-3.5433070866141736 6.377952755905513,3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,-3.5433070866141736 6.377952755905513,6.377952755905513"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,-0.7086614173228347 3.5433070866141736,6.377952755905513"/>
+</pattern>
+<pattern id="HatchCross0.6"
+inkscape:stockid="Cross hatch 0.6"
+x="0" y="0" width="2.834645669291339" height="2.834645669291339"
+patternUnits="userSpaceOnUse">
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,6.377952755905513 6.377952755905513,-3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,-3.5433070866141736 6.377952755905513,6.377952755905513"/>
+</pattern>
+<pattern id="Hatch0.7x045"
+inkscape:stockid="Hatch 0.7 x 45°"
+x="0" y="0" width="3.3709807984329103" height="3.3709807984329103"
+patternUnits="userSpaceOnUse">
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,3.5433070866141736 3.5433070866141736,-3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,6.914287885047084 6.914287885047084,-3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -0.17232628818126328,6.914287885047084 6.914287885047084,-0.17232628818126328"/>
+</pattern>
+<pattern id="Hatch0.7x135"
+inkscape:stockid="Hatch 0.7 x -45°"
+x="0" y="0" width="3.3709807984329103" height="3.3709807984329103"
+patternUnits="userSpaceOnUse">
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -0.17232628818126328,-3.5433070866141736 6.914287885047084,3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,-3.5433070866141736 6.914287885047084,6.914287885047084"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,-0.17232628818126328 3.5433070866141736,6.914287885047084"/>
+</pattern>
+<pattern id="HatchCross0.7"
+inkscape:stockid="Cross hatch 0.7"
+x="0" y="0" width="3.3709807984329103" height="3.3709807984329103"
+patternUnits="userSpaceOnUse">
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,6.914287885047084 6.914287885047084,-3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,-3.5433070866141736 6.914287885047084,6.914287885047084"/>
+</pattern>
+<pattern id="Hatch0.8x045"
+inkscape:stockid="Hatch 0.8 x 45°"
+x="0" y="0" width="4.0087943500339716" height="4.0087943500339716"
+patternUnits="userSpaceOnUse">
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,3.5433070866141736 3.5433070866141736,-3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,7.552101436648146 7.552101436648146,-3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M 0.46548726341979796,7.552101436648146 7.552101436648146,0.46548726341979796"/>
+</pattern>
+<pattern id="Hatch0.8x135"
+inkscape:stockid="Hatch 0.8 x -45°"
+x="0" y="0" width="4.0087943500339716" height="4.0087943500339716"
+patternUnits="userSpaceOnUse">
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M 0.46548726341979796,-3.5433070866141736 7.552101436648146,3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,-3.5433070866141736 7.552101436648146,7.552101436648146"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,0.46548726341979796 3.5433070866141736,7.552101436648146"/>
+</pattern>
+<pattern id="HatchCross0.8"
+inkscape:stockid="Cross hatch 0.8"
+x="0" y="0" width="4.0087943500339716" height="4.0087943500339716"
+patternUnits="userSpaceOnUse">
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,7.552101436648146 7.552101436648146,-3.5433070866141736"/>
+  <path
+     style="stroke:#000000;stroke-width:0.05mm"
+     d="M -3.5433070866141736,-3.5433070866141736 7.552101436648146,7.552101436648146"/>
+</pattern>
+
+</defs>
+<text
+	  style="font-size:14pt;font-family:Calibri;text-align:center;text-anchor:middle;fill:#000000;stroke:none"
+	  x="33.66141732283465"
+	  y="14.173228346456694">
+	  <tspan
+		x="33.66141732283465"
+		y="14.173228346456694">0.1</tspan></text>
+	<rect fill="url(#Hatch0.1x045)" stroke="black" stroke-width="0.5mm" x="5.31496062992126" y="21.25984251968504" width="56.69291338582678" height="56.69291338582678" rx="7.086614173228347" ry="7.086614173228347" />
+	<rect fill="url(#Hatch0.1x135)" stroke="black" stroke-width="0.5mm" x="5.31496062992126" y="92.12598425196852" width="56.69291338582678" height="56.69291338582678" rx="7.086614173228347" ry="7.086614173228347" />
+	<rect fill="url(#HatchCross0.1)" stroke="black" stroke-width="0.5mm" x="5.31496062992126" y="162.992125984252" width="56.69291338582678" height="56.69291338582678" rx="7.086614173228347" ry="7.086614173228347" />
+	<text
+	  style="font-size:14pt;font-family:Calibri;text-align:center;text-anchor:middle;fill:#000000;stroke:none"
+	  x="104.52755905511812"
+	  y="14.173228346456694">
+	  <tspan
+		x="104.52755905511812"
+		y="14.173228346456694">0.1</tspan></text>
+	<rect fill="url(#Hatch0.1x045)" stroke="black" stroke-width="0.5mm" x="76.18110236220473" y="21.25984251968504" width="56.69291338582678" height="56.69291338582678" rx="7.086614173228347" ry="7.086614173228347" />
+	<rect fill="url(#Hatch0.1x135)" stroke="black" stroke-width="0.5mm" x="76.18110236220473" y="92.12598425196852" width="56.69291338582678" height="56.69291338582678" rx="7.086614173228347" ry="7.086614173228347" />
+	<rect fill="url(#HatchCross0.1)" stroke="black" stroke-width="0.5mm" x="76.18110236220473" y="162.992125984252" width="56.69291338582678" height="56.69291338582678" rx="7.086614173228347" ry="7.086614173228347" />
+	<text
+	  style="font-size:14pt;font-family:Calibri;text-align:center;text-anchor:middle;fill:#000000;stroke:none"
+	  x="175.3937007874016"
+	  y="14.173228346456694">
+	  <tspan
+		x="175.3937007874016"
+		y="14.173228346456694">0.1</tspan></text>
+	<rect fill="url(#Hatch0.1x045)" stroke="black" stroke-width="0.5mm" x="147.0472440944882" y="21.25984251968504" width="56.69291338582678" height="56.69291338582678" rx="7.086614173228347" ry="7.086614173228347" />
+	<rect fill="url(#Hatch0.1x135)" stroke="black" stroke-width="0.5mm" x="147.0472440944882" y="92.12598425196852" width="56.69291338582678" height="56.69291338582678" rx="7.086614173228347" ry="7.086614173228347" />
+	<rect fill="url(#HatchCross0.1)" stroke="black" stroke-width="0.5mm" x="147.0472440944882" y="162.992125984252" width="56.69291338582678" height="56.69291338582678" rx="7.086614173228347" ry="7.086614173228347" />
+	<text
+	  style="font-size:14pt;font-family:Calibri;text-align:center;text-anchor:middle;fill:#000000;stroke:none"
+	  x="246.25984251968507"
+	  y="14.173228346456694">
+	  <tspan
+		x="246.25984251968507"
+		y="14.173228346456694">0.2</tspan></text>
+	<rect fill="url(#Hatch0.2x045)" stroke="black" stroke-width="0.5mm" x="217.91338582677167" y="21.25984251968504" width="56.69291338582678" height="56.69291338582678" rx="7.086614173228347" ry="7.086614173228347" />
+	<rect fill="url(#Hatch0.2x135)" stroke="black" stroke-width="0.5mm" x="217.91338582677167" y="92.12598425196852" width="56.69291338582678" height="56.69291338582678" rx="7.086614173228347" ry="7.086614173228347" />
+	<rect fill="url(#HatchCross0.2)" stroke="black" stroke-width="0.5mm" x="217.91338582677167" y="162.992125984252" width="56.69291338582678" height="56.69291338582678" rx="7.086614173228347" ry="7.086614173228347" />
+	<text
+	  style="font-size:14pt;font-family:Calibri;text-align:center;text-anchor:middle;fill:#000000;stroke:none"
+	  x="317.12598425196853"
+	  y="14.173228346456694">
+	  <tspan
+		x="317.12598425196853"
+		y="14.173228346456694">0.2</tspan></text>
+	<rect fill="url(#Hatch0.2x045)" stroke="black" stroke-width="0.5mm" x="288.77952755905517" y="21.25984251968504" width="56.69291338582678" height="56.69291338582678" rx="7.086614173228347" ry="7.086614173228347" />
+	<rect fill="url(#Hatch0.2x135)" stroke="black" stroke-width="0.5mm" x="288.77952755905517" y="92.12598425196852" width="56.69291338582678" height="56.69291338582678" rx="7.086614173228347" ry="7.086614173228347" />
+	<rect fill="url(#HatchCross0.2)" stroke="black" stroke-width="0.5mm" x="288.77952755905517" y="162.992125984252" width="56.69291338582678" height="56.69291338582678" rx="7.086614173228347" ry="7.086614173228347" />
+	<text
+	  style="font-size:14pt;font-family:Calibri;text-align:center;text-anchor:middle;fill:#000000;stroke:none"
+	  x="387.992125984252"
+	  y="14.173228346456694">
+	  <tspan
+		x="387.992125984252"
+		y="14.173228346456694">0.2</tspan></text>
+	<rect fill="url(#Hatch0.2x045)" stroke="black" stroke-width="0.5mm" x="359.6456692913386" y="21.25984251968504" width="56.69291338582678" height="56.69291338582678" rx="7.086614173228347" ry="7.086614173228347" />
+	<rect fill="url(#Hatch0.2x135)" stroke="black" stroke-width="0.5mm" x="359.6456692913386" y="92.12598425196852" width="56.69291338582678" height="56.69291338582678" rx="7.086614173228347" ry="7.086614173228347" />
+	<rect fill="url(#HatchCross0.2)" stroke="black" stroke-width="0.5mm" x="359.6456692913386" y="162.992125984252" width="56.69291338582678" height="56.69291338582678" rx="7.086614173228347" ry="7.086614173228347" />
+	<text
+	  style="font-size:14pt;font-family:Calibri;text-align:center;text-anchor:middle;fill:#000000;stroke:none"
+	  x="458.85826771653547"
+	  y="14.173228346456694">
+	  <tspan
+		x="458.85826771653547"
+		y="14.173228346456694">0.3</tspan></text>
+	<rect fill="url(#Hatch0.3x045)" stroke="black" stroke-width="0.5mm" x="430.5118110236221" y="21.25984251968504" width="56.69291338582678" height="56.69291338582678" rx="7.086614173228347" ry="7.086614173228347" />
+	<rect fill="url(#Hatch0.3x135)" stroke="black" stroke-width="0.5mm" x="430.5118110236221" y="92.12598425196852" width="56.69291338582678" height="56.69291338582678" rx="7.086614173228347" ry="7.086614173228347" />
+	<rect fill="url(#HatchCross0.3)" stroke="black" stroke-width="0.5mm" x="430.5118110236221" y="162.992125984252" width="56.69291338582678" height="56.69291338582678" rx="7.086614173228347" ry="7.086614173228347" />
+	<text
+	  style="font-size:14pt;font-family:Calibri;text-align:center;text-anchor:middle;fill:#000000;stroke:none"
+	  x="529.724409448819"
+	  y="14.173228346456694">
+	  <tspan
+		x="529.724409448819"
+		y="14.173228346456694">0.3</tspan></text>
+	<rect fill="url(#Hatch0.3x045)" stroke="black" stroke-width="0.5mm" x="501.37795275590554" y="21.25984251968504" width="56.69291338582678" height="56.69291338582678" rx="7.086614173228347" ry="7.086614173228347" />
+	<rect fill="url(#Hatch0.3x135)" stroke="black" stroke-width="0.5mm" x="501.37795275590554" y="92.12598425196852" width="56.69291338582678" height="56.69291338582678" rx="7.086614173228347" ry="7.086614173228347" />
+	<rect fill="url(#HatchCross0.3)" stroke="black" stroke-width="0.5mm" x="501.37795275590554" y="162.992125984252" width="56.69291338582678" height="56.69291338582678" rx="7.086614173228347" ry="7.086614173228347" />
+	<text
+	  style="font-size:14pt;font-family:Calibri;text-align:center;text-anchor:middle;fill:#000000;stroke:none"
+	  x="600.5905511811025"
+	  y="14.173228346456694">
+	  <tspan
+		x="600.5905511811025"
+		y="14.173228346456694">0.4</tspan></text>
+	<rect fill="url(#Hatch0.4x045)" stroke="black" stroke-width="0.5mm" x="572.244094488189" y="21.25984251968504" width="56.69291338582678" height="56.69291338582678" rx="7.086614173228347" ry="7.086614173228347" />
+	<rect fill="url(#Hatch0.4x135)" stroke="black" stroke-width="0.5mm" x="572.244094488189" y="92.12598425196852" width="56.69291338582678" height="56.69291338582678" rx="7.086614173228347" ry="7.086614173228347" />
+	<rect fill="url(#HatchCross0.4)" stroke="black" stroke-width="0.5mm" x="572.244094488189" y="162.992125984252" width="56.69291338582678" height="56.69291338582678" rx="7.086614173228347" ry="7.086614173228347" />
+	<text
+	  style="font-size:14pt;font-family:Calibri;text-align:center;text-anchor:middle;fill:#000000;stroke:none"
+	  x="671.456692913386"
+	  y="14.173228346456694">
+	  <tspan
+		x="671.456692913386"
+		y="14.173228346456694">0.5</tspan></text>
+	<rect fill="url(#Hatch0.5x045)" stroke="black" stroke-width="0.5mm" x="643.1102362204725" y="21.25984251968504" width="56.69291338582678" height="56.69291338582678" rx="7.086614173228347" ry="7.086614173228347" />
+	<rect fill="url(#Hatch0.5x135)" stroke="black" stroke-width="0.5mm" x="643.1102362204725" y="92.12598425196852" width="56.69291338582678" height="56.69291338582678" rx="7.086614173228347" ry="7.086614173228347" />
+	<rect fill="url(#HatchCross0.5)" stroke="black" stroke-width="0.5mm" x="643.1102362204725" y="162.992125984252" width="56.69291338582678" height="56.69291338582678" rx="7.086614173228347" ry="7.086614173228347" />
+	<text
+	  style="font-size:14pt;font-family:Calibri;text-align:center;text-anchor:middle;fill:#000000;stroke:none"
+	  x="742.3228346456693"
+	  y="14.173228346456694">
+	  <tspan
+		x="742.3228346456693"
+		y="14.173228346456694">0.6</tspan></text>
+	<rect fill="url(#Hatch0.6x045)" stroke="black" stroke-width="0.5mm" x="713.976377952756" y="21.25984251968504" width="56.69291338582678" height="56.69291338582678" rx="7.086614173228347" ry="7.086614173228347" />
+	<rect fill="url(#Hatch0.6x135)" stroke="black" stroke-width="0.5mm" x="713.976377952756" y="92.12598425196852" width="56.69291338582678" height="56.69291338582678" rx="7.086614173228347" ry="7.086614173228347" />
+	<rect fill="url(#HatchCross0.6)" stroke="black" stroke-width="0.5mm" x="713.976377952756" y="162.992125984252" width="56.69291338582678" height="56.69291338582678" rx="7.086614173228347" ry="7.086614173228347" />
+	<text
+	  style="font-size:14pt;font-family:Calibri;text-align:center;text-anchor:middle;fill:#000000;stroke:none"
+	  x="813.1889763779528"
+	  y="14.173228346456694">
+	  <tspan
+		x="813.1889763779528"
+		y="14.173228346456694">0.7</tspan></text>
+	<rect fill="url(#Hatch0.7x045)" stroke="black" stroke-width="0.5mm" x="784.8425196850394" y="21.25984251968504" width="56.69291338582678" height="56.69291338582678" rx="7.086614173228347" ry="7.086614173228347" />
+	<rect fill="url(#Hatch0.7x135)" stroke="black" stroke-width="0.5mm" x="784.8425196850394" y="92.12598425196852" width="56.69291338582678" height="56.69291338582678" rx="7.086614173228347" ry="7.086614173228347" />
+	<rect fill="url(#HatchCross0.7)" stroke="black" stroke-width="0.5mm" x="784.8425196850394" y="162.992125984252" width="56.69291338582678" height="56.69291338582678" rx="7.086614173228347" ry="7.086614173228347" />
+	<text
+	  style="font-size:14pt;font-family:Calibri;text-align:center;text-anchor:middle;fill:#000000;stroke:none"
+	  x="884.0551181102363"
+	  y="14.173228346456694">
+	  <tspan
+		x="884.0551181102363"
+		y="14.173228346456694">0.8</tspan></text>
+	<rect fill="url(#Hatch0.8x045)" stroke="black" stroke-width="0.5mm" x="855.7086614173229" y="21.25984251968504" width="56.69291338582678" height="56.69291338582678" rx="7.086614173228347" ry="7.086614173228347" />
+	<rect fill="url(#Hatch0.8x135)" stroke="black" stroke-width="0.5mm" x="855.7086614173229" y="92.12598425196852" width="56.69291338582678" height="56.69291338582678" rx="7.086614173228347" ry="7.086614173228347" />
+	<rect fill="url(#HatchCross0.8)" stroke="black" stroke-width="0.5mm" x="855.7086614173229" y="162.992125984252" width="56.69291338582678" height="56.69291338582678" rx="7.086614173228347" ry="7.086614173228347" />
+	
+</svg>

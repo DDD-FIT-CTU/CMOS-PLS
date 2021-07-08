@@ -1,0 +1,36 @@
+timestamp 1601319602
+version 8.3
+tech scmos
+style TSMC0.18um(tsmc18)from:t11b
+scale 1000 1 2.5
+resistclasses 6700 7500 929000 929000 1 7700 7700 80 80 80 70 70 40
+parameters NMOS_MAGIC l=l w=w a1=as p1=ps a2=ad p2=pd
+parameters PMOS_MAGIC l=l w=w a1=as p1=ps a2=ad p2=pd
+node "xp_8_132#" 0 0 8 132 m1p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "xp_28_212#" 0 0 28 212 m1p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "xp_104_252#" 0 0 104 252 m1p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_36_24#" 45 0 36 24 ndif 960 184 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "Y" 46 369.806 88 24 ndif 800 120 1600 200 0 0 0 0 0 0 0 0 0 0 4976 776 0 0 0 0 0 0 0 0 0 0
+node "a_36_296#" 50 0 36 296 pdif 0 0 960 184 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_8_24#" 414 453.866 8 24 ndif 1600 200 1600 200 0 0 0 0 0 0 3072 768 0 0 6464 1008 0 0 0 0 0 0 0 0 0 0
+node "B" 354 173.658 48 16 p 0 0 0 0 0 0 0 0 0 0 3072 768 0 0 832 136 0 0 0 0 0 0 0 0 0 0
+node "A" 355 246.06 8 148 pc 0 0 0 0 0 0 0 0 0 0 3264 792 0 0 512 96 0 0 0 0 0 0 0 0 0 0
+node "vdd" 1242 1949.4 -32 192 nw 512 128 1920 208 41040 816 0 0 0 0 0 0 0 0 4640 496 0 0 0 0 0 0 0 0 0 0
+substrate "gnd" 0 0 -8 -8 poc 1760 208 512 128 0 0 0 0 0 0 0 0 0 0 4640 496 0 0 0 0 0 0 0 0 0 0
+cap "vdd" "B" 254.956
+cap "A" "B" 405.184
+cap "vdd" "a_8_24#" 406.003
+cap "Y" "vdd" 390.666
+cap "A" "a_8_24#" 118.876
+cap "B" "a_8_24#" 376.044
+cap "a_36_296#" "a_8_24#" 3.339
+cap "Y" "a_8_24#" 508.602
+cap "a_36_24#" "a_8_24#" 3.339
+cap "vdd" "A" 200.29
+device msubckt NMOS_MAGIC 80 24 81 25 l=8 w=40 "gnd" "a_8_24#" 16 0 "gnd" 40 "S" "Y" 40 "D"
+device msubckt NMOS_MAGIC 48 24 49 25 l=8 w=80 "gnd" "B" 16 0 "a_36_24#" 80 "D" "gnd" 80 "S"
+device msubckt NMOS_MAGIC 28 24 29 25 l=8 w=80 "gnd" "A" 16 0 "a_8_24#" 80 "D" "a_36_24#" 80 "S"
+device msubckt PMOS_MAGIC 80 296 81 297 l=8 w=80 "vdd" "a_8_24#" 16 0 "vdd" 80 "S" "Y" 80 "D"
+device msubckt PMOS_MAGIC 48 296 49 297 l=8 w=80 "vdd" "B" 16 0 "a_36_296#" 80 "D" "vdd" 80 "S"
+device msubckt PMOS_MAGIC 28 296 29 297 l=8 w=80 "vdd" "A" 16 0 "a_8_24#" 80 "D" "a_36_296#" 80 "S"
+subcap "Y" -200.39

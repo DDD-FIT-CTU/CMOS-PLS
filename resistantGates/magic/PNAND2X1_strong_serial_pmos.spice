@@ -1,0 +1,75 @@
+* NGSPICE file created from PNAND2X1_strong_serial_pmos.ext - technology: scmos
+
+.subckt PNAND2X1_strong_serial_pmos
+X1000 VGND1 CTRL GND GND NMOS_MAGIC w=1u l=0.2u
++  ad=0.3p pd=2.6u as=1.8p ps=8.4u
+**devattr s=S d=D
+X1001 VGND2 CTRL GND GND NMOS_MAGIC w=1u l=0.2u
++  ad=0.3p pd=2.6u as=0p ps=0u
+**devattr s=S d=D
+X1002 Y B VVDD VDD PMOS_MAGIC w=2.4u l=0.2u
++  ad=3.44p pd=16u as=4.88p ps=22u
+**devattr s=S d=D
+X1003 Y A VVDD VDD PMOS_MAGIC w=2.4u l=0.2u
++  ad=0p pd=0u as=0p ps=0u
+**devattr s=S d=D
+X1004 Y B a_n60_500# GND NMOS_MAGIC w=1u l=0.2u
++  ad=1p pd=6u as=0.3p ps=2.6u
+**devattr s=S d=D
+X1005 CTRL GND GND GND NMOS_MAGIC w=2u l=0.2u
++  ad=1p pd=5u as=0p ps=0u
+**devattr s=S d=D
+X1006 a_n152_500# B VGND1 GND NMOS_MAGIC w=1u l=0.2u
++  ad=0.3p pd=2.6u as=0p ps=0u
+**devattr s=S d=D
+X1007 Y CTRL VVDD VDD PMOS_MAGIC w=2u l=0.2u
++  ad=0p pd=0u as=0p ps=0u
+**devattr s=S d=D
+X1008 a_n60_500# A VGND2 GND NMOS_MAGIC w=1u l=0.2u
++  ad=0p pd=0u as=0p ps=0u
+**devattr s=S d=D
+X1009 VVDD GND VDD VDD PMOS_MAGIC w=2.4u l=0.2u
++  ad=0p pd=0u as=4.44p ps=20.8u
+**devattr s=S d=D
+X1010 O Y VDD VDD PMOS_MAGIC w=4u l=0.2u
++  ad=2p pd=9u as=0p ps=0u
+**devattr s=S d=D
+X1011 O Y GND GND NMOS_MAGIC w=2u l=0.2u
++  ad=1p pd=5u as=0p ps=0u
+**devattr s=S d=D
+X1012 Y CTRL VVDD VDD PMOS_MAGIC w=2u l=0.2u
++  ad=0p pd=0u as=0p ps=0u
+**devattr s=S d=D
+X1013 CTRL GND VDD VDD PMOS_MAGIC w=0.4u l=0.2u
++  ad=0.2p pd=1.8u as=0p ps=0u
+**devattr s=S d=D
+X1014 VVDD GND VDD VDD PMOS_MAGIC w=2.4u l=0.2u
++  ad=0p pd=0u as=0p ps=0u
+**devattr s=S d=D
+X1015 Y A a_n152_500# GND NMOS_MAGIC w=1u l=0.2u
++  ad=0p pd=0u as=0p ps=0u
+**devattr s=S d=D
+C0 A VVDD 0.01fF
+C1 Y VVDD 1.05fF
+C2 Y O 0.05fF
+C3 VDD CTRL 1.31fF
+C4 VDD B 0.23fF
+C5 VDD A 0.19fF
+C6 CTRL B 0.55fF
+C7 VDD Y 0.44fF
+C8 CTRL A 0.29fF
+C9 VDD VVDD 1.29fF
+C10 CTRL Y 0.48fF
+C11 B A 0.80fF
+C12 VDD O 0.54fF
+C13 B Y 0.04fF
+C14 A Y 0.04fF
+C15 B VVDD 0.01fF
+C16 O GND -0.32fF
+C17 Y GND 0.51fF
+C18 A GND 0.55fF
+C19 B GND 0.56fF
+C20 CTRL GND 0.50fF
+C21 VDD GND 3.64fF
+.ends
+

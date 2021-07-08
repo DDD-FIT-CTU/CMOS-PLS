@@ -15,6 +15,15 @@
 
 .include ../models.lib
 .include ../90nm_bulk.lib
+.include ../tsmc180nmcmos.lib
+
+* --- Settings
+.param showPlots = 1
+* redefine ...
+.include test004_settings.inc
+.csparam showPlots = {showPlots}
+.global showPlots
+* --- End of Settins
 
 * **************************************
 * --- Test ---
@@ -25,8 +34,8 @@ VVSUB VSUB 0 0.0V
 
 Vtrig LaserTrig 0 0 PWL(0ns 0V 40ns 0V 42ns SUPP 62ns SUPP 64ns 0V 100ns 0V)
 
-R_WELL nwell VNWELL 0.001
-R_SUB psub VSUB 0.001
+R_WELL nwell VDD 0.001
+R_SUB psub VSS 0.001
 
 Xpmos VSS VDD VDD nwell psub LaserTrig SUBCKT_PMOS
 
@@ -44,11 +53,25 @@ Xpmos VSS VDD VDD nwell psub LaserTrig SUBCKT_PMOS
 
 .control
     run
-    plot i(vvdd) i(vvss) i(vvsub) i(vvnwell)
-    plot v(vss) v(vdd)
-    plot v(xpmos.xdiodeD.ctrl) v(xpmos.xdiodeD.ctrl2)
-    plot v(xpmos.xdiodeS.ctrl) v(xpmos.xdiodeS.ctrl2)
-
+    
+    if ('showPlots'> 0)
+      plot i(vvdd) i(vvss) i(vvsub) i(vvnwell)
+      plot v(vss) v(vdd)
+      plot v(xpmos.xdiodeD.ctrl) v(xpmos.xdiodeD.ctrl2)
+      plot v(xpmos.xdiodeS.ctrl) v(xpmos.xdiodeS.ctrl2)
+    end
+    
+    let timeIndex = 0
+    while time[timeIndex] < 55ns
+      let timeIndex= timeIndex + 1
+    end
+    
+    print i(VVDD)[$&timeIndex]
+    print time[$&timeIndex]
+    
+    if ('showPlots' < 1)
+        quit
+    end
 .endc
 
 .end

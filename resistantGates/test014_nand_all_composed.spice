@@ -1,0 +1,187 @@
+*** TEST 014 : compensed AND2 structure ***
+*
+* ngSPICE test for PLS experiments
+*
+* NAND PLS test - gate area illuminated
+*
+* DC sweep is used for efficient simmulation of PLS effects
+*
+* Author: Jan Belohoubek, 08/2020
+* jan.belohoubek@fit.cvut.cz
+*
+* https://users.fit.cvut.cz/~belohja4/
+*
+*
+* **************************************
+
+.include ../models.lib
+.include ../tsmc180nmcmos.lib
+.include models/nand_all.spice
+
+* **************************************
+* --- Test ---
+* **************************************
+
+* --- Settings
+.param showPlots = 1
+.param writeFile = 1
+* redefine ...
+*.include test01X_settings.inc
+
+.csparam showPlots = {showPlots}
+.csparam writeFile = {writeFile}
+.global showPlots writeFile
+* --- End of Settins
+
+Vtrig LaserTrig 0 0 PWL(0ns 0V 5ns 0V 7ns SUPP)
+
+.param beamDistanceTop = 0
+.param beamDistanceBot = 0
+
+.global LaserTrig beamDistanceTop beamDistanceBot
+
+* --- inputs
+Vvin0 A 0 DC 0V
+Vvin1 B 0 DC 0V
+
+* --- outputs
+C1 VSS O 10fF
+
+* --- circuit layout model
+Xgate A B Y VSS VDD NAND2
+Xinv O VSS Y VDD INVX1
+Xinv2 O VSS Y VDD INVX1
+
+
+* **************************************
+* --- Simulation Settings ---
+* **************************************
+
+.param pLaser = 0
+.param pLaserStep = 50
+.param pLaserStart = 50
+.param pLaserMax = 1000
+.csparam pLaser = {pLaser}
+.csparam pLaserStep = {pLaserStep}
+.csparam pLaserStart = {pLaserStart}
+.csparam pLaserMax = {pLaserMax}
+
+.param SIM_LEN = 10ns
+.csparam SIM_LEN = {SIM_LEN}
+
+.tran 0.1ns 'SIM_LEN'
+.param SIMSTEP = 'SIM_LEN/0.1ns'
+.csparam SIMSTEP = {SIMSTEP}
+
+
+* **************************************
+* --- Simulation Control ---
+* **************************************
+
+.control
+
+    let run_pLaser = pLaser
+    let run = 1
+    let run_inputSet = 0               $ variable to alter inputs
+    
+    set curplot = new
+    set scratch = $curplot
+    
+    let ivdd_00 = unitvec('1+(pLaserMax - pLaserStart)/pLaserStep')
+    let ivdd_01 = unitvec('1+(pLaserMax - pLaserStart)/pLaserStep')
+    let ivdd_10 = unitvec('1+(pLaserMax - pLaserStart)/pLaserStep')
+    let ivdd_11 = unitvec('1+(pLaserMax - pLaserStart)/pLaserStep')
+    let time = unitvec('1+(pLaserMax - pLaserStart)/pLaserStep')
+    
+    dowhile run_pLaser <= pLaserMax
+    
+        run
+        print i(vvdd)[100]
+        set run ="$&run"
+        set dt = $curplot    $ store the current plot to dt
+        setplot $scratch     $ make ’scratch’ the active plot
+        *store the output vector to plot ’scratch’
+
+        if run = 1
+            let lastIndex = 0
+            while time[$&lastIndex] < 'SIM_LEN'
+               let lastIndex = lastIndex + 1
+            end
+            let lastIndex = lastIndex - 1
+        end
+        
+        
+        if run_inputSet = 0
+        let ivdd_00['run-1']={$dt}.i(vvdd)[100]
+        end
+        if run_inputSet = 1
+        let ivdd_01['run-1']={$dt}.i(vvdd)[100]
+        end
+        if run_inputSet = 2
+        let ivdd_10['run-1']={$dt}.i(vvdd)[100]
+        end
+        if run_inputSet = 3
+        let ivdd_11['run-1']={$dt}.i(vvdd)[100]
+        end
+        let time['run-1']='$run * 1ns'
+        
+        setplot $dt          $ go back to the previous plot
+        
+        
+        let run_inputSet = run_inputSet + 1
+        if run_inputSet = 4
+            let run = run + 1
+            
+            let run_inputSet = 0
+            
+            set run_pLaser ="$&run_pLaser"
+            let run_pLaser = run_pLaser + pLaserStep
+            
+            echo New laser power is $&run_pLaser
+            alterparam pLaser = $&run_pLaser
+            
+            * reset parameters before re-run ...
+            reset
+        end
+        
+        if run_inputSet = 0
+          echo inputs are set to 00
+          alter @vvin0[dc]=0V
+          alter @vvin1[dc]=0V
+        end
+        
+        if run_inputSet = 1
+          echo inputs are set to 01
+          alter @vvin0[dc]=SUPP
+          alter @vvin1[dc]=0V
+        end
+        
+        if run_inputSet = 2
+          echo inputs are set to 10
+          alter @vvin0[dc]=0V
+          alter @vvin1[dc]=SUPP
+        end
+        
+        if run_inputSet = 3
+          echo inputs are set to 11
+          alter @vvin0[dc]=SUPP
+          alter @vvin1[dc]=SUPP
+        end
+        
+       
+    end
+    
+    setplot $scratch
+    
+    settype time time
+    settype current ivdd_00 ivdd_01 ivdd_10 ivdd_11
+    
+    plot ivdd_00 ivdd_01 ivdd_10 ivdd_11 vs time
+    
+    if ('showPlots' < 1)
+        quit
+    end
+    
+.endc
+
+.end

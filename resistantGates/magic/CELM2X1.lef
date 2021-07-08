@@ -1,0 +1,74 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO CELM2X1
+  CLASS BLOCK ;
+  FOREIGN CELM2X1 ;
+  ORIGIN 0.800 0.300 ;
+  SIZE 4.600 BY 10.800 ;
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.800000 ;
+    PORT
+      LAYER metal1 ;
+        RECT 0.700 5.300 1.600 5.700 ;
+        RECT 1.200 4.900 1.600 5.300 ;
+    END
+  END B
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal1 ;
+        RECT 2.300 7.700 2.700 9.400 ;
+        RECT 2.300 7.400 2.800 7.700 ;
+        RECT 2.500 1.900 2.800 7.400 ;
+        RECT 2.300 1.600 2.800 1.900 ;
+        RECT 2.300 0.600 2.700 1.600 ;
+    END
+  END Y
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.800000 ;
+    PORT
+      LAYER metal1 ;
+        RECT 0.200 3.300 0.600 4.100 ;
+    END
+  END A
+  PIN gnd
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER metal1 ;
+        RECT 1.500 0.300 1.900 2.600 ;
+        RECT -0.200 -0.300 3.100 0.300 ;
+    END
+  END gnd
+  PIN vdd
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER metal1 ;
+        RECT -0.200 9.700 3.200 10.300 ;
+        RECT 1.500 7.400 1.900 9.700 ;
+    END
+  END vdd
+  OBS
+      LAYER metal1 ;
+        RECT 0.200 7.400 0.600 9.400 ;
+        RECT 0.300 7.100 1.200 7.400 ;
+        RECT 0.900 6.800 1.200 7.100 ;
+        RECT 0.900 6.500 2.200 6.800 ;
+        RECT 1.900 3.500 2.200 6.500 ;
+        RECT 0.900 3.200 2.200 3.500 ;
+        RECT 0.900 2.900 1.200 3.200 ;
+        RECT 1.800 3.100 2.200 3.200 ;
+        RECT 0.300 2.600 1.200 2.900 ;
+        RECT 0.200 0.600 0.600 2.600 ;
+  END
+END CELM2X1
+END LIBRARY
+

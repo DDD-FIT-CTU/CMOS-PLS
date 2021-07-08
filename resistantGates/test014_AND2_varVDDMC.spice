@@ -1,0 +1,337 @@
+*** TEST 014 ***
+*
+* ngSPICE test for PLS experiments
+*
+* MonteCarlo simulation of AND2 gate under PLS -- supply voltage variations employed
+*
+* Author: Jan Belohoubek, 07/2019; 04/2020
+* jan.belohoubek@fit.cvut.cz
+*
+* https://users.fit.cvut.cz/~belohja4/
+*
+*
+* **************************************
+
+.include ../models.lib
+.include ../tsmc180nmcmos.lib
+.include models/nand_all.spice
+
+* **************************************
+* --- Test ---
+* **************************************
+
+* --- Settings
+.param showPlots = 1
+.param pLaser = 50
+.param pLaserStep = 50
+.param pLaserStart = 50
+.param pLaserMax = 1000
+.csparam pLaser = {pLaser}
+.csparam pLaserStep = {pLaserStep}
+.csparam pLaserStart = {pLaserStart}
+.csparam pLaserMax = {pLaserMax}
+
+.csparam showPlots = {showPlots}
+.global showPlots
+* --- End of Settins
+
+Vtrig LaserTrig 0 0 PWL(0ns 0V 40ns 0V 42ns SUPP 62ns SUPP 64ns 0V 100ns 0V)
+
+.param beamDistanceTop = 0
+.param beamDistanceBot = 0
+
+.global LaserTrig beamDistanceTop beamDistanceBot
+
+* --- outputs
+C1 VSS out 1pF
+
+* --- circuit layout model
+Xnand A B Y VSS VDD NAND2
+Xinv out VSS Y VDD INVX1
+Xinv2 out VSS Y VDD INVX1
+
+
+* **************************************
+* --- Simulation Settings ---
+* **************************************
+
+* --- inputs
+Vvin0 A 0 0 PWL(0ns 0V 18ns 0V 22ns 0V 22ns 0V)
+Vvin1 B 0 0 PWL(0ns 0V 18ns 0V 22ns 0V 22ns 0V)
+
+*.tran 0.10ns 100ns
+.param SIMSTEP = '100ns/1.0ns'
+.csparam SIMSTEP = {SIMSTEP}
+
+* **************************************
+* --- Simulation Control ---
+* **************************************
+
+.options noacct
+.control              
+  let mc_exec_runs = 50             $ # of run indexes for monte carlo
+  let mc_start = 0                  $ first run index for monte carlo
+  let mc_runs = 'mc_start + mc_exec_runs - 1'                  $ last run index for monte carlo
+  let run = mc_start                $ number of actual model/run
+  let mc_inputSet = 0               $ variable to alter inputs
+  let mc_pLaser = pLaser
+  
+  let IN_ZERO = 0V
+  let IN_ONE = SUPP
+  let SUPP_MC = SUPP
+  
+  let timeIndex = 0                 $ time for reading stable/constant current value
+ 
+  set curplot = new                 $ create a new plot
+  set curplottitle = "Currents"
+  set curplotname = "currs"
+  set pltMCcurrents = $curplot      $ store curplot to name 'pltMCcurrents'
+  
+  set curplot = new                 $ create a new plot
+  set curplottitle = "Current/Power Dependency"
+  set curplotname = "currpow"
+  set pltMCCurrentDependency = $curplot      $ store curplot to name 'pltMCCurrentDependency'
+  
+  set curplot = new                 $ create a new plot
+  set curplottitle = "vars"
+  set curplotname = "vars"
+  set vars = $curplot      $ store curplot to name 'pltMCcurrents'
+  
+  let mc_runsp = mc_runs + 1
+  
+* define distributions for random numbers:
+* unif: uniform distribution, deviation relativ to nominal value
+* aunif: uniform distribution, deviation absolut
+* gauss: Gaussian distribution, deviation relativ to nominal value
+* agauss: Gaussian distribution, deviation absolut
+  define unif(nom, var) (nom + (nom*var) * sunif(0))
+  define aunif(nom, avar) (nom + avar * sunif(0))
+  *define gauss(nom, var, sig) (nom + (nom*var)/sig * sgauss(0))
+  * define agauss(nom, avar, sig) (nom + avar/sig * sgauss(0))
+  * redefined by JB
+  define gauss(nom, var) (nom + (nom*var) * sgauss(0))
+  define agauss(nom, avar) (nom + avar * sgauss(0))
+  
+  dowhile run <= mc_runs
+    set run ="$&run"             $ create a variable from the vector
+    set mc_runs ="$&mc_runs"     $ create a variable from the vector
+    set mc_inputSet ="$&mc_inputSet"  $ create a variable from the vector
+    set mc_pLaser ="$&mc_pLaser"      $ create a variable from the vector
+    echo simulationc run no. $run of $mc_runs ( inputs = $&mc_inputSet , power = $&mc_pLaser )
+  
+    setplot $vars
+    
+    * first run with nominal voltage inputs
+    if run > 0 and mc_inputSet = 0 and mc_pLaser = 50
+      * alter supply voltage
+      let SUPP_MC = agauss('1.8V + (3.3V - 1.8V)/2',  '(3.3V - 1.8V)/2 + 0.3')
+      alterparam SUPP = $&SUPP_MC
+      echo New supply voltage: $&SUPP_MC
+    end
+    
+    * change Gate inputs
+    if mc_inputSet = 0
+      echo inputs are set to 00
+      echo inputs are set to: $&IN_ZERO and $&IN_ONE
+      
+      * next inputs ...
+      let foo = @Vvin0[PWL]
+      let foo[5] = IN_ZERO
+      let foo[7] = IN_ZERO
+      alter @Vvin0[PWL] = foo
+      let foo = @Vvin1[PWL]
+      let foo[5] = IN_ZERO
+      let foo[7] = IN_ZERO
+      alter @Vvin1[PWL] = foo
+    end
+    
+    if mc_inputSet = 1
+      echo inputs are set to 01
+      echo inputs are set to: $&IN_ZERO and $&IN_ONE
+      
+      * next inputs ...
+      let foo = @Vvin0[PWL]
+      let foo[5] = IN_ONE
+      let foo[7] = IN_ONE
+      alter @Vvin0[PWL] = foo
+      let foo = @Vvin1[PWL]
+      let foo[5] = IN_ZERO 
+      let foo[7] = IN_ZERO 
+      alter @Vvin1[PWL] = foo
+    end
+    
+    if mc_inputSet = 2
+      echo inputs are set to 10
+      echo inputs are set to: $&IN_ZERO and $&IN_ONE
+          
+      * next inputs ...
+      let foo = @Vvin0[PWL]
+      let foo[5] = IN_ZERO 
+      let foo[7] = IN_ZERO 
+      alter @Vvin0[PWL] = foo
+      let foo = @Vvin1[PWL]
+      let foo[5] = IN_ONE
+      let foo[7] = IN_ONE
+      alter @Vvin1[PWL] = foo
+    end
+    
+    if mc_inputSet = 3
+      echo inputs are set to 11
+      echo inputs are set to: $&IN_ZERO and $&IN_ONE
+      
+      * next inputs ...
+      let foo = @Vvin0[PWL]
+      let foo[5] = IN_ONE
+      let foo[7] = IN_ONE
+      alter @Vvin0[PWL] = foo
+      let foo = @Vvin1[PWL]
+      let foo[5] = IN_ONE
+      let foo[7] = IN_ONE
+      alter @Vvin1[PWL] = foo
+    end
+    
+    * stop simulation when signals are stable
+    tran 0.10ns 100ns
+    
+    echo Simulation status $sim_status
+    let simstat = $sim_status
+    if simstat = 1
+      echo go to next run
+      goto next
+    end
+    
+    set dt = $curplot
+    setplot $pltMCcurrents
+    if run=mc_start
+       let time={$dt}.time
+       
+       let timeIndex = 0
+       while time[timeIndex] < 60ns
+         let timeIndex= timeIndex + 1
+       end
+    end
+    
+    *let ivss{$run}_{$mc_inputSet}_{$mc_pLaser}={$dt}.i(vvss)
+    let ivdd{$run}_{$mc_inputSet}_{$mc_pLaser}={$dt}.i(vvdd)
+    let vA{$run}_{$mc_inputSet}={$dt}.v(A)
+    let vB{$run}_{$mc_inputSet}={$dt}.v(B)
+    let vOUT{$run}_{$mc_inputSet}={$dt}.v(OUT)
+    
+    * Laser power dependency
+    setplot $pltMCCurrentDependency
+    if run=mc_start
+       let time={$dt}.time
+    end
+    
+    if mc_pLaser = pLaserStart and mc_inputSet = 0
+      let in00Dep_{$run} = unitvec('1+(pLaserMax - pLaserStart)/pLaserStep')     $ requires vector as parameter
+      let in01Dep_{$run} = unitvec('1+(pLaserMax - pLaserStart)/pLaserStep')     $ requires vector as parameter
+      let in10Dep_{$run} = unitvec('1+(pLaserMax - pLaserStart)/pLaserStep')     $ requires vector as parameter
+      let in11Dep_{$run} = unitvec('1+(pLaserMax - pLaserStart)/pLaserStep')     $ requires vector as parameter
+      
+      let variances_{$run} = unitvec('1+(pLaserMax - pLaserStart)/pLaserStep')     $ requires vector as parameter
+      settype current variances_{$run}
+      
+      settype current in00Dep_{$run}
+      settype current in01Dep_{$run}
+      settype current in10Dep_{$run}
+      settype current in11Dep_{$run}
+    end
+    
+    set index = '({$mc_pLaser}-pLaserStart)/pLaserStep'
+    
+    
+    if mc_inputSet = 0
+      let variances_{$run}[$index] = 0
+      let max = '{$dt}.i(vvdd)[$&timeIndex]'
+      let min = '{$dt}.i(vvdd)[$&timeIndex]'
+      
+      let in00Dep_{$run}[$index] = '{$dt}.i(vvdd)[$&timeIndex]'
+    end
+    
+    if mc_inputSet = 1
+      let in01Dep_{$run}[$index] = '{$dt}.i(vvdd)[$&timeIndex]'
+    end
+    
+    if mc_inputSet = 2
+      let in10Dep_{$run}[$index] = '{$dt}.i(vvdd)[$&timeIndex]'
+    end
+    
+    let val = '{$dt}.i(vvdd)[$&timeIndex]'
+    if $&max < $&val
+      let max = '{$dt}.i(vvdd)[$&timeIndex]'
+    end
+    if $&min > $&val
+      let min = '{$dt}.i(vvdd)[$&timeIndex]'
+    end
+    
+    if mc_inputSet = 3
+      let in11Dep_{$run}[$index] = '{$dt}.i(vvdd)[$&timeIndex]'
+      
+      let diff = 'max - min'
+      let variances_{$run}[$index] = 'diff'
+      echo New variance: $&diff
+    end
+    
+    destroy $dt
+
+    let mc_inputSet = mc_inputSet + 1
+    if mc_inputSet = 4
+      set mc_pLaser ="$&mc_pLaser"
+      
+      let mc_pLaser = mc_pLaser + pLaserStep
+      
+      let mc_inputSet = 0
+      
+      if mc_pLaser > pLaserMax
+        let run = run + 1
+        let mc_pLaser = pLaserStart
+      end
+      
+      echo New laser power is $&mc_pLaser
+      alterparam pLaser = $&mc_pLaser
+    end
+     
+    label next
+    reset
+  end
+  
+  set color0=white
+  set color1=black
+  
+  settype notype min * do not display in current plot ...
+  settype notype max * do not display in current plot ...
+  settype notype val * do not display in current plot ...
+  
+  echo plot ALL simulated currents
+  setplot $pltMCcurrents
+  plot alli
+  plot ivdd0_3_1000 ivdd0_3_950 ivdd0_3_900 ivdd0_3_100
+  plot ivdd1_3_1000 ivdd1_3_950 ivdd1_3_900 ivdd1_3_100
+  plot ivdd1_2_1000 ivdd1_2_950 ivdd1_2_900 ivdd1_2_100
+  plot ivdd1_1_1000 ivdd1_1_950 ivdd1_1_900 ivdd1_1_100
+  plot ivdd1_0_1000 ivdd1_0_950 ivdd1_0_900 ivdd1_0_100
+
+  plot vout0_3 vout0_3 vout0_3 vout0_3
+  plot vout1_3 vout1_3 vout1_3 vout1_3
+  
+  setplot $pltMCCurrentDependency
+  let len = '1+(pLaserMax - pLaserStart)/pLaserStep'
+  let start = 'pLaserStart/1000'
+  let step = 'pLaserStep/1000'
+  compose xvec start={$&start} step={$&step} lin={$&len}
+  
+  settype power xvec
+  *plot in00dep_0 in01dep_0 in10dep_0 in11dep_0 vs xvec xlabel 'power [mW]'
+  plot alli vs xvec xlabel 'Laser Power [mW]'
+  
+  * to PS
+  set hcopydevtype = postscript
+  set hcopypscolor = 1
+  set hcopyheight = 600
+  set hcopywidth = 1000
+  hardcopy 'output/test014_varVDDMC.ps' alli vs xvec xlabel 'Laser Power [mW]'
+    
+.endc
+
+.end

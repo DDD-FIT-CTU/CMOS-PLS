@@ -1,0 +1,93 @@
+magic
+tech scmos
+timestamp 1601403247
+<< nwell >>
+rect 9 56 15 60
+<< metal1 >>
+rect 275 56 276 60
+rect 144 39 148 49
+rect 200 46 220 50
+rect 200 17 204 46
+rect 272 29 276 56
+rect 246 22 260 26
+rect 246 14 250 22
+<< m2contact >>
+rect 33 67 37 71
+rect 44 60 48 64
+rect 102 60 106 64
+rect 240 56 244 60
+rect 271 56 275 60
+rect 20 52 24 56
+rect 78 52 82 56
+rect 91 52 95 56
+rect 144 49 148 53
+rect 68 44 72 48
+rect 97 44 101 48
+rect 10 36 14 40
+rect 39 36 43 40
+rect 152 46 156 50
+rect 120 34 124 38
+rect 61 26 65 30
+rect 136 26 140 30
+rect 208 34 212 38
+rect 164 10 168 14
+rect 246 10 250 14
+<< metal2 >>
+rect 37 67 156 71
+rect 48 60 102 64
+rect 24 52 78 56
+rect 95 53 148 56
+rect 95 52 144 53
+rect 152 50 156 67
+rect 244 56 271 60
+rect 72 44 97 48
+rect 14 36 39 40
+rect 124 34 208 38
+rect 65 26 136 30
+rect 168 10 246 14
+use CELM2X1  CELM2X1_3
+timestamp 1601319602
+transform 1 0 95 0 1 3
+box -8 -3 37 105
+use CELM2X1  CELM2X1_2
+timestamp 1601319602
+transform 1 0 66 0 1 3
+box -8 -3 37 105
+use CELM2X1  CELM2X1_1
+timestamp 1601319602
+transform 1 0 37 0 1 3
+box -8 -3 37 105
+use CELM2X1  CELM2X1_0
+timestamp 1601319602
+transform 1 0 8 0 1 3
+box -8 -3 37 105
+use NOR3X1  NOR3X1_1
+timestamp 1601402894
+transform 1 0 190 0 1 3
+box -7 -3 68 105
+use NOR3X1  NOR3X1_0
+timestamp 1601402894
+transform 1 0 126 0 1 3
+box -7 -3 68 105
+use INVX1  INVX1_0
+timestamp 1601402894
+transform 1 0 254 0 1 3
+box -9 -3 26 105
+use INVX1  INVX1_1
+timestamp 1601402894
+transform 1 0 270 0 1 3
+box -9 -3 26 105
+<< labels >>
+rlabel m2contact 46 62 46 62 1 B1
+rlabel space 12 42 12 42 1 A0
+rlabel space 22 58 22 58 1 B0
+rlabel m2contact 70 46 70 46 1 A1
+rlabel space 0 0 296 108 1 vdd
+rlabel space 0 0 296 108 1 gnd
+rlabel space 151 3 151 3 1 GND
+rlabel space 149 103 149 103 1 VDD
+rlabel space 266 43 266 43 1 Y0
+rlabel space 282 43 282 43 1 Y1
+rlabel space -29 0 296 108 1 vdd
+rlabel space -29 0 296 108 1 gnd
+<< end >>

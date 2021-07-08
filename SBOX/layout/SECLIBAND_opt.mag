@@ -1,0 +1,140 @@
+magic
+tech scmos
+timestamp 1602070176
+<< nwell >>
+rect -2 97 309 103
+rect 65 57 69 61
+rect 36 53 45 57
+rect 65 53 74 57
+rect 94 53 103 57
+rect 41 49 45 53
+rect 99 49 103 53
+<< metal1 >>
+rect -2 97 309 103
+rect 36 53 45 57
+rect 65 53 74 57
+rect 94 53 103 57
+rect 123 53 132 57
+rect 70 49 74 53
+rect 128 45 132 53
+rect 31 37 35 41
+rect 89 33 93 41
+rect 118 33 122 41
+rect 165 36 169 46
+rect 221 43 241 47
+rect 31 29 35 33
+rect 221 27 225 43
+rect 267 19 281 23
+rect 221 14 225 16
+rect 267 11 271 19
+rect 285 16 289 74
+rect 296 53 297 57
+rect 293 26 297 53
+rect 301 16 305 74
+rect -2 -3 309 3
+<< m2contact >>
+rect 54 64 58 68
+rect 65 57 69 61
+rect 123 57 127 61
+rect 261 53 265 57
+rect 12 49 16 53
+rect 41 49 45 53
+rect 99 49 103 53
+rect 112 49 116 53
+rect 165 46 169 50
+rect 89 41 93 45
+rect 2 33 6 37
+rect 31 33 35 37
+rect 60 33 64 37
+rect 118 41 122 45
+rect 173 43 177 47
+rect 141 31 145 35
+rect 229 31 233 35
+rect 82 23 86 27
+rect 157 23 161 27
+rect 221 23 225 27
+rect 24 16 28 20
+rect 292 53 296 57
+rect 185 7 189 11
+rect 267 7 271 11
+<< metal2 >>
+rect 58 64 177 68
+rect 69 57 123 61
+rect 45 49 99 53
+rect 116 50 169 53
+rect 116 49 165 50
+rect 12 45 16 49
+rect 173 47 177 64
+rect 265 53 292 57
+rect 12 41 89 45
+rect 93 41 118 45
+rect 6 33 31 37
+rect 35 33 60 37
+rect 145 31 229 35
+rect 86 23 157 27
+rect 221 20 225 23
+rect 23 16 24 20
+rect 28 16 225 20
+rect 189 7 267 11
+use CELM2X1  CELM2X1_3
+timestamp 1601319602
+transform 1 0 116 0 1 0
+box -8 -3 37 105
+use CELM2X1  CELM2X1_2
+timestamp 1601319602
+transform 1 0 87 0 1 0
+box -8 -3 37 105
+use CELM2X1  CELM2X1_1
+timestamp 1601319602
+transform 1 0 58 0 1 0
+box -8 -3 37 105
+use CELM2X1  CELM2X1_0
+timestamp 1601319602
+transform 1 0 29 0 1 0
+box -8 -3 37 105
+use CELM2X1  CELM2X1_4
+timestamp 1601319602
+transform 1 0 0 0 1 0
+box -8 -3 37 105
+use NOR3X1  NOR3X1_1
+timestamp 1602052439
+transform 1 0 211 0 1 0
+box -7 -3 68 105
+use NOR3X1  NOR3X1_0
+timestamp 1602052439
+transform 1 0 147 0 1 0
+box -7 -3 68 105
+use INVX1  INVX1_0
+timestamp 1602052439
+transform 1 0 275 0 1 0
+box -9 -3 26 105
+use INVX1  INVX1_1
+timestamp 1602052439
+transform 1 0 291 0 1 0
+box -9 -3 26 105
+<< labels >>
+rlabel space 21 -3 317 105 1 vdd
+rlabel space 21 -3 317 105 1 gnd
+rlabel metal1 303 40 303 40 1 Y1
+port 6 n signal output
+rlabel space -8 -3 317 105 1 vdd
+rlabel space -8 -3 317 105 1 gnd
+rlabel metal1 170 100 170 100 1 VDD
+port 7 n power bidirectional
+rlabel metal1 173 100 173 100 1 VDD!
+port 9 n power bidirectional
+rlabel m2contact 67 59 67 59 1 B1
+port 3 n signal input
+rlabel metal1 33 39 33 39 1 A0
+port 2 n signal input
+rlabel metal1 43 55 43 55 1 B0
+port 1 n signal input
+rlabel m2contact 91 43 91 43 1 A1
+port 4 n signal input
+rlabel metal1 172 0 172 0 1 GND
+port 8 n ground bidirectional
+rlabel metal1 287 40 287 40 1 Y0
+port 5 n signal output
+rlabel metal1 167 0 167 0 1 GND!
+port 10 n ground bidirectional
+<< end >>

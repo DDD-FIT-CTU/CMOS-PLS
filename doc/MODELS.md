@@ -1,4 +1,4 @@
-# Model Description
+# Model Description -- deprecated !!!
 
 This brief documentation describes model deviations and highlights techniques and model customization employed in this repository.
 

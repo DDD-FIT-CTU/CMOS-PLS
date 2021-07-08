@@ -56,8 +56,8 @@ gnuplot -c test01X.gnuplot results/test017_and_stdCell.csv output/test017.pdf
 gnuplot -c test01X.gnuplot results/test018_nand_stdCell.csv output/test018.pdf
 
 # MC tests
-ngspice test014_AND2_MC.spice > simOut 2>&1
-ngspice test014_AND2_varInputMC.spice > simOut 2>&1
+# ngspice test014_AND2_MC.spice > simOut 2>&1
+# ngspice test014_AND2_varInputMC.spice > simOut 2>&1
 
 fi
 
@@ -86,6 +86,41 @@ bash test03X.sh test031_domino_and
 
 gnuplot -c test03X.gnuplot results/test030_domino_and.csv output/test030.pdf
 gnuplot -c test03X.gnuplot results/test031_domino_and.csv output/test031.pdf
+gnuplot -c test03X_joined.gnuplot results/test030_domino_and.csv results/test031_domino_and.csv output/test030+31.pdf
+
+fi
+
+# Group 4 -- MAGIC layouts
+if [ "$1" = "4" ]
+then
+
+# bash test04X.sh test040_and_strong_serial_pmos
+# bash test04X.sh test041_and_weak_serial_pmos
+# bash test04X.sh test042_and_weak_serial_pmos_nolightdet
+
+bash test04X.sh test041_and_incSupp
+bash test04X.sh test042_or_incSupp
+bash test04X.sh test043_and_final
+bash test04X.sh test044_or_final
+bash test04X.sh test045_and_final_affectedInputs
+bash test04X.sh test046_or_final_affectedInputs
+bash test04X.sh test047_or_3rdCtrlInverter
+bash test04X.sh test048_and_3rdCtrlInverter
+bash test04X.sh test049_and_final
+
+# gnuplot -c test04X.gnuplot results/test040_and_strong_serial_pmos.csv output/test040.pdf
+# gnuplot -c test04X.gnuplot results/test041_and_weak_serial_pmos.csv output/test041.pdf
+# gnuplot -c test04X.gnuplot results/test042_and_weak_serial_pmos_nolightdet.csv output/test042.pdf
+
+gnuplot -c test04X.gnuplot results/test041_and_incSupp.csv output/test041.pdf
+gnuplot -c test04X.gnuplot results/test042_or_incSupp.csv output/test042.pdf
+gnuplot -c test04X.gnuplot results/test043_and_final.csv output/test043.pdf
+gnuplot -c test04X.gnuplot results/test044_or_final.csv output/test044.pdf
+gnuplot -c test04X.gnuplot results/test045_and_final_affectedInputs.csv output/test045.pdf
+gnuplot -c test04X.gnuplot results/test046_or_final_affectedInputs.csv output/test046.pdf
+gnuplot -c test04X.gnuplot results/test047_or_3rdCtrlInverter.csv output/test047.pdf
+gnuplot -c test04X.gnuplot results/test048_and_3rdCtrlInverter.csv output/test048.pdf
+gnuplot -c test04X.gnuplot results/test049_and_final.csv output/test049.pdf
 
 fi
 
@@ -100,5 +135,17 @@ bash test052.sh
 gnuplot -c test050.gnuplot
 gnuplot -c test051.gnuplot
 gnuplot -c test052.gnuplot
+
+fi
+
+# Group 6 -- SecLib
+if [ "$1" = "6" ]
+then
+
+bash test06X.sh test060_secLib
+bash test06X.sh test061_secLib_opt
+
+gnuplot -c test06X.gnuplot results/test060_secLib.csv output/test060.pdf
+gnuplot -c test06X.gnuplot results/test061_secLib_opt.csv output/test061.pdf
 
 fi

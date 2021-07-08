@@ -25,13 +25,16 @@
   * **[resistantGates](resistantGates)** directory:
     * contains SPICE models and tests related to attack-resistant strucures
     * the attack-resistant structures are subject of the patent application submitted in March 2020 to the [Czech Industrial Property Office](www.upv.cz/)
+  * **[SBOX](SBOX)** directory:
+    * contains the AES SBOX source files and evaluation scripts
 
 # Transistor Models
   * Transistor models ready-for-simulation are:
     * 180nm [TSMC CMOS models](https://vlsiarch.ecen.okstate.edu/flows/MOSIS_SCMOS) (PREFFERED)
     * 90nm [Predictive Technology Models](ptm.asu.edu) (modified for ngspice): [http://ptm.asu.edu/modelcard/2006/90nm_bulk.pm](http://ptm.asu.edu/modelcard/2006/90nm_bulk.pm)
       * note: if you use PTM models in your research, you have to cite papers mentioned at the PTM's webpage
-  * The standard-cell model/netlist modification process is described in [doc/MODELS.md](doc/MODELS.md)
+  * <del>The standard-cell model/netlist modification process is described in [doc/MODELS.md](doc/MODELS.md)</del>
+  * The netlist exported from Magic VLSI tool can now be used directly with NMOS_MAGIC/PMOS_MAGIC models
 
 # License
   * The content of this repository is released under the (MIT-like) University of Illinois/NCSA Open Source License. See the [LICENSE](LICENSE) file.

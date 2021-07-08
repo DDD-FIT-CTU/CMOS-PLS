@@ -37,7 +37,9 @@
 VTEST TEST 0 SUPP
 Vtrig TRIG 0 SUPP
 
-Xcsrc TEST VSS TRIG SUBCKT_Iph_nplus_psub transConductance = a constCurrent = b distance = beamDistance PNArea = junctionS
+XpsubIn psubIn VSS PSUB_IN
+
+Xcsrc TEST psubIn VSS TRIG SUBCKT_Iph_nplus_psub transConductance = a constCurrent = b distance = beamDistance PNArea = junctionS
 
 * **************************************
 * --- Simulation Settings ---

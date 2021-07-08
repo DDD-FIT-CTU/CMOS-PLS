@@ -1,0 +1,94 @@
+*** TEST 60 : secLib dual-rail AND2 test ***
+*
+* ngSPICE test for PLS experiments
+*
+* NAND PLS test - gate area exported directly from Magic VLSI layout
+*
+* Author: Jan Belohoubek, 09/2020
+* jan.belohoubek@fit.cvut.cz
+*
+* https://users.fit.cvut.cz/~belohja4/
+*
+*
+* **************************************
+
+.include ../models.lib
+.include ../tsmc180nmcmos.lib
+.include magic/SECLIBAND_opt.spice
+
+* **************************************
+* --- Test ---
+* **************************************
+
+* --- Settings
+.param showPlots = 1
+.param writeFile = 1
+* redefine ...
+.include test06X_settings.inc
+.csparam showPlots = {showPlots}
+.csparam writeFile = {writeFile}
+.global showPlots writeFile
+* --- End of Settins
+
+Vtrig LaserTrig 0 0 PWL(0ns 0V 40ns 0V 42ns SUPP 62ns SUPP 64ns 0V 100ns 0V)
+
+.param beamDistanceTop = 0
+.param beamDistanceBot = 0
+
+.global LaserTrig beamDistanceTop beamDistanceBot
+
+* --- inputs
+*Vvin0 A 0 0 PWL(0ns 0V 30ns 0V 31ns SUPP)
+
+* --- outputs
+C1 VSS Y0 10fF
+C2 VSS Y1 10fF
+
+* --- circuit layout model
+*.subckt SECLIBAND INVX1_LOC_0/vdd NOR3X1_LOC_1/C CELM2X1_0/A A1 CELM2X1_0/B B1 INVX1_LOC_0/Y INVX1_LOC_1/Y
+Xgate VDD VSS A0 A1 B0 B1 Y0 Y1 SECLIBAND
+
+* **************************************
+* --- Simulation Settings ---
+* **************************************
+
+.tran 0.1ns 100ns
+.param SIMSTEP = '100ns/0.1ns'
+.csparam SIMSTEP = {SIMSTEP}
+
+* **************************************
+* --- Simulation Control ---
+* **************************************
+
+.control
+    run
+    
+    if ('showPlots' > 0)   
+        plot i(vvdd) i(vvss)
+        
+        plot v(A0) v(A1)
+        plot v(B0) v(B1)
+    end
+    
+    let timeIndex = 0
+    while time[timeIndex] < 55ns
+      let timeIndex= timeIndex + 1
+    end
+    
+    print i(VVDD)[$&timeIndex]
+    print v(Y0)[$&timeIndex]
+    print v(Y1)[$&timeIndex]
+    print time[$&timeIndex]
+    
+    if ('writeFile' > 0)   
+      wrdata ivdd.out i(vvdd)
+      wrdata ivss.out i(vvss)
+    end
+    
+    if ('showPlots' < 1)
+        quit
+    end
+    
+.endc
+
+.end

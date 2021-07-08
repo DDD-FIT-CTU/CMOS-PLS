@@ -1,0 +1,34 @@
+* SPICE3 file created from AND2X1.ext - technology: scmos
+
+
+* Top level circuit AND2X1
+.subckt AND2X1 A B Y GND VDD
+
+X0 Y a_8_24# vdd vdd PMOS_MAGIC ad=1p pd=5u as=2.2p ps=10.2u w=2u l=0.2u
+**devattr s=S d=D
+X1 a_8_24# A a_36_24# gnd NMOS_MAGIC ad=1p pd=5u as=0.6p ps=4.6u w=2u l=0.2u
+**devattr s=S d=D
+X2 Y a_8_24# gnd gnd NMOS_MAGIC ad=0.5p pd=3u as=1.1p ps=5.2u w=1u l=0.2u
+**devattr s=S d=D
+X3 a_36_24# B gnd gnd NMOS_MAGIC ad=0p pd=0u as=0p ps=0u w=2u l=0.2u
+**devattr s=S d=D
+X4 a_8_24# B vdd vdd PMOS_MAGIC ad=1.2p pd=5.2u as=0p ps=0u w=2u l=0.2u
+**devattr s=S d=D
+X5 a_8_24# A vdd vdd PMOS_MAGIC ad=0p pd=0u as=0p ps=0u w=2u l=0.2u
+**devattr s=S d=D
+C0 a_8_24# Y 0.46fF
+C1 a_8_24# a_36_24# 0.00fF
+C2 vdd A 0.20fF
+C3 vdd B 0.25fF
+C4 A B 0.26fF
+C5 vdd a_8_24# 0.82fF
+C6 vdd Y 0.38fF
+C7 A a_8_24# 0.06fF
+C8 B a_8_24# 0.33fF
+C9 Y gnd 0.14fF
+C10 a_8_24# gnd 0.38fF
+C11 B gnd 0.19fF
+C12 A gnd 0.25fF
+C13 vdd gnd 1.73fF
+.ends
+

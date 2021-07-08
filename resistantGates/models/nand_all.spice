@@ -40,6 +40,38 @@ XpmosLSINV SCTRL VSS VDD VDD VSS    LaserTrig SUBCKT_PMOS beamDistance = beamDis
 XnmosLSINV SCTRL VSS VSS VSS psubIn LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=1u   ch_l=0.2u mos_ad=0.5p mos_pd=2.5u  mos_as=0.5p mos_ps=2.5u
 
 
+*****************************************
+
+*** Code below is generated from layout ***
+***R00 GND VSS 0.001
+
+*** Compensation Light-Sensitive Inverter ***
+***X1013 SCTRL GND VDD VDD PMOS_MAGIC w=0.4u l=0.2u ad=0.2p pd=1.8u as=0p ps=0u
+***X1005 SCTRL GND GND GND NMOS_MAGIC w=2u l=0.2u ad=1p pd=5u as=0p ps=0u
+
+*** Compensation Serial PMOS - TOP ***
+***X1014 VDD_TOP GND VDD VDD PMOS_MAGIC w=2.4u l=0.2u ad=0p pd=0u as=0p ps=0u
+***X1009 VDD_TOP GND VDD VDD PMOS_MAGIC w=2.4u l=0.2u ad=0p pd=0u as=4.44p ps=20.8u
+
+*** Compensation Parallel PMOS ***
+***X1007 Y SCTRL VDD_TOP VDD PMOS_MAGIC w=2u l=0.2u ad=0p pd=0u as=0p ps=0u
+***X1012 Y SCTRL VDD_TOP VDD PMOS_MAGIC w=2u l=0.2u ad=0p pd=0u as=0p ps=0u
+
+***X1000 VGND1 CTRL GND GND NMOS_MAGIC w=1u l=0.2u ad=0.3p pd=2.6u as=1.8p ps=8.4u
+***X1001 VGND2 CTRL GND GND NMOS_MAGIC w=1u l=0.2u ad=0.3p pd=2.6u as=0p ps=0u
+***X1002 Y B VVDD VDD PMOS_MAGIC w=2.4u l=0.2u ad=3.44p pd=16u as=4.88p ps=22u
+***X1003 Y A VVDD VDD PMOS_MAGIC w=2.4u l=0.2u ad=0p pd=0u as=0p ps=0u
+***X1004 Y B a_n60_500# GND NMOS_MAGIC w=1u l=0.2u ad=1p pd=6u as=0.3p ps=2.6u
+***X1006 a_n152_500# B VGND1 GND NMOS_MAGIC w=1u l=0.2u ad=0.3p pd=2.6u as=0p ps=0u
+***X1008 a_n60_500# A VGND2 GND NMOS_MAGIC w=1u l=0.2u ad=0p pd=0u as=0p ps=0u
+***X1010 O Y VDD VDD PMOS_MAGIC w=4u l=0.2u ad=2p pd=9u as=0p ps=0u
+***X1011 O Y GND GND NMOS_MAGIC w=2u l=0.2u ad=1p pd=5u as=0p ps=0u
+***X1015 Y A a_n152_500# GND NMOS_MAGIC w=1u l=0.2u  ad=0p pd=0u as=0p ps=0u
+
+*****************************************
+
+
+
 *** Output ***
 R1 Y O 1
 

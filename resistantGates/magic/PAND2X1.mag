@@ -1,0 +1,221 @@
+magic
+tech scmos
+timestamp 1612180353
+<< nwell >>
+rect -8 48 91 105
+<< ntransistor >>
+rect 12 7 14 12
+rect 17 7 19 12
+rect 25 7 27 12
+rect 33 7 35 27
+rect 49 7 51 11
+rect 65 7 67 42
+rect 73 7 75 29
+<< ptransistor >>
+rect 9 86 11 93
+rect 17 86 19 93
+rect 25 86 27 93
+rect 33 67 35 93
+rect 49 54 51 93
+rect 65 89 67 93
+rect 73 54 75 93
+<< ndiffusion >>
+rect 11 7 12 12
+rect 14 7 17 12
+rect 19 7 20 12
+rect 24 7 25 12
+rect 27 7 28 12
+rect 32 7 33 27
+rect 35 7 36 27
+rect 48 7 49 11
+rect 51 7 52 11
+rect 64 7 65 42
+rect 67 7 68 42
+rect 72 7 73 29
+rect 75 7 76 29
+<< pdiffusion >>
+rect 8 86 9 93
+rect 11 86 12 93
+rect 16 86 17 93
+rect 19 86 20 93
+rect 24 86 25 93
+rect 27 86 28 93
+rect 32 67 33 93
+rect 35 67 36 93
+rect 48 54 49 93
+rect 51 54 52 93
+rect 64 89 65 93
+rect 67 89 68 93
+rect 72 54 73 93
+rect 75 54 76 93
+<< ndcontact >>
+rect 7 7 11 12
+rect 20 7 24 12
+rect 28 7 32 27
+rect 36 7 40 27
+rect 44 7 48 11
+rect 52 7 56 11
+rect 60 7 64 42
+rect 68 7 72 42
+rect 76 7 80 29
+<< pdcontact >>
+rect 4 86 8 93
+rect 12 86 16 93
+rect 20 86 24 93
+rect 28 67 32 93
+rect 36 67 40 93
+rect 44 54 48 93
+rect 52 54 56 93
+rect 60 89 64 93
+rect 68 54 72 93
+rect 76 54 80 93
+<< psubstratepcontact >>
+rect -2 -2 2 2
+rect 17 -2 21 2
+<< nsubstratencontact >>
+rect -2 98 2 102
+rect 28 98 32 102
+<< polysilicon >>
+rect 9 93 11 95
+rect 17 93 19 95
+rect 25 93 27 95
+rect 33 93 35 95
+rect 49 93 51 95
+rect 65 93 67 95
+rect 73 93 75 95
+rect 9 53 11 86
+rect 9 49 10 53
+rect 12 12 14 49
+rect 17 41 19 86
+rect 25 57 27 86
+rect 33 50 35 67
+rect 49 50 51 54
+rect 25 48 51 50
+rect 17 12 19 37
+rect 25 12 27 48
+rect 49 44 50 48
+rect 33 41 42 43
+rect 33 27 35 41
+rect 49 11 51 44
+rect 65 42 67 89
+rect 73 49 75 54
+rect 74 45 75 49
+rect 73 29 75 45
+rect 12 5 14 7
+rect 17 5 19 7
+rect 25 5 27 7
+rect 33 5 35 7
+rect 49 5 51 7
+rect 65 2 67 7
+rect 73 5 75 7
+<< polycontact >>
+rect 10 49 14 53
+rect 25 53 29 57
+rect 17 37 21 41
+rect 50 44 54 48
+rect 42 39 46 43
+rect 70 45 74 49
+rect 64 -2 68 2
+<< metal1 >>
+rect -2 102 85 103
+rect 2 98 28 102
+rect 32 98 85 102
+rect -2 97 85 98
+rect 28 93 32 97
+rect 52 93 56 97
+rect 68 93 72 97
+rect 12 64 16 86
+rect 36 64 40 67
+rect 12 60 40 64
+rect 4 53 14 57
+rect 4 49 10 53
+rect 18 49 22 60
+rect 43 57 44 93
+rect 29 54 44 57
+rect 29 53 47 54
+rect 25 49 29 50
+rect 18 45 25 49
+rect 9 37 17 41
+rect 9 33 16 37
+rect 25 34 29 45
+rect 43 43 47 53
+rect 60 48 64 89
+rect 80 54 81 93
+rect 54 44 64 48
+rect 69 45 70 49
+rect 46 39 47 43
+rect 20 30 40 34
+rect 20 22 24 30
+rect 36 27 40 30
+rect 7 18 24 22
+rect 7 12 11 18
+rect 43 11 47 39
+rect 60 42 64 44
+rect 43 7 44 11
+rect 77 29 81 54
+rect 80 7 81 29
+rect 28 3 32 7
+rect 52 3 56 7
+rect 68 3 72 7
+rect -2 2 85 3
+rect 2 -2 17 2
+rect 21 -2 64 2
+rect 68 -2 85 2
+rect -2 -3 85 -2
+<< m2contact >>
+rect 4 89 8 93
+rect 20 89 24 93
+rect 25 45 29 49
+rect 70 45 74 49
+rect 20 7 24 11
+<< metal2 >>
+rect 8 89 20 93
+rect 29 45 70 49
+rect 7 11 11 12
+rect 20 11 24 12
+rect 7 7 20 11
+<< metal4 >>
+rect 52 -1 58 3
+<< labels >>
+rlabel ntransistor 14 9 14 9 1 S$
+rlabel ntransistor 12 9 12 9 1 D$
+rlabel ntransistor 19 9 19 9 1 S$
+rlabel ntransistor 17 9 17 9 1 D$
+rlabel metal1 3 0 3 0 1 GND!
+port 2 n power bidirectional
+rlabel metal1 13 100 13 100 1 VDD!
+port 1 n power bidirectional
+rlabel metal1 62 70 62 70 1 CTRL
+rlabel ntransistor 67 16 67 16 1 S$
+rlabel ntransistor 65 16 65 16 1 D$
+rlabel ptransistor 65 92 65 92 1 D$
+rlabel ptransistor 67 92 67 92 1 S$
+rlabel metal1 81 62 81 66 1 Y
+port 5 n signal output
+rlabel ptransistor 75 92 75 92 1 D$
+rlabel ptransistor 73 92 73 92 1 S$
+rlabel ntransistor 75 17 75 17 1 D$
+rlabel ntransistor 73 17 73 17 1 S$
+rlabel ntransistor 51 9 51 9 1 S$
+rlabel ntransistor 49 9 49 9 1 D$
+rlabel metal1 45 26 45 26 1 CTRL2
+rlabel ptransistor 51 82 51 82 1 S$
+rlabel ptransistor 49 82 49 82 1 D$
+rlabel ntransistor 35 9 35 9 1 D$
+rlabel ntransistor 33 9 33 9 1 S$
+rlabel metal1 20 51 20 51 1 O
+rlabel ptransistor 33 68 33 68 1 S$
+rlabel ptransistor 35 68 35 68 1 D$
+rlabel ptransistor 9 91 9 91 1 S$
+rlabel ptransistor 11 91 11 91 1 D$
+rlabel ptransistor 17 91 17 91 1 D$
+rlabel ptransistor 19 91 19 91 1 S$
+rlabel ptransistor 25 90 25 90 1 D$
+rlabel ptransistor 27 90 27 90 1 S$
+rlabel ntransistor 27 10 27 10 1 S$
+rlabel ntransistor 25 10 25 10 1 D$
+rlabel metal1 7 53 7 57 1 B
+port 3 n signal input
+rlabel metal1 12 33 12 37 1 A
+port 4 n signal input
+<< end >>

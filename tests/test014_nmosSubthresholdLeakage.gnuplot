@@ -35,7 +35,7 @@ VT   = 0.354505
 ETA  = 0.0231564
 # body effect coefficient
 K1   = 0.5733393
-# Thermal voltage
+# Thermal voltage in at room temperature
 Tv   = 0.026
 # Offset voltage in the subthresh-old region at large W and L
 Voff = -0.0652968
@@ -45,21 +45,21 @@ U0   = 128.7704538
 Vsupp = 1.8
 
 # Body-source voltage
-Vsb0 = 0
-Vsb1 = 0.1
-Vsb2 = 0.2
-Vsb3 = 0.3
-Vsb4 = 0.4
-Vsb5 = 0.5
+Vsb0 = -0.05
+Vsb1 = -0.04
+Vsb2 = -0.03
+Vsb3 = -0.02
+Vsb4 = -0.01
+Vsb5 = -0.00
 
 
 # --- Graph settings ---
 
 # print to PDF -- coment to enable live 3D view
-set terminal pdf size 24cm, 12cm 
-set output "output/test014_model.pdf"
+set terminal pdf size 24cm, 12cm font "Sans,20"
+set output "output/test014_Vgs_Vds_Vsb.pdf"
 
-set title "Subthreshold Leakage in TSMC 180nm NMOS"
+#set title "Subthreshold Leakage in TSMC 180nm NMOS"
 
 set ticslevel 0.01
  
@@ -68,7 +68,7 @@ set yrange [0:Vsupp]
 
 set xlabel "V_{gs} [V]"
 set ylabel "V_{ds} [V]"
-set zlabel "I_{ds} [nA]"
+set zlabel "I_{ds} [nA]" rotate by 90
 
 # set log z
 #set pm3d
@@ -124,12 +124,12 @@ Green(z) = 256 * int(255*sin(180*Frac(z)))
 Blue(z) = int(255*cos(150*Frac(z)))
 MyPalette(z) =  Red(z) + Green(z) + Blue(z) 
 
-set view 44,316
-splot $Data00 u 1:2:3:(MyPalette($3)) w l lc rgb var title sprintf("I_{ds}; V_{sb} = %0.1f", Vsb0), \
-      $Data01 u 1:2:3:(MyPalette($3)) w l lc rgb var title sprintf("I_{ds}; V_{sb} = %0.1f", Vsb1), \
-      $Data02 u 1:2:3:(MyPalette($3)) w l lc rgb var title sprintf("I_{ds}; V_{sb} = %0.1f", Vsb2), \
-      $Data03 u 1:2:3:(MyPalette($3)) w l lc rgb var title sprintf("I_{ds}; V_{sb} = %0.1f", Vsb3), \
-      $Data04 u 1:2:3:(MyPalette($3)) w l lc rgb var title sprintf("I_{ds}; V_{sb} = %0.1f", Vsb4), \
-      $Data05 u 1:2:3:(MyPalette($3)) w l lc rgb var title sprintf("I_{ds}; V_{sb} = %0.1f", Vsb5)
+set view 45,216
+splot $Data00 u 1:2:3:(MyPalette($3)) w l lc rgb var title sprintf("V_{sb} = %0.2f", Vsb0), \
+      $Data01 u 1:2:3:(MyPalette($3)) w l lc rgb var title sprintf("V_{sb} = %0.2f", Vsb1), \
+      $Data02 u 1:2:3:(MyPalette($3)) w l lc rgb var title sprintf("V_{sb} = %0.2f", Vsb2), \
+      $Data03 u 1:2:3:(MyPalette($3)) w l lc rgb var title sprintf("V_{sb} = %0.2f", Vsb3), \
+      $Data04 u 1:2:3:(MyPalette($3)) w l lc rgb var title sprintf("V_{sb} = %0.2f", Vsb4), \
+      $Data05 u 1:2:3:(MyPalette($3)) w l lc rgb var title sprintf("V_{sb} = %0.2f", Vsb5)
 
 pause -1 "Hit any key to continue"

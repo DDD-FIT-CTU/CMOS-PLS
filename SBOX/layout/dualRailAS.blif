@@ -1,0 +1,10276 @@
+.model aes_sbox
+.inputs INPUT_0 D_INPUT_0 INPUT_1 D_INPUT_1 INPUT_2 D_INPUT_2 INPUT_3 D_INPUT_3 INPUT_4 D_INPUT_4 INPUT_5 D_INPUT_5 INPUT_6 D_INPUT_6 INPUT_7 D_INPUT_7
+.outputs D_GATE_222 D_GATE_366 D_GATE_479 D_GATE_579 D_GATE_662 D_GATE_741 D_GATE_811 D_GATE_865 GATE_222 GATE_366 GATE_479 GATE_579 GATE_662 GATE_741 GATE_811 GATE_865
+
+# gate type: NAND; name: GATE_0_I0
+.gate NAND2X1 A=D_INPUT_6 B=INPUT_7 Y=GATE_0
+
+
+
+# gate type: NAND; name: GATE_1_I0
+.gate NAND2X1 A=D_INPUT_4 B=D_INPUT_5 Y=GATE_1
+
+
+
+# gate type: NAND; name: GATE_2_I0
+.gate NAND2X1 A=GATE_0 B=GATE_1 Y=GATE_2
+
+
+
+# gate type: NAND; name: GATE_3_I0
+.gate NAND2X1 A=INPUT_0 B=D_INPUT_1 Y=GATE_3
+
+
+
+# gate type: NAND; name: GATE_4_I0
+.gate NAND2X1 A=D_INPUT_2 B=INPUT_3 Y=GATE_4
+
+
+
+# gate type: NAND; name: GATE_5_I0
+.gate NAND2X1 A=GATE_3 B=GATE_4 Y=GATE_5
+
+
+
+# gate type: NAND; name: GATE_6_I0
+.gate NAND2X1 A=GATE_2 B=GATE_5 Y=GATE_6
+
+
+
+# gate type: NAND; name: GATE_7_I0
+.gate NAND2X1 A=INPUT_2 B=D_INPUT_3 Y=GATE_7
+
+
+
+# gate type: NAND; name: GATE_8_I0
+.gate NAND2X1 A=D_INPUT_0 B=D_INPUT_1 Y=GATE_8
+
+
+
+# gate type: NAND; name: GATE_9_I0
+.gate NAND2X1 A=GATE_7 B=GATE_8 Y=GATE_9
+
+
+
+# gate type: NAND; name: GATE_10_I0
+.gate NAND2X1 A=D_INPUT_4 B=INPUT_5 Y=GATE_10
+
+
+
+# gate type: NAND; name: GATE_11_I0
+.gate NAND2X1 A=GATE_0 B=GATE_10 Y=GATE_11
+
+
+
+# gate type: NAND; name: GATE_12_I0
+.gate NAND2X1 A=GATE_9 B=GATE_11 Y=GATE_12
+
+
+
+# gate type: NAND; name: GATE_13_I0
+.gate NAND2X1 A=D_INPUT_2 B=D_INPUT_3 Y=GATE_13
+
+
+
+# gate type: NAND; name: GATE_14_I0
+.gate NAND2X1 A=GATE_8 B=GATE_13 Y=GATE_14
+
+
+
+# gate type: NAND; name: GATE_15_I0
+.gate NAND2X1 A=GATE_2 B=GATE_14 Y=GATE_15
+
+
+
+# gate type: NAND; name: GATE_16_I0
+.gate NAND2X1 A=INPUT_6 B=INPUT_7 Y=GATE_16
+
+
+
+# gate type: NAND; name: GATE_17_I0
+.gate NAND2X1 A=GATE_10 B=GATE_16 Y=GATE_17
+
+
+
+# gate type: NAND; name: GATE_18_I0
+.gate NAND2X1 A=D_GATE_3 B=GATE_4 Y=GATE_18
+
+
+
+# gate type: NAND; name: GATE_19_I0
+.gate NAND2X1 A=GATE_17 B=GATE_18 Y=GATE_19
+
+
+
+# gate type: NAND; name: GATE_20_I0
+.gate NAND2X1 A=INPUT_4 B=D_INPUT_5 Y=GATE_20
+
+
+
+# gate type: NAND; name: GATE_21_I0
+.gate NAND2X1 A=GATE_0 B=GATE_20 Y=GATE_21
+
+
+
+# gate type: NAND; name: GATE_22_I0
+.gate NAND2X1 A=GATE_3 B=GATE_13 Y=GATE_22
+
+
+
+# gate type: NAND; name: GATE_23_I0
+.gate NAND2X1 A=GATE_21 B=GATE_22 Y=GATE_23
+
+
+
+# gate type: NAND; name: GATE_24_I0
+.gate NAND2X1 A=INPUT_6 B=D_INPUT_7 Y=GATE_24
+
+
+
+# gate type: NAND; name: GATE_25_I0
+.gate NAND2X1 A=GATE_20 B=GATE_24 Y=GATE_25
+
+
+
+# gate type: NAND; name: GATE_26_I0
+.gate NAND2X1 A=GATE_5 B=GATE_25 Y=GATE_26
+
+
+
+# gate type: NAND; name: GATE_27_I0
+.gate NAND2X1 A=D_INPUT_0 B=INPUT_1 Y=GATE_27
+
+
+
+# gate type: NAND; name: GATE_28_I0
+.gate NAND2X1 A=GATE_7 B=D_GATE_27 Y=GATE_28
+
+
+
+# gate type: NAND; name: GATE_29_I0
+.gate NAND2X1 A=INPUT_4 B=INPUT_5 Y=GATE_29
+
+
+
+# gate type: NAND; name: GATE_30_I0
+.gate NAND2X1 A=GATE_0 B=GATE_29 Y=GATE_30
+
+
+
+# gate type: NAND; name: GATE_31_I0
+.gate NAND2X1 A=GATE_28 B=GATE_30 Y=GATE_31
+
+
+
+# gate type: NAND; name: GATE_32_I0
+.gate NAND2X1 A=D_GATE_19 B=D_GATE_23 Y=GATE_32
+
+
+
+# gate type: NAND; name: GATE_33_I0
+.gate NAND2X1 A=D_GATE_26 B=D_GATE_31 Y=GATE_33
+
+
+
+# gate type: NAND; name: GATE_34_I0
+.gate NAND2X1 A=GATE_32 B=GATE_33 Y=GATE_34
+
+
+
+# gate type: NAND; name: GATE_35_I0
+.gate NAND2X1 A=GATE_16 B=GATE_20 Y=GATE_35
+
+
+
+# gate type: NAND; name: GATE_36_I0
+.gate NAND2X1 A=INPUT_2 B=INPUT_3 Y=GATE_36
+
+
+
+# gate type: NAND; name: GATE_37_I0
+.gate NAND2X1 A=GATE_27 B=GATE_36 Y=GATE_37
+
+
+
+# gate type: NAND; name: GATE_38_I0
+.gate NAND2X1 A=GATE_35 B=GATE_37 Y=GATE_38
+
+
+
+# gate type: NAND; name: GATE_39_I0
+.gate NAND2X1 A=GATE_1 B=GATE_24 Y=GATE_39
+
+
+
+# gate type: NAND; name: GATE_40_I0
+.gate NAND2X1 A=GATE_9 B=GATE_39 Y=GATE_40
+
+
+
+# gate type: NAND; name: GATE_41_I0
+.gate NAND2X1 A=INPUT_1 B=GATE_36 Y=GATE_41
+
+
+
+# gate type: NAND; name: GATE_42_I0
+.gate NAND2X1 A=GATE_21 B=GATE_41 Y=GATE_42
+
+
+
+# gate type: NAND; name: GATE_43_I0
+.gate NAND2X1 A=GATE_16 B=GATE_29 Y=GATE_43
+
+
+
+# gate type: NAND; name: GATE_44_I0
+.gate NAND2X1 A=GATE_22 B=GATE_43 Y=GATE_44
+
+
+
+# gate type: NAND; name: GATE_45_I0
+.gate NAND2X1 A=D_INPUT_1 B=GATE_13 Y=GATE_45
+
+
+
+# gate type: NAND; name: GATE_46_I0
+.gate NAND2X1 A=GATE_24 B=GATE_29 Y=GATE_46
+
+
+
+# gate type: NAND; name: GATE_47_I0
+.gate NAND2X1 A=GATE_45 B=GATE_46 Y=GATE_47
+
+
+
+# gate type: NAND; name: GATE_48_I0
+.gate NAND2X1 A=GATE_13 B=GATE_27 Y=GATE_48
+
+
+
+# gate type: NAND; name: GATE_49_I0
+.gate NAND2X1 A=D_INPUT_6 B=D_INPUT_7 Y=GATE_49
+
+
+
+# gate type: NAND; name: GATE_50_I0
+.gate NAND2X1 A=GATE_29 B=GATE_49 Y=GATE_50
+
+
+
+# gate type: NAND; name: GATE_51_I0
+.gate NAND2X1 A=GATE_48 B=GATE_50 Y=GATE_51
+
+
+
+# gate type: NAND; name: GATE_52_I0
+.gate NAND2X1 A=D_INPUT_5 B=GATE_49 Y=GATE_52
+
+
+
+# gate type: NAND; name: GATE_53_I0
+.gate NAND2X1 A=INPUT_0 B=INPUT_1 Y=GATE_53
+
+
+
+# gate type: NAND; name: GATE_54_I0
+.gate NAND2X1 A=GATE_4 B=GATE_53 Y=GATE_54
+
+
+
+# gate type: NAND; name: GATE_55_I0
+.gate NAND2X1 A=GATE_52 B=GATE_54 Y=GATE_55
+
+
+
+# gate type: NAND; name: GATE_56_I0
+.gate NAND2X1 A=GATE_4_BALANCE1 B=GATE_43 Y=GATE_56
+
+
+
+# gate type: NAND; name: GATE_57_I0
+.gate NAND2X1 A=GATE_21 B=GATE_48 Y=GATE_57
+
+
+
+# gate type: NAND; name: GATE_58_I0
+.gate NAND2X1 A=GATE_10 B=GATE_24 Y=GATE_58
+
+
+
+# gate type: NAND; name: GATE_59_I0
+.gate NAND2X1 A=GATE_37 B=GATE_58 Y=GATE_59
+
+
+
+# gate type: NAND; name: GATE_60_I0
+.gate NAND2X1 A=D_GATE_57 B=D_GATE_59 Y=GATE_60
+
+
+
+# gate type: NAND; name: GATE_61_I0
+.gate NAND2X1 A=D_GATE_8 B=D_GATE_53 Y=GATE_61
+
+
+
+# gate type: NAND; name: GATE_62_I0
+.gate NAND2X1 A=GATE_7_BALANCE1 B=GATE_61 Y=GATE_62
+
+
+
+# gate type: NAND; name: GATE_63_I0
+.gate NAND2X1 A=GATE_20 B=GATE_49 Y=GATE_63
+
+
+
+# gate type: NAND; name: GATE_64_I0
+.gate NAND2X1 A=GATE_62 B=GATE_63_BALANCE1 Y=GATE_64
+
+
+
+# gate type: NAND; name: GATE_65_I0
+.gate NAND2X1 A=D_GATE_2 B=D_GATE_25 Y=GATE_65
+
+
+
+# gate type: NAND; name: GATE_66_I0
+.gate NAND2X1 A=GATE_54_BALANCE1 B=D_GATE_65 Y=GATE_66
+
+
+
+# gate type: NAND; name: GATE_67_I0
+.gate NAND2X1 A=D_GATE_4 B=D_GATE_48 Y=GATE_67
+
+
+
+# gate type: NAND; name: GATE_68_I0
+.gate NAND2X1 A=GATE_35_BALANCE1 B=D_GATE_67 Y=GATE_68
+
+
+
+# gate type: NAND; name: GATE_69_I0
+.gate NAND2X1 A=GATE_1 B=GATE_49 Y=GATE_69
+
+
+
+# gate type: NAND; name: GATE_70_I0
+.gate NAND2X1 A=GATE_4_BALANCE1 B=GATE_61 Y=GATE_70
+
+
+
+# gate type: NAND; name: GATE_71_I0
+.gate NAND2X1 A=GATE_69_BALANCE1 B=GATE_70 Y=GATE_71
+
+
+
+# gate type: NAND; name: GATE_72_I0
+.gate NAND2X1 A=GATE_8 B=GATE_36 Y=GATE_72
+
+
+
+# gate type: NAND; name: GATE_73_I0
+.gate NAND2X1 A=GATE_30 B=GATE_72 Y=GATE_73
+
+
+
+# gate type: NAND; name: GATE_74_I0
+.gate NAND2X1 A=GATE_22 B=GATE_58 Y=GATE_74
+
+
+
+# gate type: NAND; name: GATE_75_I0
+.gate NAND2X1 A=D_GATE_73 B=D_GATE_74 Y=GATE_75
+
+
+
+# gate type: NAND; name: GATE_76_I0
+.gate NAND2X1 A=GATE_13 B=GATE_53 Y=GATE_76
+
+
+
+# gate type: NAND; name: GATE_77_I0
+.gate NAND2X1 A=D_GATE_14 B=D_GATE_76 Y=GATE_77
+
+
+
+# gate type: NAND; name: GATE_78_I0
+.gate NAND2X1 A=GATE_17_BALANCE1 B=D_GATE_77 Y=GATE_78
+
+
+
+# gate type: NAND; name: GATE_79_I0
+.gate NAND2X1 A=GATE_4 B=D_GATE_27 Y=GATE_79
+
+
+
+# gate type: NAND; name: GATE_80_I0
+.gate NAND2X1 A=GATE_58 B=GATE_79 Y=GATE_80
+
+
+
+# gate type: NAND; name: GATE_81_I0
+.gate NAND2X1 A=GATE_13 B=D_GATE_27 Y=GATE_81
+
+
+
+# gate type: NAND; name: GATE_82_I0
+.gate NAND2X1 A=GATE_25 B=GATE_81 Y=GATE_82
+
+
+
+# gate type: NAND; name: GATE_83_I0
+.gate NAND2X1 A=D_GATE_80 B=D_GATE_82 Y=GATE_83
+
+
+
+# gate type: NAND; name: GATE_84_I0
+.gate NAND2X1 A=GATE_17 B=GATE_36_BALANCE1 Y=GATE_84
+
+
+
+# gate type: NAND; name: GATE_85_I0
+.gate NAND2X1 A=INPUT_0 B=GATE_84 Y=GATE_85
+
+
+
+# gate type: NAND; name: GATE_86_I0
+.gate NAND2X1 A=D_GATE_28 B=D_GATE_48 Y=GATE_86
+
+
+
+# gate type: NAND; name: GATE_87_I0
+.gate NAND2X1 A=GATE_2_BALANCE1 B=D_GATE_86 Y=GATE_87
+
+
+
+# gate type: NAND; name: GATE_88_I0
+.gate NAND2X1 A=GATE_58 B=GATE_76 Y=GATE_88
+
+
+
+# gate type: NAND; name: GATE_89_I0
+.gate NAND2X1 A=GATE_36 B=GATE_53 Y=GATE_89
+
+
+
+# gate type: NAND; name: GATE_90_I0
+.gate NAND2X1 A=GATE_50 B=GATE_89 Y=GATE_90
+
+
+
+# gate type: NAND; name: GATE_91_I0
+.gate NAND2X1 A=INPUT_1 B=GATE_7 Y=GATE_91
+
+
+
+# gate type: NAND; name: GATE_92_I0
+.gate NAND2X1 A=GATE_25 B=GATE_91 Y=GATE_92
+
+
+
+# gate type: NAND; name: GATE_93_I0
+.gate NAND2X1 A=GATE_13 B=D_GATE_53 Y=GATE_93
+
+
+
+# gate type: NAND; name: GATE_94_I0
+.gate NAND2X1 A=GATE_10 B=GATE_49 Y=GATE_94
+
+
+
+# gate type: NAND; name: GATE_95_I0
+.gate NAND2X1 A=GATE_93 B=GATE_94 Y=GATE_95
+
+
+
+# gate type: NAND; name: GATE_96_I0
+.gate NAND2X1 A=D_GATE_88 B=D_GATE_90 Y=GATE_96
+
+
+
+# gate type: NAND; name: GATE_97_I0
+.gate NAND2X1 A=D_GATE_92 B=D_GATE_95 Y=GATE_97
+
+
+
+# gate type: NAND; name: GATE_98_I0
+.gate NAND2X1 A=GATE_96 B=GATE_97_BALANCE1 Y=GATE_98
+
+
+
+# gate type: NAND; name: GATE_99_I0
+.gate NAND2X1 A=D_GATE_85 B=D_GATE_87 Y=GATE_99
+
+
+
+# gate type: NAND; name: GATE_100_I0
+.gate NAND2X1 A=GATE_98 B=GATE_99_BALANCE1 Y=GATE_100
+
+
+
+# gate type: NAND; name: GATE_101_I0
+.gate NAND2X1 A=GATE_7 B=GATE_53 Y=GATE_101
+
+
+
+# gate type: NAND; name: GATE_102_I0
+.gate NAND2X1 A=GATE_46 B=GATE_101 Y=GATE_102
+
+
+
+# gate type: NAND; name: GATE_103_I0
+.gate NAND2X1 A=GATE_3 B=GATE_7 Y=GATE_103
+
+
+
+# gate type: NAND; name: GATE_104_I0
+.gate NAND2X1 A=D_GATE_76 B=D_GATE_103 Y=GATE_104
+
+
+
+# gate type: NAND; name: GATE_105_I0
+.gate NAND2X1 A=GATE_46_BALANCE1 B=D_GATE_104 Y=GATE_105
+
+
+
+# gate type: NAND; name: GATE_106_I0
+.gate NAND2X1 A=GATE_63 B=GATE_76 Y=GATE_106
+
+
+
+# gate type: NAND; name: GATE_107_I0
+.gate NAND2X1 A=GATE_58 B=GATE_101 Y=GATE_107
+
+
+
+# gate type: NAND; name: GATE_108_I0
+.gate NAND2X1 A=GATE_30 B=GATE_76 Y=GATE_108
+
+
+
+# gate type: NAND; name: GATE_109_I0
+.gate NAND2X1 A=D_INPUT_0 B=GATE_13 Y=GATE_109
+
+
+
+# gate type: NAND; name: GATE_110_I0
+.gate NAND2X1 A=GATE_30 B=GATE_109 Y=GATE_110
+
+
+
+# gate type: NAND; name: GATE_111_I0
+.gate NAND2X1 A=D_GATE_108 B=D_GATE_110 Y=GATE_111
+
+
+
+# gate type: NAND; name: GATE_112_I0
+.gate NAND2X1 A=D_GATE_102 B=D_GATE_106 Y=GATE_112
+
+
+
+# gate type: NAND; name: GATE_113_I0
+.gate NAND2X1 A=GATE_107_BALANCE0 B=GATE_112 Y=GATE_113
+
+
+
+# gate type: NAND; name: GATE_114_I0
+.gate NAND2X1 A=D_GATE_105 B=GATE_111 Y=GATE_114
+
+
+
+# gate type: NAND; name: GATE_115_I0
+.gate NAND2X1 A=GATE_113 B=GATE_114_BALANCE1 Y=GATE_115
+
+
+
+# gate type: NAND; name: GATE_116_I0
+.gate NAND2X1 A=GATE_62 B=GATE_69_BALANCE1 Y=GATE_116
+
+
+
+# gate type: NAND; name: GATE_117_I0
+.gate NAND2X1 A=GATE_69 B=GATE_76 Y=GATE_117
+
+
+
+# gate type: NAND; name: GATE_118_I0
+.gate NAND2X1 A=INPUT_1 B=GATE_13 Y=GATE_118
+
+
+
+# gate type: NAND; name: GATE_119_I0
+.gate NAND2X1 A=D_GATE_9 B=D_GATE_37 Y=GATE_119
+
+
+
+# gate type: NAND; name: GATE_120_I0
+.gate NAND2X1 A=D_GATE_118 B=GATE_119 Y=GATE_120
+
+
+
+# gate type: NAND; name: GATE_121_I0
+.gate NAND2X1 A=GATE_43 B=D_GATE_120 Y=GATE_121
+
+
+
+# gate type: NAND; name: GATE_122_I0
+.gate NAND2X1 A=D_GATE_116 B=GATE_117_BALANCE0 Y=GATE_122
+
+
+
+# gate type: NAND; name: GATE_123_I0
+.gate NAND2X1 A=D_GATE_121 B=GATE_122 Y=GATE_123
+
+
+
+# gate type: NAND; name: GATE_124_I0
+.gate NAND2X1 A=GATE_94 B=GATE_103 Y=GATE_124
+
+
+
+# gate type: NAND; name: GATE_125_I0
+.gate NAND2X1 A=GATE_3 B=GATE_36 Y=GATE_125
+
+
+
+# gate type: NAND; name: GATE_126_I0
+.gate NAND2X1 A=GATE_2 B=GATE_125 Y=GATE_126
+
+
+
+# gate type: NAND; name: GATE_127_I0
+.gate NAND2X1 A=D_GATE_124 B=D_GATE_126 Y=GATE_127
+
+
+
+# gate type: NAND; name: GATE_128_I0
+.gate NAND2X1 A=D_GATE_27 B=GATE_36 Y=GATE_128
+
+
+
+# gate type: NAND; name: GATE_129_I0
+.gate NAND2X1 A=D_GATE_5 B=D_GATE_128 Y=GATE_129
+
+
+
+# gate type: NAND; name: GATE_130_I0
+.gate NAND2X1 A=GATE_11_BALANCE1 B=D_GATE_129 Y=GATE_130
+
+
+
+# gate type: NAND; name: GATE_131_I0
+.gate NAND2X1 A=GATE_89 B=GATE_94 Y=GATE_131
+
+
+
+# gate type: NAND; name: GATE_132_I0
+.gate NAND2X1 A=GATE_7 B=GATE_27 Y=GATE_132
+
+
+
+# gate type: NAND; name: GATE_133_I0
+.gate NAND2X1 A=GATE_94 B=GATE_132 Y=GATE_133
+
+
+
+# gate type: NAND; name: GATE_134_I0
+.gate NAND2X1 A=GATE_58 B=GATE_132 Y=GATE_134
+
+
+
+# gate type: NAND; name: GATE_135_I0
+.gate NAND2X1 A=GATE_2 B=GATE_41 Y=GATE_135
+
+
+
+# gate type: NAND; name: GATE_136_I0
+.gate NAND2X1 A=D_GATE_131 B=D_GATE_133 Y=GATE_136
+
+
+
+# gate type: NAND; name: GATE_137_I0
+.gate NAND2X1 A=D_GATE_134 B=D_GATE_135 Y=GATE_137
+
+
+
+# gate type: NAND; name: GATE_138_I0
+.gate NAND2X1 A=GATE_136 B=GATE_137_BALANCE1 Y=GATE_138
+
+
+
+# gate type: NAND; name: GATE_139_I0
+.gate NAND2X1 A=GATE_127 B=D_GATE_130 Y=GATE_139
+
+
+
+# gate type: NAND; name: GATE_140_I0
+.gate NAND2X1 A=GATE_138 B=GATE_139_BALANCE1 Y=GATE_140
+
+
+
+# gate type: NAND; name: GATE_141_I0
+.gate NAND2X1 A=GATE_48 B=GATE_63 Y=GATE_141
+
+
+
+# gate type: NAND; name: GATE_142_I0
+.gate NAND2X1 A=D_INPUT_1 B=GATE_7 Y=GATE_142
+
+
+
+# gate type: NAND; name: GATE_143_I0
+.gate NAND2X1 A=GATE_58 B=GATE_142 Y=GATE_143
+
+
+
+# gate type: NAND; name: GATE_144_I0
+.gate NAND2X1 A=GATE_50 B=GATE_76 Y=GATE_144
+
+
+
+# gate type: NAND; name: GATE_145_I0
+.gate NAND2X1 A=GATE_35 B=GATE_125 Y=GATE_145
+
+
+
+# gate type: NAND; name: GATE_146_I0
+.gate NAND2X1 A=D_GATE_141 B=D_GATE_143 Y=GATE_146
+
+
+
+# gate type: NAND; name: GATE_147_I0
+.gate NAND2X1 A=D_GATE_144 B=D_GATE_145 Y=GATE_147
+
+
+
+# gate type: NAND; name: GATE_148_I0
+.gate NAND2X1 A=GATE_146_BALANCE1 B=GATE_147 Y=GATE_148
+
+
+
+# gate type: NAND; name: GATE_149_I0
+.gate NAND2X1 A=GATE_36_BALANCE1 B=GATE_61 Y=GATE_149
+
+
+
+# gate type: NAND; name: GATE_150_I0
+.gate NAND2X1 A=D_GATE_54 B=D_GATE_149 Y=GATE_150
+
+
+
+# gate type: NAND; name: GATE_151_I0
+.gate NAND2X1 A=GATE_46 B=D_GATE_150 Y=GATE_151
+
+
+
+# gate type: NAND; name: GATE_152_I0
+.gate NAND2X1 A=D_INPUT_1 B=GATE_36 Y=GATE_152
+
+
+
+# gate type: NAND; name: GATE_153_I0
+.gate NAND2X1 A=D_GATE_5 B=D_GATE_37 Y=GATE_153
+
+
+
+# gate type: NAND; name: GATE_154_I0
+.gate NAND2X1 A=D_GATE_48 B=D_GATE_152 Y=GATE_154
+
+
+
+# gate type: NAND; name: GATE_155_I0
+.gate NAND2X1 A=GATE_153 B=GATE_154 Y=GATE_155
+
+
+
+# gate type: NAND; name: GATE_156_I0
+.gate NAND2X1 A=GATE_1 B=GATE_16 Y=GATE_156
+
+
+
+# gate type: NAND; name: GATE_157_I0
+.gate NAND2X1 A=D_GATE_155 B=GATE_156 Y=GATE_157
+
+
+
+# gate type: NAND; name: GATE_158_I0
+.gate NAND2X1 A=GATE_4 B=GATE_8 Y=GATE_158
+
+
+
+# gate type: NAND; name: GATE_159_I0
+.gate NAND2X1 A=D_GATE_22 B=D_GATE_125 Y=GATE_159
+
+
+
+# gate type: NAND; name: GATE_160_I0
+.gate NAND2X1 A=D_GATE_132 B=D_GATE_158 Y=GATE_160
+
+
+
+# gate type: NAND; name: GATE_161_I0
+.gate NAND2X1 A=GATE_159 B=GATE_160 Y=GATE_161
+
+
+
+# gate type: NAND; name: GATE_162_I0
+.gate NAND2X1 A=GATE_50 B=D_GATE_161 Y=GATE_162
+
+
+
+# gate type: NAND; name: GATE_163_I0
+.gate NAND2X1 A=GATE_17 B=GATE_142 Y=GATE_163
+
+
+
+# gate type: NAND; name: GATE_164_I0
+.gate NAND2X1 A=GATE_50 B=GATE_72 Y=GATE_164
+
+
+
+# gate type: NAND; name: GATE_165_I0
+.gate NAND2X1 A=GATE_14 B=GATE_39 Y=GATE_165
+
+
+
+# gate type: NAND; name: GATE_166_I0
+.gate NAND2X1 A=GATE_63 B=GATE_158 Y=GATE_166
+
+
+
+# gate type: NAND; name: GATE_167_I0
+.gate NAND2X1 A=D_GATE_163 B=D_GATE_164 Y=GATE_167
+
+
+
+# gate type: NAND; name: GATE_168_I0
+.gate NAND2X1 A=D_GATE_165 B=D_GATE_166 Y=GATE_168
+
+
+
+# gate type: NAND; name: GATE_169_I0
+.gate NAND2X1 A=GATE_167 B=GATE_168 Y=GATE_169
+
+
+
+# gate type: NAND; name: GATE_170_I0
+.gate NAND2X1 A=GATE_22 B=GATE_39 Y=GATE_170
+
+
+
+# gate type: NAND; name: GATE_171_I0
+.gate NAND2X1 A=GATE_69 B=GATE_101 Y=GATE_171
+
+
+
+# gate type: NAND; name: GATE_172_I0
+.gate NAND2X1 A=GATE_69_BALANCE1 B=GATE_149 Y=GATE_172
+
+
+
+# gate type: NAND; name: GATE_173_I0
+.gate NAND2X1 A=D_GATE_170 B=D_GATE_171 Y=GATE_173
+
+
+
+# gate type: NAND; name: GATE_174_I0
+.gate NAND2X1 A=D_GATE_172 B=GATE_173 Y=GATE_174
+
+
+
+# gate type: NAND; name: GATE_175_I0
+.gate NAND2X1 A=GATE_25 B=GATE_89 Y=GATE_175
+
+
+
+# gate type: NAND; name: GATE_176_I0
+.gate NAND2X1 A=GATE_48 B=GATE_69 Y=GATE_176
+
+
+
+# gate type: NAND; name: GATE_177_I0
+.gate NAND2X1 A=GATE_54 B=GATE_156 Y=GATE_177
+
+
+
+# gate type: NAND; name: GATE_178_I0
+.gate NAND2X1 A=GATE_35 B=GATE_103 Y=GATE_178
+
+
+
+# gate type: NAND; name: GATE_179_I0
+.gate NAND2X1 A=D_GATE_175 B=D_GATE_176 Y=GATE_179
+
+
+
+# gate type: NAND; name: GATE_180_I0
+.gate NAND2X1 A=D_GATE_177 B=D_GATE_178 Y=GATE_180
+
+
+
+# gate type: NAND; name: GATE_181_I0
+.gate NAND2X1 A=GATE_179 B=GATE_180 Y=GATE_181
+
+
+
+# gate type: NAND; name: GATE_182_I0
+.gate NAND2X1 A=GATE_5 B=GATE_39 Y=GATE_182
+
+
+
+# gate type: NAND; name: GATE_183_I0
+.gate NAND2X1 A=GATE_70 B=GATE_94_BALANCE1 Y=GATE_183
+
+
+
+# gate type: NAND; name: GATE_184_I0
+.gate NAND2X1 A=GATE_54_BALANCE0 B=D_GATE_72 Y=GATE_184
+
+
+
+# gate type: NAND; name: GATE_185_I0
+.gate NAND2X1 A=D_GATE_149 B=GATE_184 Y=GATE_185
+
+
+
+# gate type: NAND; name: GATE_186_I0
+.gate NAND2X1 A=GATE_39 B=D_GATE_185 Y=GATE_186
+
+
+
+# gate type: NAND; name: GATE_187_I0
+.gate NAND2X1 A=D_GATE_37 B=GATE_184 Y=GATE_187
+
+
+
+# gate type: NAND; name: GATE_188_I0
+.gate NAND2X1 A=GATE_94 B=D_GATE_187 Y=GATE_188
+
+
+
+# gate type: NAND; name: GATE_189_I0
+.gate NAND2X1 A=GATE_182_BALANCE0 B=GATE_183_BALANCE0 Y=GATE_189
+
+
+
+# gate type: NAND; name: GATE_190_I0
+.gate NAND2X1 A=D_GATE_186 B=GATE_189 Y=GATE_190
+
+
+
+# gate type: NAND; name: GATE_191_I0
+.gate NAND2X1 A=GATE_188_BALANCE0 B=GATE_190 Y=GATE_191
+
+
+
+# gate type: NAND; name: GATE_192_I0
+.gate NAND2X1 A=D_GATE_6 B=D_GATE_12 Y=GATE_192
+
+
+
+# gate type: NAND; name: GATE_193_I0
+.gate NAND2X1 A=D_GATE_15 B=D_GATE_38 Y=GATE_193
+
+
+
+# gate type: NAND; name: GATE_194_I0
+.gate NAND2X1 A=D_GATE_40 B=D_GATE_42 Y=GATE_194
+
+
+
+# gate type: NAND; name: GATE_195_I0
+.gate NAND2X1 A=D_GATE_44 B=D_GATE_47 Y=GATE_195
+
+
+
+# gate type: NAND; name: GATE_196_I0
+.gate NAND2X1 A=D_GATE_51 B=D_GATE_55 Y=GATE_196
+
+
+
+# gate type: NAND; name: GATE_197_I0
+.gate NAND2X1 A=GATE_56_BALANCE0 B=GATE_196 Y=GATE_197
+
+
+
+# gate type: NAND; name: GATE_198_I0
+.gate NAND2X1 A=GATE_194 B=GATE_195 Y=GATE_198
+
+
+
+# gate type: NAND; name: GATE_199_I0
+.gate NAND2X1 A=GATE_192_BALANCE1 B=GATE_193 Y=GATE_199
+
+
+
+# gate type: NAND; name: GATE_200_I0
+.gate NAND2X1 A=GATE_60 B=D_GATE_64 Y=GATE_200
+
+
+
+# gate type: NAND; name: GATE_201_I0
+.gate NAND2X1 A=D_GATE_66 B=GATE_68_BALANCE0 Y=GATE_201
+
+
+
+# gate type: NAND; name: GATE_202_I0
+.gate NAND2X1 A=D_GATE_71 B=GATE_75_BALANCE1 Y=GATE_202
+
+
+
+# gate type: NAND; name: GATE_203_I0
+.gate NAND2X1 A=D_GATE_78 B=GATE_83 Y=GATE_203
+
+
+
+# gate type: NAND; name: GATE_204_I0
+.gate NAND2X1 A=GATE_202 B=GATE_203_BALANCE1 Y=GATE_204
+
+
+
+# gate type: NAND; name: GATE_205_I0
+.gate NAND2X1 A=GATE_200_BALANCE1 B=GATE_201 Y=GATE_205
+
+
+
+# gate type: NAND; name: GATE_206_I0
+.gate NAND2X1 A=GATE_198_BALANCE1 B=GATE_199 Y=GATE_206
+
+
+
+# gate type: NAND; name: GATE_207_I0
+.gate NAND2X1 A=GATE_34 B=GATE_197 Y=GATE_207
+
+
+
+# gate type: NAND; name: GATE_208_I0
+.gate NAND2X1 A=GATE_148 B=D_GATE_151 Y=GATE_208
+
+
+
+# gate type: NAND; name: GATE_209_I0
+.gate NAND2X1 A=D_GATE_157 B=D_GATE_162 Y=GATE_209
+
+
+
+# gate type: NAND; name: GATE_210_I0
+.gate NAND2X1 A=GATE_169_BALANCE1 B=GATE_174 Y=GATE_210
+
+
+
+# gate type: NAND; name: GATE_211_I0
+.gate NAND2X1 A=GATE_181_BALANCE1 B=GATE_210 Y=GATE_211
+
+
+
+# gate type: NAND; name: GATE_212_I0
+.gate NAND2X1 A=GATE_208 B=GATE_209_BALANCE1 Y=GATE_212
+
+
+
+# gate type: NAND; name: GATE_213_I0
+.gate NAND2X1 A=GATE_206 B=GATE_207 Y=GATE_213
+
+
+
+# gate type: NAND; name: GATE_214_I0
+.gate NAND2X1 A=GATE_204 B=GATE_205 Y=GATE_214
+
+
+
+# gate type: NAND; name: GATE_215_I0
+.gate NAND2X1 A=GATE_100 B=GATE_115 Y=GATE_215
+
+
+
+# gate type: NAND; name: GATE_216_I0
+.gate NAND2X1 A=GATE_123_BALANCE1 B=GATE_140 Y=GATE_216
+
+
+
+# gate type: NAND; name: GATE_217_I0
+.gate NAND2X1 A=GATE_215 B=GATE_216 Y=GATE_217
+
+
+
+# gate type: NAND; name: GATE_218_I0
+.gate NAND2X1 A=GATE_213 B=GATE_214 Y=GATE_218
+
+
+
+# gate type: NAND; name: GATE_219_I0
+.gate NAND2X1 A=GATE_211 B=GATE_212 Y=GATE_219
+
+
+
+# gate type: NAND; name: GATE_220_I0
+.gate NAND2X1 A=GATE_191_BALANCE1 B=GATE_219_BALANCE1 Y=GATE_220
+
+
+
+# gate type: NAND; name: GATE_221_I0
+.gate NAND2X1 A=GATE_217 B=GATE_218 Y=GATE_221
+
+
+
+# gate type: NAND; name: GATE_222_I0
+.gate NAND2X1 A=GATE_220 B=GATE_221 Y=GATE_222
+
+
+
+# gate type: NAND; name: GATE_223_I0
+.gate NAND2X1 A=GATE_30 B=GATE_125 Y=GATE_223
+
+
+
+# gate type: NAND; name: GATE_224_I0
+.gate NAND2X1 A=D_INPUT_1 B=GATE_4 Y=GATE_224
+
+
+
+# gate type: NAND; name: GATE_225_I0
+.gate NAND2X1 A=GATE_17 B=GATE_224 Y=GATE_225
+
+
+
+# gate type: NAND; name: GATE_226_I0
+.gate NAND2X1 A=D_GATE_223 B=D_GATE_225 Y=GATE_226
+
+
+
+# gate type: NAND; name: GATE_227_I0
+.gate NAND2X1 A=D_GATE_6 B=D_GATE_51 Y=GATE_227
+
+
+
+# gate type: NAND; name: GATE_228_I0
+.gate NAND2X1 A=GATE_11 B=GATE_22 Y=GATE_228
+
+
+
+# gate type: NAND; name: GATE_229_I0
+.gate NAND2X1 A=GATE_5 B=GATE_30 Y=GATE_229
+
+
+
+# gate type: NAND; name: GATE_230_I0
+.gate NAND2X1 A=D_GATE_228 B=D_GATE_229 Y=GATE_230
+
+
+
+# gate type: NAND; name: GATE_231_I0
+.gate NAND2X1 A=GATE_14 B=GATE_156 Y=GATE_231
+
+
+
+# gate type: NAND; name: GATE_232_I0
+.gate NAND2X1 A=INPUT_0 B=GATE_13 Y=GATE_232
+
+
+
+# gate type: NAND; name: GATE_233_I0
+.gate NAND2X1 A=GATE_46 B=GATE_232 Y=GATE_233
+
+
+
+# gate type: NAND; name: GATE_234_I0
+.gate NAND2X1 A=D_GATE_61 B=GATE_84 Y=GATE_234
+
+
+
+# gate type: NAND; name: GATE_235_I0
+.gate NAND2X1 A=GATE_4 B=GATE_27 Y=GATE_235
+
+
+
+# gate type: NAND; name: GATE_236_I0
+.gate NAND2X1 A=GATE_25 B=GATE_235 Y=GATE_236
+
+
+
+# gate type: NAND; name: GATE_237_I0
+.gate NAND2X1 A=GATE_22 B=GATE_50 Y=GATE_237
+
+
+
+# gate type: NAND; name: GATE_238_I0
+.gate NAND2X1 A=GATE_50 B=GATE_101 Y=GATE_238
+
+
+
+# gate type: NAND; name: GATE_239_I0
+.gate NAND2X1 A=D_GATE_231 B=D_GATE_233 Y=GATE_239
+
+
+
+# gate type: NAND; name: GATE_240_I0
+.gate NAND2X1 A=D_GATE_236 B=D_GATE_237 Y=GATE_240
+
+
+
+# gate type: NAND; name: GATE_241_I0
+.gate NAND2X1 A=GATE_238_BALANCE0 B=GATE_240 Y=GATE_241
+
+
+
+# gate type: NAND; name: GATE_242_I0
+.gate NAND2X1 A=D_GATE_234 B=GATE_239 Y=GATE_242
+
+
+
+# gate type: NAND; name: GATE_243_I0
+.gate NAND2X1 A=GATE_241 B=GATE_242 Y=GATE_243
+
+
+
+# gate type: NAND; name: GATE_244_I0
+.gate NAND2X1 A=GATE_25 B=GATE_36_BALANCE1 Y=GATE_244
+
+
+
+# gate type: NAND; name: GATE_245_I0
+.gate NAND2X1 A=GATE_8 B=GATE_244 Y=GATE_245
+
+
+
+# gate type: NAND; name: GATE_246_I0
+.gate NAND2X1 A=D_GATE_5 B=D_GATE_9 Y=GATE_246
+
+
+
+# gate type: NAND; name: GATE_247_I0
+.gate NAND2X1 A=GATE_46_BALANCE1 B=D_GATE_246 Y=GATE_247
+
+
+
+# gate type: NAND; name: GATE_248_I0
+.gate NAND2X1 A=D_GATE_22 B=D_GATE_37 Y=GATE_248
+
+
+
+# gate type: NAND; name: GATE_249_I0
+.gate NAND2X1 A=GATE_63_BALANCE1 B=D_GATE_248 Y=GATE_249
+
+
+
+# gate type: NAND; name: GATE_250_I0
+.gate NAND2X1 A=GATE_50_BALANCE1 B=D_GATE_104 Y=GATE_250
+
+
+
+# gate type: NAND; name: GATE_251_I0
+.gate NAND2X1 A=GATE_54 B=GATE_58 Y=GATE_251
+
+
+
+# gate type: NAND; name: GATE_252_I0
+.gate NAND2X1 A=GATE_63 B=GATE_132 Y=GATE_252
+
+
+
+# gate type: NAND; name: GATE_253_I0
+.gate NAND2X1 A=D_GATE_251 B=D_GATE_252 Y=GATE_253
+
+
+
+# gate type: NAND; name: GATE_254_I0
+.gate NAND2X1 A=GATE_36_BALANCE1 B=GATE_156 Y=GATE_254
+
+
+
+# gate type: NAND; name: GATE_255_I0
+.gate NAND2X1 A=D_GATE_3 B=GATE_254 Y=GATE_255
+
+
+
+# gate type: NAND; name: GATE_256_I0
+.gate NAND2X1 A=GATE_17 B=GATE_132 Y=GATE_256
+
+
+
+# gate type: NAND; name: GATE_257_I0
+.gate NAND2X1 A=GATE_76 B=GATE_156 Y=GATE_257
+
+
+
+# gate type: NAND; name: GATE_258_I0
+.gate NAND2X1 A=D_GATE_256 B=D_GATE_257 Y=GATE_258
+
+
+
+# gate type: NAND; name: GATE_259_I0
+.gate NAND2X1 A=D_GATE_11 B=D_GATE_156 Y=GATE_259
+
+
+
+# gate type: NAND; name: GATE_260_I0
+.gate NAND2X1 A=GATE_103_BALANCE1 B=D_GATE_259 Y=GATE_260
+
+
+
+# gate type: NAND; name: GATE_261_I0
+.gate NAND2X1 A=GATE_39_BALANCE1 B=GATE_62 Y=GATE_261
+
+
+
+# gate type: NAND; name: GATE_262_I0
+.gate NAND2X1 A=GATE_21 B=GATE_36_BALANCE1 Y=GATE_262
+
+
+
+# gate type: NAND; name: GATE_263_I0
+.gate NAND2X1 A=D_GATE_9 B=D_GATE_76 Y=GATE_263
+
+
+
+# gate type: NAND; name: GATE_264_I0
+.gate NAND2X1 A=GATE_39_BALANCE1 B=D_GATE_263 Y=GATE_264
+
+
+
+# gate type: NAND; name: GATE_265_I0
+.gate NAND2X1 A=D_GATE_261 B=D_GATE_262 Y=GATE_265
+
+
+
+# gate type: NAND; name: GATE_266_I0
+.gate NAND2X1 A=GATE_264_BALANCE0 B=GATE_265 Y=GATE_266
+
+
+
+# gate type: NAND; name: GATE_267_I0
+.gate NAND2X1 A=GATE_35 B=GATE_91 Y=GATE_267
+
+
+
+# gate type: NAND; name: GATE_268_I0
+.gate NAND2X1 A=D_GATE_235 B=GATE_267_BALANCE0 Y=GATE_268
+
+
+
+# gate type: NAND; name: GATE_269_I0
+.gate NAND2X1 A=D_GATE_17 B=D_GATE_35 Y=GATE_269
+
+
+
+# gate type: NAND; name: GATE_270_I0
+.gate NAND2X1 A=D_GATE_268 B=D_GATE_269 Y=GATE_270
+
+
+
+# gate type: NAND; name: GATE_271_I0
+.gate NAND2X1 A=GATE_30 B=GATE_41 Y=GATE_271
+
+
+
+# gate type: NAND; name: GATE_272_I0
+.gate NAND2X1 A=GATE_35 B=GATE_152 Y=GATE_272
+
+
+
+# gate type: NAND; name: GATE_273_I0
+.gate NAND2X1 A=D_GATE_271 B=D_GATE_272 Y=GATE_273
+
+
+
+# gate type: NAND; name: GATE_274_I0
+.gate NAND2X1 A=D_INPUT_0 B=D_GATE_273 Y=GATE_274
+
+
+
+# gate type: NAND; name: GATE_275_I0
+.gate NAND2X1 A=D_GATE_270 B=GATE_274_BALANCE0 Y=GATE_275
+
+
+
+# gate type: NAND; name: GATE_276_I0
+.gate NAND2X1 A=GATE_36_BALANCE1 B=GATE_46 Y=GATE_276
+
+
+
+# gate type: NAND; name: GATE_277_I0
+.gate NAND2X1 A=D_GATE_8 B=GATE_276 Y=GATE_277
+
+
+
+# gate type: NAND; name: GATE_278_I0
+.gate NAND2X1 A=GATE_43 B=GATE_132 Y=GATE_278
+
+
+
+# gate type: NAND; name: GATE_279_I0
+.gate NAND2X1 A=GATE_46 B=GATE_235 Y=GATE_279
+
+
+
+# gate type: NAND; name: GATE_280_I0
+.gate NAND2X1 A=GATE_2 B=GATE_235 Y=GATE_280
+
+
+
+# gate type: NAND; name: GATE_281_I0
+.gate NAND2X1 A=GATE_101 B=GATE_156 Y=GATE_281
+
+
+
+# gate type: NAND; name: GATE_282_I0
+.gate NAND2X1 A=GATE_25 B=GATE_224 Y=GATE_282
+
+
+
+# gate type: NAND; name: GATE_283_I0
+.gate NAND2X1 A=D_GATE_278 B=D_GATE_279 Y=GATE_283
+
+
+
+# gate type: NAND; name: GATE_284_I0
+.gate NAND2X1 A=D_GATE_280 B=D_GATE_281 Y=GATE_284
+
+
+
+# gate type: NAND; name: GATE_285_I0
+.gate NAND2X1 A=GATE_282_BALANCE0 B=GATE_284 Y=GATE_285
+
+
+
+# gate type: NAND; name: GATE_286_I0
+.gate NAND2X1 A=D_GATE_277 B=GATE_283 Y=GATE_286
+
+
+
+# gate type: NAND; name: GATE_287_I0
+.gate NAND2X1 A=GATE_285 B=GATE_286 Y=GATE_287
+
+
+
+# gate type: NAND; name: GATE_288_I0
+.gate NAND2X1 A=GATE_50 B=GATE_224 Y=GATE_288
+
+
+
+# gate type: NAND; name: GATE_289_I0
+.gate NAND2X1 A=GATE_14 B=GATE_25 Y=GATE_289
+
+
+
+# gate type: NAND; name: GATE_290_I0
+.gate NAND2X1 A=GATE_35 B=GATE_232 Y=GATE_290
+
+
+
+# gate type: NAND; name: GATE_291_I0
+.gate NAND2X1 A=GATE_39_BALANCE1 B=GATE_149 Y=GATE_291
+
+
+
+# gate type: NAND; name: GATE_292_I0
+.gate NAND2X1 A=INPUT_1 B=GATE_4 Y=GATE_292
+
+
+
+# gate type: NAND; name: GATE_293_I0
+.gate NAND2X1 A=D_GATE_9 B=D_GATE_292 Y=GATE_293
+
+
+
+# gate type: NAND; name: GATE_294_I0
+.gate NAND2X1 A=GATE_58_BALANCE1 B=D_GATE_293 Y=GATE_294
+
+
+
+# gate type: NAND; name: GATE_295_I0
+.gate NAND2X1 A=D_GATE_41 B=D_GATE_54 Y=GATE_295
+
+
+
+# gate type: NAND; name: GATE_296_I0
+.gate NAND2X1 A=GATE_43_BALANCE1 B=D_GATE_295 Y=GATE_296
+
+
+
+# gate type: NAND; name: GATE_297_I0
+.gate NAND2X1 A=GATE_30 B=GATE_54 Y=GATE_297
+
+
+
+# gate type: NAND; name: GATE_298_I0
+.gate NAND2X1 A=GATE_11 B=GATE_118 Y=GATE_298
+
+
+
+# gate type: NAND; name: GATE_299_I0
+.gate NAND2X1 A=GATE_58 B=GATE_118 Y=GATE_299
+
+
+
+# gate type: NAND; name: GATE_300_I0
+.gate NAND2X1 A=D_GATE_74 B=D_GATE_299 Y=GATE_300
+
+
+
+# gate type: NAND; name: GATE_301_I0
+.gate NAND2X1 A=D_GATE_297 B=D_GATE_298 Y=GATE_301
+
+
+
+# gate type: NAND; name: GATE_302_I0
+.gate NAND2X1 A=GATE_300_BALANCE1 B=GATE_301 Y=GATE_302
+
+
+
+# gate type: NAND; name: GATE_303_I0
+.gate NAND2X1 A=GATE_52 B=GATE_235 Y=GATE_303
+
+
+
+# gate type: NAND; name: GATE_304_I0
+.gate NAND2X1 A=GATE_2 B=GATE_89 Y=GATE_304
+
+
+
+# gate type: NAND; name: GATE_305_I0
+.gate NAND2X1 A=GATE_21 B=GATE_142 Y=GATE_305
+
+
+
+# gate type: NAND; name: GATE_306_I0
+.gate NAND2X1 A=D_GATE_303 B=D_GATE_304 Y=GATE_306
+
+
+
+# gate type: NAND; name: GATE_307_I0
+.gate NAND2X1 A=GATE_305_BALANCE0 B=GATE_306 Y=GATE_307
+
+
+
+# gate type: NAND; name: GATE_308_I0
+.gate NAND2X1 A=GATE_21 B=GATE_224 Y=GATE_308
+
+
+
+# gate type: NAND; name: GATE_309_I0
+.gate NAND2X1 A=GATE_4_BALANCE1 B=GATE_39 Y=GATE_309
+
+
+
+# gate type: NAND; name: GATE_310_I0
+.gate NAND2X1 A=GATE_25 B=GATE_101 Y=GATE_310
+
+
+
+# gate type: NAND; name: GATE_311_I0
+.gate NAND2X1 A=GATE_54 B=GATE_63 Y=GATE_311
+
+
+
+# gate type: NAND; name: GATE_312_I0
+.gate NAND2X1 A=GATE_69 B=GATE_89 Y=GATE_312
+
+
+
+# gate type: NAND; name: GATE_313_I0
+.gate NAND2X1 A=GATE_14 B=GATE_63 Y=GATE_313
+
+
+
+# gate type: NAND; name: GATE_314_I0
+.gate NAND2X1 A=GATE_30 B=GATE_132 Y=GATE_314
+
+
+
+# gate type: NAND; name: GATE_315_I0
+.gate NAND2X1 A=GATE_11 B=GATE_79 Y=GATE_315
+
+
+
+# gate type: NAND; name: GATE_316_I0
+.gate NAND2X1 A=D_GATE_312 B=D_GATE_313 Y=GATE_316
+
+
+
+# gate type: NAND; name: GATE_317_I0
+.gate NAND2X1 A=D_GATE_314 B=D_GATE_315 Y=GATE_317
+
+
+
+# gate type: NAND; name: GATE_318_I0
+.gate NAND2X1 A=GATE_316 B=GATE_317_BALANCE1 Y=GATE_318
+
+
+
+# gate type: NAND; name: GATE_319_I0
+.gate NAND2X1 A=GATE_35 B=GATE_89 Y=GATE_319
+
+
+
+# gate type: NAND; name: GATE_320_I0
+.gate NAND2X1 A=GATE_9 B=GATE_63 Y=GATE_320
+
+
+
+# gate type: NAND; name: GATE_321_I0
+.gate NAND2X1 A=GATE_43 B=GATE_142 Y=GATE_321
+
+
+
+# gate type: NAND; name: GATE_322_I0
+.gate NAND2X1 A=GATE_94 B=GATE_109 Y=GATE_322
+
+
+
+# gate type: NAND; name: GATE_323_I0
+.gate NAND2X1 A=D_GATE_319 B=D_GATE_320 Y=GATE_323
+
+
+
+# gate type: NAND; name: GATE_324_I0
+.gate NAND2X1 A=D_GATE_321 B=D_GATE_322 Y=GATE_324
+
+
+
+# gate type: NAND; name: GATE_325_I0
+.gate NAND2X1 A=GATE_323 B=GATE_324 Y=GATE_325
+
+
+
+# gate type: NAND; name: GATE_326_I0
+.gate NAND2X1 A=D_GATE_62 B=GATE_263 Y=GATE_326
+
+
+
+# gate type: NAND; name: GATE_327_I0
+.gate NAND2X1 A=D_INPUT_4 B=GATE_49 Y=GATE_327
+
+
+
+# gate type: NAND; name: GATE_328_I0
+.gate NAND2X1 A=D_GATE_326 B=GATE_327 Y=GATE_328
+
+
+
+# gate type: NAND; name: GATE_329_I0
+.gate NAND2X1 A=D_GATE_50 B=GATE_69_BALANCE0 Y=GATE_329
+
+
+
+# gate type: NAND; name: GATE_330_I0
+.gate NAND2X1 A=D_GATE_185 B=GATE_329_BALANCE0 Y=GATE_330
+
+
+
+# gate type: NAND; name: GATE_331_I0
+.gate NAND2X1 A=D_GATE_110 B=D_GATE_134 Y=GATE_331
+
+
+
+# gate type: NAND; name: GATE_332_I0
+.gate NAND2X1 A=D_GATE_170 B=D_GATE_288 Y=GATE_332
+
+
+
+# gate type: NAND; name: GATE_333_I0
+.gate NAND2X1 A=D_GATE_289 B=D_GATE_290 Y=GATE_333
+
+
+
+# gate type: NAND; name: GATE_334_I0
+.gate NAND2X1 A=D_GATE_308 B=D_GATE_309 Y=GATE_334
+
+
+
+# gate type: NAND; name: GATE_335_I0
+.gate NAND2X1 A=D_GATE_310 B=D_GATE_311 Y=GATE_335
+
+
+
+# gate type: NAND; name: GATE_336_I0
+.gate NAND2X1 A=GATE_334_BALANCE1 B=GATE_335 Y=GATE_336
+
+
+
+# gate type: NAND; name: GATE_337_I0
+.gate NAND2X1 A=GATE_332_BALANCE1 B=GATE_333 Y=GATE_337
+
+
+
+# gate type: NAND; name: GATE_338_I0
+.gate NAND2X1 A=GATE_60 B=GATE_331 Y=GATE_338
+
+
+
+# gate type: NAND; name: GATE_339_I0
+.gate NAND2X1 A=D_GATE_87 B=GATE_226 Y=GATE_339
+
+
+
+# gate type: NAND; name: GATE_340_I0
+.gate NAND2X1 A=GATE_227 B=GATE_230 Y=GATE_340
+
+
+
+# gate type: NAND; name: GATE_341_I0
+.gate NAND2X1 A=D_GATE_245 B=D_GATE_247 Y=GATE_341
+
+
+
+# gate type: NAND; name: GATE_342_I0
+.gate NAND2X1 A=D_GATE_249 B=D_GATE_250 Y=GATE_342
+
+
+
+# gate type: NAND; name: GATE_343_I0
+.gate NAND2X1 A=GATE_253 B=D_GATE_255 Y=GATE_343
+
+
+
+# gate type: NAND; name: GATE_344_I0
+.gate NAND2X1 A=GATE_258 B=D_GATE_260 Y=GATE_344
+
+
+
+# gate type: NAND; name: GATE_345_I0
+.gate NAND2X1 A=D_GATE_291 B=D_GATE_294 Y=GATE_345
+
+
+
+# gate type: NAND; name: GATE_346_I0
+.gate NAND2X1 A=GATE_296_BALANCE0 B=GATE_345 Y=GATE_346
+
+
+
+# gate type: NAND; name: GATE_347_I0
+.gate NAND2X1 A=GATE_343 B=GATE_344_BALANCE1 Y=GATE_347
+
+
+
+# gate type: NAND; name: GATE_348_I0
+.gate NAND2X1 A=GATE_341 B=GATE_342 Y=GATE_348
+
+
+
+# gate type: NAND; name: GATE_349_I0
+.gate NAND2X1 A=GATE_339 B=GATE_340 Y=GATE_349
+
+
+
+# gate type: NAND; name: GATE_350_I0
+.gate NAND2X1 A=GATE_337 B=GATE_338_BALANCE1 Y=GATE_350
+
+
+
+# gate type: NAND; name: GATE_351_I0
+.gate NAND2X1 A=GATE_181 B=GATE_336 Y=GATE_351
+
+
+
+# gate type: NAND; name: GATE_352_I0
+.gate NAND2X1 A=GATE_302 B=GATE_307 Y=GATE_352
+
+
+
+# gate type: NAND; name: GATE_353_I0
+.gate NAND2X1 A=GATE_318 B=GATE_325 Y=GATE_353
+
+
+
+# gate type: NAND; name: GATE_354_I0
+.gate NAND2X1 A=D_GATE_328 B=D_GATE_330 Y=GATE_354
+
+
+
+# gate type: NAND; name: GATE_355_I0
+.gate NAND2X1 A=GATE_353 B=GATE_354 Y=GATE_355
+
+
+
+# gate type: NAND; name: GATE_356_I0
+.gate NAND2X1 A=GATE_351 B=GATE_352 Y=GATE_356
+
+
+
+# gate type: NAND; name: GATE_357_I0
+.gate NAND2X1 A=GATE_349_BALANCE1 B=GATE_350 Y=GATE_357
+
+
+
+# gate type: NAND; name: GATE_358_I0
+.gate NAND2X1 A=GATE_347 B=GATE_348_BALANCE1 Y=GATE_358
+
+
+
+# gate type: NAND; name: GATE_359_I0
+.gate NAND2X1 A=GATE_243 B=GATE_346 Y=GATE_359
+
+
+
+# gate type: NAND; name: GATE_360_I0
+.gate NAND2X1 A=GATE_266 B=GATE_275 Y=GATE_360
+
+
+
+# gate type: NAND; name: GATE_361_I0
+.gate NAND2X1 A=GATE_287_BALANCE1 B=GATE_360 Y=GATE_361
+
+
+
+# gate type: NAND; name: GATE_362_I0
+.gate NAND2X1 A=GATE_358 B=GATE_359 Y=GATE_362
+
+
+
+# gate type: NAND; name: GATE_363_I0
+.gate NAND2X1 A=GATE_356 B=GATE_357 Y=GATE_363
+
+
+
+# gate type: NAND; name: GATE_364_I0
+.gate NAND2X1 A=GATE_355_BALANCE1 B=GATE_363 Y=GATE_364
+
+
+
+# gate type: NAND; name: GATE_365_I0
+.gate NAND2X1 A=GATE_361 B=GATE_362 Y=GATE_365
+
+
+
+# gate type: NAND; name: GATE_366_I0
+.gate NAND2X1 A=GATE_364 B=GATE_365 Y=GATE_366
+
+
+
+# gate type: NAND; name: GATE_367_I0
+.gate NAND2X1 A=GATE_5_BALANCE1 B=D_GATE_269 Y=GATE_367
+
+
+
+# gate type: NAND; name: GATE_368_I0
+.gate NAND2X1 A=GATE_21 B=GATE_118 Y=GATE_368
+
+
+
+# gate type: NAND; name: GATE_369_I0
+.gate NAND2X1 A=D_GATE_308 B=D_GATE_368 Y=GATE_369
+
+
+
+# gate type: NAND; name: GATE_370_I0
+.gate NAND2X1 A=GATE_4_BALANCE1 B=GATE_30 Y=GATE_370
+
+
+
+# gate type: NAND; name: GATE_371_I0
+.gate NAND2X1 A=D_INPUT_1 B=GATE_370 Y=GATE_371
+
+
+
+# gate type: NAND; name: GATE_372_I0
+.gate NAND2X1 A=GATE_25 B=GATE_76 Y=GATE_372
+
+
+
+# gate type: NAND; name: GATE_373_I0
+.gate NAND2X1 A=D_GATE_321 B=D_GATE_372 Y=GATE_373
+
+
+
+# gate type: NAND; name: GATE_374_I0
+.gate NAND2X1 A=D_GATE_30 B=D_GATE_156 Y=GATE_374
+
+
+
+# gate type: NAND; name: GATE_375_I0
+.gate NAND2X1 A=GATE_142_BALANCE1 B=D_GATE_374 Y=GATE_375
+
+
+
+# gate type: NAND; name: GATE_376_I0
+.gate NAND2X1 A=GATE_2 B=D_GATE_13 Y=GATE_376
+
+
+
+# gate type: NAND; name: GATE_377_I0
+.gate NAND2X1 A=D_GATE_41 B=GATE_376 Y=GATE_377
+
+
+
+# gate type: NAND; name: GATE_378_I0
+.gate NAND2X1 A=GATE_11_BALANCE0 B=D_GATE_25 Y=GATE_378
+
+
+
+# gate type: NAND; name: GATE_379_I0
+.gate NAND2X1 A=GATE_125_BALANCE1 B=D_GATE_378 Y=GATE_379
+
+
+
+# gate type: NAND; name: GATE_380_I0
+.gate NAND2X1 A=INPUT_3 B=GATE_11 Y=GATE_380
+
+
+
+# gate type: NAND; name: GATE_381_I0
+.gate NAND2X1 A=GATE_27 B=GATE_380 Y=GATE_381
+
+
+
+# gate type: NAND; name: GATE_382_I0
+.gate NAND2X1 A=D_GATE_89 B=D_GATE_235 Y=GATE_382
+
+
+
+# gate type: NAND; name: GATE_383_I0
+.gate NAND2X1 A=GATE_39_BALANCE1 B=D_GATE_382 Y=GATE_383
+
+
+
+# gate type: NAND; name: GATE_384_I0
+.gate NAND2X1 A=GATE_25 B=GATE_103 Y=GATE_384
+
+
+
+# gate type: NAND; name: GATE_385_I0
+.gate NAND2X1 A=D_INPUT_4 B=GATE_16 Y=GATE_385
+
+
+
+# gate type: NAND; name: GATE_386_I0
+.gate NAND2X1 A=GATE_91 B=GATE_385 Y=GATE_386
+
+
+
+# gate type: NAND; name: GATE_387_I0
+.gate NAND2X1 A=D_GATE_166 B=D_GATE_175 Y=GATE_387
+
+
+
+# gate type: NAND; name: GATE_388_I0
+.gate NAND2X1 A=D_GATE_384 B=D_GATE_386 Y=GATE_388
+
+
+
+# gate type: NAND; name: GATE_389_I0
+.gate NAND2X1 A=GATE_387 B=GATE_388_BALANCE1 Y=GATE_389
+
+
+
+# gate type: NAND; name: GATE_390_I0
+.gate NAND2X1 A=D_GATE_381 B=D_GATE_383 Y=GATE_390
+
+
+
+# gate type: NAND; name: GATE_391_I0
+.gate NAND2X1 A=GATE_389 B=GATE_390 Y=GATE_391
+
+
+
+# gate type: NAND; name: GATE_392_I0
+.gate NAND2X1 A=GATE_37 B=GATE_39 Y=GATE_392
+
+
+
+# gate type: NAND; name: GATE_393_I0
+.gate NAND2X1 A=GATE_46 B=GATE_125 Y=GATE_393
+
+
+
+# gate type: NAND; name: GATE_394_I0
+.gate NAND2X1 A=GATE_58 B=GATE_103 Y=GATE_394
+
+
+
+# gate type: NAND; name: GATE_395_I0
+.gate NAND2X1 A=GATE_22 B=GATE_35 Y=GATE_395
+
+
+
+# gate type: NAND; name: GATE_396_I0
+.gate NAND2X1 A=GATE_2 B=GATE_81 Y=GATE_396
+
+
+
+# gate type: NAND; name: GATE_397_I0
+.gate NAND2X1 A=D_GATE_14 B=GATE_292_BALANCE0 Y=GATE_397
+
+
+
+# gate type: NAND; name: GATE_398_I0
+.gate NAND2X1 A=GATE_43_BALANCE1 B=D_GATE_397 Y=GATE_398
+
+
+
+# gate type: NAND; name: GATE_399_I0
+.gate NAND2X1 A=D_GATE_392 B=D_GATE_393 Y=GATE_399
+
+
+
+# gate type: NAND; name: GATE_400_I0
+.gate NAND2X1 A=D_GATE_394 B=D_GATE_395 Y=GATE_400
+
+
+
+# gate type: NAND; name: GATE_401_I0
+.gate NAND2X1 A=GATE_396_BALANCE0 B=GATE_400 Y=GATE_401
+
+
+
+# gate type: NAND; name: GATE_402_I0
+.gate NAND2X1 A=D_GATE_398 B=GATE_399_BALANCE1 Y=GATE_402
+
+
+
+# gate type: NAND; name: GATE_403_I0
+.gate NAND2X1 A=GATE_401_BALANCE1 B=GATE_402_BALANCE1 Y=GATE_403
+
+
+
+# gate type: NAND; name: GATE_404_I0
+.gate NAND2X1 A=D_GATE_45 B=GATE_326 Y=GATE_404
+
+
+
+# gate type: NAND; name: GATE_405_I0
+.gate NAND2X1 A=GATE_94_BALANCE1 B=D_GATE_404 Y=GATE_405
+
+
+
+# gate type: NAND; name: GATE_406_I0
+.gate NAND2X1 A=D_GATE_54 B=D_GATE_152 Y=GATE_406
+
+
+
+# gate type: NAND; name: GATE_407_I0
+.gate NAND2X1 A=D_INPUT_6 B=GATE_20 Y=GATE_407
+
+
+
+# gate type: NAND; name: GATE_408_I0
+.gate NAND2X1 A=D_GATE_406 B=GATE_407_BALANCE1 Y=GATE_408
+
+
+
+# gate type: NAND; name: GATE_409_I0
+.gate NAND2X1 A=D_GATE_11 B=D_GATE_50 Y=GATE_409
+
+
+
+# gate type: NAND; name: GATE_410_I0
+.gate NAND2X1 A=GATE_103_BALANCE1 B=D_GATE_409 Y=GATE_410
+
+
+
+# gate type: NAND; name: GATE_411_I0
+.gate NAND2X1 A=GATE_36_BALANCE1 B=GATE_43 Y=GATE_411
+
+
+
+# gate type: NAND; name: GATE_412_I0
+.gate NAND2X1 A=INPUT_0 B=GATE_411 Y=GATE_412
+
+
+
+# gate type: NAND; name: GATE_413_I0
+.gate NAND2X1 A=INPUT_3 B=GATE_3 Y=GATE_413
+
+
+
+# gate type: NAND; name: GATE_414_I0
+.gate NAND2X1 A=D_GATE_292 B=D_GATE_413 Y=GATE_414
+
+
+
+# gate type: NAND; name: GATE_415_I0
+.gate NAND2X1 A=GATE_156_BALANCE1 B=D_GATE_414 Y=GATE_415
+
+
+
+# gate type: NAND; name: GATE_416_I0
+.gate NAND2X1 A=GATE_46 B=GATE_224 Y=GATE_416
+
+
+
+# gate type: NAND; name: GATE_417_I0
+.gate NAND2X1 A=GATE_14 B=GATE_50 Y=GATE_417
+
+
+
+# gate type: NAND; name: GATE_418_I0
+.gate NAND2X1 A=GATE_35 B=GATE_41 Y=GATE_418
+
+
+
+# gate type: NAND; name: GATE_419_I0
+.gate NAND2X1 A=GATE_94 B=GATE_101 Y=GATE_419
+
+
+
+# gate type: NAND; name: GATE_420_I0
+.gate NAND2X1 A=GATE_89 B=GATE_327 Y=GATE_420
+
+
+
+# gate type: NAND; name: GATE_421_I0
+.gate NAND2X1 A=GATE_11 B=GATE_91 Y=GATE_421
+
+
+
+# gate type: NAND; name: GATE_422_I0
+.gate NAND2X1 A=GATE_5 B=GATE_63 Y=GATE_422
+
+
+
+# gate type: NAND; name: GATE_423_I0
+.gate NAND2X1 A=GATE_43 B=GATE_76 Y=GATE_423
+
+
+
+# gate type: NAND; name: GATE_424_I0
+.gate NAND2X1 A=D_INPUT_5 B=GATE_16 Y=GATE_424
+
+
+
+# gate type: NAND; name: GATE_425_I0
+.gate NAND2X1 A=GATE_118 B=GATE_424 Y=GATE_425
+
+
+
+# gate type: NAND; name: GATE_426_I0
+.gate NAND2X1 A=GATE_69 B=GATE_132 Y=GATE_426
+
+
+
+# gate type: NAND; name: GATE_427_I0
+.gate NAND2X1 A=GATE_30 B=GATE_235 Y=GATE_427
+
+
+
+# gate type: NAND; name: GATE_428_I0
+.gate NAND2X1 A=D_INPUT_7 B=GATE_10 Y=GATE_428
+
+
+
+# gate type: NAND; name: GATE_429_I0
+.gate NAND2X1 A=GATE_158 B=GATE_428 Y=GATE_429
+
+
+
+# gate type: NAND; name: GATE_430_I0
+.gate NAND2X1 A=GATE_69 B=GATE_235 Y=GATE_430
+
+
+
+# gate type: NAND; name: GATE_431_I0
+.gate NAND2X1 A=GATE_17 B=GATE_128 Y=GATE_431
+
+
+
+# gate type: NAND; name: GATE_432_I0
+.gate NAND2X1 A=GATE_69 B=GATE_152 Y=GATE_432
+
+
+
+# gate type: NAND; name: GATE_433_I0
+.gate NAND2X1 A=D_GATE_171 B=D_GATE_430 Y=GATE_433
+
+
+
+# gate type: NAND; name: GATE_434_I0
+.gate NAND2X1 A=D_GATE_431 B=D_GATE_432 Y=GATE_434
+
+
+
+# gate type: NAND; name: GATE_435_I0
+.gate NAND2X1 A=GATE_433 B=GATE_434_BALANCE1 Y=GATE_435
+
+
+
+# gate type: NAND; name: GATE_436_I0
+.gate NAND2X1 A=GATE_58_BALANCE1 B=GATE_149 Y=GATE_436
+
+
+
+# gate type: NAND; name: GATE_437_I0
+.gate NAND2X1 A=GATE_22 B=GATE_69 Y=GATE_437
+
+
+
+# gate type: NAND; name: GATE_438_I0
+.gate NAND2X1 A=D_GATE_176 B=D_GATE_437 Y=GATE_438
+
+
+
+# gate type: NAND; name: GATE_439_I0
+.gate NAND2X1 A=D_GATE_436 B=GATE_438_BALANCE1 Y=GATE_439
+
+
+
+# gate type: NAND; name: GATE_440_I0
+.gate NAND2X1 A=GATE_39 B=GATE_48 Y=GATE_440
+
+
+
+# gate type: NAND; name: GATE_441_I0
+.gate NAND2X1 A=GATE_39 B=GATE_103 Y=GATE_441
+
+
+
+# gate type: NAND; name: GATE_442_I0
+.gate NAND2X1 A=D_GATE_90 B=D_GATE_440 Y=GATE_442
+
+
+
+# gate type: NAND; name: GATE_443_I0
+.gate NAND2X1 A=GATE_441_BALANCE0 B=GATE_442 Y=GATE_443
+
+
+
+# gate type: NAND; name: GATE_444_I0
+.gate NAND2X1 A=D_GATE_236 B=D_GATE_314 Y=GATE_444
+
+
+
+# gate type: NAND; name: GATE_445_I0
+.gate NAND2X1 A=D_GATE_416 B=D_GATE_417 Y=GATE_445
+
+
+
+# gate type: NAND; name: GATE_446_I0
+.gate NAND2X1 A=D_GATE_418 B=D_GATE_419 Y=GATE_446
+
+
+
+# gate type: NAND; name: GATE_447_I0
+.gate NAND2X1 A=D_GATE_420 B=D_GATE_421 Y=GATE_447
+
+
+
+# gate type: NAND; name: GATE_448_I0
+.gate NAND2X1 A=D_GATE_422 B=D_GATE_423 Y=GATE_448
+
+
+
+# gate type: NAND; name: GATE_449_I0
+.gate NAND2X1 A=D_GATE_425 B=D_GATE_426 Y=GATE_449
+
+
+
+# gate type: NAND; name: GATE_450_I0
+.gate NAND2X1 A=D_GATE_427 B=D_GATE_429 Y=GATE_450
+
+
+
+# gate type: NAND; name: GATE_451_I0
+.gate NAND2X1 A=GATE_449_BALANCE1 B=GATE_450 Y=GATE_451
+
+
+
+# gate type: NAND; name: GATE_452_I0
+.gate NAND2X1 A=GATE_447 B=GATE_448_BALANCE1 Y=GATE_452
+
+
+
+# gate type: NAND; name: GATE_453_I0
+.gate NAND2X1 A=GATE_445_BALANCE1 B=GATE_446 Y=GATE_453
+
+
+
+# gate type: NAND; name: GATE_454_I0
+.gate NAND2X1 A=GATE_75_BALANCE1 B=GATE_444 Y=GATE_454
+
+
+
+# gate type: NAND; name: GATE_455_I0
+.gate NAND2X1 A=D_GATE_183 B=GATE_253 Y=GATE_455
+
+
+
+# gate type: NAND; name: GATE_456_I0
+.gate NAND2X1 A=D_GATE_367 B=GATE_369 Y=GATE_456
+
+
+
+# gate type: NAND; name: GATE_457_I0
+.gate NAND2X1 A=D_GATE_371 B=GATE_373 Y=GATE_457
+
+
+
+# gate type: NAND; name: GATE_458_I0
+.gate NAND2X1 A=D_GATE_375 B=D_GATE_377 Y=GATE_458
+
+
+
+# gate type: NAND; name: GATE_459_I0
+.gate NAND2X1 A=D_GATE_379 B=D_GATE_408 Y=GATE_459
+
+
+
+# gate type: NAND; name: GATE_460_I0
+.gate NAND2X1 A=D_GATE_410 B=D_GATE_412 Y=GATE_460
+
+
+
+# gate type: NAND; name: GATE_461_I0
+.gate NAND2X1 A=GATE_415_BALANCE0 B=GATE_460 Y=GATE_461
+
+
+
+# gate type: NAND; name: GATE_462_I0
+.gate NAND2X1 A=GATE_458_BALANCE1 B=GATE_459 Y=GATE_462
+
+
+
+# gate type: NAND; name: GATE_463_I0
+.gate NAND2X1 A=GATE_456 B=GATE_457 Y=GATE_463
+
+
+
+# gate type: NAND; name: GATE_464_I0
+.gate NAND2X1 A=GATE_454 B=GATE_455 Y=GATE_464
+
+
+
+# gate type: NAND; name: GATE_465_I0
+.gate NAND2X1 A=GATE_452 B=GATE_453 Y=GATE_465
+
+
+
+# gate type: NAND; name: GATE_466_I0
+.gate NAND2X1 A=D_GATE_162 B=GATE_451 Y=GATE_466
+
+
+
+# gate type: NAND; name: GATE_467_I0
+.gate NAND2X1 A=GATE_435 B=GATE_439 Y=GATE_467
+
+
+
+# gate type: NAND; name: GATE_468_I0
+.gate NAND2X1 A=GATE_443_BALANCE1 B=GATE_467 Y=GATE_468
+
+
+
+# gate type: NAND; name: GATE_469_I0
+.gate NAND2X1 A=GATE_465 B=GATE_466 Y=GATE_469
+
+
+
+# gate type: NAND; name: GATE_470_I0
+.gate NAND2X1 A=GATE_463 B=GATE_464 Y=GATE_470
+
+
+
+# gate type: NAND; name: GATE_471_I0
+.gate NAND2X1 A=GATE_461_BALANCE1 B=GATE_462_BALANCE1 Y=GATE_471
+
+
+
+# gate type: NAND; name: GATE_472_I0
+.gate NAND2X1 A=GATE_115 B=GATE_275 Y=GATE_472
+
+
+
+# gate type: NAND; name: GATE_473_I0
+.gate NAND2X1 A=GATE_391 B=GATE_403 Y=GATE_473
+
+
+
+# gate type: NAND; name: GATE_474_I0
+.gate NAND2X1 A=GATE_405_BALANCE0 B=GATE_473 Y=GATE_474
+
+
+
+# gate type: NAND; name: GATE_475_I0
+.gate NAND2X1 A=GATE_471 B=GATE_472_BALANCE1 Y=GATE_475
+
+
+
+# gate type: NAND; name: GATE_476_I0
+.gate NAND2X1 A=GATE_469 B=GATE_470 Y=GATE_476
+
+
+
+# gate type: NAND; name: GATE_477_I0
+.gate NAND2X1 A=GATE_468_BALANCE1 B=GATE_476 Y=GATE_477
+
+
+
+# gate type: NAND; name: GATE_478_I0
+.gate NAND2X1 A=GATE_474 B=GATE_475 Y=GATE_478
+
+
+
+# gate type: NAND; name: GATE_479_I0
+.gate NAND2X1 A=GATE_477_BALANCE1 B=GATE_478 Y=GATE_479
+
+
+
+# gate type: NAND; name: GATE_480_I0
+.gate NAND2X1 A=GATE_2_BALANCE1 B=D_GATE_293 Y=GATE_480
+
+
+
+# gate type: NAND; name: GATE_481_I0
+.gate NAND2X1 A=GATE_5 B=GATE_58 Y=GATE_481
+
+
+
+# gate type: NAND; name: GATE_482_I0
+.gate NAND2X1 A=D_GATE_251 B=D_GATE_481 Y=GATE_482
+
+
+
+# gate type: NAND; name: GATE_483_I0
+.gate NAND2X1 A=GATE_9 B=GATE_35 Y=GATE_483
+
+
+
+# gate type: NAND; name: GATE_484_I0
+.gate NAND2X1 A=GATE_43 B=GATE_101 Y=GATE_484
+
+
+
+# gate type: NAND; name: GATE_485_I0
+.gate NAND2X1 A=D_GATE_483 B=D_GATE_484 Y=GATE_485
+
+
+
+# gate type: NAND; name: GATE_486_I0
+.gate NAND2X1 A=GATE_22 B=GATE_94 Y=GATE_486
+
+
+
+# gate type: NAND; name: GATE_487_I0
+.gate NAND2X1 A=GATE_156 B=GATE_224 Y=GATE_487
+
+
+
+# gate type: NAND; name: GATE_488_I0
+.gate NAND2X1 A=D_GATE_486 B=D_GATE_487 Y=GATE_488
+
+
+
+# gate type: NAND; name: GATE_489_I0
+.gate NAND2X1 A=D_GATE_3 B=GATE_84 Y=GATE_489
+
+
+
+# gate type: NAND; name: GATE_490_I0
+.gate NAND2X1 A=GATE_30 B=GATE_101 Y=GATE_490
+
+
+
+# gate type: NAND; name: GATE_491_I0
+.gate NAND2X1 A=GATE_58 B=GATE_125 Y=GATE_491
+
+
+
+# gate type: NAND; name: GATE_492_I0
+.gate NAND2X1 A=D_GATE_490 B=D_GATE_491 Y=GATE_492
+
+
+
+# gate type: NAND; name: GATE_493_I0
+.gate NAND2X1 A=GATE_11_BALANCE1 B=D_GATE_382 Y=GATE_493
+
+
+
+# gate type: NAND; name: GATE_494_I0
+.gate NAND2X1 A=GATE_35 B=GATE_54 Y=GATE_494
+
+
+
+# gate type: NAND; name: GATE_495_I0
+.gate NAND2X1 A=GATE_17 B=GATE_54 Y=GATE_495
+
+
+
+# gate type: NAND; name: GATE_496_I0
+.gate NAND2X1 A=GATE_21_BALANCE1 B=GATE_70 Y=GATE_496
+
+
+
+# gate type: NAND; name: GATE_497_I0
+.gate NAND2X1 A=GATE_69 B=D_GATE_187 Y=GATE_497
+
+
+
+# gate type: NAND; name: GATE_498_I0
+.gate NAND2X1 A=D_GATE_494 B=D_GATE_495 Y=GATE_498
+
+
+
+# gate type: NAND; name: GATE_499_I0
+.gate NAND2X1 A=D_GATE_496 B=GATE_498 Y=GATE_499
+
+
+
+# gate type: NAND; name: GATE_500_I0
+.gate NAND2X1 A=D_GATE_497 B=GATE_499 Y=GATE_500
+
+
+
+# gate type: NAND; name: GATE_501_I0
+.gate NAND2X1 A=D_GATE_76 B=D_GATE_142 Y=GATE_501
+
+
+
+# gate type: NAND; name: GATE_502_I0
+.gate NAND2X1 A=GATE_63_BALANCE1 B=D_GATE_501 Y=GATE_502
+
+
+
+# gate type: NAND; name: GATE_503_I0
+.gate NAND2X1 A=GATE_9 B=GATE_156 Y=GATE_503
+
+
+
+# gate type: NAND; name: GATE_504_I0
+.gate NAND2X1 A=GATE_17 B=GATE_22 Y=GATE_504
+
+
+
+# gate type: NAND; name: GATE_505_I0
+.gate NAND2X1 A=D_GATE_238 B=D_GATE_418 Y=GATE_505
+
+
+
+# gate type: NAND; name: GATE_506_I0
+.gate NAND2X1 A=D_GATE_503 B=D_GATE_504 Y=GATE_506
+
+
+
+# gate type: NAND; name: GATE_507_I0
+.gate NAND2X1 A=GATE_505 B=GATE_506_BALANCE1 Y=GATE_507
+
+
+
+# gate type: NAND; name: GATE_508_I0
+.gate NAND2X1 A=GATE_226 B=D_GATE_502 Y=GATE_508
+
+
+
+# gate type: NAND; name: GATE_509_I0
+.gate NAND2X1 A=GATE_507 B=GATE_508_BALANCE1 Y=GATE_509
+
+
+
+# gate type: NAND; name: GATE_510_I0
+.gate NAND2X1 A=GATE_30 B=GATE_45 Y=GATE_510
+
+
+
+# gate type: NAND; name: GATE_511_I0
+.gate NAND2X1 A=INPUT_0 B=D_GATE_305 Y=GATE_511
+
+
+
+# gate type: NAND; name: GATE_512_I0
+.gate NAND2X1 A=GATE_510_BALANCE0 B=GATE_511 Y=GATE_512
+
+
+
+# gate type: NAND; name: GATE_513_I0
+.gate NAND2X1 A=D_INPUT_0 B=D_GATE_135 Y=GATE_513
+
+
+
+# gate type: NAND; name: GATE_514_I0
+.gate NAND2X1 A=GATE_416_BALANCE0 B=GATE_513 Y=GATE_514
+
+
+
+# gate type: NAND; name: GATE_515_I0
+.gate NAND2X1 A=D_GATE_512 B=GATE_514_BALANCE0 Y=GATE_515
+
+
+
+# gate type: NAND; name: GATE_516_I0
+.gate NAND2X1 A=GATE_30_BALANCE1 B=D_GATE_263 Y=GATE_516
+
+
+
+# gate type: NAND; name: GATE_517_I0
+.gate NAND2X1 A=GATE_63 B=GATE_72 Y=GATE_517
+
+
+
+# gate type: NAND; name: GATE_518_I0
+.gate NAND2X1 A=GATE_45 B=GATE_156 Y=GATE_518
+
+
+
+# gate type: NAND; name: GATE_519_I0
+.gate NAND2X1 A=D_GATE_517 B=D_GATE_518 Y=GATE_519
+
+
+
+# gate type: NAND; name: GATE_520_I0
+.gate NAND2X1 A=GATE_17 B=GATE_48 Y=GATE_520
+
+
+
+# gate type: NAND; name: GATE_521_I0
+.gate NAND2X1 A=GATE_21 B=GATE_101 Y=GATE_521
+
+
+
+# gate type: NAND; name: GATE_522_I0
+.gate NAND2X1 A=D_GATE_520 B=D_GATE_521 Y=GATE_522
+
+
+
+# gate type: NAND; name: GATE_523_I0
+.gate NAND2X1 A=GATE_46 B=GATE_132 Y=GATE_523
+
+
+
+# gate type: NAND; name: GATE_524_I0
+.gate NAND2X1 A=GATE_9 B=GATE_50 Y=GATE_524
+
+
+
+# gate type: NAND; name: GATE_525_I0
+.gate NAND2X1 A=GATE_30 B=GATE_158 Y=GATE_525
+
+
+
+# gate type: NAND; name: GATE_526_I0
+.gate NAND2X1 A=GATE_63 B=GATE_109 Y=GATE_526
+
+
+
+# gate type: NAND; name: GATE_527_I0
+.gate NAND2X1 A=GATE_5 B=GATE_43 Y=GATE_527
+
+
+
+# gate type: NAND; name: GATE_528_I0
+.gate NAND2X1 A=INPUT_3 B=GATE_25 Y=GATE_528
+
+
+
+# gate type: NAND; name: GATE_529_I0
+.gate NAND2X1 A=GATE_35 B=GATE_101 Y=GATE_529
+
+
+
+# gate type: NAND; name: GATE_530_I0
+.gate NAND2X1 A=GATE_39 B=GATE_72 Y=GATE_530
+
+
+
+# gate type: NAND; name: GATE_531_I0
+.gate NAND2X1 A=D_GATE_101 B=D_GATE_125 Y=GATE_531
+
+
+
+# gate type: NAND; name: GATE_532_I0
+.gate NAND2X1 A=GATE_94_BALANCE1 B=D_GATE_531 Y=GATE_532
+
+
+
+# gate type: NAND; name: GATE_533_I0
+.gate NAND2X1 A=GATE_41 B=GATE_58 Y=GATE_533
+
+
+
+# gate type: NAND; name: GATE_534_I0
+.gate NAND2X1 A=D_GATE_532 B=GATE_533_BALANCE0 Y=GATE_534
+
+
+
+# gate type: NAND; name: GATE_535_I0
+.gate NAND2X1 A=GATE_11 B=GATE_101 Y=GATE_535
+
+
+
+# gate type: NAND; name: GATE_536_I0
+.gate NAND2X1 A=D_GATE_384 B=D_GATE_535 Y=GATE_536
+
+
+
+# gate type: NAND; name: GATE_537_I0
+.gate NAND2X1 A=D_GATE_12 B=D_GATE_310 Y=GATE_537
+
+
+
+# gate type: NAND; name: GATE_538_I0
+.gate NAND2X1 A=GATE_536 B=GATE_537 Y=GATE_538
+
+
+
+# gate type: NAND; name: GATE_539_I0
+.gate NAND2X1 A=D_GATE_177 B=D_GATE_182 Y=GATE_539
+
+
+
+# gate type: NAND; name: GATE_540_I0
+.gate NAND2X1 A=D_GATE_254 B=D_GATE_271 Y=GATE_540
+
+
+
+# gate type: NAND; name: GATE_541_I0
+.gate NAND2X1 A=D_GATE_279 B=D_GATE_311 Y=GATE_541
+
+
+
+# gate type: NAND; name: GATE_542_I0
+.gate NAND2X1 A=D_GATE_314 B=D_GATE_368 Y=GATE_542
+
+
+
+# gate type: NAND; name: GATE_543_I0
+.gate NAND2X1 A=D_GATE_372 B=D_GATE_437 Y=GATE_543
+
+
+
+# gate type: NAND; name: GATE_544_I0
+.gate NAND2X1 A=D_GATE_440 B=D_GATE_523 Y=GATE_544
+
+
+
+# gate type: NAND; name: GATE_545_I0
+.gate NAND2X1 A=D_GATE_524 B=D_GATE_525 Y=GATE_545
+
+
+
+# gate type: NAND; name: GATE_546_I0
+.gate NAND2X1 A=D_GATE_526 B=D_GATE_527 Y=GATE_546
+
+
+
+# gate type: NAND; name: GATE_547_I0
+.gate NAND2X1 A=D_GATE_528 B=D_GATE_529 Y=GATE_547
+
+
+
+# gate type: NAND; name: GATE_548_I0
+.gate NAND2X1 A=GATE_530_BALANCE0 B=GATE_547 Y=GATE_548
+
+
+
+# gate type: NAND; name: GATE_549_I0
+.gate NAND2X1 A=GATE_545 B=GATE_546_BALANCE1 Y=GATE_549
+
+
+
+# gate type: NAND; name: GATE_550_I0
+.gate NAND2X1 A=GATE_543 B=GATE_544_BALANCE1 Y=GATE_550
+
+
+
+# gate type: NAND; name: GATE_551_I0
+.gate NAND2X1 A=GATE_541 B=GATE_542 Y=GATE_551
+
+
+
+# gate type: NAND; name: GATE_552_I0
+.gate NAND2X1 A=GATE_539 B=GATE_540 Y=GATE_552
+
+
+
+# gate type: NAND; name: GATE_553_I0
+.gate NAND2X1 A=D_GATE_105 B=GATE_127 Y=GATE_553
+
+
+
+# gate type: NAND; name: GATE_554_I0
+.gate NAND2X1 A=GATE_258_BALANCE1 B=GATE_480_BALANCE0 Y=GATE_554
+
+
+
+# gate type: NAND; name: GATE_555_I0
+.gate NAND2X1 A=GATE_482 B=GATE_485 Y=GATE_555
+
+
+
+# gate type: NAND; name: GATE_556_I0
+.gate NAND2X1 A=GATE_488 B=D_GATE_489 Y=GATE_556
+
+
+
+# gate type: NAND; name: GATE_557_I0
+.gate NAND2X1 A=GATE_492 B=D_GATE_493 Y=GATE_557
+
+
+
+# gate type: NAND; name: GATE_558_I0
+.gate NAND2X1 A=D_GATE_516 B=GATE_519 Y=GATE_558
+
+
+
+# gate type: NAND; name: GATE_559_I0
+.gate NAND2X1 A=GATE_522 B=GATE_558 Y=GATE_559
+
+
+
+# gate type: NAND; name: GATE_560_I0
+.gate NAND2X1 A=GATE_556 B=GATE_557 Y=GATE_560
+
+
+
+# gate type: NAND; name: GATE_561_I0
+.gate NAND2X1 A=GATE_554 B=GATE_555 Y=GATE_561
+
+
+
+# gate type: NAND; name: GATE_562_I0
+.gate NAND2X1 A=GATE_552 B=GATE_553_BALANCE1 Y=GATE_562
+
+
+
+# gate type: NAND; name: GATE_563_I0
+.gate NAND2X1 A=GATE_550 B=GATE_551 Y=GATE_563
+
+
+
+# gate type: NAND; name: GATE_564_I0
+.gate NAND2X1 A=GATE_548 B=GATE_549 Y=GATE_564
+
+
+
+# gate type: NAND; name: GATE_565_I0
+.gate NAND2X1 A=GATE_169_BALANCE1 B=GATE_302 Y=GATE_565
+
+
+
+# gate type: NAND; name: GATE_566_I0
+.gate NAND2X1 A=GATE_534 B=GATE_538 Y=GATE_566
+
+
+
+# gate type: NAND; name: GATE_567_I0
+.gate NAND2X1 A=GATE_565 B=GATE_566 Y=GATE_567
+
+
+
+# gate type: NAND; name: GATE_568_I0
+.gate NAND2X1 A=GATE_563 B=GATE_564 Y=GATE_568
+
+
+
+# gate type: NAND; name: GATE_569_I0
+.gate NAND2X1 A=GATE_561 B=GATE_562 Y=GATE_569
+
+
+
+# gate type: NAND; name: GATE_570_I0
+.gate NAND2X1 A=GATE_559_BALANCE1 B=GATE_560 Y=GATE_570
+
+
+
+# gate type: NAND; name: GATE_571_I0
+.gate NAND2X1 A=GATE_123 B=GATE_266 Y=GATE_571
+
+
+
+# gate type: NAND; name: GATE_572_I0
+.gate NAND2X1 A=GATE_403 B=GATE_500_BALANCE1 Y=GATE_572
+
+
+
+# gate type: NAND; name: GATE_573_I0
+.gate NAND2X1 A=GATE_509 B=D_GATE_515 Y=GATE_573
+
+
+
+# gate type: NAND; name: GATE_574_I0
+.gate NAND2X1 A=GATE_572 B=GATE_573_BALANCE1 Y=GATE_574
+
+
+
+# gate type: NAND; name: GATE_575_I0
+.gate NAND2X1 A=GATE_570 B=GATE_571_BALANCE1 Y=GATE_575
+
+
+
+# gate type: NAND; name: GATE_576_I0
+.gate NAND2X1 A=GATE_568 B=GATE_569 Y=GATE_576
+
+
+
+# gate type: NAND; name: GATE_577_I0
+.gate NAND2X1 A=GATE_567_BALANCE1 B=GATE_576 Y=GATE_577
+
+
+
+# gate type: NAND; name: GATE_578_I0
+.gate NAND2X1 A=GATE_574 B=GATE_575_BALANCE1 Y=GATE_578
+
+
+
+# gate type: NAND; name: GATE_579_I0
+.gate NAND2X1 A=GATE_577_BALANCE1 B=GATE_578_BALANCE1 Y=GATE_579
+
+
+
+# gate type: NAND; name: GATE_580_I0
+.gate NAND2X1 A=INPUT_6 B=GATE_1 Y=GATE_580
+
+
+
+# gate type: NAND; name: GATE_581_I0
+.gate NAND2X1 A=GATE_132 B=GATE_580 Y=GATE_581
+
+
+
+# gate type: NAND; name: GATE_582_I0
+.gate NAND2X1 A=GATE_30 B=GATE_48 Y=GATE_582
+
+
+
+# gate type: NAND; name: GATE_583_I0
+.gate NAND2X1 A=GATE_5 B=GATE_50 Y=GATE_583
+
+
+
+# gate type: NAND; name: GATE_584_I0
+.gate NAND2X1 A=GATE_21 B=GATE_292 Y=GATE_584
+
+
+
+# gate type: NAND; name: GATE_585_I0
+.gate NAND2X1 A=GATE_69 B=GATE_128 Y=GATE_585
+
+
+
+# gate type: NAND; name: GATE_586_I0
+.gate NAND2X1 A=D_INPUT_7 B=GATE_29 Y=GATE_586
+
+
+
+# gate type: NAND; name: GATE_587_I0
+.gate NAND2X1 A=GATE_142 B=GATE_586 Y=GATE_587
+
+
+
+# gate type: NAND; name: GATE_588_I0
+.gate NAND2X1 A=GATE_21 B=GATE_128 Y=GATE_588
+
+
+
+# gate type: NAND; name: GATE_589_I0
+.gate NAND2X1 A=D_GATE_37 B=D_GATE_101 Y=GATE_589
+
+
+
+# gate type: NAND; name: GATE_590_I0
+.gate NAND2X1 A=GATE_63_BALANCE1 B=D_GATE_589 Y=GATE_590
+
+
+
+# gate type: NAND; name: GATE_591_I0
+.gate NAND2X1 A=D_GATE_422 B=D_GATE_588 Y=GATE_591
+
+
+
+# gate type: NAND; name: GATE_592_I0
+.gate NAND2X1 A=D_GATE_590 B=GATE_591_BALANCE1 Y=GATE_592
+
+
+
+# gate type: NAND; name: GATE_593_I0
+.gate NAND2X1 A=GATE_94 B=D_GATE_185 Y=GATE_593
+
+
+
+# gate type: NAND; name: GATE_594_I0
+.gate NAND2X1 A=GATE_25_BALANCE1 B=D_GATE_248 Y=GATE_594
+
+
+
+# gate type: NAND; name: GATE_595_I0
+.gate NAND2X1 A=D_GATE_43 B=D_GATE_327 Y=GATE_595
+
+
+
+# gate type: NAND; name: GATE_596_I0
+.gate NAND2X1 A=GATE_9_BALANCE1 B=D_GATE_595 Y=GATE_596
+
+
+
+# gate type: NAND; name: GATE_597_I0
+.gate NAND2X1 A=D_GATE_45 B=D_GATE_292 Y=GATE_597
+
+
+
+# gate type: NAND; name: GATE_598_I0
+.gate NAND2X1 A=GATE_35_BALANCE1 B=D_GATE_597 Y=GATE_598
+
+
+
+# gate type: NAND; name: GATE_599_I0
+.gate NAND2X1 A=GATE_30 B=GATE_103 Y=GATE_599
+
+
+
+# gate type: NAND; name: GATE_600_I0
+.gate NAND2X1 A=GATE_14 B=GATE_46 Y=GATE_600
+
+
+
+# gate type: NAND; name: GATE_601_I0
+.gate NAND2X1 A=D_GATE_599 B=D_GATE_600 Y=GATE_601
+
+
+
+# gate type: NAND; name: GATE_602_I0
+.gate NAND2X1 A=GATE_11 B=GATE_48 Y=GATE_602
+
+
+
+# gate type: NAND; name: GATE_603_I0
+.gate NAND2X1 A=GATE_69 B=GATE_158 Y=GATE_603
+
+
+
+# gate type: NAND; name: GATE_604_I0
+.gate NAND2X1 A=D_GATE_602 B=D_GATE_603 Y=GATE_604
+
+
+
+# gate type: NAND; name: GATE_605_I0
+.gate NAND2X1 A=D_GATE_101 B=D_GATE_118 Y=GATE_605
+
+
+
+# gate type: NAND; name: GATE_606_I0
+.gate NAND2X1 A=GATE_17_BALANCE1 B=D_GATE_605 Y=GATE_606
+
+
+
+# gate type: NAND; name: GATE_607_I0
+.gate NAND2X1 A=D_GATE_14 B=D_GATE_72 Y=GATE_607
+
+
+
+# gate type: NAND; name: GATE_608_I0
+.gate NAND2X1 A=GATE_58_BALANCE1 B=D_GATE_607 Y=GATE_608
+
+
+
+# gate type: NAND; name: GATE_609_I0
+.gate NAND2X1 A=D_GATE_39 B=D_GATE_46 Y=GATE_609
+
+
+
+# gate type: NAND; name: GATE_610_I0
+.gate NAND2X1 A=GATE_4 B=D_GATE_53 Y=GATE_610
+
+
+
+# gate type: NAND; name: GATE_611_I0
+.gate NAND2X1 A=D_GATE_609 B=GATE_610_BALANCE1 Y=GATE_611
+
+
+
+# gate type: NAND; name: GATE_612_I0
+.gate NAND2X1 A=GATE_39 B=GATE_54 Y=GATE_612
+
+
+
+# gate type: NAND; name: GATE_613_I0
+.gate NAND2X1 A=D_GATE_76 B=D_GATE_132 Y=GATE_613
+
+
+
+# gate type: NAND; name: GATE_614_I0
+.gate NAND2X1 A=GATE_21_BALANCE1 B=D_GATE_613 Y=GATE_614
+
+
+
+# gate type: NAND; name: GATE_615_I0
+.gate NAND2X1 A=GATE_17 B=GATE_103 Y=GATE_615
+
+
+
+# gate type: NAND; name: GATE_616_I0
+.gate NAND2X1 A=GATE_37 B=GATE_50 Y=GATE_616
+
+
+
+# gate type: NAND; name: GATE_617_I0
+.gate NAND2X1 A=D_INPUT_3 B=GATE_27 Y=GATE_617
+
+
+
+# gate type: NAND; name: GATE_618_I0
+.gate NAND2X1 A=GATE_35 B=GATE_617 Y=GATE_618
+
+
+
+# gate type: NAND; name: GATE_619_I0
+.gate NAND2X1 A=D_GATE_527 B=D_GATE_612 Y=GATE_619
+
+
+
+# gate type: NAND; name: GATE_620_I0
+.gate NAND2X1 A=D_GATE_615 B=D_GATE_616 Y=GATE_620
+
+
+
+# gate type: NAND; name: GATE_621_I0
+.gate NAND2X1 A=GATE_618_BALANCE0 B=GATE_620 Y=GATE_621
+
+
+
+# gate type: NAND; name: GATE_622_I0
+.gate NAND2X1 A=D_GATE_614 B=GATE_619 Y=GATE_622
+
+
+
+# gate type: NAND; name: GATE_623_I0
+.gate NAND2X1 A=GATE_621 B=GATE_622 Y=GATE_623
+
+
+
+# gate type: NAND; name: GATE_624_I0
+.gate NAND2X1 A=D_GATE_65 B=GATE_292_BALANCE1 Y=GATE_624
+
+
+
+# gate type: NAND; name: GATE_625_I0
+.gate NAND2X1 A=GATE_94 B=GATE_158 Y=GATE_625
+
+
+
+# gate type: NAND; name: GATE_626_I0
+.gate NAND2X1 A=GATE_5 B=GATE_35 Y=GATE_626
+
+
+
+# gate type: NAND; name: GATE_627_I0
+.gate NAND2X1 A=GATE_46 B=GATE_91 Y=GATE_627
+
+
+
+# gate type: NAND; name: GATE_628_I0
+.gate NAND2X1 A=D_GATE_625 B=D_GATE_626 Y=GATE_628
+
+
+
+# gate type: NAND; name: GATE_629_I0
+.gate NAND2X1 A=GATE_627_BALANCE0 B=GATE_628 Y=GATE_629
+
+
+
+# gate type: NAND; name: GATE_630_I0
+.gate NAND2X1 A=GATE_482 B=D_GATE_624 Y=GATE_630
+
+
+
+# gate type: NAND; name: GATE_631_I0
+.gate NAND2X1 A=GATE_629_BALANCE1 B=GATE_630 Y=GATE_631
+
+
+
+# gate type: NAND; name: GATE_632_I0
+.gate NAND2X1 A=D_GATE_117 B=D_GATE_276 Y=GATE_632
+
+
+
+# gate type: NAND; name: GATE_633_I0
+.gate NAND2X1 A=D_GATE_289 B=D_GATE_411 Y=GATE_633
+
+
+
+# gate type: NAND; name: GATE_634_I0
+.gate NAND2X1 A=D_GATE_427 B=D_GATE_581 Y=GATE_634
+
+
+
+# gate type: NAND; name: GATE_635_I0
+.gate NAND2X1 A=D_GATE_582 B=D_GATE_583 Y=GATE_635
+
+
+
+# gate type: NAND; name: GATE_636_I0
+.gate NAND2X1 A=D_GATE_584 B=D_GATE_585 Y=GATE_636
+
+
+
+# gate type: NAND; name: GATE_637_I0
+.gate NAND2X1 A=GATE_587_BALANCE0 B=GATE_636 Y=GATE_637
+
+
+
+# gate type: NAND; name: GATE_638_I0
+.gate NAND2X1 A=GATE_634 B=GATE_635_BALANCE1 Y=GATE_638
+
+
+
+# gate type: NAND; name: GATE_639_I0
+.gate NAND2X1 A=GATE_632 B=GATE_633 Y=GATE_639
+
+
+
+# gate type: NAND; name: GATE_640_I0
+.gate NAND2X1 A=GATE_230 B=D_GATE_264 Y=GATE_640
+
+
+
+# gate type: NAND; name: GATE_641_I0
+.gate NAND2X1 A=D_GATE_415 B=GATE_519_BALANCE1 Y=GATE_641
+
+
+
+# gate type: NAND; name: GATE_642_I0
+.gate NAND2X1 A=GATE_536 B=D_GATE_594 Y=GATE_642
+
+
+
+# gate type: NAND; name: GATE_643_I0
+.gate NAND2X1 A=D_GATE_596 B=D_GATE_598 Y=GATE_643
+
+
+
+# gate type: NAND; name: GATE_644_I0
+.gate NAND2X1 A=GATE_601 B=GATE_604 Y=GATE_644
+
+
+
+# gate type: NAND; name: GATE_645_I0
+.gate NAND2X1 A=D_GATE_606 B=D_GATE_608 Y=GATE_645
+
+
+
+# gate type: NAND; name: GATE_646_I0
+.gate NAND2X1 A=D_GATE_611 B=GATE_645 Y=GATE_646
+
+
+
+# gate type: NAND; name: GATE_647_I0
+.gate NAND2X1 A=GATE_643 B=GATE_644_BALANCE1 Y=GATE_647
+
+
+
+# gate type: NAND; name: GATE_648_I0
+.gate NAND2X1 A=GATE_641 B=GATE_642 Y=GATE_648
+
+
+
+# gate type: NAND; name: GATE_649_I0
+.gate NAND2X1 A=GATE_639 B=GATE_640 Y=GATE_649
+
+
+
+# gate type: NAND; name: GATE_650_I0
+.gate NAND2X1 A=GATE_637 B=GATE_638 Y=GATE_650
+
+
+
+# gate type: NAND; name: GATE_651_I0
+.gate NAND2X1 A=GATE_439 B=GATE_592 Y=GATE_651
+
+
+
+# gate type: NAND; name: GATE_652_I0
+.gate NAND2X1 A=D_GATE_593 B=GATE_651 Y=GATE_652
+
+
+
+# gate type: NAND; name: GATE_653_I0
+.gate NAND2X1 A=GATE_649_BALANCE1 B=GATE_650 Y=GATE_653
+
+
+
+# gate type: NAND; name: GATE_654_I0
+.gate NAND2X1 A=GATE_647 B=GATE_648 Y=GATE_654
+
+
+
+# gate type: NAND; name: GATE_655_I0
+.gate NAND2X1 A=GATE_100 B=GATE_646 Y=GATE_655
+
+
+
+# gate type: NAND; name: GATE_656_I0
+.gate NAND2X1 A=GATE_140 B=GATE_509 Y=GATE_656
+
+
+
+# gate type: NAND; name: GATE_657_I0
+.gate NAND2X1 A=GATE_623 B=GATE_631 Y=GATE_657
+
+
+
+# gate type: NAND; name: GATE_658_I0
+.gate NAND2X1 A=GATE_656 B=GATE_657 Y=GATE_658
+
+
+
+# gate type: NAND; name: GATE_659_I0
+.gate NAND2X1 A=GATE_654 B=GATE_655 Y=GATE_659
+
+
+
+# gate type: NAND; name: GATE_660_I0
+.gate NAND2X1 A=GATE_652 B=GATE_653 Y=GATE_660
+
+
+
+# gate type: NAND; name: GATE_661_I0
+.gate NAND2X1 A=GATE_659 B=GATE_660 Y=GATE_661
+
+
+
+# gate type: NAND; name: GATE_662_I0
+.gate NAND2X1 A=GATE_658_BALANCE1 B=GATE_661 Y=GATE_662
+
+
+
+# gate type: NAND; name: GATE_663_I0
+.gate NAND2X1 A=D_GATE_72 B=D_GATE_76 Y=GATE_663
+
+
+
+# gate type: NAND; name: GATE_664_I0
+.gate NAND2X1 A=GATE_2_BALANCE1 B=D_GATE_663 Y=GATE_664
+
+
+
+# gate type: NAND; name: GATE_665_I0
+.gate NAND2X1 A=GATE_17_BALANCE1 B=D_GATE_119 Y=GATE_665
+
+
+
+# gate type: NAND; name: GATE_666_I0
+.gate NAND2X1 A=GATE_63_BALANCE1 B=D_GATE_263 Y=GATE_666
+
+
+
+# gate type: NAND; name: GATE_667_I0
+.gate NAND2X1 A=D_GATE_25 B=D_GATE_156 Y=GATE_667
+
+
+
+# gate type: NAND; name: GATE_668_I0
+.gate NAND2X1 A=GATE_158_BALANCE1 B=D_GATE_667 Y=GATE_668
+
+
+
+# gate type: NAND; name: GATE_669_I0
+.gate NAND2X1 A=GATE_39 B=GATE_101 Y=GATE_669
+
+
+
+# gate type: NAND; name: GATE_670_I0
+.gate NAND2X1 A=INPUT_2 B=GATE_3 Y=GATE_670
+
+
+
+# gate type: NAND; name: GATE_671_I0
+.gate NAND2X1 A=GATE_156 B=GATE_670 Y=GATE_671
+
+
+
+# gate type: NAND; name: GATE_672_I0
+.gate NAND2X1 A=D_GATE_669 B=D_GATE_671 Y=GATE_672
+
+
+
+# gate type: NAND; name: GATE_673_I0
+.gate NAND2X1 A=GATE_69 B=D_GATE_326 Y=GATE_673
+
+
+
+# gate type: NAND; name: GATE_674_I0
+.gate NAND2X1 A=GATE_438_BALANCE1 B=D_GATE_673 Y=GATE_674
+
+
+
+# gate type: NAND; name: GATE_675_I0
+.gate NAND2X1 A=D_GATE_132 B=GATE_597 Y=GATE_675
+
+
+
+# gate type: NAND; name: GATE_676_I0
+.gate NAND2X1 A=GATE_25 B=GATE_132 Y=GATE_676
+
+
+
+# gate type: NAND; name: GATE_677_I0
+.gate NAND2X1 A=D_GATE_11 B=D_GATE_676 Y=GATE_677
+
+
+
+# gate type: NAND; name: GATE_678_I0
+.gate NAND2X1 A=D_GATE_675 B=GATE_677_BALANCE0 Y=GATE_678
+
+
+
+# gate type: NAND; name: GATE_679_I0
+.gate NAND2X1 A=GATE_50 B=D_GATE_185 Y=GATE_679
+
+
+
+# gate type: NAND; name: GATE_680_I0
+.gate NAND2X1 A=GATE_30 B=GATE_152 Y=GATE_680
+
+
+
+# gate type: NAND; name: GATE_681_I0
+.gate NAND2X1 A=GATE_35 B=GATE_158 Y=GATE_681
+
+
+
+# gate type: NAND; name: GATE_682_I0
+.gate NAND2X1 A=GATE_14 B=GATE_21 Y=GATE_682
+
+
+
+# gate type: NAND; name: GATE_683_I0
+.gate NAND2X1 A=GATE_11 B=GATE_41 Y=GATE_683
+
+
+
+# gate type: NAND; name: GATE_684_I0
+.gate NAND2X1 A=D_GATE_680 B=D_GATE_681 Y=GATE_684
+
+
+
+# gate type: NAND; name: GATE_685_I0
+.gate NAND2X1 A=D_GATE_682 B=D_GATE_683 Y=GATE_685
+
+
+
+# gate type: NAND; name: GATE_686_I0
+.gate NAND2X1 A=GATE_684 B=GATE_685_BALANCE1 Y=GATE_686
+
+
+
+# gate type: NAND; name: GATE_687_I0
+.gate NAND2X1 A=D_GATE_37 B=D_GATE_292 Y=GATE_687
+
+
+
+# gate type: NAND; name: GATE_688_I0
+.gate NAND2X1 A=GATE_30_BALANCE1 B=D_GATE_687 Y=GATE_688
+
+
+
+# gate type: NAND; name: GATE_689_I0
+.gate NAND2X1 A=D_INPUT_0 B=GATE_411 Y=GATE_689
+
+
+
+# gate type: NAND; name: GATE_690_I0
+.gate NAND2X1 A=D_GATE_688 B=D_GATE_689 Y=GATE_690
+
+
+
+# gate type: NAND; name: GATE_691_I0
+.gate NAND2X1 A=GATE_17 B=GATE_45 Y=GATE_691
+
+
+
+# gate type: NAND; name: GATE_692_I0
+.gate NAND2X1 A=GATE_13_BALANCE1 B=GATE_35 Y=GATE_692
+
+
+
+# gate type: NAND; name: GATE_693_I0
+.gate NAND2X1 A=GATE_132 B=GATE_424 Y=GATE_693
+
+
+
+# gate type: NAND; name: GATE_694_I0
+.gate NAND2X1 A=GATE_22 B=GATE_46 Y=GATE_694
+
+
+
+# gate type: NAND; name: GATE_695_I0
+.gate NAND2X1 A=GATE_25 B=GATE_142 Y=GATE_695
+
+
+
+# gate type: NAND; name: GATE_696_I0
+.gate NAND2X1 A=GATE_156 B=GATE_235 Y=GATE_696
+
+
+
+# gate type: NAND; name: GATE_697_I0
+.gate NAND2X1 A=GATE_63 B=GATE_125 Y=GATE_697
+
+
+
+# gate type: NAND; name: GATE_698_I0
+.gate NAND2X1 A=GATE_13_BALANCE1 B=GATE_156 Y=GATE_698
+
+
+
+# gate type: NAND; name: GATE_699_I0
+.gate NAND2X1 A=GATE_58 B=GATE_89 Y=GATE_699
+
+
+
+# gate type: NAND; name: GATE_700_I0
+.gate NAND2X1 A=GATE_43 B=GATE_235 Y=GATE_700
+
+
+
+# gate type: NAND; name: GATE_701_I0
+.gate NAND2X1 A=D_GATE_44 B=D_GATE_134 Y=GATE_701
+
+
+
+# gate type: NAND; name: GATE_702_I0
+.gate NAND2X1 A=D_GATE_166 B=D_GATE_311 Y=GATE_702
+
+
+
+# gate type: NAND; name: GATE_703_I0
+.gate NAND2X1 A=D_GATE_312 B=D_GATE_416 Y=GATE_703
+
+
+
+# gate type: NAND; name: GATE_704_I0
+.gate NAND2X1 A=D_GATE_484 B=D_GATE_525 Y=GATE_704
+
+
+
+# gate type: NAND; name: GATE_705_I0
+.gate NAND2X1 A=D_GATE_691 B=D_GATE_692 Y=GATE_705
+
+
+
+# gate type: NAND; name: GATE_706_I0
+.gate NAND2X1 A=D_GATE_693 B=D_GATE_694 Y=GATE_706
+
+
+
+# gate type: NAND; name: GATE_707_I0
+.gate NAND2X1 A=D_GATE_695 B=D_GATE_696 Y=GATE_707
+
+
+
+# gate type: NAND; name: GATE_708_I0
+.gate NAND2X1 A=D_GATE_697 B=D_GATE_698 Y=GATE_708
+
+
+
+# gate type: NAND; name: GATE_709_I0
+.gate NAND2X1 A=D_GATE_699 B=D_GATE_700 Y=GATE_709
+
+
+
+# gate type: NAND; name: GATE_710_I0
+.gate NAND2X1 A=GATE_708_BALANCE1 B=GATE_709 Y=GATE_710
+
+
+
+# gate type: NAND; name: GATE_711_I0
+.gate NAND2X1 A=GATE_706 B=GATE_707 Y=GATE_711
+
+
+
+# gate type: NAND; name: GATE_712_I0
+.gate NAND2X1 A=GATE_704 B=GATE_705 Y=GATE_712
+
+
+
+# gate type: NAND; name: GATE_713_I0
+.gate NAND2X1 A=GATE_702 B=GATE_703 Y=GATE_713
+
+
+
+# gate type: NAND; name: GATE_714_I0
+.gate NAND2X1 A=GATE_111 B=GATE_701 Y=GATE_714
+
+
+
+# gate type: NAND; name: GATE_715_I0
+.gate NAND2X1 A=GATE_227 B=GATE_300 Y=GATE_715
+
+
+
+# gate type: NAND; name: GATE_716_I0
+.gate NAND2X1 A=GATE_373 B=GATE_492 Y=GATE_716
+
+
+
+# gate type: NAND; name: GATE_717_I0
+.gate NAND2X1 A=D_GATE_590 B=GATE_604_BALANCE1 Y=GATE_717
+
+
+
+# gate type: NAND; name: GATE_718_I0
+.gate NAND2X1 A=D_GATE_664 B=D_GATE_665 Y=GATE_718
+
+
+
+# gate type: NAND; name: GATE_719_I0
+.gate NAND2X1 A=D_GATE_666 B=D_GATE_668 Y=GATE_719
+
+
+
+# gate type: NAND; name: GATE_720_I0
+.gate NAND2X1 A=GATE_672 B=GATE_719 Y=GATE_720
+
+
+
+# gate type: NAND; name: GATE_721_I0
+.gate NAND2X1 A=GATE_717 B=GATE_718_BALANCE1 Y=GATE_721
+
+
+
+# gate type: NAND; name: GATE_722_I0
+.gate NAND2X1 A=GATE_715_BALANCE1 B=GATE_716 Y=GATE_722
+
+
+
+# gate type: NAND; name: GATE_723_I0
+.gate NAND2X1 A=GATE_713 B=GATE_714_BALANCE1 Y=GATE_723
+
+
+
+# gate type: NAND; name: GATE_724_I0
+.gate NAND2X1 A=GATE_711 B=GATE_712 Y=GATE_724
+
+
+
+# gate type: NAND; name: GATE_725_I0
+.gate NAND2X1 A=D_GATE_151 B=GATE_710 Y=GATE_725
+
+
+
+# gate type: NAND; name: GATE_726_I0
+.gate NAND2X1 A=GATE_307 B=GATE_443 Y=GATE_726
+
+
+
+# gate type: NAND; name: GATE_727_I0
+.gate NAND2X1 A=D_GATE_678 B=GATE_679_BALANCE0 Y=GATE_727
+
+
+
+# gate type: NAND; name: GATE_728_I0
+.gate NAND2X1 A=GATE_686 B=GATE_690 Y=GATE_728
+
+
+
+# gate type: NAND; name: GATE_729_I0
+.gate NAND2X1 A=GATE_727 B=GATE_728 Y=GATE_729
+
+
+
+# gate type: NAND; name: GATE_730_I0
+.gate NAND2X1 A=GATE_725 B=GATE_726 Y=GATE_730
+
+
+
+# gate type: NAND; name: GATE_731_I0
+.gate NAND2X1 A=GATE_723 B=GATE_724 Y=GATE_731
+
+
+
+# gate type: NAND; name: GATE_732_I0
+.gate NAND2X1 A=GATE_721 B=GATE_722 Y=GATE_732
+
+
+
+# gate type: NAND; name: GATE_733_I0
+.gate NAND2X1 A=D_GATE_405 B=GATE_720 Y=GATE_733
+
+
+
+# gate type: NAND; name: GATE_734_I0
+.gate NAND2X1 A=GATE_500 B=GATE_631 Y=GATE_734
+
+
+
+# gate type: NAND; name: GATE_735_I0
+.gate NAND2X1 A=GATE_674 B=GATE_734 Y=GATE_735
+
+
+
+# gate type: NAND; name: GATE_736_I0
+.gate NAND2X1 A=GATE_732 B=GATE_733_BALANCE1 Y=GATE_736
+
+
+
+# gate type: NAND; name: GATE_737_I0
+.gate NAND2X1 A=GATE_730 B=GATE_731 Y=GATE_737
+
+
+
+# gate type: NAND; name: GATE_738_I0
+.gate NAND2X1 A=GATE_191 B=GATE_729 Y=GATE_738
+
+
+
+# gate type: NAND; name: GATE_739_I0
+.gate NAND2X1 A=GATE_737 B=GATE_738 Y=GATE_739
+
+
+
+# gate type: NAND; name: GATE_740_I0
+.gate NAND2X1 A=GATE_735 B=GATE_736 Y=GATE_740
+
+
+
+# gate type: NAND; name: GATE_741_I0
+.gate NAND2X1 A=GATE_739 B=GATE_740 Y=GATE_741
+
+
+
+# gate type: NAND; name: GATE_742_I0
+.gate NAND2X1 A=GATE_2 B=GATE_152 Y=GATE_742
+
+
+
+# gate type: NAND; name: GATE_743_I0
+.gate NAND2X1 A=GATE_43 B=GATE_125 Y=GATE_743
+
+
+
+# gate type: NAND; name: GATE_744_I0
+.gate NAND2X1 A=GATE_39 B=GATE_158 Y=GATE_744
+
+
+
+# gate type: NAND; name: GATE_745_I0
+.gate NAND2X1 A=GATE_72 B=GATE_156 Y=GATE_745
+
+
+
+# gate type: NAND; name: GATE_746_I0
+.gate NAND2X1 A=GATE_46 B=GATE_48 Y=GATE_746
+
+
+
+# gate type: NAND; name: GATE_747_I0
+.gate NAND2X1 A=GATE_3 B=GATE_698 Y=GATE_747
+
+
+
+# gate type: NAND; name: GATE_748_I0
+.gate NAND2X1 A=D_INPUT_0 B=GATE_7 Y=GATE_748
+
+
+
+# gate type: NAND; name: GATE_749_I0
+.gate NAND2X1 A=D_GATE_158 B=D_GATE_748 Y=GATE_749
+
+
+
+# gate type: NAND; name: GATE_750_I0
+.gate NAND2X1 A=GATE_2_BALANCE1 B=D_GATE_749 Y=GATE_750
+
+
+
+# gate type: NAND; name: GATE_751_I0
+.gate NAND2X1 A=INPUT_5 B=GATE_49 Y=GATE_751
+
+
+
+# gate type: NAND; name: GATE_752_I0
+.gate NAND2X1 A=D_GATE_184 B=GATE_751_BALANCE1 Y=GATE_752
+
+
+
+# gate type: NAND; name: GATE_753_I0
+.gate NAND2X1 A=GATE_35_BALANCE1 B=D_GATE_613 Y=GATE_753
+
+
+
+# gate type: NAND; name: GATE_754_I0
+.gate NAND2X1 A=GATE_58_BALANCE1 B=D_GATE_663 Y=GATE_754
+
+
+
+# gate type: NAND; name: GATE_755_I0
+.gate NAND2X1 A=D_GATE_103 B=D_GATE_158 Y=GATE_755
+
+
+
+# gate type: NAND; name: GATE_756_I0
+.gate NAND2X1 A=GATE_43_BALANCE1 B=D_GATE_755 Y=GATE_756
+
+
+
+# gate type: NAND; name: GATE_757_I0
+.gate NAND2X1 A=D_GATE_39 B=D_GATE_94 Y=GATE_757
+
+
+
+# gate type: NAND; name: GATE_758_I0
+.gate NAND2X1 A=GATE_235_BALANCE1 B=D_GATE_757 Y=GATE_758
+
+
+
+# gate type: NAND; name: GATE_759_I0
+.gate NAND2X1 A=GATE_63 B=D_GATE_326 Y=GATE_759
+
+
+
+# gate type: NAND; name: GATE_760_I0
+.gate NAND2X1 A=D_INPUT_0 B=GATE_598 Y=GATE_760
+
+
+
+# gate type: NAND; name: GATE_761_I0
+.gate NAND2X1 A=INPUT_6 B=GATE_10 Y=GATE_761
+
+
+
+# gate type: NAND; name: GATE_762_I0
+.gate NAND2X1 A=GATE_45 B=GATE_761 Y=GATE_762
+
+
+
+# gate type: NAND; name: GATE_763_I0
+.gate NAND2X1 A=GATE_39 B=GATE_125 Y=GATE_763
+
+
+
+# gate type: NAND; name: GATE_764_I0
+.gate NAND2X1 A=GATE_11 B=GATE_14 Y=GATE_764
+
+
+
+# gate type: NAND; name: GATE_765_I0
+.gate NAND2X1 A=GATE_63 B=GATE_89 Y=GATE_765
+
+
+
+# gate type: NAND; name: GATE_766_I0
+.gate NAND2X1 A=GATE_2_BALANCE1 B=D_GATE_77 Y=GATE_766
+
+
+
+# gate type: NAND; name: GATE_767_I0
+.gate NAND2X1 A=D_GATE_102 B=D_GATE_133 Y=GATE_767
+
+
+
+# gate type: NAND; name: GATE_768_I0
+.gate NAND2X1 A=D_GATE_762 B=D_GATE_763 Y=GATE_768
+
+
+
+# gate type: NAND; name: GATE_769_I0
+.gate NAND2X1 A=D_GATE_764 B=D_GATE_765 Y=GATE_769
+
+
+
+# gate type: NAND; name: GATE_770_I0
+.gate NAND2X1 A=GATE_768_BALANCE1 B=GATE_769 Y=GATE_770
+
+
+
+# gate type: NAND; name: GATE_771_I0
+.gate NAND2X1 A=GATE_488 B=GATE_767 Y=GATE_771
+
+
+
+# gate type: NAND; name: GATE_772_I0
+.gate NAND2X1 A=GATE_766_BALANCE0 B=GATE_771 Y=GATE_772
+
+
+
+# gate type: NAND; name: GATE_773_I0
+.gate NAND2X1 A=GATE_770_BALANCE1 B=GATE_772 Y=GATE_773
+
+
+
+# gate type: NAND; name: GATE_774_I0
+.gate NAND2X1 A=D_GATE_90 B=D_GATE_108 Y=GATE_774
+
+
+
+# gate type: NAND; name: GATE_775_I0
+.gate NAND2X1 A=D_GATE_163 B=D_GATE_237 Y=GATE_775
+
+
+
+# gate type: NAND; name: GATE_776_I0
+.gate NAND2X1 A=D_GATE_244 B=D_GATE_304 Y=GATE_776
+
+
+
+# gate type: NAND; name: GATE_777_I0
+.gate NAND2X1 A=D_GATE_370 B=D_GATE_495 Y=GATE_777
+
+
+
+# gate type: NAND; name: GATE_778_I0
+.gate NAND2X1 A=D_GATE_510 B=D_GATE_696 Y=GATE_778
+
+
+
+# gate type: NAND; name: GATE_779_I0
+.gate NAND2X1 A=D_GATE_742 B=D_GATE_743 Y=GATE_779
+
+
+
+# gate type: NAND; name: GATE_780_I0
+.gate NAND2X1 A=D_GATE_744 B=D_GATE_745 Y=GATE_780
+
+
+
+# gate type: NAND; name: GATE_781_I0
+.gate NAND2X1 A=GATE_746_BALANCE0 B=GATE_780 Y=GATE_781
+
+
+
+# gate type: NAND; name: GATE_782_I0
+.gate NAND2X1 A=GATE_778 B=GATE_779 Y=GATE_782
+
+
+
+# gate type: NAND; name: GATE_783_I0
+.gate NAND2X1 A=GATE_776 B=GATE_777 Y=GATE_783
+
+
+
+# gate type: NAND; name: GATE_784_I0
+.gate NAND2X1 A=GATE_774 B=GATE_775 Y=GATE_784
+
+
+
+# gate type: NAND; name: GATE_785_I0
+.gate NAND2X1 A=GATE_83 B=D_GATE_261 Y=GATE_785
+
+
+
+# gate type: NAND; name: GATE_786_I0
+.gate NAND2X1 A=GATE_369 B=GATE_485 Y=GATE_786
+
+
+
+# gate type: NAND; name: GATE_787_I0
+.gate NAND2X1 A=D_GATE_532 B=GATE_601_BALANCE1 Y=GATE_787
+
+
+
+# gate type: NAND; name: GATE_788_I0
+.gate NAND2X1 A=D_GATE_747 B=D_GATE_750 Y=GATE_788
+
+
+
+# gate type: NAND; name: GATE_789_I0
+.gate NAND2X1 A=D_GATE_752 B=D_GATE_753 Y=GATE_789
+
+
+
+# gate type: NAND; name: GATE_790_I0
+.gate NAND2X1 A=D_GATE_754 B=D_GATE_756 Y=GATE_790
+
+
+
+# gate type: NAND; name: GATE_791_I0
+.gate NAND2X1 A=D_GATE_758 B=GATE_790 Y=GATE_791
+
+
+
+# gate type: NAND; name: GATE_792_I0
+.gate NAND2X1 A=GATE_788_BALANCE1 B=GATE_789 Y=GATE_792
+
+
+
+# gate type: NAND; name: GATE_793_I0
+.gate NAND2X1 A=GATE_786 B=GATE_787 Y=GATE_793
+
+
+
+# gate type: NAND; name: GATE_794_I0
+.gate NAND2X1 A=GATE_784 B=GATE_785_BALANCE1 Y=GATE_794
+
+
+
+# gate type: NAND; name: GATE_795_I0
+.gate NAND2X1 A=GATE_782 B=GATE_783 Y=GATE_795
+
+
+
+# gate type: NAND; name: GATE_796_I0
+.gate NAND2X1 A=GATE_148 B=GATE_781_BALANCE1 Y=GATE_796
+
+
+
+# gate type: NAND; name: GATE_797_I0
+.gate NAND2X1 A=GATE_318 B=GATE_435 Y=GATE_797
+
+
+
+# gate type: NAND; name: GATE_798_I0
+.gate NAND2X1 A=GATE_538 B=GATE_592 Y=GATE_798
+
+
+
+# gate type: NAND; name: GATE_799_I0
+.gate NAND2X1 A=GATE_686 B=GATE_759_BALANCE0 Y=GATE_799
+
+
+
+# gate type: NAND; name: GATE_800_I0
+.gate NAND2X1 A=D_GATE_760 B=GATE_799 Y=GATE_800
+
+
+
+# gate type: NAND; name: GATE_801_I0
+.gate NAND2X1 A=GATE_797 B=GATE_798 Y=GATE_801
+
+
+
+# gate type: NAND; name: GATE_802_I0
+.gate NAND2X1 A=GATE_795 B=GATE_796 Y=GATE_802
+
+
+
+# gate type: NAND; name: GATE_803_I0
+.gate NAND2X1 A=GATE_793 B=GATE_794 Y=GATE_803
+
+
+
+# gate type: NAND; name: GATE_804_I0
+.gate NAND2X1 A=GATE_791_BALANCE1 B=GATE_792 Y=GATE_804
+
+
+
+# gate type: NAND; name: GATE_805_I0
+.gate NAND2X1 A=GATE_287 B=GATE_674_BALANCE1 Y=GATE_805
+
+
+
+# gate type: NAND; name: GATE_806_I0
+.gate NAND2X1 A=GATE_804 B=GATE_805 Y=GATE_806
+
+
+
+# gate type: NAND; name: GATE_807_I0
+.gate NAND2X1 A=GATE_802 B=GATE_803 Y=GATE_807
+
+
+
+# gate type: NAND; name: GATE_808_I0
+.gate NAND2X1 A=GATE_800 B=GATE_801 Y=GATE_808
+
+
+
+# gate type: NAND; name: GATE_809_I0
+.gate NAND2X1 A=GATE_773_BALANCE1 B=GATE_808 Y=GATE_809
+
+
+
+# gate type: NAND; name: GATE_810_I0
+.gate NAND2X1 A=GATE_806 B=GATE_807 Y=GATE_810
+
+
+
+# gate type: NAND; name: GATE_811_I0
+.gate NAND2X1 A=GATE_809 B=GATE_810 Y=GATE_811
+
+
+
+# gate type: NAND; name: GATE_812_I0
+.gate NAND2X1 A=D_GATE_61 B=GATE_262 Y=GATE_812
+
+
+
+# gate type: NAND; name: GATE_813_I0
+.gate NAND2X1 A=GATE_103_BALANCE0 B=D_GATE_224 Y=GATE_813
+
+
+
+# gate type: NAND; name: GATE_814_I0
+.gate NAND2X1 A=GATE_2_BALANCE1 B=D_GATE_813 Y=GATE_814
+
+
+
+# gate type: NAND; name: GATE_815_I0
+.gate NAND2X1 A=GATE_50_BALANCE1 B=D_GATE_184 Y=GATE_815
+
+
+
+# gate type: NAND; name: GATE_816_I0
+.gate NAND2X1 A=D_INPUT_1 B=GATE_380 Y=GATE_816
+
+
+
+# gate type: NAND; name: GATE_817_I0
+.gate NAND2X1 A=D_GATE_4 B=D_GATE_142 Y=GATE_817
+
+
+
+# gate type: NAND; name: GATE_818_I0
+.gate NAND2X1 A=GATE_46 B=D_GATE_53 Y=GATE_818
+
+
+
+# gate type: NAND; name: GATE_819_I0
+.gate NAND2X1 A=D_GATE_817 B=GATE_818 Y=GATE_819
+
+
+
+# gate type: NAND; name: GATE_820_I0
+.gate NAND2X1 A=GATE_9 B=GATE_69 Y=GATE_820
+
+
+
+# gate type: NAND; name: GATE_821_I0
+.gate NAND2X1 A=GATE_63 B=GATE_101 Y=GATE_821
+
+
+
+# gate type: NAND; name: GATE_822_I0
+.gate NAND2X1 A=GATE_50 B=GATE_235 Y=GATE_822
+
+
+
+# gate type: NAND; name: GATE_823_I0
+.gate NAND2X1 A=GATE_25 B=GATE_232 Y=GATE_823
+
+
+
+# gate type: NAND; name: GATE_824_I0
+.gate NAND2X1 A=GATE_43 B=GATE_93 Y=GATE_824
+
+
+
+# gate type: NAND; name: GATE_825_I0
+.gate NAND2X1 A=GATE_54 B=GATE_94 Y=GATE_825
+
+
+
+# gate type: NAND; name: GATE_826_I0
+.gate NAND2X1 A=GATE_41 B=GATE_156 Y=GATE_826
+
+
+
+# gate type: NAND; name: GATE_827_I0
+.gate NAND2X1 A=GATE_406 B=GATE_597 Y=GATE_827
+
+
+
+# gate type: NAND; name: GATE_828_I0
+.gate NAND2X1 A=GATE_63 B=D_GATE_827 Y=GATE_828
+
+
+
+# gate type: NAND; name: GATE_829_I0
+.gate NAND2X1 A=D_GATE_107 B=D_GATE_141 Y=GATE_829
+
+
+
+# gate type: NAND; name: GATE_830_I0
+.gate NAND2X1 A=D_GATE_272 B=D_GATE_299 Y=GATE_830
+
+
+
+# gate type: NAND; name: GATE_831_I0
+.gate NAND2X1 A=D_GATE_422 B=D_GATE_432 Y=GATE_831
+
+
+
+# gate type: NAND; name: GATE_832_I0
+.gate NAND2X1 A=D_GATE_481 B=D_GATE_494 Y=GATE_832
+
+
+
+# gate type: NAND; name: GATE_833_I0
+.gate NAND2X1 A=D_GATE_510 B=D_GATE_676 Y=GATE_833
+
+
+
+# gate type: NAND; name: GATE_834_I0
+.gate NAND2X1 A=D_GATE_820 B=D_GATE_821 Y=GATE_834
+
+
+
+# gate type: NAND; name: GATE_835_I0
+.gate NAND2X1 A=D_GATE_822 B=D_GATE_823 Y=GATE_835
+
+
+
+# gate type: NAND; name: GATE_836_I0
+.gate NAND2X1 A=D_GATE_824 B=D_GATE_825 Y=GATE_836
+
+
+
+# gate type: NAND; name: GATE_837_I0
+.gate NAND2X1 A=GATE_826_BALANCE0 B=GATE_836 Y=GATE_837
+
+
+
+# gate type: NAND; name: GATE_838_I0
+.gate NAND2X1 A=GATE_834 B=GATE_835 Y=GATE_838
+
+
+
+# gate type: NAND; name: GATE_839_I0
+.gate NAND2X1 A=GATE_832 B=GATE_833 Y=GATE_839
+
+
+
+# gate type: NAND; name: GATE_840_I0
+.gate NAND2X1 A=GATE_830 B=GATE_831 Y=GATE_840
+
+
+
+# gate type: NAND; name: GATE_841_I0
+.gate NAND2X1 A=D_GATE_183 B=GATE_829 Y=GATE_841
+
+
+
+# gate type: NAND; name: GATE_842_I0
+.gate NAND2X1 A=D_GATE_250 B=D_GATE_277 Y=GATE_842
+
+
+
+# gate type: NAND; name: GATE_843_I0
+.gate NAND2X1 A=D_GATE_496 B=GATE_522 Y=GATE_843
+
+
+
+# gate type: NAND; name: GATE_844_I0
+.gate NAND2X1 A=GATE_672 B=D_GATE_812 Y=GATE_844
+
+
+
+# gate type: NAND; name: GATE_845_I0
+.gate NAND2X1 A=D_GATE_814 B=D_GATE_815 Y=GATE_845
+
+
+
+# gate type: NAND; name: GATE_846_I0
+.gate NAND2X1 A=D_GATE_816 B=D_GATE_819 Y=GATE_846
+
+
+
+# gate type: NAND; name: GATE_847_I0
+.gate NAND2X1 A=GATE_845 B=GATE_846_BALANCE1 Y=GATE_847
+
+
+
+# gate type: NAND; name: GATE_848_I0
+.gate NAND2X1 A=GATE_843 B=GATE_844 Y=GATE_848
+
+
+
+# gate type: NAND; name: GATE_849_I0
+.gate NAND2X1 A=GATE_841 B=GATE_842_BALANCE1 Y=GATE_849
+
+
+
+# gate type: NAND; name: GATE_850_I0
+.gate NAND2X1 A=GATE_839 B=GATE_840_BALANCE1 Y=GATE_850
+
+
+
+# gate type: NAND; name: GATE_851_I0
+.gate NAND2X1 A=GATE_837 B=GATE_838 Y=GATE_851
+
+
+
+# gate type: NAND; name: GATE_852_I0
+.gate NAND2X1 A=GATE_34 B=GATE_174 Y=GATE_852
+
+
+
+# gate type: NAND; name: GATE_853_I0
+.gate NAND2X1 A=GATE_325 B=GATE_534 Y=GATE_853
+
+
+
+# gate type: NAND; name: GATE_854_I0
+.gate NAND2X1 A=GATE_690 B=D_GATE_828 Y=GATE_854
+
+
+
+# gate type: NAND; name: GATE_855_I0
+.gate NAND2X1 A=GATE_853 B=GATE_854 Y=GATE_855
+
+
+
+# gate type: NAND; name: GATE_856_I0
+.gate NAND2X1 A=GATE_851 B=GATE_852 Y=GATE_856
+
+
+
+# gate type: NAND; name: GATE_857_I0
+.gate NAND2X1 A=GATE_849 B=GATE_850 Y=GATE_857
+
+
+
+# gate type: NAND; name: GATE_858_I0
+.gate NAND2X1 A=GATE_847 B=GATE_848 Y=GATE_858
+
+
+
+# gate type: NAND; name: GATE_859_I0
+.gate NAND2X1 A=GATE_243 B=GATE_391 Y=GATE_859
+
+
+
+# gate type: NAND; name: GATE_860_I0
+.gate NAND2X1 A=GATE_623_BALANCE1 B=GATE_859 Y=GATE_860
+
+
+
+# gate type: NAND; name: GATE_861_I0
+.gate NAND2X1 A=GATE_857 B=GATE_858 Y=GATE_861
+
+
+
+# gate type: NAND; name: GATE_862_I0
+.gate NAND2X1 A=GATE_855 B=GATE_856 Y=GATE_862
+
+
+
+# gate type: NAND; name: GATE_863_I0
+.gate NAND2X1 A=GATE_773_BALANCE1 B=GATE_862 Y=GATE_863
+
+
+
+# gate type: NAND; name: GATE_864_I0
+.gate NAND2X1 A=GATE_860 B=GATE_861 Y=GATE_864
+
+
+
+# gate type: NAND; name: GATE_865_I0
+.gate NAND2X1 A=GATE_863 B=GATE_864 Y=GATE_865
+
+
+
+# gate type: NOR; name: D_GATE_0_I0
+.gate NOR2X1 A=D_INPUT_7 B=INPUT_6 Y=D_GATE_0
+
+
+
+# gate type: NOR; name: D_GATE_1_I0
+.gate NOR2X1 A=INPUT_5 B=INPUT_4 Y=D_GATE_1
+
+
+
+# gate type: NOR; name: D_GATE_2_I0
+.gate NOR2X1 A=D_GATE_1 B=D_GATE_0 Y=D_GATE_2
+
+
+
+# gate type: NOR; name: D_GATE_3_I0
+.gate NOR2X1 A=INPUT_1 B=D_INPUT_0 Y=D_GATE_3
+
+
+
+# gate type: NOR; name: D_GATE_4_I0
+.gate NOR2X1 A=D_INPUT_3 B=INPUT_2 Y=D_GATE_4
+
+
+
+# gate type: NOR; name: D_GATE_5_I0
+.gate NOR2X1 A=D_GATE_4 B=D_GATE_3 Y=D_GATE_5
+
+
+
+# gate type: NOR; name: D_GATE_6_I0
+.gate NOR2X1 A=D_GATE_5 B=D_GATE_2 Y=D_GATE_6
+
+
+
+# gate type: NOR; name: D_GATE_7_I0
+.gate NOR2X1 A=INPUT_3 B=D_INPUT_2 Y=D_GATE_7
+
+
+
+# gate type: NOR; name: D_GATE_8_I0
+.gate NOR2X1 A=INPUT_1 B=INPUT_0 Y=D_GATE_8
+
+
+
+# gate type: NOR; name: D_GATE_9_I0
+.gate NOR2X1 A=D_GATE_8 B=D_GATE_7 Y=D_GATE_9
+
+
+
+# gate type: NOR; name: D_GATE_10_I0
+.gate NOR2X1 A=D_INPUT_5 B=INPUT_4 Y=D_GATE_10
+
+
+
+# gate type: NOR; name: D_GATE_11_I0
+.gate NOR2X1 A=D_GATE_10 B=D_GATE_0 Y=D_GATE_11
+
+
+
+# gate type: NOR; name: D_GATE_12_I0
+.gate NOR2X1 A=D_GATE_11 B=D_GATE_9 Y=D_GATE_12
+
+
+
+# gate type: NOR; name: D_GATE_13_I0
+.gate NOR2X1 A=INPUT_3 B=INPUT_2 Y=D_GATE_13
+
+
+
+# gate type: NOR; name: D_GATE_14_I0
+.gate NOR2X1 A=D_GATE_13 B=D_GATE_8 Y=D_GATE_14
+
+
+
+# gate type: NOR; name: D_GATE_15_I0
+.gate NOR2X1 A=D_GATE_14 B=GATE_2_BALANCE0 Y=D_GATE_15
+
+
+
+# gate type: NOR; name: D_GATE_16_I0
+.gate NOR2X1 A=D_INPUT_7 B=D_INPUT_6 Y=D_GATE_16
+
+
+
+# gate type: NOR; name: D_GATE_17_I0
+.gate NOR2X1 A=D_GATE_16 B=D_GATE_10 Y=D_GATE_17
+
+
+
+# gate type: NOR; name: D_GATE_18_I0
+.gate NOR2X1 A=GATE_4_BALANCE0 B=GATE_3 Y=D_GATE_18
+
+
+
+# gate type: NOR; name: D_GATE_19_I0
+.gate NOR2X1 A=D_GATE_18 B=GATE_17_BALANCE0 Y=D_GATE_19
+
+
+
+# gate type: NOR; name: D_GATE_20_I0
+.gate NOR2X1 A=INPUT_5 B=D_INPUT_4 Y=D_GATE_20
+
+
+
+# gate type: NOR; name: D_GATE_21_I0
+.gate NOR2X1 A=D_GATE_20 B=D_GATE_0 Y=D_GATE_21
+
+
+
+# gate type: NOR; name: D_GATE_22_I0
+.gate NOR2X1 A=D_GATE_13 B=D_GATE_3 Y=D_GATE_22
+
+
+
+# gate type: NOR; name: D_GATE_23_I0
+.gate NOR2X1 A=D_GATE_22 B=D_GATE_21 Y=D_GATE_23
+
+
+
+# gate type: NOR; name: D_GATE_24_I0
+.gate NOR2X1 A=INPUT_7 B=D_INPUT_6 Y=D_GATE_24
+
+
+
+# gate type: NOR; name: D_GATE_25_I0
+.gate NOR2X1 A=D_GATE_24 B=D_GATE_20 Y=D_GATE_25
+
+
+
+# gate type: NOR; name: D_GATE_26_I0
+.gate NOR2X1 A=D_GATE_25 B=GATE_5_BALANCE0 Y=D_GATE_26
+
+
+
+# gate type: NOR; name: D_GATE_27_I0
+.gate NOR2X1 A=D_INPUT_1 B=INPUT_0 Y=D_GATE_27
+
+
+
+# gate type: NOR; name: D_GATE_28_I0
+.gate NOR2X1 A=GATE_27 B=D_GATE_7 Y=D_GATE_28
+
+
+
+# gate type: NOR; name: D_GATE_29_I0
+.gate NOR2X1 A=D_INPUT_5 B=D_INPUT_4 Y=D_GATE_29
+
+
+
+# gate type: NOR; name: D_GATE_30_I0
+.gate NOR2X1 A=D_GATE_29 B=D_GATE_0 Y=D_GATE_30
+
+
+
+# gate type: NOR; name: D_GATE_31_I0
+.gate NOR2X1 A=D_GATE_30 B=D_GATE_28 Y=D_GATE_31
+
+
+
+# gate type: NOR; name: D_GATE_32_I0
+.gate NOR2X1 A=GATE_23 B=GATE_19 Y=D_GATE_32
+
+
+
+# gate type: NOR; name: D_GATE_33_I0
+.gate NOR2X1 A=GATE_31 B=GATE_26 Y=D_GATE_33
+
+
+
+# gate type: NOR; name: D_GATE_34_I0
+.gate NOR2X1 A=D_GATE_33 B=D_GATE_32 Y=D_GATE_34
+
+
+
+# gate type: NOR; name: D_GATE_35_I0
+.gate NOR2X1 A=D_GATE_20 B=D_GATE_16 Y=D_GATE_35
+
+
+
+# gate type: NOR; name: D_GATE_36_I0
+.gate NOR2X1 A=D_INPUT_3 B=D_INPUT_2 Y=D_GATE_36
+
+
+
+# gate type: NOR; name: D_GATE_37_I0
+.gate NOR2X1 A=D_GATE_36 B=D_GATE_27 Y=D_GATE_37
+
+
+
+# gate type: NOR; name: D_GATE_38_I0
+.gate NOR2X1 A=GATE_37_BALANCE0 B=GATE_35_BALANCE0 Y=D_GATE_38
+
+
+
+# gate type: NOR; name: D_GATE_39_I0
+.gate NOR2X1 A=D_GATE_24 B=D_GATE_1 Y=D_GATE_39
+
+
+
+# gate type: NOR; name: D_GATE_40_I0
+.gate NOR2X1 A=D_GATE_39 B=D_GATE_9 Y=D_GATE_40
+
+
+
+# gate type: NOR; name: D_GATE_41_I0
+.gate NOR2X1 A=D_GATE_36 B=D_INPUT_1 Y=D_GATE_41
+
+
+
+# gate type: NOR; name: D_GATE_42_I0
+.gate NOR2X1 A=D_GATE_41 B=D_GATE_21 Y=D_GATE_42
+
+
+
+# gate type: NOR; name: D_GATE_43_I0
+.gate NOR2X1 A=D_GATE_29 B=D_GATE_16 Y=D_GATE_43
+
+
+
+# gate type: NOR; name: D_GATE_44_I0
+.gate NOR2X1 A=D_GATE_43 B=D_GATE_22 Y=D_GATE_44
+
+
+
+# gate type: NOR; name: D_GATE_45_I0
+.gate NOR2X1 A=D_GATE_13 B=INPUT_1 Y=D_GATE_45
+
+
+
+# gate type: NOR; name: D_GATE_46_I0
+.gate NOR2X1 A=D_GATE_29 B=D_GATE_24 Y=D_GATE_46
+
+
+
+# gate type: NOR; name: D_GATE_47_I0
+.gate NOR2X1 A=D_GATE_46 B=D_GATE_45 Y=D_GATE_47
+
+
+
+# gate type: NOR; name: D_GATE_48_I0
+.gate NOR2X1 A=D_GATE_27 B=D_GATE_13 Y=D_GATE_48
+
+
+
+# gate type: NOR; name: D_GATE_49_I0
+.gate NOR2X1 A=INPUT_7 B=INPUT_6 Y=D_GATE_49
+
+
+
+# gate type: NOR; name: D_GATE_50_I0
+.gate NOR2X1 A=D_GATE_49 B=D_GATE_29 Y=D_GATE_50
+
+
+
+# gate type: NOR; name: D_GATE_51_I0
+.gate NOR2X1 A=D_GATE_50 B=D_GATE_48 Y=D_GATE_51
+
+
+
+# gate type: NOR; name: D_GATE_52_I0
+.gate NOR2X1 A=D_GATE_49 B=INPUT_5 Y=D_GATE_52
+
+
+
+# gate type: NOR; name: D_GATE_53_I0
+.gate NOR2X1 A=D_INPUT_1 B=D_INPUT_0 Y=D_GATE_53
+
+
+
+# gate type: NOR; name: D_GATE_54_I0
+.gate NOR2X1 A=D_GATE_53 B=GATE_4_BALANCE0 Y=D_GATE_54
+
+
+
+# gate type: NOR; name: D_GATE_55_I0
+.gate NOR2X1 A=D_GATE_54 B=D_GATE_52 Y=D_GATE_55
+
+
+
+# gate type: NOR; name: D_GATE_56_I0
+.gate NOR2X1 A=D_GATE_43 B=D_GATE_4 Y=D_GATE_56
+
+
+
+# gate type: NOR; name: D_GATE_57_I0
+.gate NOR2X1 A=D_GATE_48 B=D_GATE_21 Y=D_GATE_57
+
+
+
+# gate type: NOR; name: D_GATE_58_I0
+.gate NOR2X1 A=D_GATE_24 B=D_GATE_10 Y=D_GATE_58
+
+
+
+# gate type: NOR; name: D_GATE_59_I0
+.gate NOR2X1 A=D_GATE_58 B=D_GATE_37 Y=D_GATE_59
+
+
+
+# gate type: NOR; name: D_GATE_60_I0
+.gate NOR2X1 A=GATE_59 B=GATE_57 Y=D_GATE_60
+
+
+
+# gate type: NOR; name: D_GATE_61_I0
+.gate NOR2X1 A=GATE_53 B=GATE_8 Y=D_GATE_61
+
+
+
+# gate type: NOR; name: D_GATE_62_I0
+.gate NOR2X1 A=D_GATE_61 B=GATE_7_BALANCE0 Y=D_GATE_62
+
+
+
+# gate type: NOR; name: D_GATE_63_I0
+.gate NOR2X1 A=D_GATE_49 B=D_GATE_20 Y=D_GATE_63
+
+
+
+# gate type: NOR; name: D_GATE_64_I0
+.gate NOR2X1 A=GATE_63_BALANCE0 B=D_GATE_62 Y=D_GATE_64
+
+
+
+# gate type: NOR; name: D_GATE_65_I0
+.gate NOR2X1 A=GATE_25 B=GATE_2 Y=D_GATE_65
+
+
+
+# gate type: NOR; name: D_GATE_66_I0
+.gate NOR2X1 A=GATE_65 B=D_GATE_54 Y=D_GATE_66
+
+
+
+# gate type: NOR; name: D_GATE_67_I0
+.gate NOR2X1 A=GATE_48 B=GATE_4_BALANCE1 Y=D_GATE_67
+
+
+
+# gate type: NOR; name: D_GATE_68_I0
+.gate NOR2X1 A=GATE_67 B=D_GATE_35 Y=D_GATE_68
+
+
+
+# gate type: NOR; name: D_GATE_69_I0
+.gate NOR2X1 A=D_GATE_49 B=D_GATE_1 Y=D_GATE_69
+
+
+
+# gate type: NOR; name: D_GATE_70_I0
+.gate NOR2X1 A=GATE_61_BALANCE0 B=D_GATE_4 Y=D_GATE_70
+
+
+
+# gate type: NOR; name: D_GATE_71_I0
+.gate NOR2X1 A=D_GATE_70 B=GATE_69_BALANCE0 Y=D_GATE_71
+
+
+
+# gate type: NOR; name: D_GATE_72_I0
+.gate NOR2X1 A=D_GATE_36 B=D_GATE_8 Y=D_GATE_72
+
+
+
+# gate type: NOR; name: D_GATE_73_I0
+.gate NOR2X1 A=D_GATE_72 B=D_GATE_30 Y=D_GATE_73
+
+
+
+# gate type: NOR; name: D_GATE_74_I0
+.gate NOR2X1 A=D_GATE_58 B=D_GATE_22 Y=D_GATE_74
+
+
+
+# gate type: NOR; name: D_GATE_75_I0
+.gate NOR2X1 A=GATE_74 B=GATE_73 Y=D_GATE_75
+
+
+
+# gate type: NOR; name: D_GATE_76_I0
+.gate NOR2X1 A=D_GATE_53 B=D_GATE_13 Y=D_GATE_76
+
+
+
+# gate type: NOR; name: D_GATE_77_I0
+.gate NOR2X1 A=GATE_76 B=GATE_14 Y=D_GATE_77
+
+
+
+# gate type: NOR; name: D_GATE_78_I0
+.gate NOR2X1 A=GATE_77 B=D_GATE_17 Y=D_GATE_78
+
+
+
+# gate type: NOR; name: D_GATE_79_I0
+.gate NOR2X1 A=GATE_27 B=D_GATE_4 Y=D_GATE_79
+
+
+
+# gate type: NOR; name: D_GATE_80_I0
+.gate NOR2X1 A=D_GATE_79 B=D_GATE_58 Y=D_GATE_80
+
+
+
+# gate type: NOR; name: D_GATE_81_I0
+.gate NOR2X1 A=GATE_27 B=D_GATE_13 Y=D_GATE_81
+
+
+
+# gate type: NOR; name: D_GATE_82_I0
+.gate NOR2X1 A=D_GATE_81 B=D_GATE_25 Y=D_GATE_82
+
+
+
+# gate type: NOR; name: D_GATE_83_I0
+.gate NOR2X1 A=GATE_82 B=GATE_80 Y=D_GATE_83
+
+
+
+# gate type: NOR; name: D_GATE_84_I0
+.gate NOR2X1 A=GATE_36_BALANCE0 B=D_GATE_17 Y=D_GATE_84
+
+
+
+# gate type: NOR; name: D_GATE_85_I0
+.gate NOR2X1 A=D_GATE_84 B=D_INPUT_0 Y=D_GATE_85
+
+
+
+# gate type: NOR; name: D_GATE_86_I0
+.gate NOR2X1 A=GATE_48 B=GATE_28 Y=D_GATE_86
+
+
+
+# gate type: NOR; name: D_GATE_87_I0
+.gate NOR2X1 A=GATE_86 B=D_GATE_2 Y=D_GATE_87
+
+
+
+# gate type: NOR; name: D_GATE_88_I0
+.gate NOR2X1 A=D_GATE_76 B=D_GATE_58 Y=D_GATE_88
+
+
+
+# gate type: NOR; name: D_GATE_89_I0
+.gate NOR2X1 A=GATE_53_BALANCE0 B=D_GATE_36 Y=D_GATE_89
+
+
+
+# gate type: NOR; name: D_GATE_90_I0
+.gate NOR2X1 A=D_GATE_89 B=D_GATE_50 Y=D_GATE_90
+
+
+
+# gate type: NOR; name: D_GATE_91_I0
+.gate NOR2X1 A=D_GATE_7 B=D_INPUT_1 Y=D_GATE_91
+
+
+
+# gate type: NOR; name: D_GATE_92_I0
+.gate NOR2X1 A=D_GATE_91 B=D_GATE_25 Y=D_GATE_92
+
+
+
+# gate type: NOR; name: D_GATE_93_I0
+.gate NOR2X1 A=GATE_53 B=D_GATE_13 Y=D_GATE_93
+
+
+
+# gate type: NOR; name: D_GATE_94_I0
+.gate NOR2X1 A=D_GATE_49 B=D_GATE_10 Y=D_GATE_94
+
+
+
+# gate type: NOR; name: D_GATE_95_I0
+.gate NOR2X1 A=D_GATE_94 B=D_GATE_93 Y=D_GATE_95
+
+
+
+# gate type: NOR; name: D_GATE_96_I0
+.gate NOR2X1 A=GATE_90 B=GATE_88 Y=D_GATE_96
+
+
+
+# gate type: NOR; name: D_GATE_97_I0
+.gate NOR2X1 A=GATE_95 B=GATE_92 Y=D_GATE_97
+
+
+
+# gate type: NOR; name: D_GATE_98_I0
+.gate NOR2X1 A=GATE_97_BALANCE0 B=D_GATE_96 Y=D_GATE_98
+
+
+
+# gate type: NOR; name: D_GATE_99_I0
+.gate NOR2X1 A=GATE_87 B=GATE_85 Y=D_GATE_99
+
+
+
+# gate type: NOR; name: D_GATE_100_I0
+.gate NOR2X1 A=GATE_99_BALANCE0 B=D_GATE_98 Y=D_GATE_100
+
+
+
+# gate type: NOR; name: D_GATE_101_I0
+.gate NOR2X1 A=GATE_53_BALANCE0 B=D_GATE_7 Y=D_GATE_101
+
+
+
+# gate type: NOR; name: D_GATE_102_I0
+.gate NOR2X1 A=D_GATE_101 B=GATE_46_BALANCE0 Y=D_GATE_102
+
+
+
+# gate type: NOR; name: D_GATE_103_I0
+.gate NOR2X1 A=D_GATE_7 B=D_GATE_3 Y=D_GATE_103
+
+
+
+# gate type: NOR; name: D_GATE_104_I0
+.gate NOR2X1 A=GATE_103 B=GATE_76 Y=D_GATE_104
+
+
+
+# gate type: NOR; name: D_GATE_105_I0
+.gate NOR2X1 A=GATE_104 B=D_GATE_46 Y=D_GATE_105
+
+
+
+# gate type: NOR; name: D_GATE_106_I0
+.gate NOR2X1 A=D_GATE_76 B=D_GATE_63 Y=D_GATE_106
+
+
+
+# gate type: NOR; name: D_GATE_107_I0
+.gate NOR2X1 A=D_GATE_101 B=D_GATE_58 Y=D_GATE_107
+
+
+
+# gate type: NOR; name: D_GATE_108_I0
+.gate NOR2X1 A=D_GATE_76 B=D_GATE_30 Y=D_GATE_108
+
+
+
+# gate type: NOR; name: D_GATE_109_I0
+.gate NOR2X1 A=D_GATE_13 B=INPUT_0 Y=D_GATE_109
+
+
+
+# gate type: NOR; name: D_GATE_110_I0
+.gate NOR2X1 A=D_GATE_109 B=D_GATE_30 Y=D_GATE_110
+
+
+
+# gate type: NOR; name: D_GATE_111_I0
+.gate NOR2X1 A=GATE_110 B=GATE_108 Y=D_GATE_111
+
+
+
+# gate type: NOR; name: D_GATE_112_I0
+.gate NOR2X1 A=GATE_106 B=GATE_102 Y=D_GATE_112
+
+
+
+# gate type: NOR; name: D_GATE_113_I0
+.gate NOR2X1 A=D_GATE_112 B=GATE_107_BALANCE1 Y=D_GATE_113
+
+
+
+# gate type: NOR; name: D_GATE_114_I0
+.gate NOR2X1 A=D_GATE_111 B=GATE_105 Y=D_GATE_114
+
+
+
+# gate type: NOR; name: D_GATE_115_I0
+.gate NOR2X1 A=GATE_114_BALANCE0 B=D_GATE_113 Y=D_GATE_115
+
+
+
+# gate type: NOR; name: D_GATE_116_I0
+.gate NOR2X1 A=D_GATE_69 B=D_GATE_62 Y=D_GATE_116
+
+
+
+# gate type: NOR; name: D_GATE_117_I0
+.gate NOR2X1 A=D_GATE_76 B=D_GATE_69 Y=D_GATE_117
+
+
+
+# gate type: NOR; name: D_GATE_118_I0
+.gate NOR2X1 A=D_GATE_13 B=D_INPUT_1 Y=D_GATE_118
+
+
+
+# gate type: NOR; name: D_GATE_119_I0
+.gate NOR2X1 A=GATE_37 B=GATE_9 Y=D_GATE_119
+
+
+
+# gate type: NOR; name: D_GATE_120_I0
+.gate NOR2X1 A=D_GATE_119 B=GATE_118_BALANCE1 Y=D_GATE_120
+
+
+
+# gate type: NOR; name: D_GATE_121_I0
+.gate NOR2X1 A=GATE_120 B=D_GATE_43 Y=D_GATE_121
+
+
+
+# gate type: NOR; name: D_GATE_122_I0
+.gate NOR2X1 A=GATE_117_BALANCE1 B=GATE_116 Y=D_GATE_122
+
+
+
+# gate type: NOR; name: D_GATE_123_I0
+.gate NOR2X1 A=D_GATE_122 B=GATE_121 Y=D_GATE_123
+
+
+
+# gate type: NOR; name: D_GATE_124_I0
+.gate NOR2X1 A=D_GATE_103 B=D_GATE_94 Y=D_GATE_124
+
+
+
+# gate type: NOR; name: D_GATE_125_I0
+.gate NOR2X1 A=D_GATE_36 B=D_GATE_3 Y=D_GATE_125
+
+
+
+# gate type: NOR; name: D_GATE_126_I0
+.gate NOR2X1 A=D_GATE_125 B=D_GATE_2 Y=D_GATE_126
+
+
+
+# gate type: NOR; name: D_GATE_127_I0
+.gate NOR2X1 A=GATE_126 B=GATE_124 Y=D_GATE_127
+
+
+
+# gate type: NOR; name: D_GATE_128_I0
+.gate NOR2X1 A=D_GATE_36 B=GATE_27 Y=D_GATE_128
+
+
+
+# gate type: NOR; name: D_GATE_129_I0
+.gate NOR2X1 A=GATE_128 B=GATE_5 Y=D_GATE_129
+
+
+
+# gate type: NOR; name: D_GATE_130_I0
+.gate NOR2X1 A=GATE_129 B=D_GATE_11 Y=D_GATE_130
+
+
+
+# gate type: NOR; name: D_GATE_131_I0
+.gate NOR2X1 A=D_GATE_94 B=D_GATE_89 Y=D_GATE_131
+
+
+
+# gate type: NOR; name: D_GATE_132_I0
+.gate NOR2X1 A=D_GATE_27 B=D_GATE_7 Y=D_GATE_132
+
+
+
+# gate type: NOR; name: D_GATE_133_I0
+.gate NOR2X1 A=D_GATE_132 B=GATE_94_BALANCE0 Y=D_GATE_133
+
+
+
+# gate type: NOR; name: D_GATE_134_I0
+.gate NOR2X1 A=D_GATE_132 B=D_GATE_58 Y=D_GATE_134
+
+
+
+# gate type: NOR; name: D_GATE_135_I0
+.gate NOR2X1 A=D_GATE_41 B=D_GATE_2 Y=D_GATE_135
+
+
+
+# gate type: NOR; name: D_GATE_136_I0
+.gate NOR2X1 A=GATE_133 B=GATE_131 Y=D_GATE_136
+
+
+
+# gate type: NOR; name: D_GATE_137_I0
+.gate NOR2X1 A=GATE_135 B=GATE_134 Y=D_GATE_137
+
+
+
+# gate type: NOR; name: D_GATE_138_I0
+.gate NOR2X1 A=GATE_137_BALANCE0 B=D_GATE_136 Y=D_GATE_138
+
+
+
+# gate type: NOR; name: D_GATE_139_I0
+.gate NOR2X1 A=GATE_130 B=D_GATE_127 Y=D_GATE_139
+
+
+
+# gate type: NOR; name: D_GATE_140_I0
+.gate NOR2X1 A=GATE_139_BALANCE0 B=D_GATE_138 Y=D_GATE_140
+
+
+
+# gate type: NOR; name: D_GATE_141_I0
+.gate NOR2X1 A=D_GATE_63 B=D_GATE_48 Y=D_GATE_141
+
+
+
+# gate type: NOR; name: D_GATE_142_I0
+.gate NOR2X1 A=D_GATE_7 B=INPUT_1 Y=D_GATE_142
+
+
+
+# gate type: NOR; name: D_GATE_143_I0
+.gate NOR2X1 A=D_GATE_142 B=D_GATE_58 Y=D_GATE_143
+
+
+
+# gate type: NOR; name: D_GATE_144_I0
+.gate NOR2X1 A=D_GATE_76 B=D_GATE_50 Y=D_GATE_144
+
+
+
+# gate type: NOR; name: D_GATE_145_I0
+.gate NOR2X1 A=GATE_125_BALANCE0 B=D_GATE_35 Y=D_GATE_145
+
+
+
+# gate type: NOR; name: D_GATE_146_I0
+.gate NOR2X1 A=GATE_143 B=GATE_141 Y=D_GATE_146
+
+
+
+# gate type: NOR; name: D_GATE_147_I0
+.gate NOR2X1 A=GATE_145 B=GATE_144 Y=D_GATE_147
+
+
+
+# gate type: NOR; name: D_GATE_148_I0
+.gate NOR2X1 A=D_GATE_147 B=GATE_146_BALANCE0 Y=D_GATE_148
+
+
+
+# gate type: NOR; name: D_GATE_149_I0
+.gate NOR2X1 A=GATE_61_BALANCE0 B=GATE_36_BALANCE0 Y=D_GATE_149
+
+
+
+# gate type: NOR; name: D_GATE_150_I0
+.gate NOR2X1 A=GATE_149_BALANCE1 B=GATE_54_BALANCE1 Y=D_GATE_150
+
+
+
+# gate type: NOR; name: D_GATE_151_I0
+.gate NOR2X1 A=GATE_150 B=D_GATE_46 Y=D_GATE_151
+
+
+
+# gate type: NOR; name: D_GATE_152_I0
+.gate NOR2X1 A=D_GATE_36 B=INPUT_1 Y=D_GATE_152
+
+
+
+# gate type: NOR; name: D_GATE_153_I0
+.gate NOR2X1 A=GATE_37 B=GATE_5 Y=D_GATE_153
+
+
+
+# gate type: NOR; name: D_GATE_154_I0
+.gate NOR2X1 A=GATE_152 B=GATE_48 Y=D_GATE_154
+
+
+
+# gate type: NOR; name: D_GATE_155_I0
+.gate NOR2X1 A=D_GATE_154 B=D_GATE_153 Y=D_GATE_155
+
+
+
+# gate type: NOR; name: D_GATE_156_I0
+.gate NOR2X1 A=D_GATE_16 B=D_GATE_1 Y=D_GATE_156
+
+
+
+# gate type: NOR; name: D_GATE_157_I0
+.gate NOR2X1 A=D_GATE_156 B=GATE_155 Y=D_GATE_157
+
+
+
+# gate type: NOR; name: D_GATE_158_I0
+.gate NOR2X1 A=D_GATE_8 B=D_GATE_4 Y=D_GATE_158
+
+
+
+# gate type: NOR; name: D_GATE_159_I0
+.gate NOR2X1 A=GATE_125 B=GATE_22 Y=D_GATE_159
+
+
+
+# gate type: NOR; name: D_GATE_160_I0
+.gate NOR2X1 A=GATE_158 B=GATE_132 Y=D_GATE_160
+
+
+
+# gate type: NOR; name: D_GATE_161_I0
+.gate NOR2X1 A=D_GATE_160 B=D_GATE_159 Y=D_GATE_161
+
+
+
+# gate type: NOR; name: D_GATE_162_I0
+.gate NOR2X1 A=GATE_161 B=D_GATE_50 Y=D_GATE_162
+
+
+
+# gate type: NOR; name: D_GATE_163_I0
+.gate NOR2X1 A=D_GATE_142 B=D_GATE_17 Y=D_GATE_163
+
+
+
+# gate type: NOR; name: D_GATE_164_I0
+.gate NOR2X1 A=D_GATE_72 B=D_GATE_50 Y=D_GATE_164
+
+
+
+# gate type: NOR; name: D_GATE_165_I0
+.gate NOR2X1 A=D_GATE_39 B=D_GATE_14 Y=D_GATE_165
+
+
+
+# gate type: NOR; name: D_GATE_166_I0
+.gate NOR2X1 A=D_GATE_158 B=D_GATE_63 Y=D_GATE_166
+
+
+
+# gate type: NOR; name: D_GATE_167_I0
+.gate NOR2X1 A=GATE_164 B=GATE_163 Y=D_GATE_167
+
+
+
+# gate type: NOR; name: D_GATE_168_I0
+.gate NOR2X1 A=GATE_166 B=GATE_165 Y=D_GATE_168
+
+
+
+# gate type: NOR; name: D_GATE_169_I0
+.gate NOR2X1 A=D_GATE_168 B=D_GATE_167 Y=D_GATE_169
+
+
+
+# gate type: NOR; name: D_GATE_170_I0
+.gate NOR2X1 A=D_GATE_39 B=D_GATE_22 Y=D_GATE_170
+
+
+
+# gate type: NOR; name: D_GATE_171_I0
+.gate NOR2X1 A=D_GATE_101 B=GATE_69_BALANCE0 Y=D_GATE_171
+
+
+
+# gate type: NOR; name: D_GATE_172_I0
+.gate NOR2X1 A=D_GATE_149 B=D_GATE_69 Y=D_GATE_172
+
+
+
+# gate type: NOR; name: D_GATE_173_I0
+.gate NOR2X1 A=GATE_171 B=GATE_170 Y=D_GATE_173
+
+
+
+# gate type: NOR; name: D_GATE_174_I0
+.gate NOR2X1 A=D_GATE_173 B=GATE_172 Y=D_GATE_174
+
+
+
+# gate type: NOR; name: D_GATE_175_I0
+.gate NOR2X1 A=D_GATE_89 B=D_GATE_25 Y=D_GATE_175
+
+
+
+# gate type: NOR; name: D_GATE_176_I0
+.gate NOR2X1 A=D_GATE_69 B=D_GATE_48 Y=D_GATE_176
+
+
+
+# gate type: NOR; name: D_GATE_177_I0
+.gate NOR2X1 A=D_GATE_156 B=D_GATE_54 Y=D_GATE_177
+
+
+
+# gate type: NOR; name: D_GATE_178_I0
+.gate NOR2X1 A=D_GATE_103 B=D_GATE_35 Y=D_GATE_178
+
+
+
+# gate type: NOR; name: D_GATE_179_I0
+.gate NOR2X1 A=GATE_176 B=GATE_175 Y=D_GATE_179
+
+
+
+# gate type: NOR; name: D_GATE_180_I0
+.gate NOR2X1 A=GATE_178 B=GATE_177 Y=D_GATE_180
+
+
+
+# gate type: NOR; name: D_GATE_181_I0
+.gate NOR2X1 A=D_GATE_180 B=D_GATE_179 Y=D_GATE_181
+
+
+
+# gate type: NOR; name: D_GATE_182_I0
+.gate NOR2X1 A=GATE_39_BALANCE0 B=D_GATE_5 Y=D_GATE_182
+
+
+
+# gate type: NOR; name: D_GATE_183_I0
+.gate NOR2X1 A=D_GATE_94 B=D_GATE_70 Y=D_GATE_183
+
+
+
+# gate type: NOR; name: D_GATE_184_I0
+.gate NOR2X1 A=GATE_72 B=GATE_54 Y=D_GATE_184
+
+
+
+# gate type: NOR; name: D_GATE_185_I0
+.gate NOR2X1 A=D_GATE_184 B=GATE_149 Y=D_GATE_185
+
+
+
+# gate type: NOR; name: D_GATE_186_I0
+.gate NOR2X1 A=GATE_185 B=GATE_39_BALANCE0 Y=D_GATE_186
+
+
+
+# gate type: NOR; name: D_GATE_187_I0
+.gate NOR2X1 A=D_GATE_184 B=GATE_37_BALANCE1 Y=D_GATE_187
+
+
+
+# gate type: NOR; name: D_GATE_188_I0
+.gate NOR2X1 A=GATE_187 B=D_GATE_94 Y=D_GATE_188
+
+
+
+# gate type: NOR; name: D_GATE_189_I0
+.gate NOR2X1 A=GATE_183_BALANCE1 B=GATE_182_BALANCE1 Y=D_GATE_189
+
+
+
+# gate type: NOR; name: D_GATE_190_I0
+.gate NOR2X1 A=D_GATE_189 B=GATE_186 Y=D_GATE_190
+
+
+
+# gate type: NOR; name: D_GATE_191_I0
+.gate NOR2X1 A=D_GATE_190 B=GATE_188_BALANCE1 Y=D_GATE_191
+
+
+
+# gate type: NOR; name: D_GATE_192_I0
+.gate NOR2X1 A=GATE_12 B=GATE_6 Y=D_GATE_192
+
+
+
+# gate type: NOR; name: D_GATE_193_I0
+.gate NOR2X1 A=GATE_38 B=GATE_15 Y=D_GATE_193
+
+
+
+# gate type: NOR; name: D_GATE_194_I0
+.gate NOR2X1 A=GATE_42 B=GATE_40 Y=D_GATE_194
+
+
+
+# gate type: NOR; name: D_GATE_195_I0
+.gate NOR2X1 A=GATE_47 B=GATE_44 Y=D_GATE_195
+
+
+
+# gate type: NOR; name: D_GATE_196_I0
+.gate NOR2X1 A=GATE_55 B=GATE_51 Y=D_GATE_196
+
+
+
+# gate type: NOR; name: D_GATE_197_I0
+.gate NOR2X1 A=D_GATE_196 B=GATE_56_BALANCE1 Y=D_GATE_197
+
+
+
+# gate type: NOR; name: D_GATE_198_I0
+.gate NOR2X1 A=D_GATE_195 B=D_GATE_194 Y=D_GATE_198
+
+
+
+# gate type: NOR; name: D_GATE_199_I0
+.gate NOR2X1 A=D_GATE_193 B=GATE_192_BALANCE0 Y=D_GATE_199
+
+
+
+# gate type: NOR; name: D_GATE_200_I0
+.gate NOR2X1 A=GATE_64 B=D_GATE_60 Y=D_GATE_200
+
+
+
+# gate type: NOR; name: D_GATE_201_I0
+.gate NOR2X1 A=GATE_68_BALANCE1 B=GATE_66 Y=D_GATE_201
+
+
+
+# gate type: NOR; name: D_GATE_202_I0
+.gate NOR2X1 A=GATE_75_BALANCE0 B=GATE_71 Y=D_GATE_202
+
+
+
+# gate type: NOR; name: D_GATE_203_I0
+.gate NOR2X1 A=D_GATE_83 B=GATE_78 Y=D_GATE_203
+
+
+
+# gate type: NOR; name: D_GATE_204_I0
+.gate NOR2X1 A=GATE_203_BALANCE0 B=D_GATE_202 Y=D_GATE_204
+
+
+
+# gate type: NOR; name: D_GATE_205_I0
+.gate NOR2X1 A=D_GATE_201 B=GATE_200_BALANCE0 Y=D_GATE_205
+
+
+
+# gate type: NOR; name: D_GATE_206_I0
+.gate NOR2X1 A=D_GATE_199 B=GATE_198_BALANCE0 Y=D_GATE_206
+
+
+
+# gate type: NOR; name: D_GATE_207_I0
+.gate NOR2X1 A=D_GATE_197 B=D_GATE_34 Y=D_GATE_207
+
+
+
+# gate type: NOR; name: D_GATE_208_I0
+.gate NOR2X1 A=GATE_151 B=D_GATE_148 Y=D_GATE_208
+
+
+
+# gate type: NOR; name: D_GATE_209_I0
+.gate NOR2X1 A=GATE_162 B=GATE_157 Y=D_GATE_209
+
+
+
+# gate type: NOR; name: D_GATE_210_I0
+.gate NOR2X1 A=D_GATE_174 B=GATE_169_BALANCE0 Y=D_GATE_210
+
+
+
+# gate type: NOR; name: D_GATE_211_I0
+.gate NOR2X1 A=D_GATE_210 B=GATE_181_BALANCE0 Y=D_GATE_211
+
+
+
+# gate type: NOR; name: D_GATE_212_I0
+.gate NOR2X1 A=GATE_209_BALANCE0 B=D_GATE_208 Y=D_GATE_212
+
+
+
+# gate type: NOR; name: D_GATE_213_I0
+.gate NOR2X1 A=D_GATE_207 B=D_GATE_206 Y=D_GATE_213
+
+
+
+# gate type: NOR; name: D_GATE_214_I0
+.gate NOR2X1 A=D_GATE_205 B=D_GATE_204 Y=D_GATE_214
+
+
+
+# gate type: NOR; name: D_GATE_215_I0
+.gate NOR2X1 A=D_GATE_115 B=D_GATE_100 Y=D_GATE_215
+
+
+
+# gate type: NOR; name: D_GATE_216_I0
+.gate NOR2X1 A=D_GATE_140 B=GATE_123_BALANCE0 Y=D_GATE_216
+
+
+
+# gate type: NOR; name: D_GATE_217_I0
+.gate NOR2X1 A=D_GATE_216 B=D_GATE_215 Y=D_GATE_217
+
+
+
+# gate type: NOR; name: D_GATE_218_I0
+.gate NOR2X1 A=D_GATE_214 B=D_GATE_213 Y=D_GATE_218
+
+
+
+# gate type: NOR; name: D_GATE_219_I0
+.gate NOR2X1 A=D_GATE_212 B=D_GATE_211 Y=D_GATE_219
+
+
+
+# gate type: NOR; name: D_GATE_220_I0
+.gate NOR2X1 A=GATE_219_BALANCE0 B=GATE_191_BALANCE0 Y=D_GATE_220
+
+
+
+# gate type: NOR; name: D_GATE_221_I0
+.gate NOR2X1 A=D_GATE_218 B=D_GATE_217 Y=D_GATE_221
+
+
+
+# gate type: NOR; name: D_GATE_222_I0
+.gate NOR2X1 A=D_GATE_221 B=D_GATE_220 Y=D_GATE_222
+
+
+
+# gate type: NOR; name: D_GATE_223_I0
+.gate NOR2X1 A=D_GATE_125 B=D_GATE_30 Y=D_GATE_223
+
+
+
+# gate type: NOR; name: D_GATE_224_I0
+.gate NOR2X1 A=D_GATE_4 B=INPUT_1 Y=D_GATE_224
+
+
+
+# gate type: NOR; name: D_GATE_225_I0
+.gate NOR2X1 A=D_GATE_224 B=D_GATE_17 Y=D_GATE_225
+
+
+
+# gate type: NOR; name: D_GATE_226_I0
+.gate NOR2X1 A=GATE_225 B=GATE_223 Y=D_GATE_226
+
+
+
+# gate type: NOR; name: D_GATE_227_I0
+.gate NOR2X1 A=GATE_51 B=GATE_6 Y=D_GATE_227
+
+
+
+# gate type: NOR; name: D_GATE_228_I0
+.gate NOR2X1 A=D_GATE_22 B=D_GATE_11 Y=D_GATE_228
+
+
+
+# gate type: NOR; name: D_GATE_229_I0
+.gate NOR2X1 A=D_GATE_30 B=D_GATE_5 Y=D_GATE_229
+
+
+
+# gate type: NOR; name: D_GATE_230_I0
+.gate NOR2X1 A=GATE_229 B=GATE_228 Y=D_GATE_230
+
+
+
+# gate type: NOR; name: D_GATE_231_I0
+.gate NOR2X1 A=D_GATE_156 B=D_GATE_14 Y=D_GATE_231
+
+
+
+# gate type: NOR; name: D_GATE_232_I0
+.gate NOR2X1 A=GATE_13_BALANCE0 B=D_INPUT_0 Y=D_GATE_232
+
+
+
+# gate type: NOR; name: D_GATE_233_I0
+.gate NOR2X1 A=D_GATE_232 B=GATE_46_BALANCE0 Y=D_GATE_233
+
+
+
+# gate type: NOR; name: D_GATE_234_I0
+.gate NOR2X1 A=D_GATE_84 B=GATE_61_BALANCE1 Y=D_GATE_234
+
+
+
+# gate type: NOR; name: D_GATE_235_I0
+.gate NOR2X1 A=D_GATE_27 B=GATE_4_BALANCE0 Y=D_GATE_235
+
+
+
+# gate type: NOR; name: D_GATE_236_I0
+.gate NOR2X1 A=D_GATE_235 B=D_GATE_25 Y=D_GATE_236
+
+
+
+# gate type: NOR; name: D_GATE_237_I0
+.gate NOR2X1 A=GATE_50_BALANCE0 B=D_GATE_22 Y=D_GATE_237
+
+
+
+# gate type: NOR; name: D_GATE_238_I0
+.gate NOR2X1 A=D_GATE_101 B=D_GATE_50 Y=D_GATE_238
+
+
+
+# gate type: NOR; name: D_GATE_239_I0
+.gate NOR2X1 A=GATE_233 B=GATE_231 Y=D_GATE_239
+
+
+
+# gate type: NOR; name: D_GATE_240_I0
+.gate NOR2X1 A=GATE_237 B=GATE_236 Y=D_GATE_240
+
+
+
+# gate type: NOR; name: D_GATE_241_I0
+.gate NOR2X1 A=D_GATE_240 B=GATE_238_BALANCE1 Y=D_GATE_241
+
+
+
+# gate type: NOR; name: D_GATE_242_I0
+.gate NOR2X1 A=D_GATE_239 B=GATE_234 Y=D_GATE_242
+
+
+
+# gate type: NOR; name: D_GATE_243_I0
+.gate NOR2X1 A=D_GATE_242 B=D_GATE_241 Y=D_GATE_243
+
+
+
+# gate type: NOR; name: D_GATE_244_I0
+.gate NOR2X1 A=GATE_36_BALANCE0 B=D_GATE_25 Y=D_GATE_244
+
+
+
+# gate type: NOR; name: D_GATE_245_I0
+.gate NOR2X1 A=D_GATE_244 B=D_GATE_8 Y=D_GATE_245
+
+
+
+# gate type: NOR; name: D_GATE_246_I0
+.gate NOR2X1 A=GATE_9 B=GATE_5 Y=D_GATE_246
+
+
+
+# gate type: NOR; name: D_GATE_247_I0
+.gate NOR2X1 A=GATE_246 B=D_GATE_46 Y=D_GATE_247
+
+
+
+# gate type: NOR; name: D_GATE_248_I0
+.gate NOR2X1 A=GATE_37 B=GATE_22 Y=D_GATE_248
+
+
+
+# gate type: NOR; name: D_GATE_249_I0
+.gate NOR2X1 A=GATE_248 B=GATE_63_BALANCE0 Y=D_GATE_249
+
+
+
+# gate type: NOR; name: D_GATE_250_I0
+.gate NOR2X1 A=GATE_104 B=D_GATE_50 Y=D_GATE_250
+
+
+
+# gate type: NOR; name: D_GATE_251_I0
+.gate NOR2X1 A=D_GATE_58 B=D_GATE_54 Y=D_GATE_251
+
+
+
+# gate type: NOR; name: D_GATE_252_I0
+.gate NOR2X1 A=D_GATE_132 B=D_GATE_63 Y=D_GATE_252
+
+
+
+# gate type: NOR; name: D_GATE_253_I0
+.gate NOR2X1 A=GATE_252 B=GATE_251 Y=D_GATE_253
+
+
+
+# gate type: NOR; name: D_GATE_254_I0
+.gate NOR2X1 A=GATE_156_BALANCE0 B=GATE_36_BALANCE0 Y=D_GATE_254
+
+
+
+# gate type: NOR; name: D_GATE_255_I0
+.gate NOR2X1 A=D_GATE_254 B=GATE_3 Y=D_GATE_255
+
+
+
+# gate type: NOR; name: D_GATE_256_I0
+.gate NOR2X1 A=D_GATE_132 B=D_GATE_17 Y=D_GATE_256
+
+
+
+# gate type: NOR; name: D_GATE_257_I0
+.gate NOR2X1 A=D_GATE_156 B=D_GATE_76 Y=D_GATE_257
+
+
+
+# gate type: NOR; name: D_GATE_258_I0
+.gate NOR2X1 A=GATE_257 B=GATE_256 Y=D_GATE_258
+
+
+
+# gate type: NOR; name: D_GATE_259_I0
+.gate NOR2X1 A=GATE_156 B=GATE_11 Y=D_GATE_259
+
+
+
+# gate type: NOR; name: D_GATE_260_I0
+.gate NOR2X1 A=GATE_259 B=GATE_103_BALANCE0 Y=D_GATE_260
+
+
+
+# gate type: NOR; name: D_GATE_261_I0
+.gate NOR2X1 A=D_GATE_62 B=GATE_39_BALANCE0 Y=D_GATE_261
+
+
+
+# gate type: NOR; name: D_GATE_262_I0
+.gate NOR2X1 A=GATE_36_BALANCE0 B=D_GATE_21 Y=D_GATE_262
+
+
+
+# gate type: NOR; name: D_GATE_263_I0
+.gate NOR2X1 A=GATE_76 B=GATE_9 Y=D_GATE_263
+
+
+
+# gate type: NOR; name: D_GATE_264_I0
+.gate NOR2X1 A=GATE_263 B=D_GATE_39 Y=D_GATE_264
+
+
+
+# gate type: NOR; name: D_GATE_265_I0
+.gate NOR2X1 A=GATE_262_BALANCE1 B=GATE_261 Y=D_GATE_265
+
+
+
+# gate type: NOR; name: D_GATE_266_I0
+.gate NOR2X1 A=D_GATE_265 B=GATE_264_BALANCE1 Y=D_GATE_266
+
+
+
+# gate type: NOR; name: D_GATE_267_I0
+.gate NOR2X1 A=D_GATE_91 B=D_GATE_35 Y=D_GATE_267
+
+
+
+# gate type: NOR; name: D_GATE_268_I0
+.gate NOR2X1 A=GATE_267_BALANCE1 B=GATE_235_BALANCE1 Y=D_GATE_268
+
+
+
+# gate type: NOR; name: D_GATE_269_I0
+.gate NOR2X1 A=GATE_35 B=GATE_17 Y=D_GATE_269
+
+
+
+# gate type: NOR; name: D_GATE_270_I0
+.gate NOR2X1 A=GATE_269 B=GATE_268 Y=D_GATE_270
+
+
+
+# gate type: NOR; name: D_GATE_271_I0
+.gate NOR2X1 A=D_GATE_41 B=D_GATE_30 Y=D_GATE_271
+
+
+
+# gate type: NOR; name: D_GATE_272_I0
+.gate NOR2X1 A=D_GATE_152 B=D_GATE_35 Y=D_GATE_272
+
+
+
+# gate type: NOR; name: D_GATE_273_I0
+.gate NOR2X1 A=GATE_272 B=GATE_271 Y=D_GATE_273
+
+
+
+# gate type: NOR; name: D_GATE_274_I0
+.gate NOR2X1 A=GATE_273 B=INPUT_0 Y=D_GATE_274
+
+
+
+# gate type: NOR; name: D_GATE_275_I0
+.gate NOR2X1 A=GATE_274_BALANCE1 B=GATE_270 Y=D_GATE_275
+
+
+
+# gate type: NOR; name: D_GATE_276_I0
+.gate NOR2X1 A=D_GATE_46 B=GATE_36_BALANCE0 Y=D_GATE_276
+
+
+
+# gate type: NOR; name: D_GATE_277_I0
+.gate NOR2X1 A=D_GATE_276 B=GATE_8 Y=D_GATE_277
+
+
+
+# gate type: NOR; name: D_GATE_278_I0
+.gate NOR2X1 A=D_GATE_132 B=GATE_43_BALANCE0 Y=D_GATE_278
+
+
+
+# gate type: NOR; name: D_GATE_279_I0
+.gate NOR2X1 A=D_GATE_235 B=D_GATE_46 Y=D_GATE_279
+
+
+
+# gate type: NOR; name: D_GATE_280_I0
+.gate NOR2X1 A=D_GATE_235 B=D_GATE_2 Y=D_GATE_280
+
+
+
+# gate type: NOR; name: D_GATE_281_I0
+.gate NOR2X1 A=D_GATE_156 B=D_GATE_101 Y=D_GATE_281
+
+
+
+# gate type: NOR; name: D_GATE_282_I0
+.gate NOR2X1 A=D_GATE_224 B=D_GATE_25 Y=D_GATE_282
+
+
+
+# gate type: NOR; name: D_GATE_283_I0
+.gate NOR2X1 A=GATE_279 B=GATE_278 Y=D_GATE_283
+
+
+
+# gate type: NOR; name: D_GATE_284_I0
+.gate NOR2X1 A=GATE_281 B=GATE_280 Y=D_GATE_284
+
+
+
+# gate type: NOR; name: D_GATE_285_I0
+.gate NOR2X1 A=D_GATE_284 B=GATE_282_BALANCE1 Y=D_GATE_285
+
+
+
+# gate type: NOR; name: D_GATE_286_I0
+.gate NOR2X1 A=D_GATE_283 B=GATE_277 Y=D_GATE_286
+
+
+
+# gate type: NOR; name: D_GATE_287_I0
+.gate NOR2X1 A=D_GATE_286 B=D_GATE_285 Y=D_GATE_287
+
+
+
+# gate type: NOR; name: D_GATE_288_I0
+.gate NOR2X1 A=D_GATE_224 B=D_GATE_50 Y=D_GATE_288
+
+
+
+# gate type: NOR; name: D_GATE_289_I0
+.gate NOR2X1 A=D_GATE_25 B=D_GATE_14 Y=D_GATE_289
+
+
+
+# gate type: NOR; name: D_GATE_290_I0
+.gate NOR2X1 A=D_GATE_232 B=D_GATE_35 Y=D_GATE_290
+
+
+
+# gate type: NOR; name: D_GATE_291_I0
+.gate NOR2X1 A=GATE_149_BALANCE0 B=GATE_39_BALANCE0 Y=D_GATE_291
+
+
+
+# gate type: NOR; name: D_GATE_292_I0
+.gate NOR2X1 A=GATE_4_BALANCE0 B=D_INPUT_1 Y=D_GATE_292
+
+
+
+# gate type: NOR; name: D_GATE_293_I0
+.gate NOR2X1 A=GATE_292 B=GATE_9 Y=D_GATE_293
+
+
+
+# gate type: NOR; name: D_GATE_294_I0
+.gate NOR2X1 A=GATE_293 B=GATE_58_BALANCE0 Y=D_GATE_294
+
+
+
+# gate type: NOR; name: D_GATE_295_I0
+.gate NOR2X1 A=GATE_54 B=GATE_41 Y=D_GATE_295
+
+
+
+# gate type: NOR; name: D_GATE_296_I0
+.gate NOR2X1 A=GATE_295 B=D_GATE_43 Y=D_GATE_296
+
+
+
+# gate type: NOR; name: D_GATE_297_I0
+.gate NOR2X1 A=D_GATE_54 B=D_GATE_30 Y=D_GATE_297
+
+
+
+# gate type: NOR; name: D_GATE_298_I0
+.gate NOR2X1 A=D_GATE_118 B=GATE_11_BALANCE0 Y=D_GATE_298
+
+
+
+# gate type: NOR; name: D_GATE_299_I0
+.gate NOR2X1 A=D_GATE_118 B=D_GATE_58 Y=D_GATE_299
+
+
+
+# gate type: NOR; name: D_GATE_300_I0
+.gate NOR2X1 A=GATE_299 B=GATE_74 Y=D_GATE_300
+
+
+
+# gate type: NOR; name: D_GATE_301_I0
+.gate NOR2X1 A=GATE_298 B=GATE_297 Y=D_GATE_301
+
+
+
+# gate type: NOR; name: D_GATE_302_I0
+.gate NOR2X1 A=D_GATE_301 B=GATE_300_BALANCE0 Y=D_GATE_302
+
+
+
+# gate type: NOR; name: D_GATE_303_I0
+.gate NOR2X1 A=D_GATE_235 B=D_GATE_52 Y=D_GATE_303
+
+
+
+# gate type: NOR; name: D_GATE_304_I0
+.gate NOR2X1 A=D_GATE_89 B=D_GATE_2 Y=D_GATE_304
+
+
+
+# gate type: NOR; name: D_GATE_305_I0
+.gate NOR2X1 A=GATE_142_BALANCE0 B=D_GATE_21 Y=D_GATE_305
+
+
+
+# gate type: NOR; name: D_GATE_306_I0
+.gate NOR2X1 A=GATE_304 B=GATE_303 Y=D_GATE_306
+
+
+
+# gate type: NOR; name: D_GATE_307_I0
+.gate NOR2X1 A=D_GATE_306 B=GATE_305_BALANCE1 Y=D_GATE_307
+
+
+
+# gate type: NOR; name: D_GATE_308_I0
+.gate NOR2X1 A=D_GATE_224 B=D_GATE_21 Y=D_GATE_308
+
+
+
+# gate type: NOR; name: D_GATE_309_I0
+.gate NOR2X1 A=D_GATE_39 B=D_GATE_4 Y=D_GATE_309
+
+
+
+# gate type: NOR; name: D_GATE_310_I0
+.gate NOR2X1 A=D_GATE_101 B=D_GATE_25 Y=D_GATE_310
+
+
+
+# gate type: NOR; name: D_GATE_311_I0
+.gate NOR2X1 A=D_GATE_63 B=D_GATE_54 Y=D_GATE_311
+
+
+
+# gate type: NOR; name: D_GATE_312_I0
+.gate NOR2X1 A=D_GATE_89 B=D_GATE_69 Y=D_GATE_312
+
+
+
+# gate type: NOR; name: D_GATE_313_I0
+.gate NOR2X1 A=D_GATE_63 B=D_GATE_14 Y=D_GATE_313
+
+
+
+# gate type: NOR; name: D_GATE_314_I0
+.gate NOR2X1 A=D_GATE_132 B=D_GATE_30 Y=D_GATE_314
+
+
+
+# gate type: NOR; name: D_GATE_315_I0
+.gate NOR2X1 A=D_GATE_79 B=D_GATE_11 Y=D_GATE_315
+
+
+
+# gate type: NOR; name: D_GATE_316_I0
+.gate NOR2X1 A=GATE_313 B=GATE_312 Y=D_GATE_316
+
+
+
+# gate type: NOR; name: D_GATE_317_I0
+.gate NOR2X1 A=GATE_315 B=GATE_314 Y=D_GATE_317
+
+
+
+# gate type: NOR; name: D_GATE_318_I0
+.gate NOR2X1 A=GATE_317_BALANCE0 B=D_GATE_316 Y=D_GATE_318
+
+
+
+# gate type: NOR; name: D_GATE_319_I0
+.gate NOR2X1 A=D_GATE_89 B=D_GATE_35 Y=D_GATE_319
+
+
+
+# gate type: NOR; name: D_GATE_320_I0
+.gate NOR2X1 A=D_GATE_63 B=GATE_9_BALANCE0 Y=D_GATE_320
+
+
+
+# gate type: NOR; name: D_GATE_321_I0
+.gate NOR2X1 A=D_GATE_142 B=GATE_43_BALANCE0 Y=D_GATE_321
+
+
+
+# gate type: NOR; name: D_GATE_322_I0
+.gate NOR2X1 A=D_GATE_109 B=GATE_94_BALANCE0 Y=D_GATE_322
+
+
+
+# gate type: NOR; name: D_GATE_323_I0
+.gate NOR2X1 A=GATE_320 B=GATE_319 Y=D_GATE_323
+
+
+
+# gate type: NOR; name: D_GATE_324_I0
+.gate NOR2X1 A=GATE_322 B=GATE_321 Y=D_GATE_324
+
+
+
+# gate type: NOR; name: D_GATE_325_I0
+.gate NOR2X1 A=D_GATE_324 B=D_GATE_323 Y=D_GATE_325
+
+
+
+# gate type: NOR; name: D_GATE_326_I0
+.gate NOR2X1 A=D_GATE_263 B=GATE_62 Y=D_GATE_326
+
+
+
+# gate type: NOR; name: D_GATE_327_I0
+.gate NOR2X1 A=D_GATE_49 B=INPUT_4 Y=D_GATE_327
+
+
+
+# gate type: NOR; name: D_GATE_328_I0
+.gate NOR2X1 A=D_GATE_327 B=GATE_326 Y=D_GATE_328
+
+
+
+# gate type: NOR; name: D_GATE_329_I0
+.gate NOR2X1 A=GATE_69 B=GATE_50 Y=D_GATE_329
+
+
+
+# gate type: NOR; name: D_GATE_330_I0
+.gate NOR2X1 A=GATE_329_BALANCE1 B=GATE_185 Y=D_GATE_330
+
+
+
+# gate type: NOR; name: D_GATE_331_I0
+.gate NOR2X1 A=GATE_134 B=GATE_110 Y=D_GATE_331
+
+
+
+# gate type: NOR; name: D_GATE_332_I0
+.gate NOR2X1 A=GATE_288 B=GATE_170 Y=D_GATE_332
+
+
+
+# gate type: NOR; name: D_GATE_333_I0
+.gate NOR2X1 A=GATE_290 B=GATE_289 Y=D_GATE_333
+
+
+
+# gate type: NOR; name: D_GATE_334_I0
+.gate NOR2X1 A=GATE_309 B=GATE_308 Y=D_GATE_334
+
+
+
+# gate type: NOR; name: D_GATE_335_I0
+.gate NOR2X1 A=GATE_311 B=GATE_310 Y=D_GATE_335
+
+
+
+# gate type: NOR; name: D_GATE_336_I0
+.gate NOR2X1 A=D_GATE_335 B=GATE_334_BALANCE0 Y=D_GATE_336
+
+
+
+# gate type: NOR; name: D_GATE_337_I0
+.gate NOR2X1 A=D_GATE_333 B=GATE_332_BALANCE0 Y=D_GATE_337
+
+
+
+# gate type: NOR; name: D_GATE_338_I0
+.gate NOR2X1 A=D_GATE_331 B=D_GATE_60 Y=D_GATE_338
+
+
+
+# gate type: NOR; name: D_GATE_339_I0
+.gate NOR2X1 A=D_GATE_226 B=GATE_87 Y=D_GATE_339
+
+
+
+# gate type: NOR; name: D_GATE_340_I0
+.gate NOR2X1 A=D_GATE_230 B=D_GATE_227 Y=D_GATE_340
+
+
+
+# gate type: NOR; name: D_GATE_341_I0
+.gate NOR2X1 A=GATE_247 B=GATE_245 Y=D_GATE_341
+
+
+
+# gate type: NOR; name: D_GATE_342_I0
+.gate NOR2X1 A=GATE_250 B=GATE_249 Y=D_GATE_342
+
+
+
+# gate type: NOR; name: D_GATE_343_I0
+.gate NOR2X1 A=GATE_255 B=D_GATE_253 Y=D_GATE_343
+
+
+
+# gate type: NOR; name: D_GATE_344_I0
+.gate NOR2X1 A=GATE_260 B=D_GATE_258 Y=D_GATE_344
+
+
+
+# gate type: NOR; name: D_GATE_345_I0
+.gate NOR2X1 A=GATE_294 B=GATE_291 Y=D_GATE_345
+
+
+
+# gate type: NOR; name: D_GATE_346_I0
+.gate NOR2X1 A=D_GATE_345 B=GATE_296_BALANCE1 Y=D_GATE_346
+
+
+
+# gate type: NOR; name: D_GATE_347_I0
+.gate NOR2X1 A=GATE_344_BALANCE0 B=D_GATE_343 Y=D_GATE_347
+
+
+
+# gate type: NOR; name: D_GATE_348_I0
+.gate NOR2X1 A=D_GATE_342 B=D_GATE_341 Y=D_GATE_348
+
+
+
+# gate type: NOR; name: D_GATE_349_I0
+.gate NOR2X1 A=D_GATE_340 B=D_GATE_339 Y=D_GATE_349
+
+
+
+# gate type: NOR; name: D_GATE_350_I0
+.gate NOR2X1 A=GATE_338_BALANCE0 B=D_GATE_337 Y=D_GATE_350
+
+
+
+# gate type: NOR; name: D_GATE_351_I0
+.gate NOR2X1 A=D_GATE_336 B=D_GATE_181 Y=D_GATE_351
+
+
+
+# gate type: NOR; name: D_GATE_352_I0
+.gate NOR2X1 A=D_GATE_307 B=D_GATE_302 Y=D_GATE_352
+
+
+
+# gate type: NOR; name: D_GATE_353_I0
+.gate NOR2X1 A=D_GATE_325 B=D_GATE_318 Y=D_GATE_353
+
+
+
+# gate type: NOR; name: D_GATE_354_I0
+.gate NOR2X1 A=GATE_330 B=GATE_328 Y=D_GATE_354
+
+
+
+# gate type: NOR; name: D_GATE_355_I0
+.gate NOR2X1 A=D_GATE_354 B=D_GATE_353 Y=D_GATE_355
+
+
+
+# gate type: NOR; name: D_GATE_356_I0
+.gate NOR2X1 A=D_GATE_352 B=D_GATE_351 Y=D_GATE_356
+
+
+
+# gate type: NOR; name: D_GATE_357_I0
+.gate NOR2X1 A=D_GATE_350 B=GATE_349_BALANCE0 Y=D_GATE_357
+
+
+
+# gate type: NOR; name: D_GATE_358_I0
+.gate NOR2X1 A=GATE_348_BALANCE0 B=D_GATE_347 Y=D_GATE_358
+
+
+
+# gate type: NOR; name: D_GATE_359_I0
+.gate NOR2X1 A=D_GATE_346 B=D_GATE_243 Y=D_GATE_359
+
+
+
+# gate type: NOR; name: D_GATE_360_I0
+.gate NOR2X1 A=D_GATE_275 B=D_GATE_266 Y=D_GATE_360
+
+
+
+# gate type: NOR; name: D_GATE_361_I0
+.gate NOR2X1 A=D_GATE_360 B=GATE_287_BALANCE0 Y=D_GATE_361
+
+
+
+# gate type: NOR; name: D_GATE_362_I0
+.gate NOR2X1 A=D_GATE_359 B=D_GATE_358 Y=D_GATE_362
+
+
+
+# gate type: NOR; name: D_GATE_363_I0
+.gate NOR2X1 A=D_GATE_357 B=D_GATE_356 Y=D_GATE_363
+
+
+
+# gate type: NOR; name: D_GATE_364_I0
+.gate NOR2X1 A=D_GATE_363 B=GATE_355_BALANCE0 Y=D_GATE_364
+
+
+
+# gate type: NOR; name: D_GATE_365_I0
+.gate NOR2X1 A=D_GATE_362 B=D_GATE_361 Y=D_GATE_365
+
+
+
+# gate type: NOR; name: D_GATE_366_I0
+.gate NOR2X1 A=D_GATE_365 B=D_GATE_364 Y=D_GATE_366
+
+
+
+# gate type: NOR; name: D_GATE_367_I0
+.gate NOR2X1 A=GATE_269 B=D_GATE_5 Y=D_GATE_367
+
+
+
+# gate type: NOR; name: D_GATE_368_I0
+.gate NOR2X1 A=GATE_118_BALANCE0 B=D_GATE_21 Y=D_GATE_368
+
+
+
+# gate type: NOR; name: D_GATE_369_I0
+.gate NOR2X1 A=GATE_368 B=GATE_308 Y=D_GATE_369
+
+
+
+# gate type: NOR; name: D_GATE_370_I0
+.gate NOR2X1 A=D_GATE_30 B=GATE_4_BALANCE0 Y=D_GATE_370
+
+
+
+# gate type: NOR; name: D_GATE_371_I0
+.gate NOR2X1 A=D_GATE_370 B=INPUT_1 Y=D_GATE_371
+
+
+
+# gate type: NOR; name: D_GATE_372_I0
+.gate NOR2X1 A=D_GATE_76 B=GATE_25_BALANCE0 Y=D_GATE_372
+
+
+
+# gate type: NOR; name: D_GATE_373_I0
+.gate NOR2X1 A=GATE_372 B=GATE_321 Y=D_GATE_373
+
+
+
+# gate type: NOR; name: D_GATE_374_I0
+.gate NOR2X1 A=GATE_156 B=GATE_30 Y=D_GATE_374
+
+
+
+# gate type: NOR; name: D_GATE_375_I0
+.gate NOR2X1 A=GATE_374 B=D_GATE_142 Y=D_GATE_375
+
+
+
+# gate type: NOR; name: D_GATE_376_I0
+.gate NOR2X1 A=GATE_13_BALANCE1 B=D_GATE_2 Y=D_GATE_376
+
+
+
+# gate type: NOR; name: D_GATE_377_I0
+.gate NOR2X1 A=D_GATE_376 B=GATE_41_BALANCE1 Y=D_GATE_377
+
+
+
+# gate type: NOR; name: D_GATE_378_I0
+.gate NOR2X1 A=GATE_25 B=GATE_11 Y=D_GATE_378
+
+
+
+# gate type: NOR; name: D_GATE_379_I0
+.gate NOR2X1 A=GATE_378 B=D_GATE_125 Y=D_GATE_379
+
+
+
+# gate type: NOR; name: D_GATE_380_I0
+.gate NOR2X1 A=D_GATE_11 B=D_INPUT_3 Y=D_GATE_380
+
+
+
+# gate type: NOR; name: D_GATE_381_I0
+.gate NOR2X1 A=D_GATE_380 B=D_GATE_27 Y=D_GATE_381
+
+
+
+# gate type: NOR; name: D_GATE_382_I0
+.gate NOR2X1 A=GATE_235 B=GATE_89 Y=D_GATE_382
+
+
+
+# gate type: NOR; name: D_GATE_383_I0
+.gate NOR2X1 A=GATE_382 B=D_GATE_39 Y=D_GATE_383
+
+
+
+# gate type: NOR; name: D_GATE_384_I0
+.gate NOR2X1 A=D_GATE_103 B=D_GATE_25 Y=D_GATE_384
+
+
+
+# gate type: NOR; name: D_GATE_385_I0
+.gate NOR2X1 A=D_GATE_16 B=INPUT_4 Y=D_GATE_385
+
+
+
+# gate type: NOR; name: D_GATE_386_I0
+.gate NOR2X1 A=D_GATE_385 B=D_GATE_91 Y=D_GATE_386
+
+
+
+# gate type: NOR; name: D_GATE_387_I0
+.gate NOR2X1 A=GATE_175 B=GATE_166 Y=D_GATE_387
+
+
+
+# gate type: NOR; name: D_GATE_388_I0
+.gate NOR2X1 A=GATE_386 B=GATE_384 Y=D_GATE_388
+
+
+
+# gate type: NOR; name: D_GATE_389_I0
+.gate NOR2X1 A=GATE_388_BALANCE0 B=D_GATE_387 Y=D_GATE_389
+
+
+
+# gate type: NOR; name: D_GATE_390_I0
+.gate NOR2X1 A=GATE_383 B=GATE_381 Y=D_GATE_390
+
+
+
+# gate type: NOR; name: D_GATE_391_I0
+.gate NOR2X1 A=D_GATE_390 B=D_GATE_389 Y=D_GATE_391
+
+
+
+# gate type: NOR; name: D_GATE_392_I0
+.gate NOR2X1 A=D_GATE_39 B=D_GATE_37 Y=D_GATE_392
+
+
+
+# gate type: NOR; name: D_GATE_393_I0
+.gate NOR2X1 A=D_GATE_125 B=D_GATE_46 Y=D_GATE_393
+
+
+
+# gate type: NOR; name: D_GATE_394_I0
+.gate NOR2X1 A=D_GATE_103 B=D_GATE_58 Y=D_GATE_394
+
+
+
+# gate type: NOR; name: D_GATE_395_I0
+.gate NOR2X1 A=D_GATE_35 B=D_GATE_22 Y=D_GATE_395
+
+
+
+# gate type: NOR; name: D_GATE_396_I0
+.gate NOR2X1 A=D_GATE_81 B=GATE_2_BALANCE0 Y=D_GATE_396
+
+
+
+# gate type: NOR; name: D_GATE_397_I0
+.gate NOR2X1 A=GATE_292 B=GATE_14 Y=D_GATE_397
+
+
+
+# gate type: NOR; name: D_GATE_398_I0
+.gate NOR2X1 A=GATE_397 B=D_GATE_43 Y=D_GATE_398
+
+
+
+# gate type: NOR; name: D_GATE_399_I0
+.gate NOR2X1 A=GATE_393 B=GATE_392 Y=D_GATE_399
+
+
+
+# gate type: NOR; name: D_GATE_400_I0
+.gate NOR2X1 A=GATE_395 B=GATE_394 Y=D_GATE_400
+
+
+
+# gate type: NOR; name: D_GATE_401_I0
+.gate NOR2X1 A=D_GATE_400 B=GATE_396_BALANCE1 Y=D_GATE_401
+
+
+
+# gate type: NOR; name: D_GATE_402_I0
+.gate NOR2X1 A=GATE_399_BALANCE0 B=GATE_398 Y=D_GATE_402
+
+
+
+# gate type: NOR; name: D_GATE_403_I0
+.gate NOR2X1 A=GATE_402_BALANCE0 B=GATE_401_BALANCE0 Y=D_GATE_403
+
+
+
+# gate type: NOR; name: D_GATE_404_I0
+.gate NOR2X1 A=D_GATE_326 B=GATE_45 Y=D_GATE_404
+
+
+
+# gate type: NOR; name: D_GATE_405_I0
+.gate NOR2X1 A=GATE_404 B=D_GATE_94 Y=D_GATE_405
+
+
+
+# gate type: NOR; name: D_GATE_406_I0
+.gate NOR2X1 A=GATE_152 B=GATE_54 Y=D_GATE_406
+
+
+
+# gate type: NOR; name: D_GATE_407_I0
+.gate NOR2X1 A=D_GATE_20 B=INPUT_6 Y=D_GATE_407
+
+
+
+# gate type: NOR; name: D_GATE_408_I0
+.gate NOR2X1 A=GATE_407_BALANCE0 B=GATE_406 Y=D_GATE_408
+
+
+
+# gate type: NOR; name: D_GATE_409_I0
+.gate NOR2X1 A=GATE_50 B=GATE_11 Y=D_GATE_409
+
+
+
+# gate type: NOR; name: D_GATE_410_I0
+.gate NOR2X1 A=GATE_409 B=D_GATE_103 Y=D_GATE_410
+
+
+
+# gate type: NOR; name: D_GATE_411_I0
+.gate NOR2X1 A=D_GATE_43 B=GATE_36_BALANCE0 Y=D_GATE_411
+
+
+
+# gate type: NOR; name: D_GATE_412_I0
+.gate NOR2X1 A=D_GATE_411 B=D_INPUT_0 Y=D_GATE_412
+
+
+
+# gate type: NOR; name: D_GATE_413_I0
+.gate NOR2X1 A=D_GATE_3 B=D_INPUT_3 Y=D_GATE_413
+
+
+
+# gate type: NOR; name: D_GATE_414_I0
+.gate NOR2X1 A=GATE_413 B=GATE_292 Y=D_GATE_414
+
+
+
+# gate type: NOR; name: D_GATE_415_I0
+.gate NOR2X1 A=GATE_414 B=D_GATE_156 Y=D_GATE_415
+
+
+
+# gate type: NOR; name: D_GATE_416_I0
+.gate NOR2X1 A=D_GATE_224 B=D_GATE_46 Y=D_GATE_416
+
+
+
+# gate type: NOR; name: D_GATE_417_I0
+.gate NOR2X1 A=D_GATE_50 B=D_GATE_14 Y=D_GATE_417
+
+
+
+# gate type: NOR; name: D_GATE_418_I0
+.gate NOR2X1 A=D_GATE_41 B=D_GATE_35 Y=D_GATE_418
+
+
+
+# gate type: NOR; name: D_GATE_419_I0
+.gate NOR2X1 A=D_GATE_101 B=D_GATE_94 Y=D_GATE_419
+
+
+
+# gate type: NOR; name: D_GATE_420_I0
+.gate NOR2X1 A=D_GATE_327 B=D_GATE_89 Y=D_GATE_420
+
+
+
+# gate type: NOR; name: D_GATE_421_I0
+.gate NOR2X1 A=D_GATE_91 B=D_GATE_11 Y=D_GATE_421
+
+
+
+# gate type: NOR; name: D_GATE_422_I0
+.gate NOR2X1 A=D_GATE_63 B=D_GATE_5 Y=D_GATE_422
+
+
+
+# gate type: NOR; name: D_GATE_423_I0
+.gate NOR2X1 A=D_GATE_76 B=D_GATE_43 Y=D_GATE_423
+
+
+
+# gate type: NOR; name: D_GATE_424_I0
+.gate NOR2X1 A=D_GATE_16 B=INPUT_5 Y=D_GATE_424
+
+
+
+# gate type: NOR; name: D_GATE_425_I0
+.gate NOR2X1 A=D_GATE_424 B=D_GATE_118 Y=D_GATE_425
+
+
+
+# gate type: NOR; name: D_GATE_426_I0
+.gate NOR2X1 A=D_GATE_132 B=D_GATE_69 Y=D_GATE_426
+
+
+
+# gate type: NOR; name: D_GATE_427_I0
+.gate NOR2X1 A=D_GATE_235 B=D_GATE_30 Y=D_GATE_427
+
+
+
+# gate type: NOR; name: D_GATE_428_I0
+.gate NOR2X1 A=D_GATE_10 B=INPUT_7 Y=D_GATE_428
+
+
+
+# gate type: NOR; name: D_GATE_429_I0
+.gate NOR2X1 A=D_GATE_428 B=D_GATE_158 Y=D_GATE_429
+
+
+
+# gate type: NOR; name: D_GATE_430_I0
+.gate NOR2X1 A=D_GATE_235 B=D_GATE_69 Y=D_GATE_430
+
+
+
+# gate type: NOR; name: D_GATE_431_I0
+.gate NOR2X1 A=D_GATE_128 B=D_GATE_17 Y=D_GATE_431
+
+
+
+# gate type: NOR; name: D_GATE_432_I0
+.gate NOR2X1 A=D_GATE_152 B=D_GATE_69 Y=D_GATE_432
+
+
+
+# gate type: NOR; name: D_GATE_433_I0
+.gate NOR2X1 A=GATE_430 B=GATE_171 Y=D_GATE_433
+
+
+
+# gate type: NOR; name: D_GATE_434_I0
+.gate NOR2X1 A=GATE_432 B=GATE_431 Y=D_GATE_434
+
+
+
+# gate type: NOR; name: D_GATE_435_I0
+.gate NOR2X1 A=GATE_434_BALANCE0 B=D_GATE_433 Y=D_GATE_435
+
+
+
+# gate type: NOR; name: D_GATE_436_I0
+.gate NOR2X1 A=D_GATE_149 B=GATE_58_BALANCE0 Y=D_GATE_436
+
+
+
+# gate type: NOR; name: D_GATE_437_I0
+.gate NOR2X1 A=D_GATE_69 B=D_GATE_22 Y=D_GATE_437
+
+
+
+# gate type: NOR; name: D_GATE_438_I0
+.gate NOR2X1 A=GATE_437 B=GATE_176 Y=D_GATE_438
+
+
+
+# gate type: NOR; name: D_GATE_439_I0
+.gate NOR2X1 A=GATE_438_BALANCE0 B=GATE_436 Y=D_GATE_439
+
+
+
+# gate type: NOR; name: D_GATE_440_I0
+.gate NOR2X1 A=D_GATE_48 B=D_GATE_39 Y=D_GATE_440
+
+
+
+# gate type: NOR; name: D_GATE_441_I0
+.gate NOR2X1 A=D_GATE_103 B=D_GATE_39 Y=D_GATE_441
+
+
+
+# gate type: NOR; name: D_GATE_442_I0
+.gate NOR2X1 A=GATE_440 B=GATE_90 Y=D_GATE_442
+
+
+
+# gate type: NOR; name: D_GATE_443_I0
+.gate NOR2X1 A=D_GATE_442 B=GATE_441_BALANCE1 Y=D_GATE_443
+
+
+
+# gate type: NOR; name: D_GATE_444_I0
+.gate NOR2X1 A=GATE_314 B=GATE_236 Y=D_GATE_444
+
+
+
+# gate type: NOR; name: D_GATE_445_I0
+.gate NOR2X1 A=GATE_417 B=GATE_416 Y=D_GATE_445
+
+
+
+# gate type: NOR; name: D_GATE_446_I0
+.gate NOR2X1 A=GATE_419 B=GATE_418 Y=D_GATE_446
+
+
+
+# gate type: NOR; name: D_GATE_447_I0
+.gate NOR2X1 A=GATE_421 B=GATE_420 Y=D_GATE_447
+
+
+
+# gate type: NOR; name: D_GATE_448_I0
+.gate NOR2X1 A=GATE_423 B=GATE_422 Y=D_GATE_448
+
+
+
+# gate type: NOR; name: D_GATE_449_I0
+.gate NOR2X1 A=GATE_426 B=GATE_425 Y=D_GATE_449
+
+
+
+# gate type: NOR; name: D_GATE_450_I0
+.gate NOR2X1 A=GATE_429 B=GATE_427 Y=D_GATE_450
+
+
+
+# gate type: NOR; name: D_GATE_451_I0
+.gate NOR2X1 A=D_GATE_450 B=GATE_449_BALANCE0 Y=D_GATE_451
+
+
+
+# gate type: NOR; name: D_GATE_452_I0
+.gate NOR2X1 A=GATE_448_BALANCE0 B=D_GATE_447 Y=D_GATE_452
+
+
+
+# gate type: NOR; name: D_GATE_453_I0
+.gate NOR2X1 A=D_GATE_446 B=GATE_445_BALANCE0 Y=D_GATE_453
+
+
+
+# gate type: NOR; name: D_GATE_454_I0
+.gate NOR2X1 A=D_GATE_444 B=GATE_75_BALANCE0 Y=D_GATE_454
+
+
+
+# gate type: NOR; name: D_GATE_455_I0
+.gate NOR2X1 A=D_GATE_253 B=GATE_183 Y=D_GATE_455
+
+
+
+# gate type: NOR; name: D_GATE_456_I0
+.gate NOR2X1 A=D_GATE_369 B=GATE_367 Y=D_GATE_456
+
+
+
+# gate type: NOR; name: D_GATE_457_I0
+.gate NOR2X1 A=D_GATE_373 B=GATE_371 Y=D_GATE_457
+
+
+
+# gate type: NOR; name: D_GATE_458_I0
+.gate NOR2X1 A=GATE_377 B=GATE_375 Y=D_GATE_458
+
+
+
+# gate type: NOR; name: D_GATE_459_I0
+.gate NOR2X1 A=GATE_408 B=GATE_379 Y=D_GATE_459
+
+
+
+# gate type: NOR; name: D_GATE_460_I0
+.gate NOR2X1 A=GATE_412 B=GATE_410 Y=D_GATE_460
+
+
+
+# gate type: NOR; name: D_GATE_461_I0
+.gate NOR2X1 A=D_GATE_460 B=GATE_415_BALANCE1 Y=D_GATE_461
+
+
+
+# gate type: NOR; name: D_GATE_462_I0
+.gate NOR2X1 A=D_GATE_459 B=GATE_458_BALANCE0 Y=D_GATE_462
+
+
+
+# gate type: NOR; name: D_GATE_463_I0
+.gate NOR2X1 A=D_GATE_457 B=D_GATE_456 Y=D_GATE_463
+
+
+
+# gate type: NOR; name: D_GATE_464_I0
+.gate NOR2X1 A=D_GATE_455 B=D_GATE_454 Y=D_GATE_464
+
+
+
+# gate type: NOR; name: D_GATE_465_I0
+.gate NOR2X1 A=D_GATE_453 B=D_GATE_452 Y=D_GATE_465
+
+
+
+# gate type: NOR; name: D_GATE_466_I0
+.gate NOR2X1 A=D_GATE_451 B=GATE_162 Y=D_GATE_466
+
+
+
+# gate type: NOR; name: D_GATE_467_I0
+.gate NOR2X1 A=D_GATE_439 B=D_GATE_435 Y=D_GATE_467
+
+
+
+# gate type: NOR; name: D_GATE_468_I0
+.gate NOR2X1 A=D_GATE_467 B=GATE_443_BALANCE0 Y=D_GATE_468
+
+
+
+# gate type: NOR; name: D_GATE_469_I0
+.gate NOR2X1 A=D_GATE_466 B=D_GATE_465 Y=D_GATE_469
+
+
+
+# gate type: NOR; name: D_GATE_470_I0
+.gate NOR2X1 A=D_GATE_464 B=D_GATE_463 Y=D_GATE_470
+
+
+
+# gate type: NOR; name: D_GATE_471_I0
+.gate NOR2X1 A=GATE_462_BALANCE0 B=GATE_461_BALANCE0 Y=D_GATE_471
+
+
+
+# gate type: NOR; name: D_GATE_472_I0
+.gate NOR2X1 A=D_GATE_275 B=D_GATE_115 Y=D_GATE_472
+
+
+
+# gate type: NOR; name: D_GATE_473_I0
+.gate NOR2X1 A=D_GATE_403 B=D_GATE_391 Y=D_GATE_473
+
+
+
+# gate type: NOR; name: D_GATE_474_I0
+.gate NOR2X1 A=D_GATE_473 B=GATE_405_BALANCE1 Y=D_GATE_474
+
+
+
+# gate type: NOR; name: D_GATE_475_I0
+.gate NOR2X1 A=GATE_472_BALANCE0 B=D_GATE_471 Y=D_GATE_475
+
+
+
+# gate type: NOR; name: D_GATE_476_I0
+.gate NOR2X1 A=D_GATE_470 B=D_GATE_469 Y=D_GATE_476
+
+
+
+# gate type: NOR; name: D_GATE_477_I0
+.gate NOR2X1 A=D_GATE_476 B=GATE_468_BALANCE0 Y=D_GATE_477
+
+
+
+# gate type: NOR; name: D_GATE_478_I0
+.gate NOR2X1 A=D_GATE_475 B=D_GATE_474 Y=D_GATE_478
+
+
+
+# gate type: NOR; name: D_GATE_479_I0
+.gate NOR2X1 A=D_GATE_478 B=GATE_477_BALANCE0 Y=D_GATE_479
+
+
+
+# gate type: NOR; name: D_GATE_480_I0
+.gate NOR2X1 A=GATE_293 B=GATE_2_BALANCE0 Y=D_GATE_480
+
+
+
+# gate type: NOR; name: D_GATE_481_I0
+.gate NOR2X1 A=D_GATE_58 B=D_GATE_5 Y=D_GATE_481
+
+
+
+# gate type: NOR; name: D_GATE_482_I0
+.gate NOR2X1 A=GATE_481 B=GATE_251 Y=D_GATE_482
+
+
+
+# gate type: NOR; name: D_GATE_483_I0
+.gate NOR2X1 A=D_GATE_35 B=D_GATE_9 Y=D_GATE_483
+
+
+
+# gate type: NOR; name: D_GATE_484_I0
+.gate NOR2X1 A=D_GATE_101 B=D_GATE_43 Y=D_GATE_484
+
+
+
+# gate type: NOR; name: D_GATE_485_I0
+.gate NOR2X1 A=GATE_484 B=GATE_483 Y=D_GATE_485
+
+
+
+# gate type: NOR; name: D_GATE_486_I0
+.gate NOR2X1 A=GATE_94_BALANCE0 B=D_GATE_22 Y=D_GATE_486
+
+
+
+# gate type: NOR; name: D_GATE_487_I0
+.gate NOR2X1 A=D_GATE_224 B=D_GATE_156 Y=D_GATE_487
+
+
+
+# gate type: NOR; name: D_GATE_488_I0
+.gate NOR2X1 A=GATE_487 B=GATE_486 Y=D_GATE_488
+
+
+
+# gate type: NOR; name: D_GATE_489_I0
+.gate NOR2X1 A=D_GATE_84 B=GATE_3 Y=D_GATE_489
+
+
+
+# gate type: NOR; name: D_GATE_490_I0
+.gate NOR2X1 A=D_GATE_101 B=D_GATE_30 Y=D_GATE_490
+
+
+
+# gate type: NOR; name: D_GATE_491_I0
+.gate NOR2X1 A=D_GATE_125 B=D_GATE_58 Y=D_GATE_491
+
+
+
+# gate type: NOR; name: D_GATE_492_I0
+.gate NOR2X1 A=GATE_491 B=GATE_490 Y=D_GATE_492
+
+
+
+# gate type: NOR; name: D_GATE_493_I0
+.gate NOR2X1 A=GATE_382 B=D_GATE_11 Y=D_GATE_493
+
+
+
+# gate type: NOR; name: D_GATE_494_I0
+.gate NOR2X1 A=GATE_54_BALANCE0 B=D_GATE_35 Y=D_GATE_494
+
+
+
+# gate type: NOR; name: D_GATE_495_I0
+.gate NOR2X1 A=D_GATE_54 B=D_GATE_17 Y=D_GATE_495
+
+
+
+# gate type: NOR; name: D_GATE_496_I0
+.gate NOR2X1 A=D_GATE_70 B=GATE_21_BALANCE0 Y=D_GATE_496
+
+
+
+# gate type: NOR; name: D_GATE_497_I0
+.gate NOR2X1 A=GATE_187 B=D_GATE_69 Y=D_GATE_497
+
+
+
+# gate type: NOR; name: D_GATE_498_I0
+.gate NOR2X1 A=GATE_495 B=GATE_494 Y=D_GATE_498
+
+
+
+# gate type: NOR; name: D_GATE_499_I0
+.gate NOR2X1 A=D_GATE_498 B=GATE_496 Y=D_GATE_499
+
+
+
+# gate type: NOR; name: D_GATE_500_I0
+.gate NOR2X1 A=D_GATE_499 B=GATE_497 Y=D_GATE_500
+
+
+
+# gate type: NOR; name: D_GATE_501_I0
+.gate NOR2X1 A=GATE_142 B=GATE_76 Y=D_GATE_501
+
+
+
+# gate type: NOR; name: D_GATE_502_I0
+.gate NOR2X1 A=GATE_501 B=GATE_63_BALANCE0 Y=D_GATE_502
+
+
+
+# gate type: NOR; name: D_GATE_503_I0
+.gate NOR2X1 A=D_GATE_156 B=D_GATE_9 Y=D_GATE_503
+
+
+
+# gate type: NOR; name: D_GATE_504_I0
+.gate NOR2X1 A=D_GATE_22 B=D_GATE_17 Y=D_GATE_504
+
+
+
+# gate type: NOR; name: D_GATE_505_I0
+.gate NOR2X1 A=GATE_418 B=GATE_238 Y=D_GATE_505
+
+
+
+# gate type: NOR; name: D_GATE_506_I0
+.gate NOR2X1 A=GATE_504 B=GATE_503 Y=D_GATE_506
+
+
+
+# gate type: NOR; name: D_GATE_507_I0
+.gate NOR2X1 A=GATE_506_BALANCE0 B=D_GATE_505 Y=D_GATE_507
+
+
+
+# gate type: NOR; name: D_GATE_508_I0
+.gate NOR2X1 A=GATE_502 B=D_GATE_226 Y=D_GATE_508
+
+
+
+# gate type: NOR; name: D_GATE_509_I0
+.gate NOR2X1 A=GATE_508_BALANCE0 B=D_GATE_507 Y=D_GATE_509
+
+
+
+# gate type: NOR; name: D_GATE_510_I0
+.gate NOR2X1 A=D_GATE_45 B=GATE_30_BALANCE0 Y=D_GATE_510
+
+
+
+# gate type: NOR; name: D_GATE_511_I0
+.gate NOR2X1 A=GATE_305 B=D_INPUT_0 Y=D_GATE_511
+
+
+
+# gate type: NOR; name: D_GATE_512_I0
+.gate NOR2X1 A=D_GATE_511 B=GATE_510_BALANCE1 Y=D_GATE_512
+
+
+
+# gate type: NOR; name: D_GATE_513_I0
+.gate NOR2X1 A=GATE_135 B=INPUT_0 Y=D_GATE_513
+
+
+
+# gate type: NOR; name: D_GATE_514_I0
+.gate NOR2X1 A=D_GATE_513 B=GATE_416_BALANCE1 Y=D_GATE_514
+
+
+
+# gate type: NOR; name: D_GATE_515_I0
+.gate NOR2X1 A=GATE_514_BALANCE1 B=GATE_512 Y=D_GATE_515
+
+
+
+# gate type: NOR; name: D_GATE_516_I0
+.gate NOR2X1 A=GATE_263 B=D_GATE_30 Y=D_GATE_516
+
+
+
+# gate type: NOR; name: D_GATE_517_I0
+.gate NOR2X1 A=D_GATE_72 B=D_GATE_63 Y=D_GATE_517
+
+
+
+# gate type: NOR; name: D_GATE_518_I0
+.gate NOR2X1 A=D_GATE_156 B=D_GATE_45 Y=D_GATE_518
+
+
+
+# gate type: NOR; name: D_GATE_519_I0
+.gate NOR2X1 A=GATE_518 B=GATE_517 Y=D_GATE_519
+
+
+
+# gate type: NOR; name: D_GATE_520_I0
+.gate NOR2X1 A=D_GATE_48 B=GATE_17_BALANCE0 Y=D_GATE_520
+
+
+
+# gate type: NOR; name: D_GATE_521_I0
+.gate NOR2X1 A=D_GATE_101 B=D_GATE_21 Y=D_GATE_521
+
+
+
+# gate type: NOR; name: D_GATE_522_I0
+.gate NOR2X1 A=GATE_521 B=GATE_520 Y=D_GATE_522
+
+
+
+# gate type: NOR; name: D_GATE_523_I0
+.gate NOR2X1 A=D_GATE_132 B=D_GATE_46 Y=D_GATE_523
+
+
+
+# gate type: NOR; name: D_GATE_524_I0
+.gate NOR2X1 A=D_GATE_50 B=D_GATE_9 Y=D_GATE_524
+
+
+
+# gate type: NOR; name: D_GATE_525_I0
+.gate NOR2X1 A=GATE_158_BALANCE0 B=D_GATE_30 Y=D_GATE_525
+
+
+
+# gate type: NOR; name: D_GATE_526_I0
+.gate NOR2X1 A=D_GATE_109 B=D_GATE_63 Y=D_GATE_526
+
+
+
+# gate type: NOR; name: D_GATE_527_I0
+.gate NOR2X1 A=D_GATE_43 B=D_GATE_5 Y=D_GATE_527
+
+
+
+# gate type: NOR; name: D_GATE_528_I0
+.gate NOR2X1 A=D_GATE_25 B=D_INPUT_3 Y=D_GATE_528
+
+
+
+# gate type: NOR; name: D_GATE_529_I0
+.gate NOR2X1 A=D_GATE_101 B=GATE_35_BALANCE0 Y=D_GATE_529
+
+
+
+# gate type: NOR; name: D_GATE_530_I0
+.gate NOR2X1 A=D_GATE_72 B=D_GATE_39 Y=D_GATE_530
+
+
+
+# gate type: NOR; name: D_GATE_531_I0
+.gate NOR2X1 A=GATE_125 B=GATE_101 Y=D_GATE_531
+
+
+
+# gate type: NOR; name: D_GATE_532_I0
+.gate NOR2X1 A=GATE_531 B=D_GATE_94 Y=D_GATE_532
+
+
+
+# gate type: NOR; name: D_GATE_533_I0
+.gate NOR2X1 A=D_GATE_58 B=D_GATE_41 Y=D_GATE_533
+
+
+
+# gate type: NOR; name: D_GATE_534_I0
+.gate NOR2X1 A=GATE_533_BALANCE1 B=GATE_532 Y=D_GATE_534
+
+
+
+# gate type: NOR; name: D_GATE_535_I0
+.gate NOR2X1 A=D_GATE_101 B=D_GATE_11 Y=D_GATE_535
+
+
+
+# gate type: NOR; name: D_GATE_536_I0
+.gate NOR2X1 A=GATE_535 B=GATE_384 Y=D_GATE_536
+
+
+
+# gate type: NOR; name: D_GATE_537_I0
+.gate NOR2X1 A=GATE_310 B=GATE_12 Y=D_GATE_537
+
+
+
+# gate type: NOR; name: D_GATE_538_I0
+.gate NOR2X1 A=D_GATE_537 B=D_GATE_536 Y=D_GATE_538
+
+
+
+# gate type: NOR; name: D_GATE_539_I0
+.gate NOR2X1 A=GATE_182 B=GATE_177 Y=D_GATE_539
+
+
+
+# gate type: NOR; name: D_GATE_540_I0
+.gate NOR2X1 A=GATE_271 B=GATE_254 Y=D_GATE_540
+
+
+
+# gate type: NOR; name: D_GATE_541_I0
+.gate NOR2X1 A=GATE_311 B=GATE_279 Y=D_GATE_541
+
+
+
+# gate type: NOR; name: D_GATE_542_I0
+.gate NOR2X1 A=GATE_368 B=GATE_314 Y=D_GATE_542
+
+
+
+# gate type: NOR; name: D_GATE_543_I0
+.gate NOR2X1 A=GATE_437 B=GATE_372 Y=D_GATE_543
+
+
+
+# gate type: NOR; name: D_GATE_544_I0
+.gate NOR2X1 A=GATE_523 B=GATE_440 Y=D_GATE_544
+
+
+
+# gate type: NOR; name: D_GATE_545_I0
+.gate NOR2X1 A=GATE_525 B=GATE_524 Y=D_GATE_545
+
+
+
+# gate type: NOR; name: D_GATE_546_I0
+.gate NOR2X1 A=GATE_527 B=GATE_526 Y=D_GATE_546
+
+
+
+# gate type: NOR; name: D_GATE_547_I0
+.gate NOR2X1 A=GATE_529 B=GATE_528 Y=D_GATE_547
+
+
+
+# gate type: NOR; name: D_GATE_548_I0
+.gate NOR2X1 A=D_GATE_547 B=GATE_530_BALANCE1 Y=D_GATE_548
+
+
+
+# gate type: NOR; name: D_GATE_549_I0
+.gate NOR2X1 A=GATE_546_BALANCE0 B=D_GATE_545 Y=D_GATE_549
+
+
+
+# gate type: NOR; name: D_GATE_550_I0
+.gate NOR2X1 A=GATE_544_BALANCE0 B=D_GATE_543 Y=D_GATE_550
+
+
+
+# gate type: NOR; name: D_GATE_551_I0
+.gate NOR2X1 A=D_GATE_542 B=D_GATE_541 Y=D_GATE_551
+
+
+
+# gate type: NOR; name: D_GATE_552_I0
+.gate NOR2X1 A=D_GATE_540 B=D_GATE_539 Y=D_GATE_552
+
+
+
+# gate type: NOR; name: D_GATE_553_I0
+.gate NOR2X1 A=D_GATE_127 B=GATE_105 Y=D_GATE_553
+
+
+
+# gate type: NOR; name: D_GATE_554_I0
+.gate NOR2X1 A=GATE_480_BALANCE1 B=GATE_258_BALANCE0 Y=D_GATE_554
+
+
+
+# gate type: NOR; name: D_GATE_555_I0
+.gate NOR2X1 A=D_GATE_485 B=D_GATE_482 Y=D_GATE_555
+
+
+
+# gate type: NOR; name: D_GATE_556_I0
+.gate NOR2X1 A=GATE_489 B=D_GATE_488 Y=D_GATE_556
+
+
+
+# gate type: NOR; name: D_GATE_557_I0
+.gate NOR2X1 A=GATE_493 B=D_GATE_492 Y=D_GATE_557
+
+
+
+# gate type: NOR; name: D_GATE_558_I0
+.gate NOR2X1 A=D_GATE_519 B=GATE_516 Y=D_GATE_558
+
+
+
+# gate type: NOR; name: D_GATE_559_I0
+.gate NOR2X1 A=D_GATE_558 B=D_GATE_522 Y=D_GATE_559
+
+
+
+# gate type: NOR; name: D_GATE_560_I0
+.gate NOR2X1 A=D_GATE_557 B=D_GATE_556 Y=D_GATE_560
+
+
+
+# gate type: NOR; name: D_GATE_561_I0
+.gate NOR2X1 A=D_GATE_555 B=D_GATE_554 Y=D_GATE_561
+
+
+
+# gate type: NOR; name: D_GATE_562_I0
+.gate NOR2X1 A=GATE_553_BALANCE0 B=D_GATE_552 Y=D_GATE_562
+
+
+
+# gate type: NOR; name: D_GATE_563_I0
+.gate NOR2X1 A=D_GATE_551 B=D_GATE_550 Y=D_GATE_563
+
+
+
+# gate type: NOR; name: D_GATE_564_I0
+.gate NOR2X1 A=D_GATE_549 B=D_GATE_548 Y=D_GATE_564
+
+
+
+# gate type: NOR; name: D_GATE_565_I0
+.gate NOR2X1 A=D_GATE_302 B=GATE_169_BALANCE0 Y=D_GATE_565
+
+
+
+# gate type: NOR; name: D_GATE_566_I0
+.gate NOR2X1 A=D_GATE_538 B=D_GATE_534 Y=D_GATE_566
+
+
+
+# gate type: NOR; name: D_GATE_567_I0
+.gate NOR2X1 A=D_GATE_566 B=D_GATE_565 Y=D_GATE_567
+
+
+
+# gate type: NOR; name: D_GATE_568_I0
+.gate NOR2X1 A=D_GATE_564 B=D_GATE_563 Y=D_GATE_568
+
+
+
+# gate type: NOR; name: D_GATE_569_I0
+.gate NOR2X1 A=D_GATE_562 B=D_GATE_561 Y=D_GATE_569
+
+
+
+# gate type: NOR; name: D_GATE_570_I0
+.gate NOR2X1 A=D_GATE_560 B=GATE_559_BALANCE0 Y=D_GATE_570
+
+
+
+# gate type: NOR; name: D_GATE_571_I0
+.gate NOR2X1 A=D_GATE_266 B=D_GATE_123 Y=D_GATE_571
+
+
+
+# gate type: NOR; name: D_GATE_572_I0
+.gate NOR2X1 A=GATE_500_BALANCE0 B=D_GATE_403 Y=D_GATE_572
+
+
+
+# gate type: NOR; name: D_GATE_573_I0
+.gate NOR2X1 A=GATE_515 B=D_GATE_509 Y=D_GATE_573
+
+
+
+# gate type: NOR; name: D_GATE_574_I0
+.gate NOR2X1 A=GATE_573_BALANCE0 B=D_GATE_572 Y=D_GATE_574
+
+
+
+# gate type: NOR; name: D_GATE_575_I0
+.gate NOR2X1 A=GATE_571_BALANCE0 B=D_GATE_570 Y=D_GATE_575
+
+
+
+# gate type: NOR; name: D_GATE_576_I0
+.gate NOR2X1 A=D_GATE_569 B=D_GATE_568 Y=D_GATE_576
+
+
+
+# gate type: NOR; name: D_GATE_577_I0
+.gate NOR2X1 A=D_GATE_576 B=GATE_567_BALANCE0 Y=D_GATE_577
+
+
+
+# gate type: NOR; name: D_GATE_578_I0
+.gate NOR2X1 A=GATE_575_BALANCE0 B=D_GATE_574 Y=D_GATE_578
+
+
+
+# gate type: NOR; name: D_GATE_579_I0
+.gate NOR2X1 A=GATE_578_BALANCE0 B=GATE_577_BALANCE0 Y=D_GATE_579
+
+
+
+# gate type: NOR; name: D_GATE_580_I0
+.gate NOR2X1 A=D_GATE_1 B=D_INPUT_6 Y=D_GATE_580
+
+
+
+# gate type: NOR; name: D_GATE_581_I0
+.gate NOR2X1 A=D_GATE_580 B=D_GATE_132 Y=D_GATE_581
+
+
+
+# gate type: NOR; name: D_GATE_582_I0
+.gate NOR2X1 A=D_GATE_48 B=D_GATE_30 Y=D_GATE_582
+
+
+
+# gate type: NOR; name: D_GATE_583_I0
+.gate NOR2X1 A=D_GATE_50 B=D_GATE_5 Y=D_GATE_583
+
+
+
+# gate type: NOR; name: D_GATE_584_I0
+.gate NOR2X1 A=D_GATE_292 B=D_GATE_21 Y=D_GATE_584
+
+
+
+# gate type: NOR; name: D_GATE_585_I0
+.gate NOR2X1 A=D_GATE_128 B=D_GATE_69 Y=D_GATE_585
+
+
+
+# gate type: NOR; name: D_GATE_586_I0
+.gate NOR2X1 A=D_GATE_29 B=INPUT_7 Y=D_GATE_586
+
+
+
+# gate type: NOR; name: D_GATE_587_I0
+.gate NOR2X1 A=D_GATE_586 B=D_GATE_142 Y=D_GATE_587
+
+
+
+# gate type: NOR; name: D_GATE_588_I0
+.gate NOR2X1 A=D_GATE_128 B=D_GATE_21 Y=D_GATE_588
+
+
+
+# gate type: NOR; name: D_GATE_589_I0
+.gate NOR2X1 A=GATE_101 B=GATE_37 Y=D_GATE_589
+
+
+
+# gate type: NOR; name: D_GATE_590_I0
+.gate NOR2X1 A=GATE_589 B=GATE_63_BALANCE0 Y=D_GATE_590
+
+
+
+# gate type: NOR; name: D_GATE_591_I0
+.gate NOR2X1 A=GATE_588 B=GATE_422 Y=D_GATE_591
+
+
+
+# gate type: NOR; name: D_GATE_592_I0
+.gate NOR2X1 A=GATE_591_BALANCE0 B=GATE_590 Y=D_GATE_592
+
+
+
+# gate type: NOR; name: D_GATE_593_I0
+.gate NOR2X1 A=GATE_185 B=D_GATE_94 Y=D_GATE_593
+
+
+
+# gate type: NOR; name: D_GATE_594_I0
+.gate NOR2X1 A=GATE_248 B=D_GATE_25 Y=D_GATE_594
+
+
+
+# gate type: NOR; name: D_GATE_595_I0
+.gate NOR2X1 A=GATE_327 B=GATE_43 Y=D_GATE_595
+
+
+
+# gate type: NOR; name: D_GATE_596_I0
+.gate NOR2X1 A=GATE_595 B=D_GATE_9 Y=D_GATE_596
+
+
+
+# gate type: NOR; name: D_GATE_597_I0
+.gate NOR2X1 A=GATE_292 B=GATE_45 Y=D_GATE_597
+
+
+
+# gate type: NOR; name: D_GATE_598_I0
+.gate NOR2X1 A=GATE_597 B=D_GATE_35 Y=D_GATE_598
+
+
+
+# gate type: NOR; name: D_GATE_599_I0
+.gate NOR2X1 A=D_GATE_103 B=D_GATE_30 Y=D_GATE_599
+
+
+
+# gate type: NOR; name: D_GATE_600_I0
+.gate NOR2X1 A=D_GATE_46 B=D_GATE_14 Y=D_GATE_600
+
+
+
+# gate type: NOR; name: D_GATE_601_I0
+.gate NOR2X1 A=GATE_600 B=GATE_599 Y=D_GATE_601
+
+
+
+# gate type: NOR; name: D_GATE_602_I0
+.gate NOR2X1 A=D_GATE_48 B=D_GATE_11 Y=D_GATE_602
+
+
+
+# gate type: NOR; name: D_GATE_603_I0
+.gate NOR2X1 A=D_GATE_158 B=D_GATE_69 Y=D_GATE_603
+
+
+
+# gate type: NOR; name: D_GATE_604_I0
+.gate NOR2X1 A=GATE_603 B=GATE_602 Y=D_GATE_604
+
+
+
+# gate type: NOR; name: D_GATE_605_I0
+.gate NOR2X1 A=GATE_118 B=GATE_101 Y=D_GATE_605
+
+
+
+# gate type: NOR; name: D_GATE_606_I0
+.gate NOR2X1 A=GATE_605 B=D_GATE_17 Y=D_GATE_606
+
+
+
+# gate type: NOR; name: D_GATE_607_I0
+.gate NOR2X1 A=GATE_72 B=GATE_14 Y=D_GATE_607
+
+
+
+# gate type: NOR; name: D_GATE_608_I0
+.gate NOR2X1 A=GATE_607 B=GATE_58_BALANCE0 Y=D_GATE_608
+
+
+
+# gate type: NOR; name: D_GATE_609_I0
+.gate NOR2X1 A=GATE_46 B=GATE_39 Y=D_GATE_609
+
+
+
+# gate type: NOR; name: D_GATE_610_I0
+.gate NOR2X1 A=GATE_53_BALANCE1 B=GATE_4_BALANCE0 Y=D_GATE_610
+
+
+
+# gate type: NOR; name: D_GATE_611_I0
+.gate NOR2X1 A=GATE_610_BALANCE0 B=GATE_609 Y=D_GATE_611
+
+
+
+# gate type: NOR; name: D_GATE_612_I0
+.gate NOR2X1 A=D_GATE_54 B=D_GATE_39 Y=D_GATE_612
+
+
+
+# gate type: NOR; name: D_GATE_613_I0
+.gate NOR2X1 A=GATE_132 B=GATE_76 Y=D_GATE_613
+
+
+
+# gate type: NOR; name: D_GATE_614_I0
+.gate NOR2X1 A=GATE_613 B=GATE_21_BALANCE0 Y=D_GATE_614
+
+
+
+# gate type: NOR; name: D_GATE_615_I0
+.gate NOR2X1 A=D_GATE_103 B=GATE_17_BALANCE0 Y=D_GATE_615
+
+
+
+# gate type: NOR; name: D_GATE_616_I0
+.gate NOR2X1 A=GATE_50_BALANCE0 B=D_GATE_37 Y=D_GATE_616
+
+
+
+# gate type: NOR; name: D_GATE_617_I0
+.gate NOR2X1 A=D_GATE_27 B=INPUT_3 Y=D_GATE_617
+
+
+
+# gate type: NOR; name: D_GATE_618_I0
+.gate NOR2X1 A=D_GATE_617 B=D_GATE_35 Y=D_GATE_618
+
+
+
+# gate type: NOR; name: D_GATE_619_I0
+.gate NOR2X1 A=GATE_612 B=GATE_527 Y=D_GATE_619
+
+
+
+# gate type: NOR; name: D_GATE_620_I0
+.gate NOR2X1 A=GATE_616 B=GATE_615 Y=D_GATE_620
+
+
+
+# gate type: NOR; name: D_GATE_621_I0
+.gate NOR2X1 A=D_GATE_620 B=GATE_618_BALANCE1 Y=D_GATE_621
+
+
+
+# gate type: NOR; name: D_GATE_622_I0
+.gate NOR2X1 A=D_GATE_619 B=GATE_614 Y=D_GATE_622
+
+
+
+# gate type: NOR; name: D_GATE_623_I0
+.gate NOR2X1 A=D_GATE_622 B=D_GATE_621 Y=D_GATE_623
+
+
+
+# gate type: NOR; name: D_GATE_624_I0
+.gate NOR2X1 A=D_GATE_292 B=GATE_65 Y=D_GATE_624
+
+
+
+# gate type: NOR; name: D_GATE_625_I0
+.gate NOR2X1 A=D_GATE_158 B=D_GATE_94 Y=D_GATE_625
+
+
+
+# gate type: NOR; name: D_GATE_626_I0
+.gate NOR2X1 A=D_GATE_35 B=D_GATE_5 Y=D_GATE_626
+
+
+
+# gate type: NOR; name: D_GATE_627_I0
+.gate NOR2X1 A=D_GATE_91 B=D_GATE_46 Y=D_GATE_627
+
+
+
+# gate type: NOR; name: D_GATE_628_I0
+.gate NOR2X1 A=GATE_626 B=GATE_625 Y=D_GATE_628
+
+
+
+# gate type: NOR; name: D_GATE_629_I0
+.gate NOR2X1 A=D_GATE_628 B=GATE_627_BALANCE1 Y=D_GATE_629
+
+
+
+# gate type: NOR; name: D_GATE_630_I0
+.gate NOR2X1 A=GATE_624 B=D_GATE_482 Y=D_GATE_630
+
+
+
+# gate type: NOR; name: D_GATE_631_I0
+.gate NOR2X1 A=D_GATE_630 B=GATE_629_BALANCE0 Y=D_GATE_631
+
+
+
+# gate type: NOR; name: D_GATE_632_I0
+.gate NOR2X1 A=GATE_276 B=GATE_117 Y=D_GATE_632
+
+
+
+# gate type: NOR; name: D_GATE_633_I0
+.gate NOR2X1 A=GATE_411 B=GATE_289 Y=D_GATE_633
+
+
+
+# gate type: NOR; name: D_GATE_634_I0
+.gate NOR2X1 A=GATE_581 B=GATE_427 Y=D_GATE_634
+
+
+
+# gate type: NOR; name: D_GATE_635_I0
+.gate NOR2X1 A=GATE_583 B=GATE_582 Y=D_GATE_635
+
+
+
+# gate type: NOR; name: D_GATE_636_I0
+.gate NOR2X1 A=GATE_585 B=GATE_584 Y=D_GATE_636
+
+
+
+# gate type: NOR; name: D_GATE_637_I0
+.gate NOR2X1 A=D_GATE_636 B=GATE_587_BALANCE1 Y=D_GATE_637
+
+
+
+# gate type: NOR; name: D_GATE_638_I0
+.gate NOR2X1 A=GATE_635_BALANCE0 B=D_GATE_634 Y=D_GATE_638
+
+
+
+# gate type: NOR; name: D_GATE_639_I0
+.gate NOR2X1 A=D_GATE_633 B=D_GATE_632 Y=D_GATE_639
+
+
+
+# gate type: NOR; name: D_GATE_640_I0
+.gate NOR2X1 A=GATE_264 B=D_GATE_230 Y=D_GATE_640
+
+
+
+# gate type: NOR; name: D_GATE_641_I0
+.gate NOR2X1 A=GATE_519_BALANCE0 B=GATE_415 Y=D_GATE_641
+
+
+
+# gate type: NOR; name: D_GATE_642_I0
+.gate NOR2X1 A=GATE_594 B=D_GATE_536 Y=D_GATE_642
+
+
+
+# gate type: NOR; name: D_GATE_643_I0
+.gate NOR2X1 A=GATE_598 B=GATE_596 Y=D_GATE_643
+
+
+
+# gate type: NOR; name: D_GATE_644_I0
+.gate NOR2X1 A=D_GATE_604 B=D_GATE_601 Y=D_GATE_644
+
+
+
+# gate type: NOR; name: D_GATE_645_I0
+.gate NOR2X1 A=GATE_608 B=GATE_606 Y=D_GATE_645
+
+
+
+# gate type: NOR; name: D_GATE_646_I0
+.gate NOR2X1 A=D_GATE_645 B=GATE_611 Y=D_GATE_646
+
+
+
+# gate type: NOR; name: D_GATE_647_I0
+.gate NOR2X1 A=GATE_644_BALANCE0 B=D_GATE_643 Y=D_GATE_647
+
+
+
+# gate type: NOR; name: D_GATE_648_I0
+.gate NOR2X1 A=D_GATE_642 B=D_GATE_641 Y=D_GATE_648
+
+
+
+# gate type: NOR; name: D_GATE_649_I0
+.gate NOR2X1 A=D_GATE_640 B=D_GATE_639 Y=D_GATE_649
+
+
+
+# gate type: NOR; name: D_GATE_650_I0
+.gate NOR2X1 A=D_GATE_638 B=D_GATE_637 Y=D_GATE_650
+
+
+
+# gate type: NOR; name: D_GATE_651_I0
+.gate NOR2X1 A=D_GATE_592 B=D_GATE_439 Y=D_GATE_651
+
+
+
+# gate type: NOR; name: D_GATE_652_I0
+.gate NOR2X1 A=D_GATE_651 B=GATE_593 Y=D_GATE_652
+
+
+
+# gate type: NOR; name: D_GATE_653_I0
+.gate NOR2X1 A=D_GATE_650 B=GATE_649_BALANCE0 Y=D_GATE_653
+
+
+
+# gate type: NOR; name: D_GATE_654_I0
+.gate NOR2X1 A=D_GATE_648 B=D_GATE_647 Y=D_GATE_654
+
+
+
+# gate type: NOR; name: D_GATE_655_I0
+.gate NOR2X1 A=D_GATE_646 B=D_GATE_100 Y=D_GATE_655
+
+
+
+# gate type: NOR; name: D_GATE_656_I0
+.gate NOR2X1 A=D_GATE_509 B=D_GATE_140 Y=D_GATE_656
+
+
+
+# gate type: NOR; name: D_GATE_657_I0
+.gate NOR2X1 A=D_GATE_631 B=D_GATE_623 Y=D_GATE_657
+
+
+
+# gate type: NOR; name: D_GATE_658_I0
+.gate NOR2X1 A=D_GATE_657 B=D_GATE_656 Y=D_GATE_658
+
+
+
+# gate type: NOR; name: D_GATE_659_I0
+.gate NOR2X1 A=D_GATE_655 B=D_GATE_654 Y=D_GATE_659
+
+
+
+# gate type: NOR; name: D_GATE_660_I0
+.gate NOR2X1 A=D_GATE_653 B=D_GATE_652 Y=D_GATE_660
+
+
+
+# gate type: NOR; name: D_GATE_661_I0
+.gate NOR2X1 A=D_GATE_660 B=D_GATE_659 Y=D_GATE_661
+
+
+
+# gate type: NOR; name: D_GATE_662_I0
+.gate NOR2X1 A=D_GATE_661 B=GATE_658_BALANCE0 Y=D_GATE_662
+
+
+
+# gate type: NOR; name: D_GATE_663_I0
+.gate NOR2X1 A=GATE_76 B=GATE_72 Y=D_GATE_663
+
+
+
+# gate type: NOR; name: D_GATE_664_I0
+.gate NOR2X1 A=GATE_663 B=D_GATE_2 Y=D_GATE_664
+
+
+
+# gate type: NOR; name: D_GATE_665_I0
+.gate NOR2X1 A=GATE_119 B=D_GATE_17 Y=D_GATE_665
+
+
+
+# gate type: NOR; name: D_GATE_666_I0
+.gate NOR2X1 A=GATE_263 B=GATE_63_BALANCE0 Y=D_GATE_666
+
+
+
+# gate type: NOR; name: D_GATE_667_I0
+.gate NOR2X1 A=GATE_156 B=GATE_25 Y=D_GATE_667
+
+
+
+# gate type: NOR; name: D_GATE_668_I0
+.gate NOR2X1 A=GATE_667 B=D_GATE_158 Y=D_GATE_668
+
+
+
+# gate type: NOR; name: D_GATE_669_I0
+.gate NOR2X1 A=D_GATE_101 B=D_GATE_39 Y=D_GATE_669
+
+
+
+# gate type: NOR; name: D_GATE_670_I0
+.gate NOR2X1 A=D_GATE_3 B=D_INPUT_2 Y=D_GATE_670
+
+
+
+# gate type: NOR; name: D_GATE_671_I0
+.gate NOR2X1 A=D_GATE_670 B=D_GATE_156 Y=D_GATE_671
+
+
+
+# gate type: NOR; name: D_GATE_672_I0
+.gate NOR2X1 A=GATE_671 B=GATE_669 Y=D_GATE_672
+
+
+
+# gate type: NOR; name: D_GATE_673_I0
+.gate NOR2X1 A=GATE_326 B=D_GATE_69 Y=D_GATE_673
+
+
+
+# gate type: NOR; name: D_GATE_674_I0
+.gate NOR2X1 A=GATE_673 B=GATE_438_BALANCE0 Y=D_GATE_674
+
+
+
+# gate type: NOR; name: D_GATE_675_I0
+.gate NOR2X1 A=D_GATE_597 B=GATE_132_BALANCE1 Y=D_GATE_675
+
+
+
+# gate type: NOR; name: D_GATE_676_I0
+.gate NOR2X1 A=D_GATE_132 B=D_GATE_25 Y=D_GATE_676
+
+
+
+# gate type: NOR; name: D_GATE_677_I0
+.gate NOR2X1 A=GATE_676 B=GATE_11_BALANCE1 Y=D_GATE_677
+
+
+
+# gate type: NOR; name: D_GATE_678_I0
+.gate NOR2X1 A=GATE_677_BALANCE1 B=GATE_675 Y=D_GATE_678
+
+
+
+# gate type: NOR; name: D_GATE_679_I0
+.gate NOR2X1 A=GATE_185 B=D_GATE_50 Y=D_GATE_679
+
+
+
+# gate type: NOR; name: D_GATE_680_I0
+.gate NOR2X1 A=D_GATE_152 B=GATE_30_BALANCE0 Y=D_GATE_680
+
+
+
+# gate type: NOR; name: D_GATE_681_I0
+.gate NOR2X1 A=D_GATE_158 B=D_GATE_35 Y=D_GATE_681
+
+
+
+# gate type: NOR; name: D_GATE_682_I0
+.gate NOR2X1 A=D_GATE_21 B=D_GATE_14 Y=D_GATE_682
+
+
+
+# gate type: NOR; name: D_GATE_683_I0
+.gate NOR2X1 A=D_GATE_41 B=D_GATE_11 Y=D_GATE_683
+
+
+
+# gate type: NOR; name: D_GATE_684_I0
+.gate NOR2X1 A=GATE_681 B=GATE_680 Y=D_GATE_684
+
+
+
+# gate type: NOR; name: D_GATE_685_I0
+.gate NOR2X1 A=GATE_683 B=GATE_682 Y=D_GATE_685
+
+
+
+# gate type: NOR; name: D_GATE_686_I0
+.gate NOR2X1 A=GATE_685_BALANCE0 B=D_GATE_684 Y=D_GATE_686
+
+
+
+# gate type: NOR; name: D_GATE_687_I0
+.gate NOR2X1 A=GATE_292 B=GATE_37 Y=D_GATE_687
+
+
+
+# gate type: NOR; name: D_GATE_688_I0
+.gate NOR2X1 A=GATE_687 B=D_GATE_30 Y=D_GATE_688
+
+
+
+# gate type: NOR; name: D_GATE_689_I0
+.gate NOR2X1 A=D_GATE_411 B=INPUT_0 Y=D_GATE_689
+
+
+
+# gate type: NOR; name: D_GATE_690_I0
+.gate NOR2X1 A=GATE_689 B=GATE_688 Y=D_GATE_690
+
+
+
+# gate type: NOR; name: D_GATE_691_I0
+.gate NOR2X1 A=D_GATE_45 B=D_GATE_17 Y=D_GATE_691
+
+
+
+# gate type: NOR; name: D_GATE_692_I0
+.gate NOR2X1 A=GATE_35_BALANCE0 B=GATE_13_BALANCE0 Y=D_GATE_692
+
+
+
+# gate type: NOR; name: D_GATE_693_I0
+.gate NOR2X1 A=D_GATE_424 B=GATE_132_BALANCE0 Y=D_GATE_693
+
+
+
+# gate type: NOR; name: D_GATE_694_I0
+.gate NOR2X1 A=D_GATE_46 B=D_GATE_22 Y=D_GATE_694
+
+
+
+# gate type: NOR; name: D_GATE_695_I0
+.gate NOR2X1 A=D_GATE_142 B=D_GATE_25 Y=D_GATE_695
+
+
+
+# gate type: NOR; name: D_GATE_696_I0
+.gate NOR2X1 A=GATE_235_BALANCE0 B=D_GATE_156 Y=D_GATE_696
+
+
+
+# gate type: NOR; name: D_GATE_697_I0
+.gate NOR2X1 A=D_GATE_125 B=D_GATE_63 Y=D_GATE_697
+
+
+
+# gate type: NOR; name: D_GATE_698_I0
+.gate NOR2X1 A=D_GATE_156 B=GATE_13_BALANCE0 Y=D_GATE_698
+
+
+
+# gate type: NOR; name: D_GATE_699_I0
+.gate NOR2X1 A=D_GATE_89 B=D_GATE_58 Y=D_GATE_699
+
+
+
+# gate type: NOR; name: D_GATE_700_I0
+.gate NOR2X1 A=D_GATE_235 B=D_GATE_43 Y=D_GATE_700
+
+
+
+# gate type: NOR; name: D_GATE_701_I0
+.gate NOR2X1 A=GATE_134 B=GATE_44 Y=D_GATE_701
+
+
+
+# gate type: NOR; name: D_GATE_702_I0
+.gate NOR2X1 A=GATE_311 B=GATE_166 Y=D_GATE_702
+
+
+
+# gate type: NOR; name: D_GATE_703_I0
+.gate NOR2X1 A=GATE_416 B=GATE_312 Y=D_GATE_703
+
+
+
+# gate type: NOR; name: D_GATE_704_I0
+.gate NOR2X1 A=GATE_525 B=GATE_484 Y=D_GATE_704
+
+
+
+# gate type: NOR; name: D_GATE_705_I0
+.gate NOR2X1 A=GATE_692 B=GATE_691 Y=D_GATE_705
+
+
+
+# gate type: NOR; name: D_GATE_706_I0
+.gate NOR2X1 A=GATE_694 B=GATE_693 Y=D_GATE_706
+
+
+
+# gate type: NOR; name: D_GATE_707_I0
+.gate NOR2X1 A=GATE_696 B=GATE_695 Y=D_GATE_707
+
+
+
+# gate type: NOR; name: D_GATE_708_I0
+.gate NOR2X1 A=GATE_698 B=GATE_697 Y=D_GATE_708
+
+
+
+# gate type: NOR; name: D_GATE_709_I0
+.gate NOR2X1 A=GATE_700 B=GATE_699 Y=D_GATE_709
+
+
+
+# gate type: NOR; name: D_GATE_710_I0
+.gate NOR2X1 A=D_GATE_709 B=GATE_708_BALANCE0 Y=D_GATE_710
+
+
+
+# gate type: NOR; name: D_GATE_711_I0
+.gate NOR2X1 A=D_GATE_707 B=D_GATE_706 Y=D_GATE_711
+
+
+
+# gate type: NOR; name: D_GATE_712_I0
+.gate NOR2X1 A=D_GATE_705 B=D_GATE_704 Y=D_GATE_712
+
+
+
+# gate type: NOR; name: D_GATE_713_I0
+.gate NOR2X1 A=D_GATE_703 B=D_GATE_702 Y=D_GATE_713
+
+
+
+# gate type: NOR; name: D_GATE_714_I0
+.gate NOR2X1 A=D_GATE_701 B=D_GATE_111 Y=D_GATE_714
+
+
+
+# gate type: NOR; name: D_GATE_715_I0
+.gate NOR2X1 A=D_GATE_300 B=D_GATE_227 Y=D_GATE_715
+
+
+
+# gate type: NOR; name: D_GATE_716_I0
+.gate NOR2X1 A=D_GATE_492 B=D_GATE_373 Y=D_GATE_716
+
+
+
+# gate type: NOR; name: D_GATE_717_I0
+.gate NOR2X1 A=GATE_604_BALANCE0 B=GATE_590 Y=D_GATE_717
+
+
+
+# gate type: NOR; name: D_GATE_718_I0
+.gate NOR2X1 A=GATE_665 B=GATE_664 Y=D_GATE_718
+
+
+
+# gate type: NOR; name: D_GATE_719_I0
+.gate NOR2X1 A=GATE_668 B=GATE_666 Y=D_GATE_719
+
+
+
+# gate type: NOR; name: D_GATE_720_I0
+.gate NOR2X1 A=D_GATE_719 B=D_GATE_672 Y=D_GATE_720
+
+
+
+# gate type: NOR; name: D_GATE_721_I0
+.gate NOR2X1 A=GATE_718_BALANCE0 B=D_GATE_717 Y=D_GATE_721
+
+
+
+# gate type: NOR; name: D_GATE_722_I0
+.gate NOR2X1 A=D_GATE_716 B=GATE_715_BALANCE0 Y=D_GATE_722
+
+
+
+# gate type: NOR; name: D_GATE_723_I0
+.gate NOR2X1 A=GATE_714_BALANCE0 B=D_GATE_713 Y=D_GATE_723
+
+
+
+# gate type: NOR; name: D_GATE_724_I0
+.gate NOR2X1 A=D_GATE_712 B=D_GATE_711 Y=D_GATE_724
+
+
+
+# gate type: NOR; name: D_GATE_725_I0
+.gate NOR2X1 A=D_GATE_710 B=GATE_151 Y=D_GATE_725
+
+
+
+# gate type: NOR; name: D_GATE_726_I0
+.gate NOR2X1 A=D_GATE_443 B=D_GATE_307 Y=D_GATE_726
+
+
+
+# gate type: NOR; name: D_GATE_727_I0
+.gate NOR2X1 A=GATE_679_BALANCE1 B=GATE_678 Y=D_GATE_727
+
+
+
+# gate type: NOR; name: D_GATE_728_I0
+.gate NOR2X1 A=D_GATE_690 B=D_GATE_686 Y=D_GATE_728
+
+
+
+# gate type: NOR; name: D_GATE_729_I0
+.gate NOR2X1 A=D_GATE_728 B=D_GATE_727 Y=D_GATE_729
+
+
+
+# gate type: NOR; name: D_GATE_730_I0
+.gate NOR2X1 A=D_GATE_726 B=D_GATE_725 Y=D_GATE_730
+
+
+
+# gate type: NOR; name: D_GATE_731_I0
+.gate NOR2X1 A=D_GATE_724 B=D_GATE_723 Y=D_GATE_731
+
+
+
+# gate type: NOR; name: D_GATE_732_I0
+.gate NOR2X1 A=D_GATE_722 B=D_GATE_721 Y=D_GATE_732
+
+
+
+# gate type: NOR; name: D_GATE_733_I0
+.gate NOR2X1 A=D_GATE_720 B=GATE_405 Y=D_GATE_733
+
+
+
+# gate type: NOR; name: D_GATE_734_I0
+.gate NOR2X1 A=D_GATE_631 B=D_GATE_500 Y=D_GATE_734
+
+
+
+# gate type: NOR; name: D_GATE_735_I0
+.gate NOR2X1 A=D_GATE_734 B=D_GATE_674 Y=D_GATE_735
+
+
+
+# gate type: NOR; name: D_GATE_736_I0
+.gate NOR2X1 A=GATE_733_BALANCE0 B=D_GATE_732 Y=D_GATE_736
+
+
+
+# gate type: NOR; name: D_GATE_737_I0
+.gate NOR2X1 A=D_GATE_731 B=D_GATE_730 Y=D_GATE_737
+
+
+
+# gate type: NOR; name: D_GATE_738_I0
+.gate NOR2X1 A=D_GATE_729 B=D_GATE_191 Y=D_GATE_738
+
+
+
+# gate type: NOR; name: D_GATE_739_I0
+.gate NOR2X1 A=D_GATE_738 B=D_GATE_737 Y=D_GATE_739
+
+
+
+# gate type: NOR; name: D_GATE_740_I0
+.gate NOR2X1 A=D_GATE_736 B=D_GATE_735 Y=D_GATE_740
+
+
+
+# gate type: NOR; name: D_GATE_741_I0
+.gate NOR2X1 A=D_GATE_740 B=D_GATE_739 Y=D_GATE_741
+
+
+
+# gate type: NOR; name: D_GATE_742_I0
+.gate NOR2X1 A=D_GATE_152 B=GATE_2_BALANCE0 Y=D_GATE_742
+
+
+
+# gate type: NOR; name: D_GATE_743_I0
+.gate NOR2X1 A=D_GATE_125 B=GATE_43_BALANCE0 Y=D_GATE_743
+
+
+
+# gate type: NOR; name: D_GATE_744_I0
+.gate NOR2X1 A=D_GATE_158 B=D_GATE_39 Y=D_GATE_744
+
+
+
+# gate type: NOR; name: D_GATE_745_I0
+.gate NOR2X1 A=D_GATE_156 B=D_GATE_72 Y=D_GATE_745
+
+
+
+# gate type: NOR; name: D_GATE_746_I0
+.gate NOR2X1 A=D_GATE_48 B=D_GATE_46 Y=D_GATE_746
+
+
+
+# gate type: NOR; name: D_GATE_747_I0
+.gate NOR2X1 A=D_GATE_698 B=D_GATE_3 Y=D_GATE_747
+
+
+
+# gate type: NOR; name: D_GATE_748_I0
+.gate NOR2X1 A=D_GATE_7 B=INPUT_0 Y=D_GATE_748
+
+
+
+# gate type: NOR; name: D_GATE_749_I0
+.gate NOR2X1 A=GATE_748 B=GATE_158 Y=D_GATE_749
+
+
+
+# gate type: NOR; name: D_GATE_750_I0
+.gate NOR2X1 A=GATE_749 B=GATE_2_BALANCE0 Y=D_GATE_750
+
+
+
+# gate type: NOR; name: D_GATE_751_I0
+.gate NOR2X1 A=D_GATE_49 B=D_INPUT_5 Y=D_GATE_751
+
+
+
+# gate type: NOR; name: D_GATE_752_I0
+.gate NOR2X1 A=GATE_751_BALANCE0 B=GATE_184 Y=D_GATE_752
+
+
+
+# gate type: NOR; name: D_GATE_753_I0
+.gate NOR2X1 A=GATE_613 B=D_GATE_35 Y=D_GATE_753
+
+
+
+# gate type: NOR; name: D_GATE_754_I0
+.gate NOR2X1 A=GATE_663 B=GATE_58_BALANCE0 Y=D_GATE_754
+
+
+
+# gate type: NOR; name: D_GATE_755_I0
+.gate NOR2X1 A=GATE_158 B=GATE_103 Y=D_GATE_755
+
+
+
+# gate type: NOR; name: D_GATE_756_I0
+.gate NOR2X1 A=GATE_755 B=D_GATE_43 Y=D_GATE_756
+
+
+
+# gate type: NOR; name: D_GATE_757_I0
+.gate NOR2X1 A=GATE_94 B=GATE_39 Y=D_GATE_757
+
+
+
+# gate type: NOR; name: D_GATE_758_I0
+.gate NOR2X1 A=GATE_757 B=GATE_235_BALANCE0 Y=D_GATE_758
+
+
+
+# gate type: NOR; name: D_GATE_759_I0
+.gate NOR2X1 A=GATE_326 B=D_GATE_63 Y=D_GATE_759
+
+
+
+# gate type: NOR; name: D_GATE_760_I0
+.gate NOR2X1 A=D_GATE_598 B=INPUT_0 Y=D_GATE_760
+
+
+
+# gate type: NOR; name: D_GATE_761_I0
+.gate NOR2X1 A=D_GATE_10 B=D_INPUT_6 Y=D_GATE_761
+
+
+
+# gate type: NOR; name: D_GATE_762_I0
+.gate NOR2X1 A=D_GATE_761 B=D_GATE_45 Y=D_GATE_762
+
+
+
+# gate type: NOR; name: D_GATE_763_I0
+.gate NOR2X1 A=D_GATE_125 B=D_GATE_39 Y=D_GATE_763
+
+
+
+# gate type: NOR; name: D_GATE_764_I0
+.gate NOR2X1 A=D_GATE_14 B=GATE_11_BALANCE0 Y=D_GATE_764
+
+
+
+# gate type: NOR; name: D_GATE_765_I0
+.gate NOR2X1 A=D_GATE_89 B=D_GATE_63 Y=D_GATE_765
+
+
+
+# gate type: NOR; name: D_GATE_766_I0
+.gate NOR2X1 A=GATE_77 B=GATE_2_BALANCE0 Y=D_GATE_766
+
+
+
+# gate type: NOR; name: D_GATE_767_I0
+.gate NOR2X1 A=GATE_133 B=GATE_102 Y=D_GATE_767
+
+
+
+# gate type: NOR; name: D_GATE_768_I0
+.gate NOR2X1 A=GATE_763 B=GATE_762 Y=D_GATE_768
+
+
+
+# gate type: NOR; name: D_GATE_769_I0
+.gate NOR2X1 A=GATE_765 B=GATE_764 Y=D_GATE_769
+
+
+
+# gate type: NOR; name: D_GATE_770_I0
+.gate NOR2X1 A=D_GATE_769 B=GATE_768_BALANCE0 Y=D_GATE_770
+
+
+
+# gate type: NOR; name: D_GATE_771_I0
+.gate NOR2X1 A=D_GATE_767 B=D_GATE_488 Y=D_GATE_771
+
+
+
+# gate type: NOR; name: D_GATE_772_I0
+.gate NOR2X1 A=D_GATE_771 B=GATE_766_BALANCE1 Y=D_GATE_772
+
+
+
+# gate type: NOR; name: D_GATE_773_I0
+.gate NOR2X1 A=D_GATE_772 B=GATE_770_BALANCE0 Y=D_GATE_773
+
+
+
+# gate type: NOR; name: D_GATE_774_I0
+.gate NOR2X1 A=GATE_108 B=GATE_90 Y=D_GATE_774
+
+
+
+# gate type: NOR; name: D_GATE_775_I0
+.gate NOR2X1 A=GATE_237 B=GATE_163 Y=D_GATE_775
+
+
+
+# gate type: NOR; name: D_GATE_776_I0
+.gate NOR2X1 A=GATE_304 B=GATE_244 Y=D_GATE_776
+
+
+
+# gate type: NOR; name: D_GATE_777_I0
+.gate NOR2X1 A=GATE_495 B=GATE_370 Y=D_GATE_777
+
+
+
+# gate type: NOR; name: D_GATE_778_I0
+.gate NOR2X1 A=GATE_696 B=GATE_510 Y=D_GATE_778
+
+
+
+# gate type: NOR; name: D_GATE_779_I0
+.gate NOR2X1 A=GATE_743 B=GATE_742 Y=D_GATE_779
+
+
+
+# gate type: NOR; name: D_GATE_780_I0
+.gate NOR2X1 A=GATE_745 B=GATE_744 Y=D_GATE_780
+
+
+
+# gate type: NOR; name: D_GATE_781_I0
+.gate NOR2X1 A=D_GATE_780 B=GATE_746_BALANCE1 Y=D_GATE_781
+
+
+
+# gate type: NOR; name: D_GATE_782_I0
+.gate NOR2X1 A=D_GATE_779 B=D_GATE_778 Y=D_GATE_782
+
+
+
+# gate type: NOR; name: D_GATE_783_I0
+.gate NOR2X1 A=D_GATE_777 B=D_GATE_776 Y=D_GATE_783
+
+
+
+# gate type: NOR; name: D_GATE_784_I0
+.gate NOR2X1 A=D_GATE_775 B=D_GATE_774 Y=D_GATE_784
+
+
+
+# gate type: NOR; name: D_GATE_785_I0
+.gate NOR2X1 A=GATE_261 B=D_GATE_83 Y=D_GATE_785
+
+
+
+# gate type: NOR; name: D_GATE_786_I0
+.gate NOR2X1 A=D_GATE_485 B=D_GATE_369 Y=D_GATE_786
+
+
+
+# gate type: NOR; name: D_GATE_787_I0
+.gate NOR2X1 A=GATE_601_BALANCE0 B=GATE_532 Y=D_GATE_787
+
+
+
+# gate type: NOR; name: D_GATE_788_I0
+.gate NOR2X1 A=GATE_750 B=GATE_747 Y=D_GATE_788
+
+
+
+# gate type: NOR; name: D_GATE_789_I0
+.gate NOR2X1 A=GATE_753 B=GATE_752 Y=D_GATE_789
+
+
+
+# gate type: NOR; name: D_GATE_790_I0
+.gate NOR2X1 A=GATE_756 B=GATE_754 Y=D_GATE_790
+
+
+
+# gate type: NOR; name: D_GATE_791_I0
+.gate NOR2X1 A=D_GATE_790 B=GATE_758 Y=D_GATE_791
+
+
+
+# gate type: NOR; name: D_GATE_792_I0
+.gate NOR2X1 A=D_GATE_789 B=GATE_788_BALANCE0 Y=D_GATE_792
+
+
+
+# gate type: NOR; name: D_GATE_793_I0
+.gate NOR2X1 A=D_GATE_787 B=D_GATE_786 Y=D_GATE_793
+
+
+
+# gate type: NOR; name: D_GATE_794_I0
+.gate NOR2X1 A=GATE_785_BALANCE0 B=D_GATE_784 Y=D_GATE_794
+
+
+
+# gate type: NOR; name: D_GATE_795_I0
+.gate NOR2X1 A=D_GATE_783 B=D_GATE_782 Y=D_GATE_795
+
+
+
+# gate type: NOR; name: D_GATE_796_I0
+.gate NOR2X1 A=GATE_781_BALANCE0 B=D_GATE_148 Y=D_GATE_796
+
+
+
+# gate type: NOR; name: D_GATE_797_I0
+.gate NOR2X1 A=D_GATE_435 B=D_GATE_318 Y=D_GATE_797
+
+
+
+# gate type: NOR; name: D_GATE_798_I0
+.gate NOR2X1 A=D_GATE_592 B=D_GATE_538 Y=D_GATE_798
+
+
+
+# gate type: NOR; name: D_GATE_799_I0
+.gate NOR2X1 A=GATE_759_BALANCE1 B=D_GATE_686 Y=D_GATE_799
+
+
+
+# gate type: NOR; name: D_GATE_800_I0
+.gate NOR2X1 A=D_GATE_799 B=GATE_760 Y=D_GATE_800
+
+
+
+# gate type: NOR; name: D_GATE_801_I0
+.gate NOR2X1 A=D_GATE_798 B=D_GATE_797 Y=D_GATE_801
+
+
+
+# gate type: NOR; name: D_GATE_802_I0
+.gate NOR2X1 A=D_GATE_796 B=D_GATE_795 Y=D_GATE_802
+
+
+
+# gate type: NOR; name: D_GATE_803_I0
+.gate NOR2X1 A=D_GATE_794 B=D_GATE_793 Y=D_GATE_803
+
+
+
+# gate type: NOR; name: D_GATE_804_I0
+.gate NOR2X1 A=D_GATE_792 B=GATE_791_BALANCE0 Y=D_GATE_804
+
+
+
+# gate type: NOR; name: D_GATE_805_I0
+.gate NOR2X1 A=GATE_674_BALANCE0 B=D_GATE_287 Y=D_GATE_805
+
+
+
+# gate type: NOR; name: D_GATE_806_I0
+.gate NOR2X1 A=D_GATE_805 B=D_GATE_804 Y=D_GATE_806
+
+
+
+# gate type: NOR; name: D_GATE_807_I0
+.gate NOR2X1 A=D_GATE_803 B=D_GATE_802 Y=D_GATE_807
+
+
+
+# gate type: NOR; name: D_GATE_808_I0
+.gate NOR2X1 A=D_GATE_801 B=D_GATE_800 Y=D_GATE_808
+
+
+
+# gate type: NOR; name: D_GATE_809_I0
+.gate NOR2X1 A=D_GATE_808 B=GATE_773_BALANCE0 Y=D_GATE_809
+
+
+
+# gate type: NOR; name: D_GATE_810_I0
+.gate NOR2X1 A=D_GATE_807 B=D_GATE_806 Y=D_GATE_810
+
+
+
+# gate type: NOR; name: D_GATE_811_I0
+.gate NOR2X1 A=D_GATE_810 B=D_GATE_809 Y=D_GATE_811
+
+
+
+# gate type: NOR; name: D_GATE_812_I0
+.gate NOR2X1 A=GATE_262_BALANCE0 B=GATE_61_BALANCE1 Y=D_GATE_812
+
+
+
+# gate type: NOR; name: D_GATE_813_I0
+.gate NOR2X1 A=GATE_224 B=GATE_103 Y=D_GATE_813
+
+
+
+# gate type: NOR; name: D_GATE_814_I0
+.gate NOR2X1 A=GATE_813 B=D_GATE_2 Y=D_GATE_814
+
+
+
+# gate type: NOR; name: D_GATE_815_I0
+.gate NOR2X1 A=GATE_184 B=D_GATE_50 Y=D_GATE_815
+
+
+
+# gate type: NOR; name: D_GATE_816_I0
+.gate NOR2X1 A=D_GATE_380 B=INPUT_1 Y=D_GATE_816
+
+
+
+# gate type: NOR; name: D_GATE_817_I0
+.gate NOR2X1 A=GATE_142 B=GATE_4_BALANCE1 Y=D_GATE_817
+
+
+
+# gate type: NOR; name: D_GATE_818_I0
+.gate NOR2X1 A=GATE_53_BALANCE1 B=D_GATE_46 Y=D_GATE_818
+
+
+
+# gate type: NOR; name: D_GATE_819_I0
+.gate NOR2X1 A=D_GATE_818 B=GATE_817 Y=D_GATE_819
+
+
+
+# gate type: NOR; name: D_GATE_820_I0
+.gate NOR2X1 A=D_GATE_69 B=D_GATE_9 Y=D_GATE_820
+
+
+
+# gate type: NOR; name: D_GATE_821_I0
+.gate NOR2X1 A=D_GATE_101 B=D_GATE_63 Y=D_GATE_821
+
+
+
+# gate type: NOR; name: D_GATE_822_I0
+.gate NOR2X1 A=D_GATE_235 B=D_GATE_50 Y=D_GATE_822
+
+
+
+# gate type: NOR; name: D_GATE_823_I0
+.gate NOR2X1 A=D_GATE_232 B=D_GATE_25 Y=D_GATE_823
+
+
+
+# gate type: NOR; name: D_GATE_824_I0
+.gate NOR2X1 A=D_GATE_93 B=D_GATE_43 Y=D_GATE_824
+
+
+
+# gate type: NOR; name: D_GATE_825_I0
+.gate NOR2X1 A=D_GATE_94 B=D_GATE_54 Y=D_GATE_825
+
+
+
+# gate type: NOR; name: D_GATE_826_I0
+.gate NOR2X1 A=D_GATE_156 B=GATE_41_BALANCE0 Y=D_GATE_826
+
+
+
+# gate type: NOR; name: D_GATE_827_I0
+.gate NOR2X1 A=D_GATE_597 B=D_GATE_406 Y=D_GATE_827
+
+
+
+# gate type: NOR; name: D_GATE_828_I0
+.gate NOR2X1 A=GATE_827 B=D_GATE_63 Y=D_GATE_828
+
+
+
+# gate type: NOR; name: D_GATE_829_I0
+.gate NOR2X1 A=GATE_141 B=GATE_107 Y=D_GATE_829
+
+
+
+# gate type: NOR; name: D_GATE_830_I0
+.gate NOR2X1 A=GATE_299 B=GATE_272 Y=D_GATE_830
+
+
+
+# gate type: NOR; name: D_GATE_831_I0
+.gate NOR2X1 A=GATE_432 B=GATE_422 Y=D_GATE_831
+
+
+
+# gate type: NOR; name: D_GATE_832_I0
+.gate NOR2X1 A=GATE_494 B=GATE_481 Y=D_GATE_832
+
+
+
+# gate type: NOR; name: D_GATE_833_I0
+.gate NOR2X1 A=GATE_676 B=GATE_510 Y=D_GATE_833
+
+
+
+# gate type: NOR; name: D_GATE_834_I0
+.gate NOR2X1 A=GATE_821 B=GATE_820 Y=D_GATE_834
+
+
+
+# gate type: NOR; name: D_GATE_835_I0
+.gate NOR2X1 A=GATE_823 B=GATE_822 Y=D_GATE_835
+
+
+
+# gate type: NOR; name: D_GATE_836_I0
+.gate NOR2X1 A=GATE_825 B=GATE_824 Y=D_GATE_836
+
+
+
+# gate type: NOR; name: D_GATE_837_I0
+.gate NOR2X1 A=D_GATE_836 B=GATE_826_BALANCE1 Y=D_GATE_837
+
+
+
+# gate type: NOR; name: D_GATE_838_I0
+.gate NOR2X1 A=D_GATE_835 B=D_GATE_834 Y=D_GATE_838
+
+
+
+# gate type: NOR; name: D_GATE_839_I0
+.gate NOR2X1 A=D_GATE_833 B=D_GATE_832 Y=D_GATE_839
+
+
+
+# gate type: NOR; name: D_GATE_840_I0
+.gate NOR2X1 A=D_GATE_831 B=D_GATE_830 Y=D_GATE_840
+
+
+
+# gate type: NOR; name: D_GATE_841_I0
+.gate NOR2X1 A=D_GATE_829 B=GATE_183 Y=D_GATE_841
+
+
+
+# gate type: NOR; name: D_GATE_842_I0
+.gate NOR2X1 A=GATE_277 B=GATE_250 Y=D_GATE_842
+
+
+
+# gate type: NOR; name: D_GATE_843_I0
+.gate NOR2X1 A=D_GATE_522 B=GATE_496 Y=D_GATE_843
+
+
+
+# gate type: NOR; name: D_GATE_844_I0
+.gate NOR2X1 A=GATE_812 B=D_GATE_672 Y=D_GATE_844
+
+
+
+# gate type: NOR; name: D_GATE_845_I0
+.gate NOR2X1 A=GATE_815 B=GATE_814 Y=D_GATE_845
+
+
+
+# gate type: NOR; name: D_GATE_846_I0
+.gate NOR2X1 A=GATE_819 B=GATE_816 Y=D_GATE_846
+
+
+
+# gate type: NOR; name: D_GATE_847_I0
+.gate NOR2X1 A=GATE_846_BALANCE0 B=D_GATE_845 Y=D_GATE_847
+
+
+
+# gate type: NOR; name: D_GATE_848_I0
+.gate NOR2X1 A=D_GATE_844 B=D_GATE_843 Y=D_GATE_848
+
+
+
+# gate type: NOR; name: D_GATE_849_I0
+.gate NOR2X1 A=GATE_842_BALANCE0 B=D_GATE_841 Y=D_GATE_849
+
+
+
+# gate type: NOR; name: D_GATE_850_I0
+.gate NOR2X1 A=GATE_840_BALANCE0 B=D_GATE_839 Y=D_GATE_850
+
+
+
+# gate type: NOR; name: D_GATE_851_I0
+.gate NOR2X1 A=D_GATE_838 B=D_GATE_837 Y=D_GATE_851
+
+
+
+# gate type: NOR; name: D_GATE_852_I0
+.gate NOR2X1 A=D_GATE_174 B=D_GATE_34 Y=D_GATE_852
+
+
+
+# gate type: NOR; name: D_GATE_853_I0
+.gate NOR2X1 A=D_GATE_534 B=D_GATE_325 Y=D_GATE_853
+
+
+
+# gate type: NOR; name: D_GATE_854_I0
+.gate NOR2X1 A=GATE_828 B=D_GATE_690 Y=D_GATE_854
+
+
+
+# gate type: NOR; name: D_GATE_855_I0
+.gate NOR2X1 A=D_GATE_854 B=D_GATE_853 Y=D_GATE_855
+
+
+
+# gate type: NOR; name: D_GATE_856_I0
+.gate NOR2X1 A=D_GATE_852 B=D_GATE_851 Y=D_GATE_856
+
+
+
+# gate type: NOR; name: D_GATE_857_I0
+.gate NOR2X1 A=D_GATE_850 B=D_GATE_849 Y=D_GATE_857
+
+
+
+# gate type: NOR; name: D_GATE_858_I0
+.gate NOR2X1 A=D_GATE_848 B=D_GATE_847 Y=D_GATE_858
+
+
+
+# gate type: NOR; name: D_GATE_859_I0
+.gate NOR2X1 A=D_GATE_391 B=D_GATE_243 Y=D_GATE_859
+
+
+
+# gate type: NOR; name: D_GATE_860_I0
+.gate NOR2X1 A=D_GATE_859 B=GATE_623_BALANCE0 Y=D_GATE_860
+
+
+
+# gate type: NOR; name: D_GATE_861_I0
+.gate NOR2X1 A=D_GATE_858 B=D_GATE_857 Y=D_GATE_861
+
+
+
+# gate type: NOR; name: D_GATE_862_I0
+.gate NOR2X1 A=D_GATE_856 B=D_GATE_855 Y=D_GATE_862
+
+
+
+# gate type: NOR; name: D_GATE_863_I0
+.gate NOR2X1 A=D_GATE_862 B=GATE_773_BALANCE0 Y=D_GATE_863
+
+
+
+# gate type: NOR; name: D_GATE_864_I0
+.gate NOR2X1 A=D_GATE_861 B=D_GATE_860 Y=D_GATE_864
+
+
+
+# gate type: NOR; name: D_GATE_865_I0
+.gate NOR2X1 A=D_GATE_864 B=D_GATE_863 Y=D_GATE_865
+
+
+
+# gate type: NOT; name: GATE_2_BALANCE0
+.gate INVX1 A=GATE_2 Y=GATE_2_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_2_BALANCE1
+.gate INVX1 A=D_GATE_2 Y=GATE_2_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_4_BALANCE0
+.gate INVX1 A=GATE_4 Y=GATE_4_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_4_BALANCE1
+.gate INVX1 A=D_GATE_4 Y=GATE_4_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_5_BALANCE0
+.gate INVX1 A=GATE_5 Y=GATE_5_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_5_BALANCE1
+.gate INVX1 A=D_GATE_5 Y=GATE_5_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_7_BALANCE0
+.gate INVX1 A=GATE_7 Y=GATE_7_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_7_BALANCE1
+.gate INVX1 A=D_GATE_7 Y=GATE_7_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_9_BALANCE0
+.gate INVX1 A=GATE_9 Y=GATE_9_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_9_BALANCE1
+.gate INVX1 A=D_GATE_9 Y=GATE_9_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_11_BALANCE0
+.gate INVX1 A=GATE_11 Y=GATE_11_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_11_BALANCE1
+.gate INVX1 A=D_GATE_11 Y=GATE_11_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_13_BALANCE0
+.gate INVX1 A=GATE_13 Y=GATE_13_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_13_BALANCE1
+.gate INVX1 A=D_GATE_13 Y=GATE_13_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_17_BALANCE0
+.gate INVX1 A=GATE_17 Y=GATE_17_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_17_BALANCE1
+.gate INVX1 A=D_GATE_17 Y=GATE_17_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_21_BALANCE0
+.gate INVX1 A=GATE_21 Y=GATE_21_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_21_BALANCE1
+.gate INVX1 A=D_GATE_21 Y=GATE_21_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_25_BALANCE0
+.gate INVX1 A=GATE_25 Y=GATE_25_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_25_BALANCE1
+.gate INVX1 A=D_GATE_25 Y=GATE_25_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_30_BALANCE0
+.gate INVX1 A=GATE_30 Y=GATE_30_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_30_BALANCE1
+.gate INVX1 A=D_GATE_30 Y=GATE_30_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_35_BALANCE0
+.gate INVX1 A=GATE_35 Y=GATE_35_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_35_BALANCE1
+.gate INVX1 A=D_GATE_35 Y=GATE_35_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_36_BALANCE0
+.gate INVX1 A=GATE_36 Y=GATE_36_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_36_BALANCE1
+.gate INVX1 A=D_GATE_36 Y=GATE_36_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_37_BALANCE0
+.gate INVX1 A=GATE_37 Y=GATE_37_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_37_BALANCE1
+.gate INVX1 A=D_GATE_37 Y=GATE_37_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_39_BALANCE0
+.gate INVX1 A=GATE_39 Y=GATE_39_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_39_BALANCE1
+.gate INVX1 A=D_GATE_39 Y=GATE_39_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_41_BALANCE0
+.gate INVX1 A=GATE_41 Y=GATE_41_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_41_BALANCE1
+.gate INVX1 A=D_GATE_41 Y=GATE_41_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_43_BALANCE0
+.gate INVX1 A=GATE_43 Y=GATE_43_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_43_BALANCE1
+.gate INVX1 A=D_GATE_43 Y=GATE_43_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_46_BALANCE0
+.gate INVX1 A=GATE_46 Y=GATE_46_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_46_BALANCE1
+.gate INVX1 A=D_GATE_46 Y=GATE_46_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_50_BALANCE0
+.gate INVX1 A=GATE_50 Y=GATE_50_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_50_BALANCE1
+.gate INVX1 A=D_GATE_50 Y=GATE_50_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_53_BALANCE0
+.gate INVX1 A=GATE_53 Y=GATE_53_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_53_BALANCE1
+.gate INVX1 A=D_GATE_53 Y=GATE_53_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_54_BALANCE0
+.gate INVX1 A=GATE_54 Y=GATE_54_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_54_BALANCE1
+.gate INVX1 A=D_GATE_54 Y=GATE_54_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_56_BALANCE0
+.gate INVX1 A=GATE_56 Y=GATE_56_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_56_BALANCE1
+.gate INVX1 A=D_GATE_56 Y=GATE_56_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_58_BALANCE0
+.gate INVX1 A=GATE_58 Y=GATE_58_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_58_BALANCE1
+.gate INVX1 A=D_GATE_58 Y=GATE_58_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_61_BALANCE0
+.gate INVX1 A=GATE_61 Y=GATE_61_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_61_BALANCE1
+.gate INVX1 A=D_GATE_61 Y=GATE_61_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_63_BALANCE0
+.gate INVX1 A=GATE_63 Y=GATE_63_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_63_BALANCE1
+.gate INVX1 A=D_GATE_63 Y=GATE_63_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_68_BALANCE0
+.gate INVX1 A=GATE_68 Y=GATE_68_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_68_BALANCE1
+.gate INVX1 A=D_GATE_68 Y=GATE_68_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_69_BALANCE0
+.gate INVX1 A=GATE_69 Y=GATE_69_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_69_BALANCE1
+.gate INVX1 A=D_GATE_69 Y=GATE_69_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_75_BALANCE0
+.gate INVX1 A=GATE_75 Y=GATE_75_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_75_BALANCE1
+.gate INVX1 A=D_GATE_75 Y=GATE_75_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_94_BALANCE0
+.gate INVX1 A=GATE_94 Y=GATE_94_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_94_BALANCE1
+.gate INVX1 A=D_GATE_94 Y=GATE_94_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_97_BALANCE0
+.gate INVX1 A=GATE_97 Y=GATE_97_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_97_BALANCE1
+.gate INVX1 A=D_GATE_97 Y=GATE_97_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_99_BALANCE0
+.gate INVX1 A=GATE_99 Y=GATE_99_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_99_BALANCE1
+.gate INVX1 A=D_GATE_99 Y=GATE_99_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_103_BALANCE0
+.gate INVX1 A=GATE_103 Y=GATE_103_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_103_BALANCE1
+.gate INVX1 A=D_GATE_103 Y=GATE_103_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_107_BALANCE0
+.gate INVX1 A=GATE_107 Y=GATE_107_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_107_BALANCE1
+.gate INVX1 A=D_GATE_107 Y=GATE_107_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_114_BALANCE0
+.gate INVX1 A=GATE_114 Y=GATE_114_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_114_BALANCE1
+.gate INVX1 A=D_GATE_114 Y=GATE_114_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_117_BALANCE0
+.gate INVX1 A=GATE_117 Y=GATE_117_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_117_BALANCE1
+.gate INVX1 A=D_GATE_117 Y=GATE_117_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_118_BALANCE0
+.gate INVX1 A=GATE_118 Y=GATE_118_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_118_BALANCE1
+.gate INVX1 A=D_GATE_118 Y=GATE_118_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_123_BALANCE0
+.gate INVX1 A=GATE_123 Y=GATE_123_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_123_BALANCE1
+.gate INVX1 A=D_GATE_123 Y=GATE_123_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_125_BALANCE0
+.gate INVX1 A=GATE_125 Y=GATE_125_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_125_BALANCE1
+.gate INVX1 A=D_GATE_125 Y=GATE_125_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_132_BALANCE0
+.gate INVX1 A=GATE_132 Y=GATE_132_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_132_BALANCE1
+.gate INVX1 A=D_GATE_132 Y=GATE_132_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_137_BALANCE0
+.gate INVX1 A=GATE_137 Y=GATE_137_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_137_BALANCE1
+.gate INVX1 A=D_GATE_137 Y=GATE_137_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_139_BALANCE0
+.gate INVX1 A=GATE_139 Y=GATE_139_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_139_BALANCE1
+.gate INVX1 A=D_GATE_139 Y=GATE_139_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_142_BALANCE0
+.gate INVX1 A=GATE_142 Y=GATE_142_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_142_BALANCE1
+.gate INVX1 A=D_GATE_142 Y=GATE_142_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_146_BALANCE0
+.gate INVX1 A=GATE_146 Y=GATE_146_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_146_BALANCE1
+.gate INVX1 A=D_GATE_146 Y=GATE_146_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_149_BALANCE0
+.gate INVX1 A=GATE_149 Y=GATE_149_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_149_BALANCE1
+.gate INVX1 A=D_GATE_149 Y=GATE_149_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_156_BALANCE0
+.gate INVX1 A=GATE_156 Y=GATE_156_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_156_BALANCE1
+.gate INVX1 A=D_GATE_156 Y=GATE_156_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_158_BALANCE0
+.gate INVX1 A=GATE_158 Y=GATE_158_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_158_BALANCE1
+.gate INVX1 A=D_GATE_158 Y=GATE_158_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_169_BALANCE0
+.gate INVX1 A=GATE_169 Y=GATE_169_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_169_BALANCE1
+.gate INVX1 A=D_GATE_169 Y=GATE_169_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_181_BALANCE0
+.gate INVX1 A=GATE_181 Y=GATE_181_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_181_BALANCE1
+.gate INVX1 A=D_GATE_181 Y=GATE_181_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_182_BALANCE0
+.gate INVX1 A=GATE_182 Y=GATE_182_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_182_BALANCE1
+.gate INVX1 A=D_GATE_182 Y=GATE_182_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_183_BALANCE0
+.gate INVX1 A=GATE_183 Y=GATE_183_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_183_BALANCE1
+.gate INVX1 A=D_GATE_183 Y=GATE_183_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_188_BALANCE0
+.gate INVX1 A=GATE_188 Y=GATE_188_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_188_BALANCE1
+.gate INVX1 A=D_GATE_188 Y=GATE_188_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_191_BALANCE0
+.gate INVX1 A=GATE_191 Y=GATE_191_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_191_BALANCE1
+.gate INVX1 A=D_GATE_191 Y=GATE_191_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_192_BALANCE0
+.gate INVX1 A=GATE_192 Y=GATE_192_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_192_BALANCE1
+.gate INVX1 A=D_GATE_192 Y=GATE_192_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_198_BALANCE0
+.gate INVX1 A=GATE_198 Y=GATE_198_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_198_BALANCE1
+.gate INVX1 A=D_GATE_198 Y=GATE_198_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_200_BALANCE0
+.gate INVX1 A=GATE_200 Y=GATE_200_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_200_BALANCE1
+.gate INVX1 A=D_GATE_200 Y=GATE_200_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_203_BALANCE0
+.gate INVX1 A=GATE_203 Y=GATE_203_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_203_BALANCE1
+.gate INVX1 A=D_GATE_203 Y=GATE_203_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_209_BALANCE0
+.gate INVX1 A=GATE_209 Y=GATE_209_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_209_BALANCE1
+.gate INVX1 A=D_GATE_209 Y=GATE_209_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_219_BALANCE0
+.gate INVX1 A=GATE_219 Y=GATE_219_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_219_BALANCE1
+.gate INVX1 A=D_GATE_219 Y=GATE_219_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_235_BALANCE0
+.gate INVX1 A=GATE_235 Y=GATE_235_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_235_BALANCE1
+.gate INVX1 A=D_GATE_235 Y=GATE_235_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_238_BALANCE0
+.gate INVX1 A=GATE_238 Y=GATE_238_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_238_BALANCE1
+.gate INVX1 A=D_GATE_238 Y=GATE_238_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_258_BALANCE0
+.gate INVX1 A=GATE_258 Y=GATE_258_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_258_BALANCE1
+.gate INVX1 A=D_GATE_258 Y=GATE_258_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_262_BALANCE0
+.gate INVX1 A=GATE_262 Y=GATE_262_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_262_BALANCE1
+.gate INVX1 A=D_GATE_262 Y=GATE_262_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_264_BALANCE0
+.gate INVX1 A=GATE_264 Y=GATE_264_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_264_BALANCE1
+.gate INVX1 A=D_GATE_264 Y=GATE_264_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_267_BALANCE0
+.gate INVX1 A=GATE_267 Y=GATE_267_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_267_BALANCE1
+.gate INVX1 A=D_GATE_267 Y=GATE_267_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_274_BALANCE0
+.gate INVX1 A=GATE_274 Y=GATE_274_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_274_BALANCE1
+.gate INVX1 A=D_GATE_274 Y=GATE_274_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_282_BALANCE0
+.gate INVX1 A=GATE_282 Y=GATE_282_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_282_BALANCE1
+.gate INVX1 A=D_GATE_282 Y=GATE_282_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_287_BALANCE0
+.gate INVX1 A=GATE_287 Y=GATE_287_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_287_BALANCE1
+.gate INVX1 A=D_GATE_287 Y=GATE_287_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_292_BALANCE0
+.gate INVX1 A=GATE_292 Y=GATE_292_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_292_BALANCE1
+.gate INVX1 A=D_GATE_292 Y=GATE_292_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_296_BALANCE0
+.gate INVX1 A=GATE_296 Y=GATE_296_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_296_BALANCE1
+.gate INVX1 A=D_GATE_296 Y=GATE_296_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_300_BALANCE0
+.gate INVX1 A=GATE_300 Y=GATE_300_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_300_BALANCE1
+.gate INVX1 A=D_GATE_300 Y=GATE_300_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_305_BALANCE0
+.gate INVX1 A=GATE_305 Y=GATE_305_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_305_BALANCE1
+.gate INVX1 A=D_GATE_305 Y=GATE_305_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_317_BALANCE0
+.gate INVX1 A=GATE_317 Y=GATE_317_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_317_BALANCE1
+.gate INVX1 A=D_GATE_317 Y=GATE_317_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_329_BALANCE0
+.gate INVX1 A=GATE_329 Y=GATE_329_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_329_BALANCE1
+.gate INVX1 A=D_GATE_329 Y=GATE_329_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_332_BALANCE0
+.gate INVX1 A=GATE_332 Y=GATE_332_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_332_BALANCE1
+.gate INVX1 A=D_GATE_332 Y=GATE_332_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_334_BALANCE0
+.gate INVX1 A=GATE_334 Y=GATE_334_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_334_BALANCE1
+.gate INVX1 A=D_GATE_334 Y=GATE_334_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_338_BALANCE0
+.gate INVX1 A=GATE_338 Y=GATE_338_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_338_BALANCE1
+.gate INVX1 A=D_GATE_338 Y=GATE_338_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_344_BALANCE0
+.gate INVX1 A=GATE_344 Y=GATE_344_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_344_BALANCE1
+.gate INVX1 A=D_GATE_344 Y=GATE_344_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_348_BALANCE0
+.gate INVX1 A=GATE_348 Y=GATE_348_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_348_BALANCE1
+.gate INVX1 A=D_GATE_348 Y=GATE_348_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_349_BALANCE0
+.gate INVX1 A=GATE_349 Y=GATE_349_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_349_BALANCE1
+.gate INVX1 A=D_GATE_349 Y=GATE_349_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_355_BALANCE0
+.gate INVX1 A=GATE_355 Y=GATE_355_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_355_BALANCE1
+.gate INVX1 A=D_GATE_355 Y=GATE_355_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_388_BALANCE0
+.gate INVX1 A=GATE_388 Y=GATE_388_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_388_BALANCE1
+.gate INVX1 A=D_GATE_388 Y=GATE_388_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_396_BALANCE0
+.gate INVX1 A=GATE_396 Y=GATE_396_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_396_BALANCE1
+.gate INVX1 A=D_GATE_396 Y=GATE_396_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_399_BALANCE0
+.gate INVX1 A=GATE_399 Y=GATE_399_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_399_BALANCE1
+.gate INVX1 A=D_GATE_399 Y=GATE_399_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_401_BALANCE0
+.gate INVX1 A=GATE_401 Y=GATE_401_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_401_BALANCE1
+.gate INVX1 A=D_GATE_401 Y=GATE_401_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_402_BALANCE0
+.gate INVX1 A=GATE_402 Y=GATE_402_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_402_BALANCE1
+.gate INVX1 A=D_GATE_402 Y=GATE_402_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_405_BALANCE0
+.gate INVX1 A=GATE_405 Y=GATE_405_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_405_BALANCE1
+.gate INVX1 A=D_GATE_405 Y=GATE_405_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_407_BALANCE0
+.gate INVX1 A=GATE_407 Y=GATE_407_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_407_BALANCE1
+.gate INVX1 A=D_GATE_407 Y=GATE_407_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_415_BALANCE0
+.gate INVX1 A=GATE_415 Y=GATE_415_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_415_BALANCE1
+.gate INVX1 A=D_GATE_415 Y=GATE_415_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_416_BALANCE0
+.gate INVX1 A=GATE_416 Y=GATE_416_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_416_BALANCE1
+.gate INVX1 A=D_GATE_416 Y=GATE_416_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_434_BALANCE0
+.gate INVX1 A=GATE_434 Y=GATE_434_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_434_BALANCE1
+.gate INVX1 A=D_GATE_434 Y=GATE_434_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_438_BALANCE0
+.gate INVX1 A=GATE_438 Y=GATE_438_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_438_BALANCE1
+.gate INVX1 A=D_GATE_438 Y=GATE_438_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_441_BALANCE0
+.gate INVX1 A=GATE_441 Y=GATE_441_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_441_BALANCE1
+.gate INVX1 A=D_GATE_441 Y=GATE_441_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_443_BALANCE0
+.gate INVX1 A=GATE_443 Y=GATE_443_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_443_BALANCE1
+.gate INVX1 A=D_GATE_443 Y=GATE_443_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_445_BALANCE0
+.gate INVX1 A=GATE_445 Y=GATE_445_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_445_BALANCE1
+.gate INVX1 A=D_GATE_445 Y=GATE_445_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_448_BALANCE0
+.gate INVX1 A=GATE_448 Y=GATE_448_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_448_BALANCE1
+.gate INVX1 A=D_GATE_448 Y=GATE_448_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_449_BALANCE0
+.gate INVX1 A=GATE_449 Y=GATE_449_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_449_BALANCE1
+.gate INVX1 A=D_GATE_449 Y=GATE_449_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_458_BALANCE0
+.gate INVX1 A=GATE_458 Y=GATE_458_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_458_BALANCE1
+.gate INVX1 A=D_GATE_458 Y=GATE_458_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_461_BALANCE0
+.gate INVX1 A=GATE_461 Y=GATE_461_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_461_BALANCE1
+.gate INVX1 A=D_GATE_461 Y=GATE_461_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_462_BALANCE0
+.gate INVX1 A=GATE_462 Y=GATE_462_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_462_BALANCE1
+.gate INVX1 A=D_GATE_462 Y=GATE_462_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_468_BALANCE0
+.gate INVX1 A=GATE_468 Y=GATE_468_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_468_BALANCE1
+.gate INVX1 A=D_GATE_468 Y=GATE_468_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_472_BALANCE0
+.gate INVX1 A=GATE_472 Y=GATE_472_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_472_BALANCE1
+.gate INVX1 A=D_GATE_472 Y=GATE_472_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_477_BALANCE0
+.gate INVX1 A=GATE_477 Y=GATE_477_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_477_BALANCE1
+.gate INVX1 A=D_GATE_477 Y=GATE_477_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_480_BALANCE0
+.gate INVX1 A=GATE_480 Y=GATE_480_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_480_BALANCE1
+.gate INVX1 A=D_GATE_480 Y=GATE_480_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_500_BALANCE0
+.gate INVX1 A=GATE_500 Y=GATE_500_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_500_BALANCE1
+.gate INVX1 A=D_GATE_500 Y=GATE_500_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_506_BALANCE0
+.gate INVX1 A=GATE_506 Y=GATE_506_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_506_BALANCE1
+.gate INVX1 A=D_GATE_506 Y=GATE_506_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_508_BALANCE0
+.gate INVX1 A=GATE_508 Y=GATE_508_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_508_BALANCE1
+.gate INVX1 A=D_GATE_508 Y=GATE_508_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_510_BALANCE0
+.gate INVX1 A=GATE_510 Y=GATE_510_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_510_BALANCE1
+.gate INVX1 A=D_GATE_510 Y=GATE_510_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_514_BALANCE0
+.gate INVX1 A=GATE_514 Y=GATE_514_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_514_BALANCE1
+.gate INVX1 A=D_GATE_514 Y=GATE_514_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_519_BALANCE0
+.gate INVX1 A=GATE_519 Y=GATE_519_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_519_BALANCE1
+.gate INVX1 A=D_GATE_519 Y=GATE_519_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_530_BALANCE0
+.gate INVX1 A=GATE_530 Y=GATE_530_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_530_BALANCE1
+.gate INVX1 A=D_GATE_530 Y=GATE_530_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_533_BALANCE0
+.gate INVX1 A=GATE_533 Y=GATE_533_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_533_BALANCE1
+.gate INVX1 A=D_GATE_533 Y=GATE_533_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_544_BALANCE0
+.gate INVX1 A=GATE_544 Y=GATE_544_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_544_BALANCE1
+.gate INVX1 A=D_GATE_544 Y=GATE_544_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_546_BALANCE0
+.gate INVX1 A=GATE_546 Y=GATE_546_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_546_BALANCE1
+.gate INVX1 A=D_GATE_546 Y=GATE_546_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_553_BALANCE0
+.gate INVX1 A=GATE_553 Y=GATE_553_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_553_BALANCE1
+.gate INVX1 A=D_GATE_553 Y=GATE_553_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_559_BALANCE0
+.gate INVX1 A=GATE_559 Y=GATE_559_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_559_BALANCE1
+.gate INVX1 A=D_GATE_559 Y=GATE_559_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_567_BALANCE0
+.gate INVX1 A=GATE_567 Y=GATE_567_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_567_BALANCE1
+.gate INVX1 A=D_GATE_567 Y=GATE_567_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_571_BALANCE0
+.gate INVX1 A=GATE_571 Y=GATE_571_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_571_BALANCE1
+.gate INVX1 A=D_GATE_571 Y=GATE_571_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_573_BALANCE0
+.gate INVX1 A=GATE_573 Y=GATE_573_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_573_BALANCE1
+.gate INVX1 A=D_GATE_573 Y=GATE_573_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_575_BALANCE0
+.gate INVX1 A=GATE_575 Y=GATE_575_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_575_BALANCE1
+.gate INVX1 A=D_GATE_575 Y=GATE_575_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_577_BALANCE0
+.gate INVX1 A=GATE_577 Y=GATE_577_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_577_BALANCE1
+.gate INVX1 A=D_GATE_577 Y=GATE_577_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_578_BALANCE0
+.gate INVX1 A=GATE_578 Y=GATE_578_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_578_BALANCE1
+.gate INVX1 A=D_GATE_578 Y=GATE_578_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_587_BALANCE0
+.gate INVX1 A=GATE_587 Y=GATE_587_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_587_BALANCE1
+.gate INVX1 A=D_GATE_587 Y=GATE_587_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_591_BALANCE0
+.gate INVX1 A=GATE_591 Y=GATE_591_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_591_BALANCE1
+.gate INVX1 A=D_GATE_591 Y=GATE_591_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_601_BALANCE0
+.gate INVX1 A=GATE_601 Y=GATE_601_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_601_BALANCE1
+.gate INVX1 A=D_GATE_601 Y=GATE_601_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_604_BALANCE0
+.gate INVX1 A=GATE_604 Y=GATE_604_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_604_BALANCE1
+.gate INVX1 A=D_GATE_604 Y=GATE_604_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_610_BALANCE0
+.gate INVX1 A=GATE_610 Y=GATE_610_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_610_BALANCE1
+.gate INVX1 A=D_GATE_610 Y=GATE_610_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_618_BALANCE0
+.gate INVX1 A=GATE_618 Y=GATE_618_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_618_BALANCE1
+.gate INVX1 A=D_GATE_618 Y=GATE_618_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_623_BALANCE0
+.gate INVX1 A=GATE_623 Y=GATE_623_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_623_BALANCE1
+.gate INVX1 A=D_GATE_623 Y=GATE_623_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_627_BALANCE0
+.gate INVX1 A=GATE_627 Y=GATE_627_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_627_BALANCE1
+.gate INVX1 A=D_GATE_627 Y=GATE_627_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_629_BALANCE0
+.gate INVX1 A=GATE_629 Y=GATE_629_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_629_BALANCE1
+.gate INVX1 A=D_GATE_629 Y=GATE_629_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_635_BALANCE0
+.gate INVX1 A=GATE_635 Y=GATE_635_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_635_BALANCE1
+.gate INVX1 A=D_GATE_635 Y=GATE_635_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_644_BALANCE0
+.gate INVX1 A=GATE_644 Y=GATE_644_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_644_BALANCE1
+.gate INVX1 A=D_GATE_644 Y=GATE_644_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_649_BALANCE0
+.gate INVX1 A=GATE_649 Y=GATE_649_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_649_BALANCE1
+.gate INVX1 A=D_GATE_649 Y=GATE_649_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_658_BALANCE0
+.gate INVX1 A=GATE_658 Y=GATE_658_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_658_BALANCE1
+.gate INVX1 A=D_GATE_658 Y=GATE_658_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_674_BALANCE0
+.gate INVX1 A=GATE_674 Y=GATE_674_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_674_BALANCE1
+.gate INVX1 A=D_GATE_674 Y=GATE_674_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_677_BALANCE0
+.gate INVX1 A=GATE_677 Y=GATE_677_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_677_BALANCE1
+.gate INVX1 A=D_GATE_677 Y=GATE_677_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_679_BALANCE0
+.gate INVX1 A=GATE_679 Y=GATE_679_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_679_BALANCE1
+.gate INVX1 A=D_GATE_679 Y=GATE_679_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_685_BALANCE0
+.gate INVX1 A=GATE_685 Y=GATE_685_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_685_BALANCE1
+.gate INVX1 A=D_GATE_685 Y=GATE_685_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_708_BALANCE0
+.gate INVX1 A=GATE_708 Y=GATE_708_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_708_BALANCE1
+.gate INVX1 A=D_GATE_708 Y=GATE_708_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_714_BALANCE0
+.gate INVX1 A=GATE_714 Y=GATE_714_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_714_BALANCE1
+.gate INVX1 A=D_GATE_714 Y=GATE_714_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_715_BALANCE0
+.gate INVX1 A=GATE_715 Y=GATE_715_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_715_BALANCE1
+.gate INVX1 A=D_GATE_715 Y=GATE_715_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_718_BALANCE0
+.gate INVX1 A=GATE_718 Y=GATE_718_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_718_BALANCE1
+.gate INVX1 A=D_GATE_718 Y=GATE_718_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_733_BALANCE0
+.gate INVX1 A=GATE_733 Y=GATE_733_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_733_BALANCE1
+.gate INVX1 A=D_GATE_733 Y=GATE_733_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_746_BALANCE0
+.gate INVX1 A=GATE_746 Y=GATE_746_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_746_BALANCE1
+.gate INVX1 A=D_GATE_746 Y=GATE_746_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_751_BALANCE0
+.gate INVX1 A=GATE_751 Y=GATE_751_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_751_BALANCE1
+.gate INVX1 A=D_GATE_751 Y=GATE_751_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_759_BALANCE0
+.gate INVX1 A=GATE_759 Y=GATE_759_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_759_BALANCE1
+.gate INVX1 A=D_GATE_759 Y=GATE_759_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_766_BALANCE0
+.gate INVX1 A=GATE_766 Y=GATE_766_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_766_BALANCE1
+.gate INVX1 A=D_GATE_766 Y=GATE_766_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_768_BALANCE0
+.gate INVX1 A=GATE_768 Y=GATE_768_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_768_BALANCE1
+.gate INVX1 A=D_GATE_768 Y=GATE_768_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_770_BALANCE0
+.gate INVX1 A=GATE_770 Y=GATE_770_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_770_BALANCE1
+.gate INVX1 A=D_GATE_770 Y=GATE_770_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_773_BALANCE0
+.gate INVX1 A=GATE_773 Y=GATE_773_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_773_BALANCE1
+.gate INVX1 A=D_GATE_773 Y=GATE_773_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_781_BALANCE0
+.gate INVX1 A=GATE_781 Y=GATE_781_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_781_BALANCE1
+.gate INVX1 A=D_GATE_781 Y=GATE_781_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_785_BALANCE0
+.gate INVX1 A=GATE_785 Y=GATE_785_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_785_BALANCE1
+.gate INVX1 A=D_GATE_785 Y=GATE_785_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_788_BALANCE0
+.gate INVX1 A=GATE_788 Y=GATE_788_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_788_BALANCE1
+.gate INVX1 A=D_GATE_788 Y=GATE_788_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_791_BALANCE0
+.gate INVX1 A=GATE_791 Y=GATE_791_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_791_BALANCE1
+.gate INVX1 A=D_GATE_791 Y=GATE_791_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_826_BALANCE0
+.gate INVX1 A=GATE_826 Y=GATE_826_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_826_BALANCE1
+.gate INVX1 A=D_GATE_826 Y=GATE_826_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_840_BALANCE0
+.gate INVX1 A=GATE_840 Y=GATE_840_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_840_BALANCE1
+.gate INVX1 A=D_GATE_840 Y=GATE_840_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_842_BALANCE0
+.gate INVX1 A=GATE_842 Y=GATE_842_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_842_BALANCE1
+.gate INVX1 A=D_GATE_842 Y=GATE_842_BALANCE1
+
+
+
+# gate type: NOT; name: GATE_846_BALANCE0
+.gate INVX1 A=GATE_846 Y=GATE_846_BALANCE0
+
+
+
+# gate type: NOT; name: GATE_846_BALANCE1
+.gate INVX1 A=D_GATE_846 Y=GATE_846_BALANCE1
+
+
+# output 0
+
+# output 1
+
+# output 2
+
+# output 3
+
+# output 4
+
+# output 5
+
+# output 6
+
+# output 7
+
+# output 8
+
+# output 9
+
+# output 10
+
+# output 11
+
+# output 12
+
+# output 13
+
+# output 14
+
+# output 15
+
+.end

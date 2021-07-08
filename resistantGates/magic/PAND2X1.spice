@@ -1,0 +1,56 @@
+* SPICE3 file created from PAND2X1.ext - technology: scmos
+
+.subckt PAND2X1 VDD GND B A Y
+X0 a_48_344# CTRL2 VDD VDD PMOS_MAGIC ad=0.77p pd=5u as=5.31p ps=24.2u w=0.7u l=0.2u
+**devattr s=S d=D
+X1 CTRL GND VDD VDD PMOS_MAGIC ad=0.2p pd=1.8u as=0p ps=0u w=0.4u l=0.2u
+**devattr s=S d=D
+X2 CTRL2 CTRL VDD VDD PMOS_MAGIC ad=1.95p pd=8.8u as=0p ps=0u w=3.9u l=0.2u
+**devattr s=S d=D
+X3 Y O GND GND NMOS_MAGIC ad=1.1p pd=5.4u as=3.22p ps=15.2u w=2.2u l=0.2u
+**devattr s=S d=D
+X4 O CTRL2 GND GND NMOS_MAGIC ad=1.25p pd=7u as=0p ps=0u w=2u l=0.2u
+**devattr s=S d=D
+X5 CTRL2 CTRL GND GND NMOS_MAGIC ad=0.2p pd=1.8u as=0p ps=0u w=0.4u l=0.2u
+**devattr s=S d=D
+X6 O CTRL VDD VDD PMOS_MAGIC ad=1.72p pd=8.8u as=0p ps=0u w=2.6u l=0.2u
+**devattr s=S d=D
+X7 CTRL GND GND GND NMOS_MAGIC ad=1.75p pd=8u as=0p ps=0u w=3.5u l=0.2u
+**devattr s=S d=D
+X8 O A a_48_344# VDD PMOS_MAGIC ad=0p pd=0u as=0p ps=0u w=0.7u l=0.2u
+**devattr s=S d=D
+X9 a_88_28# A a_108_28# GND NMOS_MAGIC ad=0.15p pd=1.6u as=0.3p ps=2.2u w=0.5u l=0.2u
+**devattr s=S d=D
+X10 O B a_88_28# GND NMOS_MAGIC ad=0p pd=0u as=0p ps=0u w=0.5u l=0.2u
+**devattr s=S d=D
+X11 O B a_48_344# VDD PMOS_MAGIC ad=0p pd=0u as=0p ps=0u w=0.7u l=0.2u
+**devattr s=S d=D
+X12 Y O VDD VDD PMOS_MAGIC ad=1.95p pd=8.8u as=0p ps=0u w=3.9u l=0.2u
+**devattr s=S d=D
+X13 a_108_28# CTRL GND GND NMOS_MAGIC ad=0p pd=0u as=0p ps=0u w=0.5u l=0.2u
+**devattr s=S d=D
+C0 a_88_28# a_108_28# 0.00fF
+C1 CTRL2 CTRL 0.34fF
+C2 A CTRL2 0.13fF
+C3 B A 0.47fF
+C4 CTRL2 O 1.20fF
+C5 A CTRL 0.16fF
+C6 B O 0.07fF
+C7 CTRL O 0.19fF
+C8 VDD CTRL2 0.86fF
+C9 A O 0.23fF
+C10 B a_48_344# 0.01fF
+C11 B VDD 0.38fF
+C12 VDD CTRL 1.37fF
+C13 Y O 0.05fF
+C14 A a_48_344# 0.01fF
+C15 A VDD 0.28fF
+C16 O a_48_344# 0.17fF
+C17 VDD O 0.78fF
+C18 B a_108_28# 0.01fF
+C19 Y VDD 0.54fF
+C20 VDD a_48_344# 0.19fF
+C21 A a_108_28# 0.01fF
+C22 O a_108_28# 0.03fF
+.ends
+

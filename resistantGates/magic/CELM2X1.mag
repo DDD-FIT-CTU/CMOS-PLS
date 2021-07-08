@@ -1,0 +1,130 @@
+magic
+tech scmos
+magscale 1 2
+timestamp 1602173652
+<< nwell >>
+rect -16 96 76 210
+<< ntransistor >>
+rect 14 12 18 52
+rect 24 12 28 52
+rect 40 12 44 32
+<< ptransistor >>
+rect 14 148 18 188
+rect 24 148 28 188
+rect 40 148 44 188
+<< ndiffusion >>
+rect 4 51 14 52
+rect 12 13 14 51
+rect 4 12 14 13
+rect 18 12 24 52
+rect 28 51 38 52
+rect 28 13 30 51
+rect 38 13 40 32
+rect 28 12 40 13
+rect 44 31 54 32
+rect 44 13 46 31
+rect 44 12 54 13
+<< pdiffusion >>
+rect 4 187 14 188
+rect 12 149 14 187
+rect 4 148 14 149
+rect 18 148 24 188
+rect 28 187 40 188
+rect 28 149 30 187
+rect 38 149 40 187
+rect 28 148 40 149
+rect 44 187 54 188
+rect 44 149 46 187
+rect 44 148 54 149
+<< ndcontact >>
+rect 4 13 12 51
+rect 30 13 38 51
+rect 46 13 54 31
+<< pdcontact >>
+rect 4 149 12 187
+rect 30 149 38 187
+rect 46 149 54 187
+<< psubstratepcontact >>
+rect -4 -4 4 4
+rect 28 -4 36 4
+<< nsubstratencontact >>
+rect -4 196 4 204
+rect 28 196 36 204
+<< polysilicon >>
+rect 14 188 18 192
+rect 24 188 28 192
+rect 40 188 44 192
+rect 14 82 18 148
+rect 12 74 18 82
+rect 14 52 18 74
+rect 24 106 28 148
+rect 24 52 28 98
+rect 40 70 44 148
+rect 40 32 44 62
+rect 14 8 18 12
+rect 24 8 28 12
+rect 40 8 44 12
+<< polycontact >>
+rect 4 74 12 82
+rect 24 98 32 106
+rect 36 62 44 70
+<< metal1 >>
+rect -4 204 64 206
+rect 4 196 28 204
+rect 36 196 64 204
+rect -4 194 64 196
+rect 4 187 12 188
+rect 4 148 12 149
+rect 30 187 38 194
+rect 30 148 38 149
+rect 46 187 54 188
+rect 54 149 56 154
+rect 46 148 56 149
+rect 6 142 24 148
+rect 18 136 24 142
+rect 18 130 44 136
+rect 14 106 32 114
+rect 4 66 12 74
+rect 38 70 44 130
+rect 18 64 36 70
+rect 18 58 24 64
+rect 6 52 24 58
+rect 4 51 12 52
+rect 4 12 12 13
+rect 30 51 38 52
+rect 50 38 56 148
+rect 30 6 38 13
+rect 46 32 56 38
+rect 46 31 54 32
+rect 46 12 54 13
+rect -4 4 62 6
+rect 4 -4 28 4
+rect 36 -4 62 4
+rect -4 -6 62 -4
+<< m1p >>
+rect 14 106 22 114
+rect 4 66 12 74
+<< labels >>
+rlabel metal1 8 200 8 200 4 vdd
+port 5 se power bidirectional
+rlabel metal1 8 0 8 0 4 gnd
+port 4 se ground bidirectional
+rlabel metal1 8 70 8 70 4 A
+port 3 se signal input
+rlabel ntransistor 44 22 44 22 1 D$
+rlabel ntransistor 40 22 40 22 1 S$
+rlabel ntransistor 28 22 28 22 1 S$
+rlabel ntransistor 18 22 18 22 1 S$
+rlabel ntransistor 24 22 24 22 1 D$
+rlabel ntransistor 14 22 14 22 1 D$
+rlabel metal1 18 110 18 110 4 B
+port 1 se signal input
+rlabel ptransistor 28 170 28 170 1 S$
+rlabel ptransistor 24 170 24 170 1 D$
+rlabel ptransistor 44 170 44 170 1 D$
+rlabel ptransistor 40 170 40 170 1 S$
+rlabel ptransistor 18 170 18 170 1 S$
+rlabel ptransistor 14 170 14 170 1 D$
+rlabel metal1 52 120 52 120 4 Y
+port 2 se signal output
+<< end >>

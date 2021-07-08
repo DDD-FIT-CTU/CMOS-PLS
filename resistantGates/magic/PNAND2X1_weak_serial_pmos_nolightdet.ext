@@ -1,0 +1,50 @@
+timestamp 1596220712
+version 8.3
+tech scmos
+style TSMC0.18um(tsmc18)from:t11b
+scale 1000 1 2.5
+resistclasses 6700 7500 929000 929000 1 7700 7700 80 80 80 70 70 40
+node "a_n60_500#" 22 0 -60 500 ndif 480 104 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VGND2" 22 0 -80 500 ndif 480 104 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VGND1" 22 0 -132 500 ndif 480 104 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_n152_500#" 22 0 -152 500 ndif 480 104 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "O" 89 373.137 112 496 ndif 1600 200 3200 360 0 0 0 0 0 0 0 0 0 0 5664 744 0 0 0 0 0 0 0 0 0 0
+node "VVDD" 184 12.416 -208 764 pdif 0 0 7424 880 0 0 0 0 0 0 0 0 0 0 5632 832 3328 448 0 0 0 0 0 0 0 0
+node "Y" 528 716.007 -236 764 pdif 1600 240 5504 640 0 0 0 0 0 0 3104 768 0 0 9408 1336 12800 1632 0 0 0 0 0 0 0 0
+node "A" 509 626.221 -168 616 pc 0 0 0 0 0 0 0 0 0 0 4480 1104 0 0 1728 248 0 0 0 0 0 0 0 0 0 0
+node "B" 536 642.707 -148 644 pc 0 0 0 0 0 0 0 0 0 0 4832 1176 0 0 1728 248 0 0 0 0 0 0 0 0 0 0
+node "VDD!" 2580 5502.44 -260 660 nw 1792 448 5120 632 94848 1288 0 0 0 0 5280 1272 0 0 23680 2608 0 0 0 0 0 0 0 0 0 0
+substrate "GND!" 0 0 -232 464 poc 2560 328 1856 456 0 0 0 0 0 0 2368 592 0 0 12320 1280 5696 744 0 0 0 0 0 0 0 0
+cap "VDD!" "A" 478.249
+cap "B" "A" 796.958
+cap "VDD!" "Y" 818.288
+cap "VDD!" "VVDD" 900.692
+cap "B" "Y" 39.96
+cap "VDD!" "O" 543.177
+cap "A" "Y" 39.96
+cap "B" "VVDD" 6.208
+cap "A" "VVDD" 6.208
+cap "Y" "VVDD" 1044.44
+cap "Y" "O" 54.984
+cap "VDD!" "B" 783.781
+device mosfet NMOS_MAGIC 104 496 105 497 8 80 "GND!" "Y" 16 0 "GND!" 80 "S" "O" 80 "D"
+device mosfet NMOS_MAGIC -48 500 -47 501 8 40 "GND!" "B" 16 0 "a_n60_500#" 40 "S" "Y" 40 "D"
+device mosfet NMOS_MAGIC -68 500 -67 501 8 40 "GND!" "A" 16 0 "VGND2" 40 "S" "a_n60_500#" 40 "D"
+device mosfet NMOS_MAGIC -88 500 -87 501 8 40 "GND!" "VDD!" 16 0 "GND!" 40 "S" "VGND2" 40 "D"
+device mosfet NMOS_MAGIC -120 500 -119 501 8 40 "GND!" "VDD!" 16 0 "VGND1" 40 "D" "GND!" 40 "S"
+device mosfet NMOS_MAGIC -140 500 -139 501 8 40 "GND!" "B" 16 0 "a_n152_500#" 40 "D" "VGND1" 40 "S"
+device mosfet NMOS_MAGIC -160 500 -159 501 8 40 "GND!" "A" 16 0 "Y" 40 "D" "a_n152_500#" 40 "S"
+device mosfet PMOS_MAGIC 104 684 105 685 8 160 "VDD!" "Y" 16 0 "VDD!" 160 "S" "O" 160 "D"
+device mosfet PMOS_MAGIC 8 764 9 765 8 80 "VDD!" "VDD!" 16 0 "VVDD" 80 "S" "Y" 80 "D"
+device mosfet PMOS_MAGIC -56 796 -55 797 8 48 "VDD!" "GND!" 16 0 "VVDD" 48 "D" "VDD!" 48 "S"
+device mosfet PMOS_MAGIC -88 748 -87 749 8 96 "VDD!" "A" 16 0 "Y" 96 "D" "VVDD" 96 "S"
+device mosfet PMOS_MAGIC -120 748 -119 749 8 96 "VDD!" "B" 16 0 "VVDD" 96 "S" "Y" 96 "D"
+device mosfet PMOS_MAGIC -152 796 -151 797 8 48 "VDD!" "GND!" 16 0 "VDD!" 48 "S" "VVDD" 48 "D"
+device mosfet PMOS_MAGIC -216 764 -215 765 8 80 "VDD!" "VDD!" 16 0 "Y" 80 "D" "VVDD" 80 "S"
+subcap "O" -261.174
+subcap "VVDD" -12.416
+subcap "Y" -194.381
+subcap "A" -80.7994
+subcap "B" -80.7994
+subcap "VDD!" -1474.38
+subcap "O" -436.938

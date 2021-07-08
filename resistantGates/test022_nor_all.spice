@@ -67,8 +67,7 @@ Xinv O VSS Y VDD INVX1
     if ('showPlots' > 0)   
         plot i(vvdd) i(vvss)
         
-        plot v(A)
-        plot v(O) 
+        plot v(A) v(B) v(O)
     end
     
     let timeIndex = 0

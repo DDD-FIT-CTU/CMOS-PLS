@@ -1,0 +1,47 @@
+timestamp 1601099041
+version 8.3
+tech scmos
+style TSMC0.18um(tsmc18)from:t11b
+scale 1000 1 2.5
+resistclasses 6700 7500 929000 929000 1 7700 7700 80 80 80 70 70 40
+parameters NMOS_MAGIC l=l w=w a1=as p1=ps a2=ad p2=pd
+parameters PMOS_MAGIC l=l w=w a1=as p1=ps a2=ad p2=pd
+node "xp_40_92#" 0 0 40 92 m1p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "xp_72_132#" 0 0 72 132 m1p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "xp_104_172#" 0 0 104 172 m1p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "xp_200_212#" 0 0 200 212 m1p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "Y" 85 614.324 68 24 ndif 1760 248 2880 288 0 0 0 0 0 0 0 0 0 0 6832 1040 0 0 0 0 0 0 0 0 0 0
+node "C" 558 286.558 120 172 pc 0 0 0 0 0 0 0 0 0 0 4768 1192 0 0 512 96 0 0 0 0 0 0 0 0 0 0
+node "a_100_256#" 163 2.33591e-13 100 256 pdif 0 0 7680 848 0 0 0 0 0 0 0 0 0 0 7200 1024 0 0 0 0 0 0 0 0 0 0
+node "a_8_256#" 164 4.26326e-14 8 256 pdif 0 0 7648 848 0 0 0 0 0 0 0 0 0 0 7424 1048 0 0 0 0 0 0 0 0 0 0
+node "B" 516 286.558 88 132 pc 0 0 0 0 0 0 0 0 0 0 4416 1104 0 0 512 96 0 0 0 0 0 0 0 0 0 0
+node "A" 512 314.017 28 244 p 0 0 0 0 0 0 0 0 0 0 4384 1096 0 0 576 104 0 0 0 0 0 0 0 0 0 0
+node "vdd" 1355 3249 -28 192 nw 1024 256 2880 288 68400 1056 0 0 0 0 0 0 0 0 8640 856 0 0 0 0 0 0 0 0 0 0
+substrate "gnd" 0 0 -8 -8 poc 1760 248 1024 256 0 0 0 0 0 0 0 0 0 0 8064 784 0 0 0 0 0 0 0 0 0 0
+cap "vdd" "B" 222.85
+cap "Y" "vdd" 69.405
+cap "a_100_256#" "vdd" 450.469
+cap "vdd" "a_8_256#" 1163.43
+cap "A" "B" 233.493
+cap "Y" "A" 5.89114
+cap "A" "a_8_256#" 31.782
+cap "Y" "B" 22.782
+cap "C" "vdd" 296.088
+cap "a_100_256#" "B" 21.798
+cap "B" "a_8_256#" 27.564
+cap "a_100_256#" "Y" 760.841
+cap "a_100_256#" "a_8_256#" 935.105
+cap "C" "B" 162.627
+cap "Y" "C" 115.176
+cap "a_100_256#" "C" 15.188
+cap "vdd" "A" 216.192
+device msubckt NMOS_MAGIC 124 24 125 25 l=8 w=40 "gnd" "C" 16 0 "gnd" 40 0 "Y" 40 0
+device msubckt NMOS_MAGIC 92 24 93 25 l=8 w=40 "gnd" "B" 16 0 "Y" 40 0 "gnd" 40 0
+device msubckt NMOS_MAGIC 60 24 61 25 l=8 w=40 "gnd" "A" 16 0 "gnd" 40 0 "Y" 40 0
+device msubckt PMOS_MAGIC 220 240 221 241 l=8 w=120 "vdd" "C" 16 0 "Y" 120 0 "a_100_256#" 120 0
+device msubckt PMOS_MAGIC 188 240 189 241 l=8 w=120 "vdd" "C" 16 0 "a_100_256#" 120 0 "Y" 120 0
+device msubckt PMOS_MAGIC 124 256 125 257 l=8 w=120 "vdd" "B" 16 0 "a_100_256#" 120 0 "a_8_256#" 120 0
+device msubckt PMOS_MAGIC 92 256 93 257 l=8 w=120 "vdd" "B" 16 0 "a_8_256#" 120 0 "a_100_256#" 120 0
+device msubckt PMOS_MAGIC 60 256 61 257 l=8 w=120 "vdd" "A" 16 0 "vdd" 120 0 "a_8_256#" 120 0
+device msubckt PMOS_MAGIC 28 256 29 257 l=8 w=120 "vdd" "A" 16 0 "a_8_256#" 120 0 "vdd" 120 0
+subcap "Y" -417.515

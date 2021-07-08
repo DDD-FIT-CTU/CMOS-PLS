@@ -14,7 +14,7 @@
 
 .include ../models.lib
 .include ../tsmc180nmcmos.lib
-.include models/AND2X1.spice
+.include magic/AND2X1.spice
 
 * **************************************
 * --- Test ---
@@ -47,7 +47,7 @@ C1 VSS O 10fF
 * --- circuit layout model
 Xgate A B O VSS VDD AND2X1
 
-R1 Y Xgate.Y 1
+R1 Y Xgate.a_8_24# 1
 
 * **************************************
 * --- Simulation Settings ---

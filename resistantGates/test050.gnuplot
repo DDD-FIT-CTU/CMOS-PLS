@@ -6,8 +6,8 @@ set key outside
 set ylabel "Node Current [nA]"
 set xlabel "\nGate Type"
 #set xtics ("AND2X1" 0, "\nNAND2X1" 1, "NAND2X1+INV" 2, "\nNAND2X1+SYMMETRY" 3, "NAND2X1+SYMMETRY+INV" 4, "\nNAND2X1+SYMMETRY\n+INV+SERIALR" 5, "\nNAND ALL" 6) rotate by 10 right font ",6"
-set xtics ("AND2X1" 0, "\n\nNAND2X1" 1, "NAND2X1+INV" 2, "\n\nNAND2X1+SYMMETRY" 3, "NAND2X1+SYMMETRY+INV" 4, "\n\nNAND2X1+SYMMETRY\n+INV+SERIALR" 5, "NAND ALL" 6, "\n\nINVX1" 7, "2INVX1" 8) font ",6"
-set xrange [0:8]
+set xtics ("AND2X1" 0, "\n\nNAND2X1" 1, "NAND2X1+INV" 2, "\n\nNAND2X1+SYMMETRY" 3, "NAND2X1+SYMMETRY+INV" 4, "\n\nNAND2X1+SYMMETRY\n+INV+SERIALR" 5, "NAND ALL" 6, "\n\nINVX1" 7, "2INVX1" 8, "\n\nNAND+ALL+CTRL+CENTER" 9) font ",6"
+set xrange [0:9]
 set format x ""
 
 plot "results/test050_leakage.csv" using 2:3 title "I_{VDD}(00)" ls 6 pt 1  pointsize 0.7 with linespoints, \

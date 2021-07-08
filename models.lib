@@ -28,6 +28,9 @@ VVDD VDDR 0 SUPP
 R_VDD VDDR VDD 0.001
 VVSS VSS 0 0V
 
+XpsubInCommon psubInCommon VSS PSUB_IN
+.global psubInCommon
+
 .global VDD VSS
 .temp 25
 
@@ -172,17 +175,17 @@ VVSS VSS 0 0V
 * --- Subckts ---
 * **************************************
 
-.subckt SUBCKT_Iph_nplus_psub nplus psub laser_trig transConductance = 1 constCurrent = 0 distance = 0 PNArea = NplusPsubJunctionS
+.subckt SUBCKT_Iph_nplus_psub nplus psubIn psub laser_trig transConductance = 1 constCurrent = 0 distance = 0 PNArea = NplusPsubJunctionS
   Vvconst vconst 0 1.0V
 
   * model was fitted for 10um PN junction -> the PNArea paramter must be /10
   * model was fitted for laser width 3um -> the pulse width paramter must be /3
-
-  G1 nplus psub ctrl psub 'transConductance * (beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2)) * PNArea/10'
-  G2 nplus psub ctrl2 VSS 'constCurrent * (beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2)) * PNArea/10'
-  
+  .if (pLaser > 0)
+      G1 nplus psubIn ctrl psubIn 'transConductance * (beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2)) * PNArea/10'
+      G2 nplus psubIn ctrl2 VSS 'constCurrent *     (beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2)) * PNArea/10'
+  .endif
   S1 nplus ctrl laser_trig VSS idealSw OFF
-  S2 ctrl psub VDD laser_trig idealSw ON
+  S2 ctrl psubIn VDD laser_trig idealSw ON
   
   S3 vconst ctrl2 laser_trig VSS idealSw OFF
   S4 ctrl2 VSS VDD laser_trig idealSw ON
@@ -210,9 +213,10 @@ VVSS VSS 0 0V
   * model was fitted for 10um PN junction -> the PNArea paramter must be /10
   * model was fitted for laser width 3um -> the pulse width paramter must be /3
 
-  G1 pplus nwell ctrl nwell 'transConductance * (beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2)) * PNArea/10'
-  G2 pplus nwell ctrl2 VSS 'constCurrent * (beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2)) * PNArea/10'
-  
+  .if (pLaser > 0)
+      G1 nwell pplus nwell ctrl 'transConductance * (beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2)) * PNArea/10'
+      G2 nwell pplus ctrl2 VSS 'constCurrent * (beta*exp(-1*distance*distance/c1)+gamma*exp(-1*distance*distance/c2)) * PNArea/10'
+  .endif
   S1 pplus ctrl laser_trig VSS idealSw OFF
   S2 ctrl nwell VDD laser_trig idealSw ON
   
@@ -220,26 +224,33 @@ VVSS VSS 0 0V
   S4 ctrl2 VSS VDD laser_trig idealSw ON
 .ends
 
-
 .subckt SUBCKT_SD drain source psubOut
-  * following values are approximation from published graphs 
-  * just read from bad graph by using my eyes ... :-(
   Vvopen vopen 0 0.8V
   * Rctrl psub ctrl 0.001
 
+  Rsub psub psubOut 0.001
   G2 psub source ctrl vopen 0.025
+  G1 drain psub ctrl vopen 0.025
   
   * connect ctrl when above 0.8V
   .model tmpSw sw vt=0.0V vh=0 ron=1
-  
   S1 psub ctrl psub vopen tmpSw OFF
   S2 vopen ctrl vopen psub tmpSw ON
   
-  * I'm not sure here ...
-  R1 drain psub2 10k
-  S3 psub2 psub psub vopen tmpSw OFF
-  
-  Rmeas psub psubOut 0.001
+  * following values are approximation from published graphs 
+  * just read from bad graph by using my eyes ... :-(  
+****  G2 psub source ctrl vopen 0.025  
+****  * connect ctrl when above 0.8V
+****  .model tmpSw sw vt=0.0V vh=0 ron=1
+****  
+****  S1 psub ctrl psub vopen tmpSw OFF
+****  S2 vopen ctrl vopen psub tmpSw ON
+****  
+****  * I'm not sure here ...
+****  R1 drain psub2 10k
+****  S3 psub2 psub psub vopen tmpSw OFF
+****  
+****  Rmeas psub psubOut 0.001
   
 .ends
 
@@ -262,22 +273,25 @@ VVSS VSS 0 0V
   * my French == NULL ...  :-( This may be completelly buggy!
 
 .if (TECHNOLOGY == TECHNOLOGY_TSMC180nm)
-  M1 drain gate source psub TSMC180nmN w = ch_w l = ch_l ad = mos_ad pd = mos_pd as = mos_as ps = mos_ps
+  M1 drain gate source psubIn TSMC180nmN w = ch_w l = ch_l ad = mos_ad pd = mos_pd as = mos_as ps = mos_ps
 .endif
 
 .if (TECHNOLOGY == TECHNOLOGY_PTM90nm)
-  M1 drain gate source psub PTM90nmNMOS w = ch_w l = ch_l ad = mos_ad pd = mos_pd as = mos_as ps = mos_ps
+  M1 drain gate source psubIn PTM90nmNMOS w = ch_w l = ch_l ad = mos_ad pd = mos_pd as = mos_as ps = mos_ps
 .endif
 
+  * Xsd drain VSS psubIn SUBCKT_SD
   Xsd drain source psubIn SUBCKT_SD
   
 .if (placeDiodes > 0)
   .if (mos_ad > 0p)
-    XcsrcD drain psubIn trig SUBCKT_Iph_nplus_psub transConductance = a constCurrent = b distance = beamDistance PNArea = '(commonDrain * 1 + 1) * mos_ad * 10^12'
+    *XcsrcD drain psubIn psub trig SUBCKT_Iph_nplus_psub transConductance = a constCurrent = b distance = beamDistance PNArea = '(commonDrain * 1 + 1) * mos_ad * 10^12'
+    XcsrcD drain psubIn psub trig SUBCKT_Iph_nplus_psub transConductance = a constCurrent = b distance = beamDistance PNArea = 'mos_ad * 10^12'
   .endif
   
   .if (mos_as > 0p)
-    XcsrcS psubIn source trig SUBCKT_Iph_nplus_psub transConductance = a constCurrent = b distance = beamDistance PNArea = '(commonSource * 1 + 1) * mos_as * 10^12'
+    *XcsrcS source psubIn psub trig SUBCKT_Iph_nplus_psub transConductance = a constCurrent = b distance = beamDistance PNArea = '(commonSource * 1 + 1) * mos_as * 10^12'
+    XcsrcS source psubIn psub trig SUBCKT_Iph_nplus_psub transConductance = a constCurrent = b distance = beamDistance PNArea = 'mos_as * 10^12'
   .endif
 .endif
 
@@ -293,14 +307,15 @@ VVSS VSS 0 0V
 
   R2 psubIn interRC 0.001
   C1 interRC psub 1fF
-  R3 psubIn psub 10k
+  *R3 psubIn psub 1k
+  R3 psubIn psub 500
 
 .ends
 
 *
 * Note: set param commonDrain/commonSource to 2 if drain/source is common for two transistors in series
 *
-.subckt SUBCKT_PMOS drain gate source nwell psub trig beamDistance = 0 placeDiodes = 1 commonDrain = 0 commonSource = 0 ch_w = NMOSw ch_l = NMOSl mos_ad = NMOSad mos_pd = NMOSpd mos_as = NMOSas mos_ps = NMOSps
+.subckt SUBCKT_PMOS drain gate source nwell psub trig beamDistance = 0 placeDiodes = 1 commonDrain = 0 commonSource = 0 ch_w = 2*NMOSw ch_l = NMOSl mos_ad = 2*NMOSad mos_pd = 2*NMOSpd mos_as = 2*NMOSas mos_ps = 2*NMOSps
 
   * PMOS model -- simplified
   * check for bugs!
@@ -316,11 +331,13 @@ VVSS VSS 0 0V
   
 .if (placeDiodes > 0)
   .if (mos_ad > 0p)
-    XDiodeD pplusD nwell trig SUBCKT_Iph_Pplus_Nwell transConductance = a2 constCurrent = b2 distance = beamDistance PNArea = '(commonDrain * 1 + 1) * mos_ad * 10^12'
+    *XDiodeD pplusD nwell trig SUBCKT_Iph_Pplus_Nwell transConductance = a2 constCurrent = b2 distance = beamDistance PNArea = '(commonDrain * 1 + 1) * mos_ad * 10^12'
+    XDiodeD pplusD nwell trig SUBCKT_Iph_Pplus_Nwell transConductance = a2 constCurrent = b2 distance = beamDistance PNArea = 'mos_ad * 10^12'
   .endif
   
   .if (mos_as > 0p)
-    XDiodeS pplusS nwell trig SUBCKT_Iph_Pplus_Nwell transConductance = a2 constCurrent = b2 distance = beamDistance PNArea = '(commonSource * 1 + 1) * mos_as * 10^12'
+    *XDiodeS pplusS nwell trig SUBCKT_Iph_Pplus_Nwell transConductance = a2 constCurrent = b2 distance = beamDistance PNArea = '(commonSource * 1 + 1) * mos_as * 10^12'
+    XDiodeS pplusS nwell trig SUBCKT_Iph_Pplus_Nwell transConductance = a2 constCurrent = b2 distance = beamDistance PNArea = 'mos_as * 10^12'
   .endif
   
   R1 pplusD drain 0.001
@@ -328,10 +345,30 @@ VVSS VSS 0 0V
   
 .endif
   
+  * Excluded due-to data-independence
   *Rnp nwell psub 100000
-
-  *XDiodePN psub nwell trig SUBCKT_Iph_Psub_Nwell transConductance = a3 constCurrent = b3 distance = beamDistance PNArea = 'PsubNwellJunctionS'
+  *XDiodePN psub nwell trig SUBCKT_Iph_Psub_Nwell transConductance = a3 constCurrent = b3 distance = beamDistance PNArea = 'PsubNwellJunctionS_INVX1'
   
+.ends
+
+
+*
+* This is for two simple usage of models exported from layout editor
+*
+.subckt PMOS_MAGIC drain gate source nwell w = NMOSw l = NMOSl ad = NMOSad pd = NMOSpd as = NMOSas ps = NMOSps
+
+Xpmos1 drain gate source nwell psub LaserTrig SUBCKT_PMOS beamDistance = beamDistanceTop ch_w=w ch_l=l mos_ad=ad mos_pd=pd mos_as=as mos_ps=ps
+  
+.ends
+
+
+*
+* This is for two simple usage of models exported from layout editor
+*
+.subckt NMOS_MAGIC drain gate source psub w = NMOSw l = NMOSl ad = NMOSad pd = NMOSpd as = NMOSas ps = NMOSps
+
+Xnmos1 drain gate source psub psubInCommon LaserTrig SUBCKT_NMOS beamDistance = beamDistanceBot ch_w=w ch_l=l mos_ad=ad mos_pd=pd mos_as=as  mos_ps=ps
+
 .ends
 
 *

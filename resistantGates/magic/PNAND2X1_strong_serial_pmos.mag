@@ -1,0 +1,270 @@
+magic
+tech scmos
+timestamp 1596093351
+<< nwell >>
+rect -65 165 39 222
+<< ntransistor >>
+rect -40 125 -38 135
+rect -35 125 -33 135
+rect -30 125 -28 135
+rect -22 125 -20 135
+rect -17 125 -15 135
+rect -12 125 -10 135
+rect 18 124 20 144
+rect 26 124 28 144
+<< ptransistor >>
+rect -54 191 -52 211
+rect -38 187 -36 211
+rect -30 187 -28 211
+rect -22 187 -20 211
+rect -14 187 -12 211
+rect 2 191 4 211
+rect 18 207 20 211
+rect 26 171 28 211
+<< ndiffusion >>
+rect -41 125 -40 135
+rect -38 125 -35 135
+rect -33 125 -30 135
+rect -28 125 -27 135
+rect -23 125 -22 135
+rect -20 125 -17 135
+rect -15 125 -12 135
+rect -10 125 -9 135
+rect 17 124 18 144
+rect 20 124 21 144
+rect 25 124 26 144
+rect 28 124 29 144
+<< pdiffusion >>
+rect -55 195 -54 211
+rect -59 191 -54 195
+rect -52 207 -47 211
+rect -52 191 -51 207
+rect -39 187 -38 211
+rect -36 207 -30 211
+rect -36 187 -35 207
+rect -31 187 -30 207
+rect -28 195 -27 211
+rect -23 195 -22 211
+rect -28 191 -22 195
+rect -28 187 -27 191
+rect -23 187 -22 191
+rect -20 207 -14 211
+rect -20 187 -19 207
+rect -15 187 -14 207
+rect -12 187 -11 211
+rect -3 207 2 211
+rect 1 191 2 207
+rect 4 195 5 211
+rect 17 207 18 211
+rect 20 207 21 211
+rect 4 191 9 195
+rect 25 171 26 211
+rect 28 171 29 211
+<< ndcontact >>
+rect -45 125 -41 135
+rect -27 125 -23 135
+rect -9 125 -5 135
+rect 13 124 17 144
+rect 21 124 25 144
+rect 29 124 33 144
+<< pdcontact >>
+rect -59 195 -55 211
+rect -51 191 -47 207
+rect -43 187 -39 211
+rect -35 187 -31 207
+rect -27 195 -23 211
+rect -27 187 -23 191
+rect -19 187 -15 207
+rect -11 187 -7 211
+rect -3 191 1 207
+rect 5 195 9 211
+rect 13 207 17 211
+rect 21 171 25 211
+rect 29 171 33 211
+<< psubstratepcontact >>
+rect -58 116 -54 120
+rect -49 116 -44 120
+rect -37 116 -33 120
+rect -14 116 -10 120
+rect -3 116 1 120
+rect 7 116 11 120
+rect 29 116 33 120
+<< nsubstratencontact >>
+rect -62 215 -58 219
+rect -43 215 -39 219
+rect -27 215 -23 219
+rect -11 215 -7 219
+rect 5 215 9 219
+rect 21 215 25 219
+rect 32 215 36 219
+<< polysilicon >>
+rect -54 211 -52 213
+rect -38 211 -36 213
+rect -30 211 -28 213
+rect -22 211 -20 213
+rect -14 211 -12 213
+rect 2 211 4 213
+rect 18 211 20 213
+rect 26 211 28 213
+rect -54 188 -52 191
+rect -55 184 -52 188
+rect 2 188 4 191
+rect -38 184 -36 187
+rect -30 183 -28 187
+rect -32 180 -28 183
+rect -22 183 -20 187
+rect -14 184 -12 187
+rect 2 184 5 188
+rect -22 180 -18 183
+rect -32 165 -30 180
+rect -33 161 -30 165
+rect -40 135 -38 154
+rect -35 135 -33 161
+rect -26 148 -24 169
+rect -20 158 -18 180
+rect -20 154 -19 158
+rect -30 146 -20 148
+rect -30 135 -28 146
+rect -22 135 -20 146
+rect -17 135 -15 154
+rect -12 135 -10 161
+rect 18 144 20 207
+rect 26 155 28 171
+rect 27 151 28 155
+rect 26 144 28 151
+rect -40 122 -38 125
+rect -35 122 -33 125
+rect -30 122 -28 125
+rect -22 122 -20 125
+rect -17 122 -15 125
+rect -12 122 -10 125
+rect 18 120 20 124
+rect 26 122 28 124
+<< polycontact >>
+rect -59 184 -55 188
+rect -39 180 -35 184
+rect 5 184 9 188
+rect -15 180 -11 184
+rect -27 169 -23 173
+rect -37 161 -33 165
+rect -42 154 -38 158
+rect -14 161 -10 165
+rect -19 154 -15 158
+rect 23 151 27 155
+rect 17 116 21 120
+<< metal1 >>
+rect -63 219 37 220
+rect -63 215 -62 219
+rect -58 215 -43 219
+rect -39 215 -27 219
+rect -23 215 -11 219
+rect -7 215 5 219
+rect 9 215 21 219
+rect 25 215 32 219
+rect 36 215 37 219
+rect -63 214 37 215
+rect -43 211 -39 214
+rect -11 211 -7 214
+rect 21 211 25 214
+rect -59 173 -55 184
+rect 5 173 9 184
+rect 13 173 17 207
+rect -59 169 -27 173
+rect -23 169 17 173
+rect 33 171 34 174
+rect -33 161 -14 165
+rect -38 154 -19 158
+rect 13 144 17 169
+rect 22 151 23 155
+rect 30 144 34 171
+rect -47 138 -3 142
+rect -45 135 -41 138
+rect -9 135 -5 138
+rect -27 121 -23 125
+rect 33 141 34 144
+rect 21 121 25 124
+rect -59 120 34 121
+rect -59 116 -58 120
+rect -54 116 -49 120
+rect -44 116 -37 120
+rect -33 116 -27 120
+rect -23 116 -14 120
+rect -10 116 -3 120
+rect 1 116 7 120
+rect 11 116 17 120
+rect 21 116 29 120
+rect 33 116 34 120
+rect -59 115 34 116
+<< m2contact >>
+rect -59 191 -55 195
+rect -51 207 -47 211
+rect -35 207 -31 211
+rect -27 191 -23 195
+rect -19 207 -15 211
+rect -3 207 1 211
+rect 5 191 9 195
+rect -39 176 -35 180
+rect -15 176 -11 180
+rect 23 151 27 155
+rect -51 138 -47 142
+rect -3 138 1 142
+rect -27 116 -23 120
+<< metal2 >>
+rect -47 207 -35 211
+rect -31 207 -19 211
+rect -15 207 -3 211
+rect -55 191 -27 195
+rect -23 191 5 195
+rect -51 142 -47 191
+rect -35 176 -15 180
+rect -27 120 -23 176
+rect -3 155 1 191
+rect -3 151 23 155
+rect -3 142 1 151
+rect -27 115 -23 116
+<< labels >>
+rlabel metal1 7 171 7 171 1 CTRL
+rlabel metal1 -19 118 -19 118 1 GND!
+rlabel metal1 -31 217 -31 217 1 VDD!
+rlabel metal2 -1 149 -1 149 1 Y
+rlabel pdcontact -1 201 -1 201 1 VVDD
+rlabel metal1 32 154 32 154 1 O
+rlabel ndiffusion -32 133 -32 133 1 VGND1
+rlabel ndiffusion -19 133 -19 133 1 VGND2
+rlabel ntransistor 18 134 18 134 1 D$
+rlabel ntransistor 20 134 20 134 1 S$
+rlabel ptransistor 20 209 20 209 1 S$
+rlabel ptransistor 18 209 18 209 1 D$
+rlabel polycontact -42 154 -42 158 1 A
+rlabel polycontact -37 161 -37 165 1 B
+rlabel ntransistor -20 130 -20 130 1 D$
+rlabel ntransistor -15 130 -15 130 1 D$
+rlabel ntransistor -10 130 -10 130 1 D$
+rlabel ntransistor -30 130 -30 130 1 D$
+rlabel ntransistor -35 130 -35 130 1 D$
+rlabel ntransistor -40 130 -40 130 1 D$
+rlabel ntransistor -12 130 -12 130 1 S$
+rlabel ntransistor -17 130 -17 130 1 S$
+rlabel ntransistor -22 130 -22 130 1 S$
+rlabel ntransistor -28 130 -28 130 1 S$
+rlabel ntransistor -33 130 -33 130 1 S$
+rlabel ntransistor -38 130 -38 130 1 S$
+rlabel ntransistor 28 134 28 134 1 D$
+rlabel ntransistor 26 134 26 134 1 S$
+rlabel ptransistor 28 209 28 209 1 D$
+rlabel ptransistor 26 209 26 209 1 S$
+rlabel ptransistor 4 202 4 202 1 D$
+rlabel ptransistor -14 202 -14 202 1 D$
+rlabel ptransistor -36 202 -36 202 1 D$
+rlabel ptransistor -22 202 -22 202 1 D$
+rlabel ptransistor -28 202 -28 202 1 D$
+rlabel ptransistor -54 203 -54 203 1 D$
+rlabel ptransistor 2 202 2 202 1 S$
+rlabel ptransistor -12 202 -12 202 1 S$
+rlabel ptransistor -20 202 -20 202 1 S$
+rlabel ptransistor -30 202 -30 202 1 S$
+rlabel ptransistor -38 202 -38 202 1 S$
+rlabel ptransistor -52 203 -52 203 1 S$
+rlabel space -65 115 39 222 1 vdd
+rlabel space -65 115 39 222 1 gnd
+<< end >>

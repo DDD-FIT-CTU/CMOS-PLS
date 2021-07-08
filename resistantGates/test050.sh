@@ -8,7 +8,7 @@ inputs=2
 startIn="0"
 initLevel="0V"
 testName="test050_leakage"
-gateVersions="AND2X1 NAND2X1 NAND2X1_INV NAND2X1_SYMMETRY NAND2X1_SYMMETRY_INV NAND2X1_SYMMETRY_INV_SERIALR NAND_ALL INVX1 2INVX1"
+gateVersions="AND2X1 NAND2X1 NAND2X1_INV NAND2X1_SYMMETRY NAND2X1_SYMMETRY_INV NAND2X1_SYMMETRY_INV_SERIALR NAND_ALL INVX1 2INVX1 NAND_ALL_CTRL_CENTER"
 
 results="results/${testName}.csv"
 pow=$( echo "2^$inputs - 1" | bc )
@@ -52,10 +52,10 @@ do
       sleep 1
       
       # run ngSPICE
-      ngspice $testName.spice > simOut 2>&1
+      ngspice $testName.spice > simOut05 2>&1
       
       # get I_vdd
-      peakVDD=$( cat simOut | grep "i(vvdd)\[" | awk '{print $3}' )     
+      peakVDD=$( cat simOut05 | grep "i(vvdd)\[" | awk '{print $3}' )     
       peakVDD_new=$( sed -E 's/([+-]?[0-9.]+)[eE]\+?(-?)([0-9]+)/(\1*10^(\2\3))/g' <<<"$peakVDD" )
       peakVDD="$(echo "($peakVDD_new) * 1000000000" | bc -l )"
       

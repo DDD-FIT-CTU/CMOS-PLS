@@ -19,7 +19,9 @@
 
 Vtrig TRIG 0 0 PWL(0ns 0V 50ns 0V 55ns SUPP 100ns SUPP)
 
-Xcsrc VDD VSS TRIG SUBCKT_Iph_nplus_psub transConductance = 100
+XpsubIn psubIn VSS PSUB_IN
+
+Xcsrc VDD psubIn VSS TRIG SUBCKT_Iph_nplus_psub transConductance = 100
 
 * **************************************
 * --- Simulation ---

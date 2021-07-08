@@ -1,0 +1,6408 @@
+.model aes_sbox
+.inputs INPUT_0 INPUT_1 INPUT_2 INPUT_3 INPUT_4 INPUT_5 INPUT_6 INPUT_7
+.outputs GATE_222 GATE_366 GATE_479 GATE_579 GATE_662 GATE_741 GATE_811 GATE_865
+
+# gate type: NAND; name: GATE_0_I0
+.gate NAND2X1 A=GATE_0_I1_OUT B=INPUT_7 Y=GATE_0_I0_OUT
+
+# gate type: NOT; name: GATE_0_I3
+.gate INVX1 A=GATE_0_I0_OUT Y=GATE_0
+
+# gate type: NOT; name: GATE_0_I1
+.gate INVX1 A=INPUT_6 Y=GATE_0_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_1_I0
+.gate NAND2X1 A=GATE_1_I1_OUT B=GATE_1_I2_OUT Y=GATE_1_I0_OUT
+
+# gate type: NOT; name: GATE_1_I3
+.gate INVX1 A=GATE_1_I0_OUT Y=GATE_1
+
+# gate type: NOT; name: GATE_1_I1
+.gate INVX1 A=INPUT_4 Y=GATE_1_I1_OUT
+
+# gate type: NOT; name: GATE_1_I2
+.gate INVX1 A=INPUT_5 Y=GATE_1_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_2_I0
+.gate NAND2X1 A=GATE_0 B=GATE_1 Y=GATE_2_I0_OUT
+
+# gate type: NOT; name: GATE_2_I3
+.gate INVX1 A=GATE_2_I0_OUT Y=GATE_2
+
+
+
+# gate type: NAND; name: GATE_3_I0
+.gate NAND2X1 A=INPUT_0 B=GATE_3_I2_OUT Y=GATE_3_I0_OUT
+
+# gate type: NOT; name: GATE_3_I3
+.gate INVX1 A=GATE_3_I0_OUT Y=GATE_3
+
+# gate type: NOT; name: GATE_3_I2
+.gate INVX1 A=INPUT_1 Y=GATE_3_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_4_I0
+.gate NAND2X1 A=GATE_4_I1_OUT B=INPUT_3 Y=GATE_4_I0_OUT
+
+# gate type: NOT; name: GATE_4_I3
+.gate INVX1 A=GATE_4_I0_OUT Y=GATE_4
+
+# gate type: NOT; name: GATE_4_I1
+.gate INVX1 A=INPUT_2 Y=GATE_4_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_5_I0
+.gate NAND2X1 A=GATE_3 B=GATE_4 Y=GATE_5_I0_OUT
+
+# gate type: NOT; name: GATE_5_I3
+.gate INVX1 A=GATE_5_I0_OUT Y=GATE_5
+
+
+
+# gate type: NAND; name: GATE_6_I0
+.gate NAND2X1 A=GATE_2 B=GATE_5 Y=GATE_6
+
+
+
+# gate type: NAND; name: GATE_7_I0
+.gate NAND2X1 A=INPUT_2 B=GATE_7_I2_OUT Y=GATE_7_I0_OUT
+
+# gate type: NOT; name: GATE_7_I3
+.gate INVX1 A=GATE_7_I0_OUT Y=GATE_7
+
+# gate type: NOT; name: GATE_7_I2
+.gate INVX1 A=INPUT_3 Y=GATE_7_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_8_I0
+.gate NAND2X1 A=GATE_8_I1_OUT B=GATE_8_I2_OUT Y=GATE_8_I0_OUT
+
+# gate type: NOT; name: GATE_8_I3
+.gate INVX1 A=GATE_8_I0_OUT Y=GATE_8
+
+# gate type: NOT; name: GATE_8_I1
+.gate INVX1 A=INPUT_0 Y=GATE_8_I1_OUT
+
+# gate type: NOT; name: GATE_8_I2
+.gate INVX1 A=INPUT_1 Y=GATE_8_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_9_I0
+.gate NAND2X1 A=GATE_7 B=GATE_8 Y=GATE_9_I0_OUT
+
+# gate type: NOT; name: GATE_9_I3
+.gate INVX1 A=GATE_9_I0_OUT Y=GATE_9
+
+
+
+# gate type: NAND; name: GATE_10_I0
+.gate NAND2X1 A=GATE_10_I1_OUT B=INPUT_5 Y=GATE_10_I0_OUT
+
+# gate type: NOT; name: GATE_10_I3
+.gate INVX1 A=GATE_10_I0_OUT Y=GATE_10
+
+# gate type: NOT; name: GATE_10_I1
+.gate INVX1 A=INPUT_4 Y=GATE_10_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_11_I0
+.gate NAND2X1 A=GATE_0 B=GATE_10 Y=GATE_11_I0_OUT
+
+# gate type: NOT; name: GATE_11_I3
+.gate INVX1 A=GATE_11_I0_OUT Y=GATE_11
+
+
+
+# gate type: NAND; name: GATE_12_I0
+.gate NAND2X1 A=GATE_9 B=GATE_11 Y=GATE_12
+
+
+
+# gate type: NAND; name: GATE_13_I0
+.gate NAND2X1 A=GATE_13_I1_OUT B=GATE_13_I2_OUT Y=GATE_13_I0_OUT
+
+# gate type: NOT; name: GATE_13_I3
+.gate INVX1 A=GATE_13_I0_OUT Y=GATE_13
+
+# gate type: NOT; name: GATE_13_I1
+.gate INVX1 A=INPUT_2 Y=GATE_13_I1_OUT
+
+# gate type: NOT; name: GATE_13_I2
+.gate INVX1 A=INPUT_3 Y=GATE_13_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_14_I0
+.gate NAND2X1 A=GATE_8 B=GATE_13 Y=GATE_14_I0_OUT
+
+# gate type: NOT; name: GATE_14_I3
+.gate INVX1 A=GATE_14_I0_OUT Y=GATE_14
+
+
+
+# gate type: NAND; name: GATE_15_I0
+.gate NAND2X1 A=GATE_2 B=GATE_14 Y=GATE_15
+
+
+
+# gate type: NAND; name: GATE_16_I0
+.gate NAND2X1 A=INPUT_6 B=INPUT_7 Y=GATE_16_I0_OUT
+
+# gate type: NOT; name: GATE_16_I3
+.gate INVX1 A=GATE_16_I0_OUT Y=GATE_16
+
+
+
+# gate type: NAND; name: GATE_17_I0
+.gate NAND2X1 A=GATE_10 B=GATE_16 Y=GATE_17_I0_OUT
+
+# gate type: NOT; name: GATE_17_I3
+.gate INVX1 A=GATE_17_I0_OUT Y=GATE_17
+
+
+
+# gate type: NAND; name: GATE_18_I0
+.gate NAND2X1 A=GATE_18_I1_OUT B=GATE_4 Y=GATE_18_I0_OUT
+
+# gate type: NOT; name: GATE_18_I3
+.gate INVX1 A=GATE_18_I0_OUT Y=GATE_18
+
+# gate type: NOT; name: GATE_18_I1
+.gate INVX1 A=GATE_3 Y=GATE_18_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_19_I0
+.gate NAND2X1 A=GATE_17 B=GATE_18 Y=GATE_19
+
+
+
+# gate type: NAND; name: GATE_20_I0
+.gate NAND2X1 A=INPUT_4 B=GATE_20_I2_OUT Y=GATE_20_I0_OUT
+
+# gate type: NOT; name: GATE_20_I3
+.gate INVX1 A=GATE_20_I0_OUT Y=GATE_20
+
+# gate type: NOT; name: GATE_20_I2
+.gate INVX1 A=INPUT_5 Y=GATE_20_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_21_I0
+.gate NAND2X1 A=GATE_0 B=GATE_20 Y=GATE_21_I0_OUT
+
+# gate type: NOT; name: GATE_21_I3
+.gate INVX1 A=GATE_21_I0_OUT Y=GATE_21
+
+
+
+# gate type: NAND; name: GATE_22_I0
+.gate NAND2X1 A=GATE_3 B=GATE_13 Y=GATE_22_I0_OUT
+
+# gate type: NOT; name: GATE_22_I3
+.gate INVX1 A=GATE_22_I0_OUT Y=GATE_22
+
+
+
+# gate type: NAND; name: GATE_23_I0
+.gate NAND2X1 A=GATE_21 B=GATE_22 Y=GATE_23
+
+
+
+# gate type: NAND; name: GATE_24_I0
+.gate NAND2X1 A=INPUT_6 B=GATE_24_I2_OUT Y=GATE_24_I0_OUT
+
+# gate type: NOT; name: GATE_24_I3
+.gate INVX1 A=GATE_24_I0_OUT Y=GATE_24
+
+# gate type: NOT; name: GATE_24_I2
+.gate INVX1 A=INPUT_7 Y=GATE_24_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_25_I0
+.gate NAND2X1 A=GATE_20 B=GATE_24 Y=GATE_25_I0_OUT
+
+# gate type: NOT; name: GATE_25_I3
+.gate INVX1 A=GATE_25_I0_OUT Y=GATE_25
+
+
+
+# gate type: NAND; name: GATE_26_I0
+.gate NAND2X1 A=GATE_5 B=GATE_25 Y=GATE_26
+
+
+
+# gate type: NAND; name: GATE_27_I0
+.gate NAND2X1 A=GATE_27_I1_OUT B=INPUT_1 Y=GATE_27_I0_OUT
+
+# gate type: NOT; name: GATE_27_I3
+.gate INVX1 A=GATE_27_I0_OUT Y=GATE_27
+
+# gate type: NOT; name: GATE_27_I1
+.gate INVX1 A=INPUT_0 Y=GATE_27_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_28_I0
+.gate NAND2X1 A=GATE_7 B=GATE_28_I2_OUT Y=GATE_28_I0_OUT
+
+# gate type: NOT; name: GATE_28_I3
+.gate INVX1 A=GATE_28_I0_OUT Y=GATE_28
+
+# gate type: NOT; name: GATE_28_I2
+.gate INVX1 A=GATE_27 Y=GATE_28_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_29_I0
+.gate NAND2X1 A=INPUT_4 B=INPUT_5 Y=GATE_29_I0_OUT
+
+# gate type: NOT; name: GATE_29_I3
+.gate INVX1 A=GATE_29_I0_OUT Y=GATE_29
+
+
+
+# gate type: NAND; name: GATE_30_I0
+.gate NAND2X1 A=GATE_0 B=GATE_29 Y=GATE_30_I0_OUT
+
+# gate type: NOT; name: GATE_30_I3
+.gate INVX1 A=GATE_30_I0_OUT Y=GATE_30
+
+
+
+# gate type: NAND; name: GATE_31_I0
+.gate NAND2X1 A=GATE_28 B=GATE_30 Y=GATE_31
+
+
+
+# gate type: NAND; name: GATE_32_I0
+.gate NAND2X1 A=GATE_19 B=GATE_23 Y=GATE_32_I0_OUT
+
+# gate type: NOT; name: GATE_32_I3
+.gate INVX1 A=GATE_32_I0_OUT Y=GATE_32
+
+
+
+# gate type: NAND; name: GATE_33_I0
+.gate NAND2X1 A=GATE_26 B=GATE_31 Y=GATE_33_I0_OUT
+
+# gate type: NOT; name: GATE_33_I3
+.gate INVX1 A=GATE_33_I0_OUT Y=GATE_33
+
+
+
+# gate type: NAND; name: GATE_34_I0
+.gate NAND2X1 A=GATE_32 B=GATE_33 Y=GATE_34_I0_OUT
+
+# gate type: NOT; name: GATE_34_I3
+.gate INVX1 A=GATE_34_I0_OUT Y=GATE_34
+
+
+
+# gate type: NAND; name: GATE_35_I0
+.gate NAND2X1 A=GATE_16 B=GATE_20 Y=GATE_35_I0_OUT
+
+# gate type: NOT; name: GATE_35_I3
+.gate INVX1 A=GATE_35_I0_OUT Y=GATE_35
+
+
+
+# gate type: NAND; name: GATE_36_I0
+.gate NAND2X1 A=INPUT_2 B=INPUT_3 Y=GATE_36_I0_OUT
+
+# gate type: NOT; name: GATE_36_I3
+.gate INVX1 A=GATE_36_I0_OUT Y=GATE_36
+
+
+
+# gate type: NAND; name: GATE_37_I0
+.gate NAND2X1 A=GATE_27 B=GATE_36 Y=GATE_37_I0_OUT
+
+# gate type: NOT; name: GATE_37_I3
+.gate INVX1 A=GATE_37_I0_OUT Y=GATE_37
+
+
+
+# gate type: NAND; name: GATE_38_I0
+.gate NAND2X1 A=GATE_35 B=GATE_37 Y=GATE_38
+
+
+
+# gate type: NAND; name: GATE_39_I0
+.gate NAND2X1 A=GATE_1 B=GATE_24 Y=GATE_39_I0_OUT
+
+# gate type: NOT; name: GATE_39_I3
+.gate INVX1 A=GATE_39_I0_OUT Y=GATE_39
+
+
+
+# gate type: NAND; name: GATE_40_I0
+.gate NAND2X1 A=GATE_9 B=GATE_39 Y=GATE_40
+
+
+
+# gate type: NAND; name: GATE_41_I0
+.gate NAND2X1 A=INPUT_1 B=GATE_36 Y=GATE_41_I0_OUT
+
+# gate type: NOT; name: GATE_41_I3
+.gate INVX1 A=GATE_41_I0_OUT Y=GATE_41
+
+
+
+# gate type: NAND; name: GATE_42_I0
+.gate NAND2X1 A=GATE_21 B=GATE_41 Y=GATE_42
+
+
+
+# gate type: NAND; name: GATE_43_I0
+.gate NAND2X1 A=GATE_16 B=GATE_29 Y=GATE_43_I0_OUT
+
+# gate type: NOT; name: GATE_43_I3
+.gate INVX1 A=GATE_43_I0_OUT Y=GATE_43
+
+
+
+# gate type: NAND; name: GATE_44_I0
+.gate NAND2X1 A=GATE_22 B=GATE_43 Y=GATE_44
+
+
+
+# gate type: NAND; name: GATE_45_I0
+.gate NAND2X1 A=GATE_45_I1_OUT B=GATE_13 Y=GATE_45_I0_OUT
+
+# gate type: NOT; name: GATE_45_I3
+.gate INVX1 A=GATE_45_I0_OUT Y=GATE_45
+
+# gate type: NOT; name: GATE_45_I1
+.gate INVX1 A=INPUT_1 Y=GATE_45_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_46_I0
+.gate NAND2X1 A=GATE_24 B=GATE_29 Y=GATE_46_I0_OUT
+
+# gate type: NOT; name: GATE_46_I3
+.gate INVX1 A=GATE_46_I0_OUT Y=GATE_46
+
+
+
+# gate type: NAND; name: GATE_47_I0
+.gate NAND2X1 A=GATE_45 B=GATE_46 Y=GATE_47
+
+
+
+# gate type: NAND; name: GATE_48_I0
+.gate NAND2X1 A=GATE_13 B=GATE_27 Y=GATE_48_I0_OUT
+
+# gate type: NOT; name: GATE_48_I3
+.gate INVX1 A=GATE_48_I0_OUT Y=GATE_48
+
+
+
+# gate type: NAND; name: GATE_49_I0
+.gate NAND2X1 A=GATE_49_I1_OUT B=GATE_49_I2_OUT Y=GATE_49_I0_OUT
+
+# gate type: NOT; name: GATE_49_I3
+.gate INVX1 A=GATE_49_I0_OUT Y=GATE_49
+
+# gate type: NOT; name: GATE_49_I1
+.gate INVX1 A=INPUT_6 Y=GATE_49_I1_OUT
+
+# gate type: NOT; name: GATE_49_I2
+.gate INVX1 A=INPUT_7 Y=GATE_49_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_50_I0
+.gate NAND2X1 A=GATE_29 B=GATE_49 Y=GATE_50_I0_OUT
+
+# gate type: NOT; name: GATE_50_I3
+.gate INVX1 A=GATE_50_I0_OUT Y=GATE_50
+
+
+
+# gate type: NAND; name: GATE_51_I0
+.gate NAND2X1 A=GATE_48 B=GATE_50 Y=GATE_51
+
+
+
+# gate type: NAND; name: GATE_52_I0
+.gate NAND2X1 A=GATE_52_I1_OUT B=GATE_49 Y=GATE_52_I0_OUT
+
+# gate type: NOT; name: GATE_52_I3
+.gate INVX1 A=GATE_52_I0_OUT Y=GATE_52
+
+# gate type: NOT; name: GATE_52_I1
+.gate INVX1 A=INPUT_5 Y=GATE_52_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_53_I0
+.gate NAND2X1 A=INPUT_0 B=INPUT_1 Y=GATE_53_I0_OUT
+
+# gate type: NOT; name: GATE_53_I3
+.gate INVX1 A=GATE_53_I0_OUT Y=GATE_53
+
+
+
+# gate type: NAND; name: GATE_54_I0
+.gate NAND2X1 A=GATE_4 B=GATE_53 Y=GATE_54_I0_OUT
+
+# gate type: NOT; name: GATE_54_I3
+.gate INVX1 A=GATE_54_I0_OUT Y=GATE_54
+
+
+
+# gate type: NAND; name: GATE_55_I0
+.gate NAND2X1 A=GATE_52 B=GATE_54 Y=GATE_55
+
+
+
+# gate type: NAND; name: GATE_56_I0
+.gate NAND2X1 A=GATE_4 B=GATE_43 Y=GATE_56
+
+
+
+# gate type: NAND; name: GATE_57_I0
+.gate NAND2X1 A=GATE_21 B=GATE_48 Y=GATE_57
+
+
+
+# gate type: NAND; name: GATE_58_I0
+.gate NAND2X1 A=GATE_10 B=GATE_24 Y=GATE_58_I0_OUT
+
+# gate type: NOT; name: GATE_58_I3
+.gate INVX1 A=GATE_58_I0_OUT Y=GATE_58
+
+
+
+# gate type: NAND; name: GATE_59_I0
+.gate NAND2X1 A=GATE_37 B=GATE_58 Y=GATE_59
+
+
+
+# gate type: NAND; name: GATE_60_I0
+.gate NAND2X1 A=GATE_57 B=GATE_59 Y=GATE_60_I0_OUT
+
+# gate type: NOT; name: GATE_60_I3
+.gate INVX1 A=GATE_60_I0_OUT Y=GATE_60
+
+
+
+# gate type: NAND; name: GATE_61_I0
+.gate NAND2X1 A=GATE_61_I1_OUT B=GATE_61_I2_OUT Y=GATE_61_I0_OUT
+
+# gate type: NOT; name: GATE_61_I3
+.gate INVX1 A=GATE_61_I0_OUT Y=GATE_61
+
+# gate type: NOT; name: GATE_61_I1
+.gate INVX1 A=GATE_8 Y=GATE_61_I1_OUT
+
+# gate type: NOT; name: GATE_61_I2
+.gate INVX1 A=GATE_53 Y=GATE_61_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_62_I0
+.gate NAND2X1 A=GATE_7 B=GATE_61 Y=GATE_62_I0_OUT
+
+# gate type: NOT; name: GATE_62_I3
+.gate INVX1 A=GATE_62_I0_OUT Y=GATE_62
+
+
+
+# gate type: NAND; name: GATE_63_I0
+.gate NAND2X1 A=GATE_20 B=GATE_49 Y=GATE_63_I0_OUT
+
+# gate type: NOT; name: GATE_63_I3
+.gate INVX1 A=GATE_63_I0_OUT Y=GATE_63
+
+
+
+# gate type: NAND; name: GATE_64_I0
+.gate NAND2X1 A=GATE_62 B=GATE_63 Y=GATE_64
+
+
+
+# gate type: NAND; name: GATE_65_I0
+.gate NAND2X1 A=GATE_65_I1_OUT B=GATE_65_I2_OUT Y=GATE_65
+
+# gate type: NOT; name: GATE_65_I1
+.gate INVX1 A=GATE_2 Y=GATE_65_I1_OUT
+
+# gate type: NOT; name: GATE_65_I2
+.gate INVX1 A=GATE_25 Y=GATE_65_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_66_I0
+.gate NAND2X1 A=GATE_54 B=GATE_65 Y=GATE_66
+
+
+
+# gate type: NAND; name: GATE_67_I0
+.gate NAND2X1 A=GATE_67_I1_OUT B=GATE_67_I2_OUT Y=GATE_67
+
+# gate type: NOT; name: GATE_67_I1
+.gate INVX1 A=GATE_4 Y=GATE_67_I1_OUT
+
+# gate type: NOT; name: GATE_67_I2
+.gate INVX1 A=GATE_48 Y=GATE_67_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_68_I0
+.gate NAND2X1 A=GATE_35 B=GATE_67 Y=GATE_68
+
+
+
+# gate type: NAND; name: GATE_69_I0
+.gate NAND2X1 A=GATE_1 B=GATE_49 Y=GATE_69_I0_OUT
+
+# gate type: NOT; name: GATE_69_I3
+.gate INVX1 A=GATE_69_I0_OUT Y=GATE_69
+
+
+
+# gate type: NAND; name: GATE_70_I0
+.gate NAND2X1 A=GATE_4 B=GATE_61 Y=GATE_70_I0_OUT
+
+# gate type: NOT; name: GATE_70_I3
+.gate INVX1 A=GATE_70_I0_OUT Y=GATE_70
+
+
+
+# gate type: NAND; name: GATE_71_I0
+.gate NAND2X1 A=GATE_69 B=GATE_70 Y=GATE_71
+
+
+
+# gate type: NAND; name: GATE_72_I0
+.gate NAND2X1 A=GATE_8 B=GATE_36 Y=GATE_72_I0_OUT
+
+# gate type: NOT; name: GATE_72_I3
+.gate INVX1 A=GATE_72_I0_OUT Y=GATE_72
+
+
+
+# gate type: NAND; name: GATE_73_I0
+.gate NAND2X1 A=GATE_30 B=GATE_72 Y=GATE_73
+
+
+
+# gate type: NAND; name: GATE_74_I0
+.gate NAND2X1 A=GATE_22 B=GATE_58 Y=GATE_74
+
+
+
+# gate type: NAND; name: GATE_75_I0
+.gate NAND2X1 A=GATE_73 B=GATE_74 Y=GATE_75_I0_OUT
+
+# gate type: NOT; name: GATE_75_I3
+.gate INVX1 A=GATE_75_I0_OUT Y=GATE_75
+
+
+
+# gate type: NAND; name: GATE_76_I0
+.gate NAND2X1 A=GATE_13 B=GATE_53 Y=GATE_76_I0_OUT
+
+# gate type: NOT; name: GATE_76_I3
+.gate INVX1 A=GATE_76_I0_OUT Y=GATE_76
+
+
+
+# gate type: NAND; name: GATE_77_I0
+.gate NAND2X1 A=GATE_77_I1_OUT B=GATE_77_I2_OUT Y=GATE_77
+
+# gate type: NOT; name: GATE_77_I1
+.gate INVX1 A=GATE_14 Y=GATE_77_I1_OUT
+
+# gate type: NOT; name: GATE_77_I2
+.gate INVX1 A=GATE_76 Y=GATE_77_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_78_I0
+.gate NAND2X1 A=GATE_17 B=GATE_77 Y=GATE_78
+
+
+
+# gate type: NAND; name: GATE_79_I0
+.gate NAND2X1 A=GATE_4 B=GATE_79_I2_OUT Y=GATE_79_I0_OUT
+
+# gate type: NOT; name: GATE_79_I3
+.gate INVX1 A=GATE_79_I0_OUT Y=GATE_79
+
+# gate type: NOT; name: GATE_79_I2
+.gate INVX1 A=GATE_27 Y=GATE_79_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_80_I0
+.gate NAND2X1 A=GATE_58 B=GATE_79 Y=GATE_80
+
+
+
+# gate type: NAND; name: GATE_81_I0
+.gate NAND2X1 A=GATE_13 B=GATE_81_I2_OUT Y=GATE_81_I0_OUT
+
+# gate type: NOT; name: GATE_81_I3
+.gate INVX1 A=GATE_81_I0_OUT Y=GATE_81
+
+# gate type: NOT; name: GATE_81_I2
+.gate INVX1 A=GATE_27 Y=GATE_81_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_82_I0
+.gate NAND2X1 A=GATE_25 B=GATE_81 Y=GATE_82
+
+
+
+# gate type: NAND; name: GATE_83_I0
+.gate NAND2X1 A=GATE_80 B=GATE_82 Y=GATE_83_I0_OUT
+
+# gate type: NOT; name: GATE_83_I3
+.gate INVX1 A=GATE_83_I0_OUT Y=GATE_83
+
+
+
+# gate type: NAND; name: GATE_84_I0
+.gate NAND2X1 A=GATE_17 B=GATE_36 Y=GATE_84_I0_OUT
+
+# gate type: NOT; name: GATE_84_I3
+.gate INVX1 A=GATE_84_I0_OUT Y=GATE_84
+
+
+
+# gate type: NAND; name: GATE_85_I0
+.gate NAND2X1 A=INPUT_0 B=GATE_84 Y=GATE_85
+
+
+
+# gate type: NAND; name: GATE_86_I0
+.gate NAND2X1 A=GATE_86_I1_OUT B=GATE_86_I2_OUT Y=GATE_86
+
+# gate type: NOT; name: GATE_86_I1
+.gate INVX1 A=GATE_28 Y=GATE_86_I1_OUT
+
+# gate type: NOT; name: GATE_86_I2
+.gate INVX1 A=GATE_48 Y=GATE_86_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_87_I0
+.gate NAND2X1 A=GATE_2 B=GATE_86 Y=GATE_87
+
+
+
+# gate type: NAND; name: GATE_88_I0
+.gate NAND2X1 A=GATE_58 B=GATE_76 Y=GATE_88
+
+
+
+# gate type: NAND; name: GATE_89_I0
+.gate NAND2X1 A=GATE_36 B=GATE_53 Y=GATE_89_I0_OUT
+
+# gate type: NOT; name: GATE_89_I3
+.gate INVX1 A=GATE_89_I0_OUT Y=GATE_89
+
+
+
+# gate type: NAND; name: GATE_90_I0
+.gate NAND2X1 A=GATE_50 B=GATE_89 Y=GATE_90
+
+
+
+# gate type: NAND; name: GATE_91_I0
+.gate NAND2X1 A=INPUT_1 B=GATE_7 Y=GATE_91_I0_OUT
+
+# gate type: NOT; name: GATE_91_I3
+.gate INVX1 A=GATE_91_I0_OUT Y=GATE_91
+
+
+
+# gate type: NAND; name: GATE_92_I0
+.gate NAND2X1 A=GATE_25 B=GATE_91 Y=GATE_92
+
+
+
+# gate type: NAND; name: GATE_93_I0
+.gate NAND2X1 A=GATE_13 B=GATE_93_I2_OUT Y=GATE_93_I0_OUT
+
+# gate type: NOT; name: GATE_93_I3
+.gate INVX1 A=GATE_93_I0_OUT Y=GATE_93
+
+# gate type: NOT; name: GATE_93_I2
+.gate INVX1 A=GATE_53 Y=GATE_93_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_94_I0
+.gate NAND2X1 A=GATE_10 B=GATE_49 Y=GATE_94_I0_OUT
+
+# gate type: NOT; name: GATE_94_I3
+.gate INVX1 A=GATE_94_I0_OUT Y=GATE_94
+
+
+
+# gate type: NAND; name: GATE_95_I0
+.gate NAND2X1 A=GATE_93 B=GATE_94 Y=GATE_95
+
+
+
+# gate type: NAND; name: GATE_96_I0
+.gate NAND2X1 A=GATE_88 B=GATE_90 Y=GATE_96_I0_OUT
+
+# gate type: NOT; name: GATE_96_I3
+.gate INVX1 A=GATE_96_I0_OUT Y=GATE_96
+
+
+
+# gate type: NAND; name: GATE_97_I0
+.gate NAND2X1 A=GATE_92 B=GATE_95 Y=GATE_97_I0_OUT
+
+# gate type: NOT; name: GATE_97_I3
+.gate INVX1 A=GATE_97_I0_OUT Y=GATE_97
+
+
+
+# gate type: NAND; name: GATE_98_I0
+.gate NAND2X1 A=GATE_96 B=GATE_97 Y=GATE_98_I0_OUT
+
+# gate type: NOT; name: GATE_98_I3
+.gate INVX1 A=GATE_98_I0_OUT Y=GATE_98
+
+
+
+# gate type: NAND; name: GATE_99_I0
+.gate NAND2X1 A=GATE_85 B=GATE_87 Y=GATE_99_I0_OUT
+
+# gate type: NOT; name: GATE_99_I3
+.gate INVX1 A=GATE_99_I0_OUT Y=GATE_99
+
+
+
+# gate type: NAND; name: GATE_100_I0
+.gate NAND2X1 A=GATE_98 B=GATE_99 Y=GATE_100_I0_OUT
+
+# gate type: NOT; name: GATE_100_I3
+.gate INVX1 A=GATE_100_I0_OUT Y=GATE_100
+
+
+
+# gate type: NAND; name: GATE_101_I0
+.gate NAND2X1 A=GATE_7 B=GATE_53 Y=GATE_101_I0_OUT
+
+# gate type: NOT; name: GATE_101_I3
+.gate INVX1 A=GATE_101_I0_OUT Y=GATE_101
+
+
+
+# gate type: NAND; name: GATE_102_I0
+.gate NAND2X1 A=GATE_46 B=GATE_101 Y=GATE_102
+
+
+
+# gate type: NAND; name: GATE_103_I0
+.gate NAND2X1 A=GATE_3 B=GATE_7 Y=GATE_103_I0_OUT
+
+# gate type: NOT; name: GATE_103_I3
+.gate INVX1 A=GATE_103_I0_OUT Y=GATE_103
+
+
+
+# gate type: NAND; name: GATE_104_I0
+.gate NAND2X1 A=GATE_104_I1_OUT B=GATE_104_I2_OUT Y=GATE_104
+
+# gate type: NOT; name: GATE_104_I1
+.gate INVX1 A=GATE_76 Y=GATE_104_I1_OUT
+
+# gate type: NOT; name: GATE_104_I2
+.gate INVX1 A=GATE_103 Y=GATE_104_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_105_I0
+.gate NAND2X1 A=GATE_46 B=GATE_104 Y=GATE_105
+
+
+
+# gate type: NAND; name: GATE_106_I0
+.gate NAND2X1 A=GATE_63 B=GATE_76 Y=GATE_106
+
+
+
+# gate type: NAND; name: GATE_107_I0
+.gate NAND2X1 A=GATE_58 B=GATE_101 Y=GATE_107
+
+
+
+# gate type: NAND; name: GATE_108_I0
+.gate NAND2X1 A=GATE_30 B=GATE_76 Y=GATE_108
+
+
+
+# gate type: NAND; name: GATE_109_I0
+.gate NAND2X1 A=GATE_109_I1_OUT B=GATE_13 Y=GATE_109_I0_OUT
+
+# gate type: NOT; name: GATE_109_I3
+.gate INVX1 A=GATE_109_I0_OUT Y=GATE_109
+
+# gate type: NOT; name: GATE_109_I1
+.gate INVX1 A=INPUT_0 Y=GATE_109_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_110_I0
+.gate NAND2X1 A=GATE_30 B=GATE_109 Y=GATE_110
+
+
+
+# gate type: NAND; name: GATE_111_I0
+.gate NAND2X1 A=GATE_108 B=GATE_110 Y=GATE_111_I0_OUT
+
+# gate type: NOT; name: GATE_111_I3
+.gate INVX1 A=GATE_111_I0_OUT Y=GATE_111
+
+
+
+# gate type: NAND; name: GATE_112_I0
+.gate NAND2X1 A=GATE_102 B=GATE_106 Y=GATE_112_I0_OUT
+
+# gate type: NOT; name: GATE_112_I3
+.gate INVX1 A=GATE_112_I0_OUT Y=GATE_112
+
+
+
+# gate type: NAND; name: GATE_113_I0
+.gate NAND2X1 A=GATE_107 B=GATE_112 Y=GATE_113_I0_OUT
+
+# gate type: NOT; name: GATE_113_I3
+.gate INVX1 A=GATE_113_I0_OUT Y=GATE_113
+
+
+
+# gate type: NAND; name: GATE_114_I0
+.gate NAND2X1 A=GATE_105 B=GATE_111 Y=GATE_114_I0_OUT
+
+# gate type: NOT; name: GATE_114_I3
+.gate INVX1 A=GATE_114_I0_OUT Y=GATE_114
+
+
+
+# gate type: NAND; name: GATE_115_I0
+.gate NAND2X1 A=GATE_113 B=GATE_114 Y=GATE_115_I0_OUT
+
+# gate type: NOT; name: GATE_115_I3
+.gate INVX1 A=GATE_115_I0_OUT Y=GATE_115
+
+
+
+# gate type: NAND; name: GATE_116_I0
+.gate NAND2X1 A=GATE_62 B=GATE_69 Y=GATE_116
+
+
+
+# gate type: NAND; name: GATE_117_I0
+.gate NAND2X1 A=GATE_69 B=GATE_76 Y=GATE_117
+
+
+
+# gate type: NAND; name: GATE_118_I0
+.gate NAND2X1 A=INPUT_1 B=GATE_13 Y=GATE_118_I0_OUT
+
+# gate type: NOT; name: GATE_118_I3
+.gate INVX1 A=GATE_118_I0_OUT Y=GATE_118
+
+
+
+# gate type: NAND; name: GATE_119_I0
+.gate NAND2X1 A=GATE_119_I1_OUT B=GATE_119_I2_OUT Y=GATE_119_I0_OUT
+
+# gate type: NOT; name: GATE_119_I3
+.gate INVX1 A=GATE_119_I0_OUT Y=GATE_119
+
+# gate type: NOT; name: GATE_119_I1
+.gate INVX1 A=GATE_9 Y=GATE_119_I1_OUT
+
+# gate type: NOT; name: GATE_119_I2
+.gate INVX1 A=GATE_37 Y=GATE_119_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_120_I0
+.gate NAND2X1 A=GATE_120_I1_OUT B=GATE_119 Y=GATE_120
+
+# gate type: NOT; name: GATE_120_I1
+.gate INVX1 A=GATE_118 Y=GATE_120_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_121_I0
+.gate NAND2X1 A=GATE_43 B=GATE_120 Y=GATE_121
+
+
+
+# gate type: NAND; name: GATE_122_I0
+.gate NAND2X1 A=GATE_116 B=GATE_117 Y=GATE_122_I0_OUT
+
+# gate type: NOT; name: GATE_122_I3
+.gate INVX1 A=GATE_122_I0_OUT Y=GATE_122
+
+
+
+# gate type: NAND; name: GATE_123_I0
+.gate NAND2X1 A=GATE_121 B=GATE_122 Y=GATE_123_I0_OUT
+
+# gate type: NOT; name: GATE_123_I3
+.gate INVX1 A=GATE_123_I0_OUT Y=GATE_123
+
+
+
+# gate type: NAND; name: GATE_124_I0
+.gate NAND2X1 A=GATE_94 B=GATE_103 Y=GATE_124
+
+
+
+# gate type: NAND; name: GATE_125_I0
+.gate NAND2X1 A=GATE_3 B=GATE_36 Y=GATE_125_I0_OUT
+
+# gate type: NOT; name: GATE_125_I3
+.gate INVX1 A=GATE_125_I0_OUT Y=GATE_125
+
+
+
+# gate type: NAND; name: GATE_126_I0
+.gate NAND2X1 A=GATE_2 B=GATE_125 Y=GATE_126
+
+
+
+# gate type: NAND; name: GATE_127_I0
+.gate NAND2X1 A=GATE_124 B=GATE_126 Y=GATE_127_I0_OUT
+
+# gate type: NOT; name: GATE_127_I3
+.gate INVX1 A=GATE_127_I0_OUT Y=GATE_127
+
+
+
+# gate type: NAND; name: GATE_128_I0
+.gate NAND2X1 A=GATE_128_I1_OUT B=GATE_36 Y=GATE_128_I0_OUT
+
+# gate type: NOT; name: GATE_128_I3
+.gate INVX1 A=GATE_128_I0_OUT Y=GATE_128
+
+# gate type: NOT; name: GATE_128_I1
+.gate INVX1 A=GATE_27 Y=GATE_128_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_129_I0
+.gate NAND2X1 A=GATE_129_I1_OUT B=GATE_129_I2_OUT Y=GATE_129
+
+# gate type: NOT; name: GATE_129_I1
+.gate INVX1 A=GATE_5 Y=GATE_129_I1_OUT
+
+# gate type: NOT; name: GATE_129_I2
+.gate INVX1 A=GATE_128 Y=GATE_129_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_130_I0
+.gate NAND2X1 A=GATE_11 B=GATE_129 Y=GATE_130
+
+
+
+# gate type: NAND; name: GATE_131_I0
+.gate NAND2X1 A=GATE_89 B=GATE_94 Y=GATE_131
+
+
+
+# gate type: NAND; name: GATE_132_I0
+.gate NAND2X1 A=GATE_7 B=GATE_27 Y=GATE_132_I0_OUT
+
+# gate type: NOT; name: GATE_132_I3
+.gate INVX1 A=GATE_132_I0_OUT Y=GATE_132
+
+
+
+# gate type: NAND; name: GATE_133_I0
+.gate NAND2X1 A=GATE_94 B=GATE_132 Y=GATE_133
+
+
+
+# gate type: NAND; name: GATE_134_I0
+.gate NAND2X1 A=GATE_58 B=GATE_132 Y=GATE_134
+
+
+
+# gate type: NAND; name: GATE_135_I0
+.gate NAND2X1 A=GATE_2 B=GATE_41 Y=GATE_135
+
+
+
+# gate type: NAND; name: GATE_136_I0
+.gate NAND2X1 A=GATE_131 B=GATE_133 Y=GATE_136_I0_OUT
+
+# gate type: NOT; name: GATE_136_I3
+.gate INVX1 A=GATE_136_I0_OUT Y=GATE_136
+
+
+
+# gate type: NAND; name: GATE_137_I0
+.gate NAND2X1 A=GATE_134 B=GATE_135 Y=GATE_137_I0_OUT
+
+# gate type: NOT; name: GATE_137_I3
+.gate INVX1 A=GATE_137_I0_OUT Y=GATE_137
+
+
+
+# gate type: NAND; name: GATE_138_I0
+.gate NAND2X1 A=GATE_136 B=GATE_137 Y=GATE_138_I0_OUT
+
+# gate type: NOT; name: GATE_138_I3
+.gate INVX1 A=GATE_138_I0_OUT Y=GATE_138
+
+
+
+# gate type: NAND; name: GATE_139_I0
+.gate NAND2X1 A=GATE_127 B=GATE_130 Y=GATE_139_I0_OUT
+
+# gate type: NOT; name: GATE_139_I3
+.gate INVX1 A=GATE_139_I0_OUT Y=GATE_139
+
+
+
+# gate type: NAND; name: GATE_140_I0
+.gate NAND2X1 A=GATE_138 B=GATE_139 Y=GATE_140_I0_OUT
+
+# gate type: NOT; name: GATE_140_I3
+.gate INVX1 A=GATE_140_I0_OUT Y=GATE_140
+
+
+
+# gate type: NAND; name: GATE_141_I0
+.gate NAND2X1 A=GATE_48 B=GATE_63 Y=GATE_141
+
+
+
+# gate type: NAND; name: GATE_142_I0
+.gate NAND2X1 A=GATE_142_I1_OUT B=GATE_7 Y=GATE_142_I0_OUT
+
+# gate type: NOT; name: GATE_142_I3
+.gate INVX1 A=GATE_142_I0_OUT Y=GATE_142
+
+# gate type: NOT; name: GATE_142_I1
+.gate INVX1 A=INPUT_1 Y=GATE_142_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_143_I0
+.gate NAND2X1 A=GATE_58 B=GATE_142 Y=GATE_143
+
+
+
+# gate type: NAND; name: GATE_144_I0
+.gate NAND2X1 A=GATE_50 B=GATE_76 Y=GATE_144
+
+
+
+# gate type: NAND; name: GATE_145_I0
+.gate NAND2X1 A=GATE_35 B=GATE_125 Y=GATE_145
+
+
+
+# gate type: NAND; name: GATE_146_I0
+.gate NAND2X1 A=GATE_141 B=GATE_143 Y=GATE_146_I0_OUT
+
+# gate type: NOT; name: GATE_146_I3
+.gate INVX1 A=GATE_146_I0_OUT Y=GATE_146
+
+
+
+# gate type: NAND; name: GATE_147_I0
+.gate NAND2X1 A=GATE_144 B=GATE_145 Y=GATE_147_I0_OUT
+
+# gate type: NOT; name: GATE_147_I3
+.gate INVX1 A=GATE_147_I0_OUT Y=GATE_147
+
+
+
+# gate type: NAND; name: GATE_148_I0
+.gate NAND2X1 A=GATE_146 B=GATE_147 Y=GATE_148_I0_OUT
+
+# gate type: NOT; name: GATE_148_I3
+.gate INVX1 A=GATE_148_I0_OUT Y=GATE_148
+
+
+
+# gate type: NAND; name: GATE_149_I0
+.gate NAND2X1 A=GATE_36 B=GATE_61 Y=GATE_149_I0_OUT
+
+# gate type: NOT; name: GATE_149_I3
+.gate INVX1 A=GATE_149_I0_OUT Y=GATE_149
+
+
+
+# gate type: NAND; name: GATE_150_I0
+.gate NAND2X1 A=GATE_150_I1_OUT B=GATE_150_I2_OUT Y=GATE_150
+
+# gate type: NOT; name: GATE_150_I1
+.gate INVX1 A=GATE_54 Y=GATE_150_I1_OUT
+
+# gate type: NOT; name: GATE_150_I2
+.gate INVX1 A=GATE_149 Y=GATE_150_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_151_I0
+.gate NAND2X1 A=GATE_46 B=GATE_150 Y=GATE_151
+
+
+
+# gate type: NAND; name: GATE_152_I0
+.gate NAND2X1 A=GATE_152_I1_OUT B=GATE_36 Y=GATE_152_I0_OUT
+
+# gate type: NOT; name: GATE_152_I3
+.gate INVX1 A=GATE_152_I0_OUT Y=GATE_152
+
+# gate type: NOT; name: GATE_152_I1
+.gate INVX1 A=INPUT_1 Y=GATE_152_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_153_I0
+.gate NAND2X1 A=GATE_153_I1_OUT B=GATE_153_I2_OUT Y=GATE_153_I0_OUT
+
+# gate type: NOT; name: GATE_153_I3
+.gate INVX1 A=GATE_153_I0_OUT Y=GATE_153
+
+# gate type: NOT; name: GATE_153_I1
+.gate INVX1 A=GATE_5 Y=GATE_153_I1_OUT
+
+# gate type: NOT; name: GATE_153_I2
+.gate INVX1 A=GATE_37 Y=GATE_153_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_154_I0
+.gate NAND2X1 A=GATE_154_I1_OUT B=GATE_154_I2_OUT Y=GATE_154_I0_OUT
+
+# gate type: NOT; name: GATE_154_I3
+.gate INVX1 A=GATE_154_I0_OUT Y=GATE_154
+
+# gate type: NOT; name: GATE_154_I1
+.gate INVX1 A=GATE_48 Y=GATE_154_I1_OUT
+
+# gate type: NOT; name: GATE_154_I2
+.gate INVX1 A=GATE_152 Y=GATE_154_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_155_I0
+.gate NAND2X1 A=GATE_153 B=GATE_154 Y=GATE_155
+
+
+
+# gate type: NAND; name: GATE_156_I0
+.gate NAND2X1 A=GATE_1 B=GATE_16 Y=GATE_156_I0_OUT
+
+# gate type: NOT; name: GATE_156_I3
+.gate INVX1 A=GATE_156_I0_OUT Y=GATE_156
+
+
+
+# gate type: NAND; name: GATE_157_I0
+.gate NAND2X1 A=GATE_155 B=GATE_156 Y=GATE_157
+
+
+
+# gate type: NAND; name: GATE_158_I0
+.gate NAND2X1 A=GATE_4 B=GATE_8 Y=GATE_158_I0_OUT
+
+# gate type: NOT; name: GATE_158_I3
+.gate INVX1 A=GATE_158_I0_OUT Y=GATE_158
+
+
+
+# gate type: NAND; name: GATE_159_I0
+.gate NAND2X1 A=GATE_159_I1_OUT B=GATE_159_I2_OUT Y=GATE_159_I0_OUT
+
+# gate type: NOT; name: GATE_159_I3
+.gate INVX1 A=GATE_159_I0_OUT Y=GATE_159
+
+# gate type: NOT; name: GATE_159_I1
+.gate INVX1 A=GATE_22 Y=GATE_159_I1_OUT
+
+# gate type: NOT; name: GATE_159_I2
+.gate INVX1 A=GATE_125 Y=GATE_159_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_160_I0
+.gate NAND2X1 A=GATE_160_I1_OUT B=GATE_160_I2_OUT Y=GATE_160_I0_OUT
+
+# gate type: NOT; name: GATE_160_I3
+.gate INVX1 A=GATE_160_I0_OUT Y=GATE_160
+
+# gate type: NOT; name: GATE_160_I1
+.gate INVX1 A=GATE_132 Y=GATE_160_I1_OUT
+
+# gate type: NOT; name: GATE_160_I2
+.gate INVX1 A=GATE_158 Y=GATE_160_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_161_I0
+.gate NAND2X1 A=GATE_159 B=GATE_160 Y=GATE_161
+
+
+
+# gate type: NAND; name: GATE_162_I0
+.gate NAND2X1 A=GATE_50 B=GATE_161 Y=GATE_162
+
+
+
+# gate type: NAND; name: GATE_163_I0
+.gate NAND2X1 A=GATE_17 B=GATE_142 Y=GATE_163
+
+
+
+# gate type: NAND; name: GATE_164_I0
+.gate NAND2X1 A=GATE_50 B=GATE_72 Y=GATE_164
+
+
+
+# gate type: NAND; name: GATE_165_I0
+.gate NAND2X1 A=GATE_14 B=GATE_39 Y=GATE_165
+
+
+
+# gate type: NAND; name: GATE_166_I0
+.gate NAND2X1 A=GATE_63 B=GATE_158 Y=GATE_166
+
+
+
+# gate type: NAND; name: GATE_167_I0
+.gate NAND2X1 A=GATE_163 B=GATE_164 Y=GATE_167_I0_OUT
+
+# gate type: NOT; name: GATE_167_I3
+.gate INVX1 A=GATE_167_I0_OUT Y=GATE_167
+
+
+
+# gate type: NAND; name: GATE_168_I0
+.gate NAND2X1 A=GATE_165 B=GATE_166 Y=GATE_168_I0_OUT
+
+# gate type: NOT; name: GATE_168_I3
+.gate INVX1 A=GATE_168_I0_OUT Y=GATE_168
+
+
+
+# gate type: NAND; name: GATE_169_I0
+.gate NAND2X1 A=GATE_167 B=GATE_168 Y=GATE_169_I0_OUT
+
+# gate type: NOT; name: GATE_169_I3
+.gate INVX1 A=GATE_169_I0_OUT Y=GATE_169
+
+
+
+# gate type: NAND; name: GATE_170_I0
+.gate NAND2X1 A=GATE_22 B=GATE_39 Y=GATE_170
+
+
+
+# gate type: NAND; name: GATE_171_I0
+.gate NAND2X1 A=GATE_69 B=GATE_101 Y=GATE_171
+
+
+
+# gate type: NAND; name: GATE_172_I0
+.gate NAND2X1 A=GATE_69 B=GATE_149 Y=GATE_172
+
+
+
+# gate type: NAND; name: GATE_173_I0
+.gate NAND2X1 A=GATE_170 B=GATE_171 Y=GATE_173_I0_OUT
+
+# gate type: NOT; name: GATE_173_I3
+.gate INVX1 A=GATE_173_I0_OUT Y=GATE_173
+
+
+
+# gate type: NAND; name: GATE_174_I0
+.gate NAND2X1 A=GATE_172 B=GATE_173 Y=GATE_174_I0_OUT
+
+# gate type: NOT; name: GATE_174_I3
+.gate INVX1 A=GATE_174_I0_OUT Y=GATE_174
+
+
+
+# gate type: NAND; name: GATE_175_I0
+.gate NAND2X1 A=GATE_25 B=GATE_89 Y=GATE_175
+
+
+
+# gate type: NAND; name: GATE_176_I0
+.gate NAND2X1 A=GATE_48 B=GATE_69 Y=GATE_176
+
+
+
+# gate type: NAND; name: GATE_177_I0
+.gate NAND2X1 A=GATE_54 B=GATE_156 Y=GATE_177
+
+
+
+# gate type: NAND; name: GATE_178_I0
+.gate NAND2X1 A=GATE_35 B=GATE_103 Y=GATE_178
+
+
+
+# gate type: NAND; name: GATE_179_I0
+.gate NAND2X1 A=GATE_175 B=GATE_176 Y=GATE_179_I0_OUT
+
+# gate type: NOT; name: GATE_179_I3
+.gate INVX1 A=GATE_179_I0_OUT Y=GATE_179
+
+
+
+# gate type: NAND; name: GATE_180_I0
+.gate NAND2X1 A=GATE_177 B=GATE_178 Y=GATE_180_I0_OUT
+
+# gate type: NOT; name: GATE_180_I3
+.gate INVX1 A=GATE_180_I0_OUT Y=GATE_180
+
+
+
+# gate type: NAND; name: GATE_181_I0
+.gate NAND2X1 A=GATE_179 B=GATE_180 Y=GATE_181_I0_OUT
+
+# gate type: NOT; name: GATE_181_I3
+.gate INVX1 A=GATE_181_I0_OUT Y=GATE_181
+
+
+
+# gate type: NAND; name: GATE_182_I0
+.gate NAND2X1 A=GATE_5 B=GATE_39 Y=GATE_182
+
+
+
+# gate type: NAND; name: GATE_183_I0
+.gate NAND2X1 A=GATE_70 B=GATE_94 Y=GATE_183
+
+
+
+# gate type: NAND; name: GATE_184_I0
+.gate NAND2X1 A=GATE_184_I1_OUT B=GATE_184_I2_OUT Y=GATE_184_I0_OUT
+
+# gate type: NOT; name: GATE_184_I3
+.gate INVX1 A=GATE_184_I0_OUT Y=GATE_184
+
+# gate type: NOT; name: GATE_184_I1
+.gate INVX1 A=GATE_54 Y=GATE_184_I1_OUT
+
+# gate type: NOT; name: GATE_184_I2
+.gate INVX1 A=GATE_72 Y=GATE_184_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_185_I0
+.gate NAND2X1 A=GATE_185_I1_OUT B=GATE_184 Y=GATE_185
+
+# gate type: NOT; name: GATE_185_I1
+.gate INVX1 A=GATE_149 Y=GATE_185_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_186_I0
+.gate NAND2X1 A=GATE_39 B=GATE_185 Y=GATE_186
+
+
+
+# gate type: NAND; name: GATE_187_I0
+.gate NAND2X1 A=GATE_187_I1_OUT B=GATE_184 Y=GATE_187
+
+# gate type: NOT; name: GATE_187_I1
+.gate INVX1 A=GATE_37 Y=GATE_187_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_188_I0
+.gate NAND2X1 A=GATE_94 B=GATE_187 Y=GATE_188
+
+
+
+# gate type: NAND; name: GATE_189_I0
+.gate NAND2X1 A=GATE_182 B=GATE_183 Y=GATE_189_I0_OUT
+
+# gate type: NOT; name: GATE_189_I3
+.gate INVX1 A=GATE_189_I0_OUT Y=GATE_189
+
+
+
+# gate type: NAND; name: GATE_190_I0
+.gate NAND2X1 A=GATE_186 B=GATE_189 Y=GATE_190_I0_OUT
+
+# gate type: NOT; name: GATE_190_I3
+.gate INVX1 A=GATE_190_I0_OUT Y=GATE_190
+
+
+
+# gate type: NAND; name: GATE_191_I0
+.gate NAND2X1 A=GATE_188 B=GATE_190 Y=GATE_191_I0_OUT
+
+# gate type: NOT; name: GATE_191_I3
+.gate INVX1 A=GATE_191_I0_OUT Y=GATE_191
+
+
+
+# gate type: NAND; name: GATE_192_I0
+.gate NAND2X1 A=GATE_6 B=GATE_12 Y=GATE_192_I0_OUT
+
+# gate type: NOT; name: GATE_192_I3
+.gate INVX1 A=GATE_192_I0_OUT Y=GATE_192
+
+
+
+# gate type: NAND; name: GATE_193_I0
+.gate NAND2X1 A=GATE_15 B=GATE_38 Y=GATE_193_I0_OUT
+
+# gate type: NOT; name: GATE_193_I3
+.gate INVX1 A=GATE_193_I0_OUT Y=GATE_193
+
+
+
+# gate type: NAND; name: GATE_194_I0
+.gate NAND2X1 A=GATE_40 B=GATE_42 Y=GATE_194_I0_OUT
+
+# gate type: NOT; name: GATE_194_I3
+.gate INVX1 A=GATE_194_I0_OUT Y=GATE_194
+
+
+
+# gate type: NAND; name: GATE_195_I0
+.gate NAND2X1 A=GATE_44 B=GATE_47 Y=GATE_195_I0_OUT
+
+# gate type: NOT; name: GATE_195_I3
+.gate INVX1 A=GATE_195_I0_OUT Y=GATE_195
+
+
+
+# gate type: NAND; name: GATE_196_I0
+.gate NAND2X1 A=GATE_51 B=GATE_55 Y=GATE_196_I0_OUT
+
+# gate type: NOT; name: GATE_196_I3
+.gate INVX1 A=GATE_196_I0_OUT Y=GATE_196
+
+
+
+# gate type: NAND; name: GATE_197_I0
+.gate NAND2X1 A=GATE_56 B=GATE_196 Y=GATE_197_I0_OUT
+
+# gate type: NOT; name: GATE_197_I3
+.gate INVX1 A=GATE_197_I0_OUT Y=GATE_197
+
+
+
+# gate type: NAND; name: GATE_198_I0
+.gate NAND2X1 A=GATE_194 B=GATE_195 Y=GATE_198_I0_OUT
+
+# gate type: NOT; name: GATE_198_I3
+.gate INVX1 A=GATE_198_I0_OUT Y=GATE_198
+
+
+
+# gate type: NAND; name: GATE_199_I0
+.gate NAND2X1 A=GATE_192 B=GATE_193 Y=GATE_199_I0_OUT
+
+# gate type: NOT; name: GATE_199_I3
+.gate INVX1 A=GATE_199_I0_OUT Y=GATE_199
+
+
+
+# gate type: NAND; name: GATE_200_I0
+.gate NAND2X1 A=GATE_60 B=GATE_64 Y=GATE_200_I0_OUT
+
+# gate type: NOT; name: GATE_200_I3
+.gate INVX1 A=GATE_200_I0_OUT Y=GATE_200
+
+
+
+# gate type: NAND; name: GATE_201_I0
+.gate NAND2X1 A=GATE_66 B=GATE_68 Y=GATE_201_I0_OUT
+
+# gate type: NOT; name: GATE_201_I3
+.gate INVX1 A=GATE_201_I0_OUT Y=GATE_201
+
+
+
+# gate type: NAND; name: GATE_202_I0
+.gate NAND2X1 A=GATE_71 B=GATE_75 Y=GATE_202_I0_OUT
+
+# gate type: NOT; name: GATE_202_I3
+.gate INVX1 A=GATE_202_I0_OUT Y=GATE_202
+
+
+
+# gate type: NAND; name: GATE_203_I0
+.gate NAND2X1 A=GATE_78 B=GATE_83 Y=GATE_203_I0_OUT
+
+# gate type: NOT; name: GATE_203_I3
+.gate INVX1 A=GATE_203_I0_OUT Y=GATE_203
+
+
+
+# gate type: NAND; name: GATE_204_I0
+.gate NAND2X1 A=GATE_202 B=GATE_203 Y=GATE_204_I0_OUT
+
+# gate type: NOT; name: GATE_204_I3
+.gate INVX1 A=GATE_204_I0_OUT Y=GATE_204
+
+
+
+# gate type: NAND; name: GATE_205_I0
+.gate NAND2X1 A=GATE_200 B=GATE_201 Y=GATE_205_I0_OUT
+
+# gate type: NOT; name: GATE_205_I3
+.gate INVX1 A=GATE_205_I0_OUT Y=GATE_205
+
+
+
+# gate type: NAND; name: GATE_206_I0
+.gate NAND2X1 A=GATE_198 B=GATE_199 Y=GATE_206_I0_OUT
+
+# gate type: NOT; name: GATE_206_I3
+.gate INVX1 A=GATE_206_I0_OUT Y=GATE_206
+
+
+
+# gate type: NAND; name: GATE_207_I0
+.gate NAND2X1 A=GATE_34 B=GATE_197 Y=GATE_207_I0_OUT
+
+# gate type: NOT; name: GATE_207_I3
+.gate INVX1 A=GATE_207_I0_OUT Y=GATE_207
+
+
+
+# gate type: NAND; name: GATE_208_I0
+.gate NAND2X1 A=GATE_148 B=GATE_151 Y=GATE_208_I0_OUT
+
+# gate type: NOT; name: GATE_208_I3
+.gate INVX1 A=GATE_208_I0_OUT Y=GATE_208
+
+
+
+# gate type: NAND; name: GATE_209_I0
+.gate NAND2X1 A=GATE_157 B=GATE_162 Y=GATE_209_I0_OUT
+
+# gate type: NOT; name: GATE_209_I3
+.gate INVX1 A=GATE_209_I0_OUT Y=GATE_209
+
+
+
+# gate type: NAND; name: GATE_210_I0
+.gate NAND2X1 A=GATE_169 B=GATE_174 Y=GATE_210_I0_OUT
+
+# gate type: NOT; name: GATE_210_I3
+.gate INVX1 A=GATE_210_I0_OUT Y=GATE_210
+
+
+
+# gate type: NAND; name: GATE_211_I0
+.gate NAND2X1 A=GATE_181 B=GATE_210 Y=GATE_211_I0_OUT
+
+# gate type: NOT; name: GATE_211_I3
+.gate INVX1 A=GATE_211_I0_OUT Y=GATE_211
+
+
+
+# gate type: NAND; name: GATE_212_I0
+.gate NAND2X1 A=GATE_208 B=GATE_209 Y=GATE_212_I0_OUT
+
+# gate type: NOT; name: GATE_212_I3
+.gate INVX1 A=GATE_212_I0_OUT Y=GATE_212
+
+
+
+# gate type: NAND; name: GATE_213_I0
+.gate NAND2X1 A=GATE_206 B=GATE_207 Y=GATE_213_I0_OUT
+
+# gate type: NOT; name: GATE_213_I3
+.gate INVX1 A=GATE_213_I0_OUT Y=GATE_213
+
+
+
+# gate type: NAND; name: GATE_214_I0
+.gate NAND2X1 A=GATE_204 B=GATE_205 Y=GATE_214_I0_OUT
+
+# gate type: NOT; name: GATE_214_I3
+.gate INVX1 A=GATE_214_I0_OUT Y=GATE_214
+
+
+
+# gate type: NAND; name: GATE_215_I0
+.gate NAND2X1 A=GATE_100 B=GATE_115 Y=GATE_215_I0_OUT
+
+# gate type: NOT; name: GATE_215_I3
+.gate INVX1 A=GATE_215_I0_OUT Y=GATE_215
+
+
+
+# gate type: NAND; name: GATE_216_I0
+.gate NAND2X1 A=GATE_123 B=GATE_140 Y=GATE_216_I0_OUT
+
+# gate type: NOT; name: GATE_216_I3
+.gate INVX1 A=GATE_216_I0_OUT Y=GATE_216
+
+
+
+# gate type: NAND; name: GATE_217_I0
+.gate NAND2X1 A=GATE_215 B=GATE_216 Y=GATE_217_I0_OUT
+
+# gate type: NOT; name: GATE_217_I3
+.gate INVX1 A=GATE_217_I0_OUT Y=GATE_217
+
+
+
+# gate type: NAND; name: GATE_218_I0
+.gate NAND2X1 A=GATE_213 B=GATE_214 Y=GATE_218_I0_OUT
+
+# gate type: NOT; name: GATE_218_I3
+.gate INVX1 A=GATE_218_I0_OUT Y=GATE_218
+
+
+
+# gate type: NAND; name: GATE_219_I0
+.gate NAND2X1 A=GATE_211 B=GATE_212 Y=GATE_219_I0_OUT
+
+# gate type: NOT; name: GATE_219_I3
+.gate INVX1 A=GATE_219_I0_OUT Y=GATE_219
+
+
+
+# gate type: NAND; name: GATE_220_I0
+.gate NAND2X1 A=GATE_191 B=GATE_219 Y=GATE_220_I0_OUT
+
+# gate type: NOT; name: GATE_220_I3
+.gate INVX1 A=GATE_220_I0_OUT Y=GATE_220
+
+
+
+# gate type: NAND; name: GATE_221_I0
+.gate NAND2X1 A=GATE_217 B=GATE_218 Y=GATE_221_I0_OUT
+
+# gate type: NOT; name: GATE_221_I3
+.gate INVX1 A=GATE_221_I0_OUT Y=GATE_221
+
+
+
+# gate type: NAND; name: GATE_222_I0
+.gate NAND2X1 A=GATE_220 B=GATE_221 Y=GATE_222
+
+
+
+# gate type: NAND; name: GATE_223_I0
+.gate NAND2X1 A=GATE_30 B=GATE_125 Y=GATE_223
+
+
+
+# gate type: NAND; name: GATE_224_I0
+.gate NAND2X1 A=GATE_224_I1_OUT B=GATE_4 Y=GATE_224_I0_OUT
+
+# gate type: NOT; name: GATE_224_I3
+.gate INVX1 A=GATE_224_I0_OUT Y=GATE_224
+
+# gate type: NOT; name: GATE_224_I1
+.gate INVX1 A=INPUT_1 Y=GATE_224_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_225_I0
+.gate NAND2X1 A=GATE_17 B=GATE_224 Y=GATE_225
+
+
+
+# gate type: NAND; name: GATE_226_I0
+.gate NAND2X1 A=GATE_223 B=GATE_225 Y=GATE_226_I0_OUT
+
+# gate type: NOT; name: GATE_226_I3
+.gate INVX1 A=GATE_226_I0_OUT Y=GATE_226
+
+
+
+# gate type: NAND; name: GATE_227_I0
+.gate NAND2X1 A=GATE_6 B=GATE_51 Y=GATE_227_I0_OUT
+
+# gate type: NOT; name: GATE_227_I3
+.gate INVX1 A=GATE_227_I0_OUT Y=GATE_227
+
+
+
+# gate type: NAND; name: GATE_228_I0
+.gate NAND2X1 A=GATE_11 B=GATE_22 Y=GATE_228
+
+
+
+# gate type: NAND; name: GATE_229_I0
+.gate NAND2X1 A=GATE_5 B=GATE_30 Y=GATE_229
+
+
+
+# gate type: NAND; name: GATE_230_I0
+.gate NAND2X1 A=GATE_228 B=GATE_229 Y=GATE_230_I0_OUT
+
+# gate type: NOT; name: GATE_230_I3
+.gate INVX1 A=GATE_230_I0_OUT Y=GATE_230
+
+
+
+# gate type: NAND; name: GATE_231_I0
+.gate NAND2X1 A=GATE_14 B=GATE_156 Y=GATE_231
+
+
+
+# gate type: NAND; name: GATE_232_I0
+.gate NAND2X1 A=INPUT_0 B=GATE_13 Y=GATE_232_I0_OUT
+
+# gate type: NOT; name: GATE_232_I3
+.gate INVX1 A=GATE_232_I0_OUT Y=GATE_232
+
+
+
+# gate type: NAND; name: GATE_233_I0
+.gate NAND2X1 A=GATE_46 B=GATE_232 Y=GATE_233
+
+
+
+# gate type: NAND; name: GATE_234_I0
+.gate NAND2X1 A=GATE_234_I1_OUT B=GATE_84 Y=GATE_234
+
+# gate type: NOT; name: GATE_234_I1
+.gate INVX1 A=GATE_61 Y=GATE_234_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_235_I0
+.gate NAND2X1 A=GATE_4 B=GATE_27 Y=GATE_235_I0_OUT
+
+# gate type: NOT; name: GATE_235_I3
+.gate INVX1 A=GATE_235_I0_OUT Y=GATE_235
+
+
+
+# gate type: NAND; name: GATE_236_I0
+.gate NAND2X1 A=GATE_25 B=GATE_235 Y=GATE_236
+
+
+
+# gate type: NAND; name: GATE_237_I0
+.gate NAND2X1 A=GATE_22 B=GATE_50 Y=GATE_237
+
+
+
+# gate type: NAND; name: GATE_238_I0
+.gate NAND2X1 A=GATE_50 B=GATE_101 Y=GATE_238
+
+
+
+# gate type: NAND; name: GATE_239_I0
+.gate NAND2X1 A=GATE_231 B=GATE_233 Y=GATE_239_I0_OUT
+
+# gate type: NOT; name: GATE_239_I3
+.gate INVX1 A=GATE_239_I0_OUT Y=GATE_239
+
+
+
+# gate type: NAND; name: GATE_240_I0
+.gate NAND2X1 A=GATE_236 B=GATE_237 Y=GATE_240_I0_OUT
+
+# gate type: NOT; name: GATE_240_I3
+.gate INVX1 A=GATE_240_I0_OUT Y=GATE_240
+
+
+
+# gate type: NAND; name: GATE_241_I0
+.gate NAND2X1 A=GATE_238 B=GATE_240 Y=GATE_241_I0_OUT
+
+# gate type: NOT; name: GATE_241_I3
+.gate INVX1 A=GATE_241_I0_OUT Y=GATE_241
+
+
+
+# gate type: NAND; name: GATE_242_I0
+.gate NAND2X1 A=GATE_234 B=GATE_239 Y=GATE_242_I0_OUT
+
+# gate type: NOT; name: GATE_242_I3
+.gate INVX1 A=GATE_242_I0_OUT Y=GATE_242
+
+
+
+# gate type: NAND; name: GATE_243_I0
+.gate NAND2X1 A=GATE_241 B=GATE_242 Y=GATE_243_I0_OUT
+
+# gate type: NOT; name: GATE_243_I3
+.gate INVX1 A=GATE_243_I0_OUT Y=GATE_243
+
+
+
+# gate type: NAND; name: GATE_244_I0
+.gate NAND2X1 A=GATE_25 B=GATE_36 Y=GATE_244_I0_OUT
+
+# gate type: NOT; name: GATE_244_I3
+.gate INVX1 A=GATE_244_I0_OUT Y=GATE_244
+
+
+
+# gate type: NAND; name: GATE_245_I0
+.gate NAND2X1 A=GATE_8 B=GATE_244 Y=GATE_245
+
+
+
+# gate type: NAND; name: GATE_246_I0
+.gate NAND2X1 A=GATE_246_I1_OUT B=GATE_246_I2_OUT Y=GATE_246
+
+# gate type: NOT; name: GATE_246_I1
+.gate INVX1 A=GATE_5 Y=GATE_246_I1_OUT
+
+# gate type: NOT; name: GATE_246_I2
+.gate INVX1 A=GATE_9 Y=GATE_246_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_247_I0
+.gate NAND2X1 A=GATE_46 B=GATE_246 Y=GATE_247
+
+
+
+# gate type: NAND; name: GATE_248_I0
+.gate NAND2X1 A=GATE_248_I1_OUT B=GATE_248_I2_OUT Y=GATE_248
+
+# gate type: NOT; name: GATE_248_I1
+.gate INVX1 A=GATE_22 Y=GATE_248_I1_OUT
+
+# gate type: NOT; name: GATE_248_I2
+.gate INVX1 A=GATE_37 Y=GATE_248_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_249_I0
+.gate NAND2X1 A=GATE_63 B=GATE_248 Y=GATE_249
+
+
+
+# gate type: NAND; name: GATE_250_I0
+.gate NAND2X1 A=GATE_50 B=GATE_104 Y=GATE_250
+
+
+
+# gate type: NAND; name: GATE_251_I0
+.gate NAND2X1 A=GATE_54 B=GATE_58 Y=GATE_251
+
+
+
+# gate type: NAND; name: GATE_252_I0
+.gate NAND2X1 A=GATE_63 B=GATE_132 Y=GATE_252
+
+
+
+# gate type: NAND; name: GATE_253_I0
+.gate NAND2X1 A=GATE_251 B=GATE_252 Y=GATE_253_I0_OUT
+
+# gate type: NOT; name: GATE_253_I3
+.gate INVX1 A=GATE_253_I0_OUT Y=GATE_253
+
+
+
+# gate type: NAND; name: GATE_254_I0
+.gate NAND2X1 A=GATE_36 B=GATE_156 Y=GATE_254_I0_OUT
+
+# gate type: NOT; name: GATE_254_I3
+.gate INVX1 A=GATE_254_I0_OUT Y=GATE_254
+
+
+
+# gate type: NAND; name: GATE_255_I0
+.gate NAND2X1 A=GATE_255_I1_OUT B=GATE_254 Y=GATE_255
+
+# gate type: NOT; name: GATE_255_I1
+.gate INVX1 A=GATE_3 Y=GATE_255_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_256_I0
+.gate NAND2X1 A=GATE_17 B=GATE_132 Y=GATE_256
+
+
+
+# gate type: NAND; name: GATE_257_I0
+.gate NAND2X1 A=GATE_76 B=GATE_156 Y=GATE_257
+
+
+
+# gate type: NAND; name: GATE_258_I0
+.gate NAND2X1 A=GATE_256 B=GATE_257 Y=GATE_258_I0_OUT
+
+# gate type: NOT; name: GATE_258_I3
+.gate INVX1 A=GATE_258_I0_OUT Y=GATE_258
+
+
+
+# gate type: NAND; name: GATE_259_I0
+.gate NAND2X1 A=GATE_259_I1_OUT B=GATE_259_I2_OUT Y=GATE_259
+
+# gate type: NOT; name: GATE_259_I1
+.gate INVX1 A=GATE_11 Y=GATE_259_I1_OUT
+
+# gate type: NOT; name: GATE_259_I2
+.gate INVX1 A=GATE_156 Y=GATE_259_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_260_I0
+.gate NAND2X1 A=GATE_103 B=GATE_259 Y=GATE_260
+
+
+
+# gate type: NAND; name: GATE_261_I0
+.gate NAND2X1 A=GATE_39 B=GATE_62 Y=GATE_261
+
+
+
+# gate type: NAND; name: GATE_262_I0
+.gate NAND2X1 A=GATE_21 B=GATE_36 Y=GATE_262_I0_OUT
+
+# gate type: NOT; name: GATE_262_I3
+.gate INVX1 A=GATE_262_I0_OUT Y=GATE_262
+
+
+
+# gate type: NAND; name: GATE_263_I0
+.gate NAND2X1 A=GATE_263_I1_OUT B=GATE_263_I2_OUT Y=GATE_263_I0_OUT
+
+# gate type: NOT; name: GATE_263_I3
+.gate INVX1 A=GATE_263_I0_OUT Y=GATE_263
+
+# gate type: NOT; name: GATE_263_I1
+.gate INVX1 A=GATE_9 Y=GATE_263_I1_OUT
+
+# gate type: NOT; name: GATE_263_I2
+.gate INVX1 A=GATE_76 Y=GATE_263_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_264_I0
+.gate NAND2X1 A=GATE_39 B=GATE_264_I2_OUT Y=GATE_264
+
+# gate type: NOT; name: GATE_264_I2
+.gate INVX1 A=GATE_263 Y=GATE_264_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_265_I0
+.gate NAND2X1 A=GATE_261 B=GATE_265_I2_OUT Y=GATE_265_I0_OUT
+
+# gate type: NOT; name: GATE_265_I3
+.gate INVX1 A=GATE_265_I0_OUT Y=GATE_265
+
+# gate type: NOT; name: GATE_265_I2
+.gate INVX1 A=GATE_262 Y=GATE_265_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_266_I0
+.gate NAND2X1 A=GATE_264 B=GATE_265 Y=GATE_266_I0_OUT
+
+# gate type: NOT; name: GATE_266_I3
+.gate INVX1 A=GATE_266_I0_OUT Y=GATE_266
+
+
+
+# gate type: NAND; name: GATE_267_I0
+.gate NAND2X1 A=GATE_35 B=GATE_91 Y=GATE_267
+
+
+
+# gate type: NAND; name: GATE_268_I0
+.gate NAND2X1 A=GATE_268_I1_OUT B=GATE_267 Y=GATE_268
+
+# gate type: NOT; name: GATE_268_I1
+.gate INVX1 A=GATE_235 Y=GATE_268_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_269_I0
+.gate NAND2X1 A=GATE_269_I1_OUT B=GATE_269_I2_OUT Y=GATE_269
+
+# gate type: NOT; name: GATE_269_I1
+.gate INVX1 A=GATE_17 Y=GATE_269_I1_OUT
+
+# gate type: NOT; name: GATE_269_I2
+.gate INVX1 A=GATE_35 Y=GATE_269_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_270_I0
+.gate NAND2X1 A=GATE_268 B=GATE_269 Y=GATE_270
+
+
+
+# gate type: NAND; name: GATE_271_I0
+.gate NAND2X1 A=GATE_30 B=GATE_41 Y=GATE_271
+
+
+
+# gate type: NAND; name: GATE_272_I0
+.gate NAND2X1 A=GATE_35 B=GATE_152 Y=GATE_272
+
+
+
+# gate type: NAND; name: GATE_273_I0
+.gate NAND2X1 A=GATE_271 B=GATE_272 Y=GATE_273
+
+
+
+# gate type: NAND; name: GATE_274_I0
+.gate NAND2X1 A=GATE_274_I1_OUT B=GATE_273 Y=GATE_274
+
+# gate type: NOT; name: GATE_274_I1
+.gate INVX1 A=INPUT_0 Y=GATE_274_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_275_I0
+.gate NAND2X1 A=GATE_270 B=GATE_274 Y=GATE_275_I0_OUT
+
+# gate type: NOT; name: GATE_275_I3
+.gate INVX1 A=GATE_275_I0_OUT Y=GATE_275
+
+
+
+# gate type: NAND; name: GATE_276_I0
+.gate NAND2X1 A=GATE_36 B=GATE_46 Y=GATE_276_I0_OUT
+
+# gate type: NOT; name: GATE_276_I3
+.gate INVX1 A=GATE_276_I0_OUT Y=GATE_276
+
+
+
+# gate type: NAND; name: GATE_277_I0
+.gate NAND2X1 A=GATE_277_I1_OUT B=GATE_276 Y=GATE_277
+
+# gate type: NOT; name: GATE_277_I1
+.gate INVX1 A=GATE_8 Y=GATE_277_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_278_I0
+.gate NAND2X1 A=GATE_43 B=GATE_132 Y=GATE_278
+
+
+
+# gate type: NAND; name: GATE_279_I0
+.gate NAND2X1 A=GATE_46 B=GATE_235 Y=GATE_279
+
+
+
+# gate type: NAND; name: GATE_280_I0
+.gate NAND2X1 A=GATE_2 B=GATE_235 Y=GATE_280
+
+
+
+# gate type: NAND; name: GATE_281_I0
+.gate NAND2X1 A=GATE_101 B=GATE_156 Y=GATE_281
+
+
+
+# gate type: NAND; name: GATE_282_I0
+.gate NAND2X1 A=GATE_25 B=GATE_224 Y=GATE_282
+
+
+
+# gate type: NAND; name: GATE_283_I0
+.gate NAND2X1 A=GATE_278 B=GATE_279 Y=GATE_283_I0_OUT
+
+# gate type: NOT; name: GATE_283_I3
+.gate INVX1 A=GATE_283_I0_OUT Y=GATE_283
+
+
+
+# gate type: NAND; name: GATE_284_I0
+.gate NAND2X1 A=GATE_280 B=GATE_281 Y=GATE_284_I0_OUT
+
+# gate type: NOT; name: GATE_284_I3
+.gate INVX1 A=GATE_284_I0_OUT Y=GATE_284
+
+
+
+# gate type: NAND; name: GATE_285_I0
+.gate NAND2X1 A=GATE_282 B=GATE_284 Y=GATE_285_I0_OUT
+
+# gate type: NOT; name: GATE_285_I3
+.gate INVX1 A=GATE_285_I0_OUT Y=GATE_285
+
+
+
+# gate type: NAND; name: GATE_286_I0
+.gate NAND2X1 A=GATE_277 B=GATE_283 Y=GATE_286_I0_OUT
+
+# gate type: NOT; name: GATE_286_I3
+.gate INVX1 A=GATE_286_I0_OUT Y=GATE_286
+
+
+
+# gate type: NAND; name: GATE_287_I0
+.gate NAND2X1 A=GATE_285 B=GATE_286 Y=GATE_287_I0_OUT
+
+# gate type: NOT; name: GATE_287_I3
+.gate INVX1 A=GATE_287_I0_OUT Y=GATE_287
+
+
+
+# gate type: NAND; name: GATE_288_I0
+.gate NAND2X1 A=GATE_50 B=GATE_224 Y=GATE_288
+
+
+
+# gate type: NAND; name: GATE_289_I0
+.gate NAND2X1 A=GATE_14 B=GATE_25 Y=GATE_289
+
+
+
+# gate type: NAND; name: GATE_290_I0
+.gate NAND2X1 A=GATE_35 B=GATE_232 Y=GATE_290
+
+
+
+# gate type: NAND; name: GATE_291_I0
+.gate NAND2X1 A=GATE_39 B=GATE_149 Y=GATE_291
+
+
+
+# gate type: NAND; name: GATE_292_I0
+.gate NAND2X1 A=INPUT_1 B=GATE_4 Y=GATE_292_I0_OUT
+
+# gate type: NOT; name: GATE_292_I3
+.gate INVX1 A=GATE_292_I0_OUT Y=GATE_292
+
+
+
+# gate type: NAND; name: GATE_293_I0
+.gate NAND2X1 A=GATE_293_I1_OUT B=GATE_293_I2_OUT Y=GATE_293
+
+# gate type: NOT; name: GATE_293_I1
+.gate INVX1 A=GATE_9 Y=GATE_293_I1_OUT
+
+# gate type: NOT; name: GATE_293_I2
+.gate INVX1 A=GATE_292 Y=GATE_293_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_294_I0
+.gate NAND2X1 A=GATE_58 B=GATE_293 Y=GATE_294
+
+
+
+# gate type: NAND; name: GATE_295_I0
+.gate NAND2X1 A=GATE_295_I1_OUT B=GATE_295_I2_OUT Y=GATE_295
+
+# gate type: NOT; name: GATE_295_I1
+.gate INVX1 A=GATE_41 Y=GATE_295_I1_OUT
+
+# gate type: NOT; name: GATE_295_I2
+.gate INVX1 A=GATE_54 Y=GATE_295_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_296_I0
+.gate NAND2X1 A=GATE_43 B=GATE_295 Y=GATE_296
+
+
+
+# gate type: NAND; name: GATE_297_I0
+.gate NAND2X1 A=GATE_30 B=GATE_54 Y=GATE_297
+
+
+
+# gate type: NAND; name: GATE_298_I0
+.gate NAND2X1 A=GATE_11 B=GATE_118 Y=GATE_298
+
+
+
+# gate type: NAND; name: GATE_299_I0
+.gate NAND2X1 A=GATE_58 B=GATE_118 Y=GATE_299
+
+
+
+# gate type: NAND; name: GATE_300_I0
+.gate NAND2X1 A=GATE_74 B=GATE_299 Y=GATE_300_I0_OUT
+
+# gate type: NOT; name: GATE_300_I3
+.gate INVX1 A=GATE_300_I0_OUT Y=GATE_300
+
+
+
+# gate type: NAND; name: GATE_301_I0
+.gate NAND2X1 A=GATE_297 B=GATE_298 Y=GATE_301_I0_OUT
+
+# gate type: NOT; name: GATE_301_I3
+.gate INVX1 A=GATE_301_I0_OUT Y=GATE_301
+
+
+
+# gate type: NAND; name: GATE_302_I0
+.gate NAND2X1 A=GATE_300 B=GATE_301 Y=GATE_302_I0_OUT
+
+# gate type: NOT; name: GATE_302_I3
+.gate INVX1 A=GATE_302_I0_OUT Y=GATE_302
+
+
+
+# gate type: NAND; name: GATE_303_I0
+.gate NAND2X1 A=GATE_52 B=GATE_235 Y=GATE_303
+
+
+
+# gate type: NAND; name: GATE_304_I0
+.gate NAND2X1 A=GATE_2 B=GATE_89 Y=GATE_304
+
+
+
+# gate type: NAND; name: GATE_305_I0
+.gate NAND2X1 A=GATE_21 B=GATE_142 Y=GATE_305
+
+
+
+# gate type: NAND; name: GATE_306_I0
+.gate NAND2X1 A=GATE_303 B=GATE_304 Y=GATE_306_I0_OUT
+
+# gate type: NOT; name: GATE_306_I3
+.gate INVX1 A=GATE_306_I0_OUT Y=GATE_306
+
+
+
+# gate type: NAND; name: GATE_307_I0
+.gate NAND2X1 A=GATE_305 B=GATE_306 Y=GATE_307_I0_OUT
+
+# gate type: NOT; name: GATE_307_I3
+.gate INVX1 A=GATE_307_I0_OUT Y=GATE_307
+
+
+
+# gate type: NAND; name: GATE_308_I0
+.gate NAND2X1 A=GATE_21 B=GATE_224 Y=GATE_308
+
+
+
+# gate type: NAND; name: GATE_309_I0
+.gate NAND2X1 A=GATE_4 B=GATE_39 Y=GATE_309
+
+
+
+# gate type: NAND; name: GATE_310_I0
+.gate NAND2X1 A=GATE_25 B=GATE_101 Y=GATE_310
+
+
+
+# gate type: NAND; name: GATE_311_I0
+.gate NAND2X1 A=GATE_54 B=GATE_63 Y=GATE_311
+
+
+
+# gate type: NAND; name: GATE_312_I0
+.gate NAND2X1 A=GATE_69 B=GATE_89 Y=GATE_312
+
+
+
+# gate type: NAND; name: GATE_313_I0
+.gate NAND2X1 A=GATE_14 B=GATE_63 Y=GATE_313
+
+
+
+# gate type: NAND; name: GATE_314_I0
+.gate NAND2X1 A=GATE_30 B=GATE_132 Y=GATE_314
+
+
+
+# gate type: NAND; name: GATE_315_I0
+.gate NAND2X1 A=GATE_11 B=GATE_79 Y=GATE_315
+
+
+
+# gate type: NAND; name: GATE_316_I0
+.gate NAND2X1 A=GATE_312 B=GATE_313 Y=GATE_316_I0_OUT
+
+# gate type: NOT; name: GATE_316_I3
+.gate INVX1 A=GATE_316_I0_OUT Y=GATE_316
+
+
+
+# gate type: NAND; name: GATE_317_I0
+.gate NAND2X1 A=GATE_314 B=GATE_315 Y=GATE_317_I0_OUT
+
+# gate type: NOT; name: GATE_317_I3
+.gate INVX1 A=GATE_317_I0_OUT Y=GATE_317
+
+
+
+# gate type: NAND; name: GATE_318_I0
+.gate NAND2X1 A=GATE_316 B=GATE_317 Y=GATE_318_I0_OUT
+
+# gate type: NOT; name: GATE_318_I3
+.gate INVX1 A=GATE_318_I0_OUT Y=GATE_318
+
+
+
+# gate type: NAND; name: GATE_319_I0
+.gate NAND2X1 A=GATE_35 B=GATE_89 Y=GATE_319
+
+
+
+# gate type: NAND; name: GATE_320_I0
+.gate NAND2X1 A=GATE_9 B=GATE_63 Y=GATE_320
+
+
+
+# gate type: NAND; name: GATE_321_I0
+.gate NAND2X1 A=GATE_43 B=GATE_142 Y=GATE_321
+
+
+
+# gate type: NAND; name: GATE_322_I0
+.gate NAND2X1 A=GATE_94 B=GATE_109 Y=GATE_322
+
+
+
+# gate type: NAND; name: GATE_323_I0
+.gate NAND2X1 A=GATE_319 B=GATE_320 Y=GATE_323_I0_OUT
+
+# gate type: NOT; name: GATE_323_I3
+.gate INVX1 A=GATE_323_I0_OUT Y=GATE_323
+
+
+
+# gate type: NAND; name: GATE_324_I0
+.gate NAND2X1 A=GATE_321 B=GATE_322 Y=GATE_324_I0_OUT
+
+# gate type: NOT; name: GATE_324_I3
+.gate INVX1 A=GATE_324_I0_OUT Y=GATE_324
+
+
+
+# gate type: NAND; name: GATE_325_I0
+.gate NAND2X1 A=GATE_323 B=GATE_324 Y=GATE_325_I0_OUT
+
+# gate type: NOT; name: GATE_325_I3
+.gate INVX1 A=GATE_325_I0_OUT Y=GATE_325
+
+
+
+# gate type: NAND; name: GATE_326_I0
+.gate NAND2X1 A=GATE_326_I1_OUT B=GATE_263 Y=GATE_326_I0_OUT
+
+# gate type: NOT; name: GATE_326_I3
+.gate INVX1 A=GATE_326_I0_OUT Y=GATE_326
+
+# gate type: NOT; name: GATE_326_I1
+.gate INVX1 A=GATE_62 Y=GATE_326_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_327_I0
+.gate NAND2X1 A=GATE_327_I1_OUT B=GATE_49 Y=GATE_327_I0_OUT
+
+# gate type: NOT; name: GATE_327_I3
+.gate INVX1 A=GATE_327_I0_OUT Y=GATE_327
+
+# gate type: NOT; name: GATE_327_I1
+.gate INVX1 A=INPUT_4 Y=GATE_327_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_328_I0
+.gate NAND2X1 A=GATE_328_I1_OUT B=GATE_327 Y=GATE_328
+
+# gate type: NOT; name: GATE_328_I1
+.gate INVX1 A=GATE_326 Y=GATE_328_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_329_I0
+.gate NAND2X1 A=GATE_329_I1_OUT B=GATE_329_I2_OUT Y=GATE_329
+
+# gate type: NOT; name: GATE_329_I1
+.gate INVX1 A=GATE_50 Y=GATE_329_I1_OUT
+
+# gate type: NOT; name: GATE_329_I2
+.gate INVX1 A=GATE_69 Y=GATE_329_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_330_I0
+.gate NAND2X1 A=GATE_185 B=GATE_329 Y=GATE_330
+
+
+
+# gate type: NAND; name: GATE_331_I0
+.gate NAND2X1 A=GATE_110 B=GATE_134 Y=GATE_331_I0_OUT
+
+# gate type: NOT; name: GATE_331_I3
+.gate INVX1 A=GATE_331_I0_OUT Y=GATE_331
+
+
+
+# gate type: NAND; name: GATE_332_I0
+.gate NAND2X1 A=GATE_170 B=GATE_288 Y=GATE_332_I0_OUT
+
+# gate type: NOT; name: GATE_332_I3
+.gate INVX1 A=GATE_332_I0_OUT Y=GATE_332
+
+
+
+# gate type: NAND; name: GATE_333_I0
+.gate NAND2X1 A=GATE_289 B=GATE_290 Y=GATE_333_I0_OUT
+
+# gate type: NOT; name: GATE_333_I3
+.gate INVX1 A=GATE_333_I0_OUT Y=GATE_333
+
+
+
+# gate type: NAND; name: GATE_334_I0
+.gate NAND2X1 A=GATE_308 B=GATE_309 Y=GATE_334_I0_OUT
+
+# gate type: NOT; name: GATE_334_I3
+.gate INVX1 A=GATE_334_I0_OUT Y=GATE_334
+
+
+
+# gate type: NAND; name: GATE_335_I0
+.gate NAND2X1 A=GATE_310 B=GATE_311 Y=GATE_335_I0_OUT
+
+# gate type: NOT; name: GATE_335_I3
+.gate INVX1 A=GATE_335_I0_OUT Y=GATE_335
+
+
+
+# gate type: NAND; name: GATE_336_I0
+.gate NAND2X1 A=GATE_334 B=GATE_335 Y=GATE_336_I0_OUT
+
+# gate type: NOT; name: GATE_336_I3
+.gate INVX1 A=GATE_336_I0_OUT Y=GATE_336
+
+
+
+# gate type: NAND; name: GATE_337_I0
+.gate NAND2X1 A=GATE_332 B=GATE_333 Y=GATE_337_I0_OUT
+
+# gate type: NOT; name: GATE_337_I3
+.gate INVX1 A=GATE_337_I0_OUT Y=GATE_337
+
+
+
+# gate type: NAND; name: GATE_338_I0
+.gate NAND2X1 A=GATE_60 B=GATE_331 Y=GATE_338_I0_OUT
+
+# gate type: NOT; name: GATE_338_I3
+.gate INVX1 A=GATE_338_I0_OUT Y=GATE_338
+
+
+
+# gate type: NAND; name: GATE_339_I0
+.gate NAND2X1 A=GATE_87 B=GATE_226 Y=GATE_339_I0_OUT
+
+# gate type: NOT; name: GATE_339_I3
+.gate INVX1 A=GATE_339_I0_OUT Y=GATE_339
+
+
+
+# gate type: NAND; name: GATE_340_I0
+.gate NAND2X1 A=GATE_227 B=GATE_230 Y=GATE_340_I0_OUT
+
+# gate type: NOT; name: GATE_340_I3
+.gate INVX1 A=GATE_340_I0_OUT Y=GATE_340
+
+
+
+# gate type: NAND; name: GATE_341_I0
+.gate NAND2X1 A=GATE_245 B=GATE_247 Y=GATE_341_I0_OUT
+
+# gate type: NOT; name: GATE_341_I3
+.gate INVX1 A=GATE_341_I0_OUT Y=GATE_341
+
+
+
+# gate type: NAND; name: GATE_342_I0
+.gate NAND2X1 A=GATE_249 B=GATE_250 Y=GATE_342_I0_OUT
+
+# gate type: NOT; name: GATE_342_I3
+.gate INVX1 A=GATE_342_I0_OUT Y=GATE_342
+
+
+
+# gate type: NAND; name: GATE_343_I0
+.gate NAND2X1 A=GATE_253 B=GATE_255 Y=GATE_343_I0_OUT
+
+# gate type: NOT; name: GATE_343_I3
+.gate INVX1 A=GATE_343_I0_OUT Y=GATE_343
+
+
+
+# gate type: NAND; name: GATE_344_I0
+.gate NAND2X1 A=GATE_258 B=GATE_260 Y=GATE_344_I0_OUT
+
+# gate type: NOT; name: GATE_344_I3
+.gate INVX1 A=GATE_344_I0_OUT Y=GATE_344
+
+
+
+# gate type: NAND; name: GATE_345_I0
+.gate NAND2X1 A=GATE_291 B=GATE_294 Y=GATE_345_I0_OUT
+
+# gate type: NOT; name: GATE_345_I3
+.gate INVX1 A=GATE_345_I0_OUT Y=GATE_345
+
+
+
+# gate type: NAND; name: GATE_346_I0
+.gate NAND2X1 A=GATE_296 B=GATE_345 Y=GATE_346_I0_OUT
+
+# gate type: NOT; name: GATE_346_I3
+.gate INVX1 A=GATE_346_I0_OUT Y=GATE_346
+
+
+
+# gate type: NAND; name: GATE_347_I0
+.gate NAND2X1 A=GATE_343 B=GATE_344 Y=GATE_347_I0_OUT
+
+# gate type: NOT; name: GATE_347_I3
+.gate INVX1 A=GATE_347_I0_OUT Y=GATE_347
+
+
+
+# gate type: NAND; name: GATE_348_I0
+.gate NAND2X1 A=GATE_341 B=GATE_342 Y=GATE_348_I0_OUT
+
+# gate type: NOT; name: GATE_348_I3
+.gate INVX1 A=GATE_348_I0_OUT Y=GATE_348
+
+
+
+# gate type: NAND; name: GATE_349_I0
+.gate NAND2X1 A=GATE_339 B=GATE_340 Y=GATE_349_I0_OUT
+
+# gate type: NOT; name: GATE_349_I3
+.gate INVX1 A=GATE_349_I0_OUT Y=GATE_349
+
+
+
+# gate type: NAND; name: GATE_350_I0
+.gate NAND2X1 A=GATE_337 B=GATE_338 Y=GATE_350_I0_OUT
+
+# gate type: NOT; name: GATE_350_I3
+.gate INVX1 A=GATE_350_I0_OUT Y=GATE_350
+
+
+
+# gate type: NAND; name: GATE_351_I0
+.gate NAND2X1 A=GATE_181 B=GATE_336 Y=GATE_351_I0_OUT
+
+# gate type: NOT; name: GATE_351_I3
+.gate INVX1 A=GATE_351_I0_OUT Y=GATE_351
+
+
+
+# gate type: NAND; name: GATE_352_I0
+.gate NAND2X1 A=GATE_302 B=GATE_307 Y=GATE_352_I0_OUT
+
+# gate type: NOT; name: GATE_352_I3
+.gate INVX1 A=GATE_352_I0_OUT Y=GATE_352
+
+
+
+# gate type: NAND; name: GATE_353_I0
+.gate NAND2X1 A=GATE_318 B=GATE_325 Y=GATE_353_I0_OUT
+
+# gate type: NOT; name: GATE_353_I3
+.gate INVX1 A=GATE_353_I0_OUT Y=GATE_353
+
+
+
+# gate type: NAND; name: GATE_354_I0
+.gate NAND2X1 A=GATE_328 B=GATE_330 Y=GATE_354_I0_OUT
+
+# gate type: NOT; name: GATE_354_I3
+.gate INVX1 A=GATE_354_I0_OUT Y=GATE_354
+
+
+
+# gate type: NAND; name: GATE_355_I0
+.gate NAND2X1 A=GATE_353 B=GATE_354 Y=GATE_355_I0_OUT
+
+# gate type: NOT; name: GATE_355_I3
+.gate INVX1 A=GATE_355_I0_OUT Y=GATE_355
+
+
+
+# gate type: NAND; name: GATE_356_I0
+.gate NAND2X1 A=GATE_351 B=GATE_352 Y=GATE_356_I0_OUT
+
+# gate type: NOT; name: GATE_356_I3
+.gate INVX1 A=GATE_356_I0_OUT Y=GATE_356
+
+
+
+# gate type: NAND; name: GATE_357_I0
+.gate NAND2X1 A=GATE_349 B=GATE_350 Y=GATE_357_I0_OUT
+
+# gate type: NOT; name: GATE_357_I3
+.gate INVX1 A=GATE_357_I0_OUT Y=GATE_357
+
+
+
+# gate type: NAND; name: GATE_358_I0
+.gate NAND2X1 A=GATE_347 B=GATE_348 Y=GATE_358_I0_OUT
+
+# gate type: NOT; name: GATE_358_I3
+.gate INVX1 A=GATE_358_I0_OUT Y=GATE_358
+
+
+
+# gate type: NAND; name: GATE_359_I0
+.gate NAND2X1 A=GATE_243 B=GATE_346 Y=GATE_359_I0_OUT
+
+# gate type: NOT; name: GATE_359_I3
+.gate INVX1 A=GATE_359_I0_OUT Y=GATE_359
+
+
+
+# gate type: NAND; name: GATE_360_I0
+.gate NAND2X1 A=GATE_266 B=GATE_275 Y=GATE_360_I0_OUT
+
+# gate type: NOT; name: GATE_360_I3
+.gate INVX1 A=GATE_360_I0_OUT Y=GATE_360
+
+
+
+# gate type: NAND; name: GATE_361_I0
+.gate NAND2X1 A=GATE_287 B=GATE_360 Y=GATE_361_I0_OUT
+
+# gate type: NOT; name: GATE_361_I3
+.gate INVX1 A=GATE_361_I0_OUT Y=GATE_361
+
+
+
+# gate type: NAND; name: GATE_362_I0
+.gate NAND2X1 A=GATE_358 B=GATE_359 Y=GATE_362_I0_OUT
+
+# gate type: NOT; name: GATE_362_I3
+.gate INVX1 A=GATE_362_I0_OUT Y=GATE_362
+
+
+
+# gate type: NAND; name: GATE_363_I0
+.gate NAND2X1 A=GATE_356 B=GATE_357 Y=GATE_363_I0_OUT
+
+# gate type: NOT; name: GATE_363_I3
+.gate INVX1 A=GATE_363_I0_OUT Y=GATE_363
+
+
+
+# gate type: NAND; name: GATE_364_I0
+.gate NAND2X1 A=GATE_355 B=GATE_363 Y=GATE_364_I0_OUT
+
+# gate type: NOT; name: GATE_364_I3
+.gate INVX1 A=GATE_364_I0_OUT Y=GATE_364
+
+
+
+# gate type: NAND; name: GATE_365_I0
+.gate NAND2X1 A=GATE_361 B=GATE_362 Y=GATE_365_I0_OUT
+
+# gate type: NOT; name: GATE_365_I3
+.gate INVX1 A=GATE_365_I0_OUT Y=GATE_365
+
+
+
+# gate type: NAND; name: GATE_366_I0
+.gate NAND2X1 A=GATE_364 B=GATE_365 Y=GATE_366
+
+
+
+# gate type: NAND; name: GATE_367_I0
+.gate NAND2X1 A=GATE_5 B=GATE_269 Y=GATE_367
+
+
+
+# gate type: NAND; name: GATE_368_I0
+.gate NAND2X1 A=GATE_21 B=GATE_118 Y=GATE_368
+
+
+
+# gate type: NAND; name: GATE_369_I0
+.gate NAND2X1 A=GATE_308 B=GATE_368 Y=GATE_369_I0_OUT
+
+# gate type: NOT; name: GATE_369_I3
+.gate INVX1 A=GATE_369_I0_OUT Y=GATE_369
+
+
+
+# gate type: NAND; name: GATE_370_I0
+.gate NAND2X1 A=GATE_4 B=GATE_30 Y=GATE_370_I0_OUT
+
+# gate type: NOT; name: GATE_370_I3
+.gate INVX1 A=GATE_370_I0_OUT Y=GATE_370
+
+
+
+# gate type: NAND; name: GATE_371_I0
+.gate NAND2X1 A=GATE_371_I1_OUT B=GATE_370 Y=GATE_371
+
+# gate type: NOT; name: GATE_371_I1
+.gate INVX1 A=INPUT_1 Y=GATE_371_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_372_I0
+.gate NAND2X1 A=GATE_25 B=GATE_76 Y=GATE_372
+
+
+
+# gate type: NAND; name: GATE_373_I0
+.gate NAND2X1 A=GATE_321 B=GATE_372 Y=GATE_373_I0_OUT
+
+# gate type: NOT; name: GATE_373_I3
+.gate INVX1 A=GATE_373_I0_OUT Y=GATE_373
+
+
+
+# gate type: NAND; name: GATE_374_I0
+.gate NAND2X1 A=GATE_374_I1_OUT B=GATE_374_I2_OUT Y=GATE_374
+
+# gate type: NOT; name: GATE_374_I1
+.gate INVX1 A=GATE_30 Y=GATE_374_I1_OUT
+
+# gate type: NOT; name: GATE_374_I2
+.gate INVX1 A=GATE_156 Y=GATE_374_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_375_I0
+.gate NAND2X1 A=GATE_142 B=GATE_374 Y=GATE_375
+
+
+
+# gate type: NAND; name: GATE_376_I0
+.gate NAND2X1 A=GATE_2 B=GATE_376_I2_OUT Y=GATE_376_I0_OUT
+
+# gate type: NOT; name: GATE_376_I3
+.gate INVX1 A=GATE_376_I0_OUT Y=GATE_376
+
+# gate type: NOT; name: GATE_376_I2
+.gate INVX1 A=GATE_13 Y=GATE_376_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_377_I0
+.gate NAND2X1 A=GATE_377_I1_OUT B=GATE_376 Y=GATE_377
+
+# gate type: NOT; name: GATE_377_I1
+.gate INVX1 A=GATE_41 Y=GATE_377_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_378_I0
+.gate NAND2X1 A=GATE_378_I1_OUT B=GATE_378_I2_OUT Y=GATE_378
+
+# gate type: NOT; name: GATE_378_I1
+.gate INVX1 A=GATE_11 Y=GATE_378_I1_OUT
+
+# gate type: NOT; name: GATE_378_I2
+.gate INVX1 A=GATE_25 Y=GATE_378_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_379_I0
+.gate NAND2X1 A=GATE_125 B=GATE_378 Y=GATE_379
+
+
+
+# gate type: NAND; name: GATE_380_I0
+.gate NAND2X1 A=INPUT_3 B=GATE_11 Y=GATE_380_I0_OUT
+
+# gate type: NOT; name: GATE_380_I3
+.gate INVX1 A=GATE_380_I0_OUT Y=GATE_380
+
+
+
+# gate type: NAND; name: GATE_381_I0
+.gate NAND2X1 A=GATE_27 B=GATE_380 Y=GATE_381
+
+
+
+# gate type: NAND; name: GATE_382_I0
+.gate NAND2X1 A=GATE_382_I1_OUT B=GATE_382_I2_OUT Y=GATE_382
+
+# gate type: NOT; name: GATE_382_I1
+.gate INVX1 A=GATE_89 Y=GATE_382_I1_OUT
+
+# gate type: NOT; name: GATE_382_I2
+.gate INVX1 A=GATE_235 Y=GATE_382_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_383_I0
+.gate NAND2X1 A=GATE_39 B=GATE_382 Y=GATE_383
+
+
+
+# gate type: NAND; name: GATE_384_I0
+.gate NAND2X1 A=GATE_25 B=GATE_103 Y=GATE_384
+
+
+
+# gate type: NAND; name: GATE_385_I0
+.gate NAND2X1 A=GATE_385_I1_OUT B=GATE_16 Y=GATE_385_I0_OUT
+
+# gate type: NOT; name: GATE_385_I3
+.gate INVX1 A=GATE_385_I0_OUT Y=GATE_385
+
+# gate type: NOT; name: GATE_385_I1
+.gate INVX1 A=INPUT_4 Y=GATE_385_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_386_I0
+.gate NAND2X1 A=GATE_91 B=GATE_385 Y=GATE_386
+
+
+
+# gate type: NAND; name: GATE_387_I0
+.gate NAND2X1 A=GATE_166 B=GATE_175 Y=GATE_387_I0_OUT
+
+# gate type: NOT; name: GATE_387_I3
+.gate INVX1 A=GATE_387_I0_OUT Y=GATE_387
+
+
+
+# gate type: NAND; name: GATE_388_I0
+.gate NAND2X1 A=GATE_384 B=GATE_386 Y=GATE_388_I0_OUT
+
+# gate type: NOT; name: GATE_388_I3
+.gate INVX1 A=GATE_388_I0_OUT Y=GATE_388
+
+
+
+# gate type: NAND; name: GATE_389_I0
+.gate NAND2X1 A=GATE_387 B=GATE_388 Y=GATE_389_I0_OUT
+
+# gate type: NOT; name: GATE_389_I3
+.gate INVX1 A=GATE_389_I0_OUT Y=GATE_389
+
+
+
+# gate type: NAND; name: GATE_390_I0
+.gate NAND2X1 A=GATE_381 B=GATE_383 Y=GATE_390_I0_OUT
+
+# gate type: NOT; name: GATE_390_I3
+.gate INVX1 A=GATE_390_I0_OUT Y=GATE_390
+
+
+
+# gate type: NAND; name: GATE_391_I0
+.gate NAND2X1 A=GATE_389 B=GATE_390 Y=GATE_391_I0_OUT
+
+# gate type: NOT; name: GATE_391_I3
+.gate INVX1 A=GATE_391_I0_OUT Y=GATE_391
+
+
+
+# gate type: NAND; name: GATE_392_I0
+.gate NAND2X1 A=GATE_37 B=GATE_39 Y=GATE_392
+
+
+
+# gate type: NAND; name: GATE_393_I0
+.gate NAND2X1 A=GATE_46 B=GATE_125 Y=GATE_393
+
+
+
+# gate type: NAND; name: GATE_394_I0
+.gate NAND2X1 A=GATE_58 B=GATE_103 Y=GATE_394
+
+
+
+# gate type: NAND; name: GATE_395_I0
+.gate NAND2X1 A=GATE_22 B=GATE_35 Y=GATE_395
+
+
+
+# gate type: NAND; name: GATE_396_I0
+.gate NAND2X1 A=GATE_2 B=GATE_81 Y=GATE_396
+
+
+
+# gate type: NAND; name: GATE_397_I0
+.gate NAND2X1 A=GATE_397_I1_OUT B=GATE_397_I2_OUT Y=GATE_397
+
+# gate type: NOT; name: GATE_397_I1
+.gate INVX1 A=GATE_14 Y=GATE_397_I1_OUT
+
+# gate type: NOT; name: GATE_397_I2
+.gate INVX1 A=GATE_292 Y=GATE_397_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_398_I0
+.gate NAND2X1 A=GATE_43 B=GATE_397 Y=GATE_398
+
+
+
+# gate type: NAND; name: GATE_399_I0
+.gate NAND2X1 A=GATE_392 B=GATE_393 Y=GATE_399_I0_OUT
+
+# gate type: NOT; name: GATE_399_I3
+.gate INVX1 A=GATE_399_I0_OUT Y=GATE_399
+
+
+
+# gate type: NAND; name: GATE_400_I0
+.gate NAND2X1 A=GATE_394 B=GATE_395 Y=GATE_400_I0_OUT
+
+# gate type: NOT; name: GATE_400_I3
+.gate INVX1 A=GATE_400_I0_OUT Y=GATE_400
+
+
+
+# gate type: NAND; name: GATE_401_I0
+.gate NAND2X1 A=GATE_396 B=GATE_400 Y=GATE_401_I0_OUT
+
+# gate type: NOT; name: GATE_401_I3
+.gate INVX1 A=GATE_401_I0_OUT Y=GATE_401
+
+
+
+# gate type: NAND; name: GATE_402_I0
+.gate NAND2X1 A=GATE_398 B=GATE_399 Y=GATE_402_I0_OUT
+
+# gate type: NOT; name: GATE_402_I3
+.gate INVX1 A=GATE_402_I0_OUT Y=GATE_402
+
+
+
+# gate type: NAND; name: GATE_403_I0
+.gate NAND2X1 A=GATE_401 B=GATE_402 Y=GATE_403_I0_OUT
+
+# gate type: NOT; name: GATE_403_I3
+.gate INVX1 A=GATE_403_I0_OUT Y=GATE_403
+
+
+
+# gate type: NAND; name: GATE_404_I0
+.gate NAND2X1 A=GATE_404_I1_OUT B=GATE_326 Y=GATE_404
+
+# gate type: NOT; name: GATE_404_I1
+.gate INVX1 A=GATE_45 Y=GATE_404_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_405_I0
+.gate NAND2X1 A=GATE_94 B=GATE_404 Y=GATE_405
+
+
+
+# gate type: NAND; name: GATE_406_I0
+.gate NAND2X1 A=GATE_406_I1_OUT B=GATE_406_I2_OUT Y=GATE_406_I0_OUT
+
+# gate type: NOT; name: GATE_406_I3
+.gate INVX1 A=GATE_406_I0_OUT Y=GATE_406
+
+# gate type: NOT; name: GATE_406_I1
+.gate INVX1 A=GATE_54 Y=GATE_406_I1_OUT
+
+# gate type: NOT; name: GATE_406_I2
+.gate INVX1 A=GATE_152 Y=GATE_406_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_407_I0
+.gate NAND2X1 A=GATE_407_I1_OUT B=GATE_20 Y=GATE_407_I0_OUT
+
+# gate type: NOT; name: GATE_407_I3
+.gate INVX1 A=GATE_407_I0_OUT Y=GATE_407
+
+# gate type: NOT; name: GATE_407_I1
+.gate INVX1 A=INPUT_6 Y=GATE_407_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_408_I0
+.gate NAND2X1 A=GATE_408_I1_OUT B=GATE_407 Y=GATE_408
+
+# gate type: NOT; name: GATE_408_I1
+.gate INVX1 A=GATE_406 Y=GATE_408_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_409_I0
+.gate NAND2X1 A=GATE_409_I1_OUT B=GATE_409_I2_OUT Y=GATE_409
+
+# gate type: NOT; name: GATE_409_I1
+.gate INVX1 A=GATE_11 Y=GATE_409_I1_OUT
+
+# gate type: NOT; name: GATE_409_I2
+.gate INVX1 A=GATE_50 Y=GATE_409_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_410_I0
+.gate NAND2X1 A=GATE_103 B=GATE_409 Y=GATE_410
+
+
+
+# gate type: NAND; name: GATE_411_I0
+.gate NAND2X1 A=GATE_36 B=GATE_43 Y=GATE_411_I0_OUT
+
+# gate type: NOT; name: GATE_411_I3
+.gate INVX1 A=GATE_411_I0_OUT Y=GATE_411
+
+
+
+# gate type: NAND; name: GATE_412_I0
+.gate NAND2X1 A=INPUT_0 B=GATE_411 Y=GATE_412
+
+
+
+# gate type: NAND; name: GATE_413_I0
+.gate NAND2X1 A=INPUT_3 B=GATE_3 Y=GATE_413
+
+
+
+# gate type: NAND; name: GATE_414_I0
+.gate NAND2X1 A=GATE_414_I1_OUT B=GATE_413 Y=GATE_414
+
+# gate type: NOT; name: GATE_414_I1
+.gate INVX1 A=GATE_292 Y=GATE_414_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_415_I0
+.gate NAND2X1 A=GATE_156 B=GATE_414 Y=GATE_415
+
+
+
+# gate type: NAND; name: GATE_416_I0
+.gate NAND2X1 A=GATE_46 B=GATE_224 Y=GATE_416
+
+
+
+# gate type: NAND; name: GATE_417_I0
+.gate NAND2X1 A=GATE_14 B=GATE_50 Y=GATE_417
+
+
+
+# gate type: NAND; name: GATE_418_I0
+.gate NAND2X1 A=GATE_35 B=GATE_41 Y=GATE_418
+
+
+
+# gate type: NAND; name: GATE_419_I0
+.gate NAND2X1 A=GATE_94 B=GATE_101 Y=GATE_419
+
+
+
+# gate type: NAND; name: GATE_420_I0
+.gate NAND2X1 A=GATE_89 B=GATE_327 Y=GATE_420
+
+
+
+# gate type: NAND; name: GATE_421_I0
+.gate NAND2X1 A=GATE_11 B=GATE_91 Y=GATE_421
+
+
+
+# gate type: NAND; name: GATE_422_I0
+.gate NAND2X1 A=GATE_5 B=GATE_63 Y=GATE_422
+
+
+
+# gate type: NAND; name: GATE_423_I0
+.gate NAND2X1 A=GATE_43 B=GATE_76 Y=GATE_423
+
+
+
+# gate type: NAND; name: GATE_424_I0
+.gate NAND2X1 A=GATE_424_I1_OUT B=GATE_16 Y=GATE_424_I0_OUT
+
+# gate type: NOT; name: GATE_424_I3
+.gate INVX1 A=GATE_424_I0_OUT Y=GATE_424
+
+# gate type: NOT; name: GATE_424_I1
+.gate INVX1 A=INPUT_5 Y=GATE_424_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_425_I0
+.gate NAND2X1 A=GATE_118 B=GATE_424 Y=GATE_425
+
+
+
+# gate type: NAND; name: GATE_426_I0
+.gate NAND2X1 A=GATE_69 B=GATE_132 Y=GATE_426
+
+
+
+# gate type: NAND; name: GATE_427_I0
+.gate NAND2X1 A=GATE_30 B=GATE_235 Y=GATE_427
+
+
+
+# gate type: NAND; name: GATE_428_I0
+.gate NAND2X1 A=GATE_428_I1_OUT B=GATE_10 Y=GATE_428_I0_OUT
+
+# gate type: NOT; name: GATE_428_I3
+.gate INVX1 A=GATE_428_I0_OUT Y=GATE_428
+
+# gate type: NOT; name: GATE_428_I1
+.gate INVX1 A=INPUT_7 Y=GATE_428_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_429_I0
+.gate NAND2X1 A=GATE_158 B=GATE_428 Y=GATE_429
+
+
+
+# gate type: NAND; name: GATE_430_I0
+.gate NAND2X1 A=GATE_69 B=GATE_235 Y=GATE_430
+
+
+
+# gate type: NAND; name: GATE_431_I0
+.gate NAND2X1 A=GATE_17 B=GATE_128 Y=GATE_431
+
+
+
+# gate type: NAND; name: GATE_432_I0
+.gate NAND2X1 A=GATE_69 B=GATE_152 Y=GATE_432
+
+
+
+# gate type: NAND; name: GATE_433_I0
+.gate NAND2X1 A=GATE_171 B=GATE_430 Y=GATE_433_I0_OUT
+
+# gate type: NOT; name: GATE_433_I3
+.gate INVX1 A=GATE_433_I0_OUT Y=GATE_433
+
+
+
+# gate type: NAND; name: GATE_434_I0
+.gate NAND2X1 A=GATE_431 B=GATE_432 Y=GATE_434_I0_OUT
+
+# gate type: NOT; name: GATE_434_I3
+.gate INVX1 A=GATE_434_I0_OUT Y=GATE_434
+
+
+
+# gate type: NAND; name: GATE_435_I0
+.gate NAND2X1 A=GATE_433 B=GATE_434 Y=GATE_435_I0_OUT
+
+# gate type: NOT; name: GATE_435_I3
+.gate INVX1 A=GATE_435_I0_OUT Y=GATE_435
+
+
+
+# gate type: NAND; name: GATE_436_I0
+.gate NAND2X1 A=GATE_58 B=GATE_149 Y=GATE_436
+
+
+
+# gate type: NAND; name: GATE_437_I0
+.gate NAND2X1 A=GATE_22 B=GATE_69 Y=GATE_437
+
+
+
+# gate type: NAND; name: GATE_438_I0
+.gate NAND2X1 A=GATE_176 B=GATE_437 Y=GATE_438_I0_OUT
+
+# gate type: NOT; name: GATE_438_I3
+.gate INVX1 A=GATE_438_I0_OUT Y=GATE_438
+
+
+
+# gate type: NAND; name: GATE_439_I0
+.gate NAND2X1 A=GATE_436 B=GATE_438 Y=GATE_439_I0_OUT
+
+# gate type: NOT; name: GATE_439_I3
+.gate INVX1 A=GATE_439_I0_OUT Y=GATE_439
+
+
+
+# gate type: NAND; name: GATE_440_I0
+.gate NAND2X1 A=GATE_39 B=GATE_48 Y=GATE_440
+
+
+
+# gate type: NAND; name: GATE_441_I0
+.gate NAND2X1 A=GATE_39 B=GATE_103 Y=GATE_441
+
+
+
+# gate type: NAND; name: GATE_442_I0
+.gate NAND2X1 A=GATE_90 B=GATE_440 Y=GATE_442_I0_OUT
+
+# gate type: NOT; name: GATE_442_I3
+.gate INVX1 A=GATE_442_I0_OUT Y=GATE_442
+
+
+
+# gate type: NAND; name: GATE_443_I0
+.gate NAND2X1 A=GATE_441 B=GATE_442 Y=GATE_443_I0_OUT
+
+# gate type: NOT; name: GATE_443_I3
+.gate INVX1 A=GATE_443_I0_OUT Y=GATE_443
+
+
+
+# gate type: NAND; name: GATE_444_I0
+.gate NAND2X1 A=GATE_236 B=GATE_314 Y=GATE_444_I0_OUT
+
+# gate type: NOT; name: GATE_444_I3
+.gate INVX1 A=GATE_444_I0_OUT Y=GATE_444
+
+
+
+# gate type: NAND; name: GATE_445_I0
+.gate NAND2X1 A=GATE_416 B=GATE_417 Y=GATE_445_I0_OUT
+
+# gate type: NOT; name: GATE_445_I3
+.gate INVX1 A=GATE_445_I0_OUT Y=GATE_445
+
+
+
+# gate type: NAND; name: GATE_446_I0
+.gate NAND2X1 A=GATE_418 B=GATE_419 Y=GATE_446_I0_OUT
+
+# gate type: NOT; name: GATE_446_I3
+.gate INVX1 A=GATE_446_I0_OUT Y=GATE_446
+
+
+
+# gate type: NAND; name: GATE_447_I0
+.gate NAND2X1 A=GATE_420 B=GATE_421 Y=GATE_447_I0_OUT
+
+# gate type: NOT; name: GATE_447_I3
+.gate INVX1 A=GATE_447_I0_OUT Y=GATE_447
+
+
+
+# gate type: NAND; name: GATE_448_I0
+.gate NAND2X1 A=GATE_422 B=GATE_423 Y=GATE_448_I0_OUT
+
+# gate type: NOT; name: GATE_448_I3
+.gate INVX1 A=GATE_448_I0_OUT Y=GATE_448
+
+
+
+# gate type: NAND; name: GATE_449_I0
+.gate NAND2X1 A=GATE_425 B=GATE_426 Y=GATE_449_I0_OUT
+
+# gate type: NOT; name: GATE_449_I3
+.gate INVX1 A=GATE_449_I0_OUT Y=GATE_449
+
+
+
+# gate type: NAND; name: GATE_450_I0
+.gate NAND2X1 A=GATE_427 B=GATE_429 Y=GATE_450_I0_OUT
+
+# gate type: NOT; name: GATE_450_I3
+.gate INVX1 A=GATE_450_I0_OUT Y=GATE_450
+
+
+
+# gate type: NAND; name: GATE_451_I0
+.gate NAND2X1 A=GATE_449 B=GATE_450 Y=GATE_451_I0_OUT
+
+# gate type: NOT; name: GATE_451_I3
+.gate INVX1 A=GATE_451_I0_OUT Y=GATE_451
+
+
+
+# gate type: NAND; name: GATE_452_I0
+.gate NAND2X1 A=GATE_447 B=GATE_448 Y=GATE_452_I0_OUT
+
+# gate type: NOT; name: GATE_452_I3
+.gate INVX1 A=GATE_452_I0_OUT Y=GATE_452
+
+
+
+# gate type: NAND; name: GATE_453_I0
+.gate NAND2X1 A=GATE_445 B=GATE_446 Y=GATE_453_I0_OUT
+
+# gate type: NOT; name: GATE_453_I3
+.gate INVX1 A=GATE_453_I0_OUT Y=GATE_453
+
+
+
+# gate type: NAND; name: GATE_454_I0
+.gate NAND2X1 A=GATE_75 B=GATE_444 Y=GATE_454_I0_OUT
+
+# gate type: NOT; name: GATE_454_I3
+.gate INVX1 A=GATE_454_I0_OUT Y=GATE_454
+
+
+
+# gate type: NAND; name: GATE_455_I0
+.gate NAND2X1 A=GATE_183 B=GATE_253 Y=GATE_455_I0_OUT
+
+# gate type: NOT; name: GATE_455_I3
+.gate INVX1 A=GATE_455_I0_OUT Y=GATE_455
+
+
+
+# gate type: NAND; name: GATE_456_I0
+.gate NAND2X1 A=GATE_367 B=GATE_369 Y=GATE_456_I0_OUT
+
+# gate type: NOT; name: GATE_456_I3
+.gate INVX1 A=GATE_456_I0_OUT Y=GATE_456
+
+
+
+# gate type: NAND; name: GATE_457_I0
+.gate NAND2X1 A=GATE_371 B=GATE_373 Y=GATE_457_I0_OUT
+
+# gate type: NOT; name: GATE_457_I3
+.gate INVX1 A=GATE_457_I0_OUT Y=GATE_457
+
+
+
+# gate type: NAND; name: GATE_458_I0
+.gate NAND2X1 A=GATE_375 B=GATE_377 Y=GATE_458_I0_OUT
+
+# gate type: NOT; name: GATE_458_I3
+.gate INVX1 A=GATE_458_I0_OUT Y=GATE_458
+
+
+
+# gate type: NAND; name: GATE_459_I0
+.gate NAND2X1 A=GATE_379 B=GATE_408 Y=GATE_459_I0_OUT
+
+# gate type: NOT; name: GATE_459_I3
+.gate INVX1 A=GATE_459_I0_OUT Y=GATE_459
+
+
+
+# gate type: NAND; name: GATE_460_I0
+.gate NAND2X1 A=GATE_410 B=GATE_412 Y=GATE_460_I0_OUT
+
+# gate type: NOT; name: GATE_460_I3
+.gate INVX1 A=GATE_460_I0_OUT Y=GATE_460
+
+
+
+# gate type: NAND; name: GATE_461_I0
+.gate NAND2X1 A=GATE_415 B=GATE_460 Y=GATE_461_I0_OUT
+
+# gate type: NOT; name: GATE_461_I3
+.gate INVX1 A=GATE_461_I0_OUT Y=GATE_461
+
+
+
+# gate type: NAND; name: GATE_462_I0
+.gate NAND2X1 A=GATE_458 B=GATE_459 Y=GATE_462_I0_OUT
+
+# gate type: NOT; name: GATE_462_I3
+.gate INVX1 A=GATE_462_I0_OUT Y=GATE_462
+
+
+
+# gate type: NAND; name: GATE_463_I0
+.gate NAND2X1 A=GATE_456 B=GATE_457 Y=GATE_463_I0_OUT
+
+# gate type: NOT; name: GATE_463_I3
+.gate INVX1 A=GATE_463_I0_OUT Y=GATE_463
+
+
+
+# gate type: NAND; name: GATE_464_I0
+.gate NAND2X1 A=GATE_454 B=GATE_455 Y=GATE_464_I0_OUT
+
+# gate type: NOT; name: GATE_464_I3
+.gate INVX1 A=GATE_464_I0_OUT Y=GATE_464
+
+
+
+# gate type: NAND; name: GATE_465_I0
+.gate NAND2X1 A=GATE_452 B=GATE_453 Y=GATE_465_I0_OUT
+
+# gate type: NOT; name: GATE_465_I3
+.gate INVX1 A=GATE_465_I0_OUT Y=GATE_465
+
+
+
+# gate type: NAND; name: GATE_466_I0
+.gate NAND2X1 A=GATE_162 B=GATE_451 Y=GATE_466_I0_OUT
+
+# gate type: NOT; name: GATE_466_I3
+.gate INVX1 A=GATE_466_I0_OUT Y=GATE_466
+
+
+
+# gate type: NAND; name: GATE_467_I0
+.gate NAND2X1 A=GATE_435 B=GATE_439 Y=GATE_467_I0_OUT
+
+# gate type: NOT; name: GATE_467_I3
+.gate INVX1 A=GATE_467_I0_OUT Y=GATE_467
+
+
+
+# gate type: NAND; name: GATE_468_I0
+.gate NAND2X1 A=GATE_443 B=GATE_467 Y=GATE_468_I0_OUT
+
+# gate type: NOT; name: GATE_468_I3
+.gate INVX1 A=GATE_468_I0_OUT Y=GATE_468
+
+
+
+# gate type: NAND; name: GATE_469_I0
+.gate NAND2X1 A=GATE_465 B=GATE_466 Y=GATE_469_I0_OUT
+
+# gate type: NOT; name: GATE_469_I3
+.gate INVX1 A=GATE_469_I0_OUT Y=GATE_469
+
+
+
+# gate type: NAND; name: GATE_470_I0
+.gate NAND2X1 A=GATE_463 B=GATE_464 Y=GATE_470_I0_OUT
+
+# gate type: NOT; name: GATE_470_I3
+.gate INVX1 A=GATE_470_I0_OUT Y=GATE_470
+
+
+
+# gate type: NAND; name: GATE_471_I0
+.gate NAND2X1 A=GATE_461 B=GATE_462 Y=GATE_471_I0_OUT
+
+# gate type: NOT; name: GATE_471_I3
+.gate INVX1 A=GATE_471_I0_OUT Y=GATE_471
+
+
+
+# gate type: NAND; name: GATE_472_I0
+.gate NAND2X1 A=GATE_115 B=GATE_275 Y=GATE_472_I0_OUT
+
+# gate type: NOT; name: GATE_472_I3
+.gate INVX1 A=GATE_472_I0_OUT Y=GATE_472
+
+
+
+# gate type: NAND; name: GATE_473_I0
+.gate NAND2X1 A=GATE_391 B=GATE_403 Y=GATE_473_I0_OUT
+
+# gate type: NOT; name: GATE_473_I3
+.gate INVX1 A=GATE_473_I0_OUT Y=GATE_473
+
+
+
+# gate type: NAND; name: GATE_474_I0
+.gate NAND2X1 A=GATE_405 B=GATE_473 Y=GATE_474_I0_OUT
+
+# gate type: NOT; name: GATE_474_I3
+.gate INVX1 A=GATE_474_I0_OUT Y=GATE_474
+
+
+
+# gate type: NAND; name: GATE_475_I0
+.gate NAND2X1 A=GATE_471 B=GATE_472 Y=GATE_475_I0_OUT
+
+# gate type: NOT; name: GATE_475_I3
+.gate INVX1 A=GATE_475_I0_OUT Y=GATE_475
+
+
+
+# gate type: NAND; name: GATE_476_I0
+.gate NAND2X1 A=GATE_469 B=GATE_470 Y=GATE_476_I0_OUT
+
+# gate type: NOT; name: GATE_476_I3
+.gate INVX1 A=GATE_476_I0_OUT Y=GATE_476
+
+
+
+# gate type: NAND; name: GATE_477_I0
+.gate NAND2X1 A=GATE_468 B=GATE_476 Y=GATE_477_I0_OUT
+
+# gate type: NOT; name: GATE_477_I3
+.gate INVX1 A=GATE_477_I0_OUT Y=GATE_477
+
+
+
+# gate type: NAND; name: GATE_478_I0
+.gate NAND2X1 A=GATE_474 B=GATE_475 Y=GATE_478_I0_OUT
+
+# gate type: NOT; name: GATE_478_I3
+.gate INVX1 A=GATE_478_I0_OUT Y=GATE_478
+
+
+
+# gate type: NAND; name: GATE_479_I0
+.gate NAND2X1 A=GATE_477 B=GATE_478 Y=GATE_479
+
+
+
+# gate type: NAND; name: GATE_480_I0
+.gate NAND2X1 A=GATE_2 B=GATE_293 Y=GATE_480
+
+
+
+# gate type: NAND; name: GATE_481_I0
+.gate NAND2X1 A=GATE_5 B=GATE_58 Y=GATE_481
+
+
+
+# gate type: NAND; name: GATE_482_I0
+.gate NAND2X1 A=GATE_251 B=GATE_481 Y=GATE_482_I0_OUT
+
+# gate type: NOT; name: GATE_482_I3
+.gate INVX1 A=GATE_482_I0_OUT Y=GATE_482
+
+
+
+# gate type: NAND; name: GATE_483_I0
+.gate NAND2X1 A=GATE_9 B=GATE_35 Y=GATE_483
+
+
+
+# gate type: NAND; name: GATE_484_I0
+.gate NAND2X1 A=GATE_43 B=GATE_101 Y=GATE_484
+
+
+
+# gate type: NAND; name: GATE_485_I0
+.gate NAND2X1 A=GATE_483 B=GATE_484 Y=GATE_485_I0_OUT
+
+# gate type: NOT; name: GATE_485_I3
+.gate INVX1 A=GATE_485_I0_OUT Y=GATE_485
+
+
+
+# gate type: NAND; name: GATE_486_I0
+.gate NAND2X1 A=GATE_22 B=GATE_94 Y=GATE_486
+
+
+
+# gate type: NAND; name: GATE_487_I0
+.gate NAND2X1 A=GATE_156 B=GATE_224 Y=GATE_487
+
+
+
+# gate type: NAND; name: GATE_488_I0
+.gate NAND2X1 A=GATE_486 B=GATE_487 Y=GATE_488_I0_OUT
+
+# gate type: NOT; name: GATE_488_I3
+.gate INVX1 A=GATE_488_I0_OUT Y=GATE_488
+
+
+
+# gate type: NAND; name: GATE_489_I0
+.gate NAND2X1 A=GATE_489_I1_OUT B=GATE_84 Y=GATE_489
+
+# gate type: NOT; name: GATE_489_I1
+.gate INVX1 A=GATE_3 Y=GATE_489_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_490_I0
+.gate NAND2X1 A=GATE_30 B=GATE_101 Y=GATE_490
+
+
+
+# gate type: NAND; name: GATE_491_I0
+.gate NAND2X1 A=GATE_58 B=GATE_125 Y=GATE_491
+
+
+
+# gate type: NAND; name: GATE_492_I0
+.gate NAND2X1 A=GATE_490 B=GATE_491 Y=GATE_492_I0_OUT
+
+# gate type: NOT; name: GATE_492_I3
+.gate INVX1 A=GATE_492_I0_OUT Y=GATE_492
+
+
+
+# gate type: NAND; name: GATE_493_I0
+.gate NAND2X1 A=GATE_11 B=GATE_382 Y=GATE_493
+
+
+
+# gate type: NAND; name: GATE_494_I0
+.gate NAND2X1 A=GATE_35 B=GATE_54 Y=GATE_494
+
+
+
+# gate type: NAND; name: GATE_495_I0
+.gate NAND2X1 A=GATE_17 B=GATE_54 Y=GATE_495
+
+
+
+# gate type: NAND; name: GATE_496_I0
+.gate NAND2X1 A=GATE_21 B=GATE_70 Y=GATE_496
+
+
+
+# gate type: NAND; name: GATE_497_I0
+.gate NAND2X1 A=GATE_69 B=GATE_187 Y=GATE_497
+
+
+
+# gate type: NAND; name: GATE_498_I0
+.gate NAND2X1 A=GATE_494 B=GATE_495 Y=GATE_498_I0_OUT
+
+# gate type: NOT; name: GATE_498_I3
+.gate INVX1 A=GATE_498_I0_OUT Y=GATE_498
+
+
+
+# gate type: NAND; name: GATE_499_I0
+.gate NAND2X1 A=GATE_496 B=GATE_498 Y=GATE_499_I0_OUT
+
+# gate type: NOT; name: GATE_499_I3
+.gate INVX1 A=GATE_499_I0_OUT Y=GATE_499
+
+
+
+# gate type: NAND; name: GATE_500_I0
+.gate NAND2X1 A=GATE_497 B=GATE_499 Y=GATE_500_I0_OUT
+
+# gate type: NOT; name: GATE_500_I3
+.gate INVX1 A=GATE_500_I0_OUT Y=GATE_500
+
+
+
+# gate type: NAND; name: GATE_501_I0
+.gate NAND2X1 A=GATE_501_I1_OUT B=GATE_501_I2_OUT Y=GATE_501
+
+# gate type: NOT; name: GATE_501_I1
+.gate INVX1 A=GATE_76 Y=GATE_501_I1_OUT
+
+# gate type: NOT; name: GATE_501_I2
+.gate INVX1 A=GATE_142 Y=GATE_501_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_502_I0
+.gate NAND2X1 A=GATE_63 B=GATE_501 Y=GATE_502
+
+
+
+# gate type: NAND; name: GATE_503_I0
+.gate NAND2X1 A=GATE_9 B=GATE_156 Y=GATE_503
+
+
+
+# gate type: NAND; name: GATE_504_I0
+.gate NAND2X1 A=GATE_17 B=GATE_22 Y=GATE_504
+
+
+
+# gate type: NAND; name: GATE_505_I0
+.gate NAND2X1 A=GATE_238 B=GATE_418 Y=GATE_505_I0_OUT
+
+# gate type: NOT; name: GATE_505_I3
+.gate INVX1 A=GATE_505_I0_OUT Y=GATE_505
+
+
+
+# gate type: NAND; name: GATE_506_I0
+.gate NAND2X1 A=GATE_503 B=GATE_504 Y=GATE_506_I0_OUT
+
+# gate type: NOT; name: GATE_506_I3
+.gate INVX1 A=GATE_506_I0_OUT Y=GATE_506
+
+
+
+# gate type: NAND; name: GATE_507_I0
+.gate NAND2X1 A=GATE_505 B=GATE_506 Y=GATE_507_I0_OUT
+
+# gate type: NOT; name: GATE_507_I3
+.gate INVX1 A=GATE_507_I0_OUT Y=GATE_507
+
+
+
+# gate type: NAND; name: GATE_508_I0
+.gate NAND2X1 A=GATE_226 B=GATE_502 Y=GATE_508_I0_OUT
+
+# gate type: NOT; name: GATE_508_I3
+.gate INVX1 A=GATE_508_I0_OUT Y=GATE_508
+
+
+
+# gate type: NAND; name: GATE_509_I0
+.gate NAND2X1 A=GATE_507 B=GATE_508 Y=GATE_509_I0_OUT
+
+# gate type: NOT; name: GATE_509_I3
+.gate INVX1 A=GATE_509_I0_OUT Y=GATE_509
+
+
+
+# gate type: NAND; name: GATE_510_I0
+.gate NAND2X1 A=GATE_30 B=GATE_45 Y=GATE_510
+
+
+
+# gate type: NAND; name: GATE_511_I0
+.gate NAND2X1 A=INPUT_0 B=GATE_305 Y=GATE_511_I0_OUT
+
+# gate type: NOT; name: GATE_511_I3
+.gate INVX1 A=GATE_511_I0_OUT Y=GATE_511
+
+
+
+# gate type: NAND; name: GATE_512_I0
+.gate NAND2X1 A=GATE_510 B=GATE_511 Y=GATE_512
+
+
+
+# gate type: NAND; name: GATE_513_I0
+.gate NAND2X1 A=GATE_513_I1_OUT B=GATE_135 Y=GATE_513_I0_OUT
+
+# gate type: NOT; name: GATE_513_I3
+.gate INVX1 A=GATE_513_I0_OUT Y=GATE_513
+
+# gate type: NOT; name: GATE_513_I1
+.gate INVX1 A=INPUT_0 Y=GATE_513_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_514_I0
+.gate NAND2X1 A=GATE_416 B=GATE_513 Y=GATE_514
+
+
+
+# gate type: NAND; name: GATE_515_I0
+.gate NAND2X1 A=GATE_512 B=GATE_514 Y=GATE_515
+
+
+
+# gate type: NAND; name: GATE_516_I0
+.gate NAND2X1 A=GATE_30 B=GATE_516_I2_OUT Y=GATE_516
+
+# gate type: NOT; name: GATE_516_I2
+.gate INVX1 A=GATE_263 Y=GATE_516_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_517_I0
+.gate NAND2X1 A=GATE_63 B=GATE_72 Y=GATE_517
+
+
+
+# gate type: NAND; name: GATE_518_I0
+.gate NAND2X1 A=GATE_45 B=GATE_156 Y=GATE_518
+
+
+
+# gate type: NAND; name: GATE_519_I0
+.gate NAND2X1 A=GATE_517 B=GATE_518 Y=GATE_519_I0_OUT
+
+# gate type: NOT; name: GATE_519_I3
+.gate INVX1 A=GATE_519_I0_OUT Y=GATE_519
+
+
+
+# gate type: NAND; name: GATE_520_I0
+.gate NAND2X1 A=GATE_17 B=GATE_48 Y=GATE_520
+
+
+
+# gate type: NAND; name: GATE_521_I0
+.gate NAND2X1 A=GATE_21 B=GATE_101 Y=GATE_521
+
+
+
+# gate type: NAND; name: GATE_522_I0
+.gate NAND2X1 A=GATE_520 B=GATE_521 Y=GATE_522_I0_OUT
+
+# gate type: NOT; name: GATE_522_I3
+.gate INVX1 A=GATE_522_I0_OUT Y=GATE_522
+
+
+
+# gate type: NAND; name: GATE_523_I0
+.gate NAND2X1 A=GATE_46 B=GATE_132 Y=GATE_523
+
+
+
+# gate type: NAND; name: GATE_524_I0
+.gate NAND2X1 A=GATE_9 B=GATE_50 Y=GATE_524
+
+
+
+# gate type: NAND; name: GATE_525_I0
+.gate NAND2X1 A=GATE_30 B=GATE_158 Y=GATE_525
+
+
+
+# gate type: NAND; name: GATE_526_I0
+.gate NAND2X1 A=GATE_63 B=GATE_109 Y=GATE_526
+
+
+
+# gate type: NAND; name: GATE_527_I0
+.gate NAND2X1 A=GATE_5 B=GATE_43 Y=GATE_527
+
+
+
+# gate type: NAND; name: GATE_528_I0
+.gate NAND2X1 A=INPUT_3 B=GATE_25 Y=GATE_528
+
+
+
+# gate type: NAND; name: GATE_529_I0
+.gate NAND2X1 A=GATE_35 B=GATE_101 Y=GATE_529
+
+
+
+# gate type: NAND; name: GATE_530_I0
+.gate NAND2X1 A=GATE_39 B=GATE_72 Y=GATE_530
+
+
+
+# gate type: NAND; name: GATE_531_I0
+.gate NAND2X1 A=GATE_531_I1_OUT B=GATE_531_I2_OUT Y=GATE_531
+
+# gate type: NOT; name: GATE_531_I1
+.gate INVX1 A=GATE_101 Y=GATE_531_I1_OUT
+
+# gate type: NOT; name: GATE_531_I2
+.gate INVX1 A=GATE_125 Y=GATE_531_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_532_I0
+.gate NAND2X1 A=GATE_94 B=GATE_531 Y=GATE_532
+
+
+
+# gate type: NAND; name: GATE_533_I0
+.gate NAND2X1 A=GATE_41 B=GATE_58 Y=GATE_533
+
+
+
+# gate type: NAND; name: GATE_534_I0
+.gate NAND2X1 A=GATE_532 B=GATE_533 Y=GATE_534_I0_OUT
+
+# gate type: NOT; name: GATE_534_I3
+.gate INVX1 A=GATE_534_I0_OUT Y=GATE_534
+
+
+
+# gate type: NAND; name: GATE_535_I0
+.gate NAND2X1 A=GATE_11 B=GATE_101 Y=GATE_535
+
+
+
+# gate type: NAND; name: GATE_536_I0
+.gate NAND2X1 A=GATE_384 B=GATE_535 Y=GATE_536_I0_OUT
+
+# gate type: NOT; name: GATE_536_I3
+.gate INVX1 A=GATE_536_I0_OUT Y=GATE_536
+
+
+
+# gate type: NAND; name: GATE_537_I0
+.gate NAND2X1 A=GATE_12 B=GATE_310 Y=GATE_537_I0_OUT
+
+# gate type: NOT; name: GATE_537_I3
+.gate INVX1 A=GATE_537_I0_OUT Y=GATE_537
+
+
+
+# gate type: NAND; name: GATE_538_I0
+.gate NAND2X1 A=GATE_536 B=GATE_537 Y=GATE_538_I0_OUT
+
+# gate type: NOT; name: GATE_538_I3
+.gate INVX1 A=GATE_538_I0_OUT Y=GATE_538
+
+
+
+# gate type: NAND; name: GATE_539_I0
+.gate NAND2X1 A=GATE_177 B=GATE_182 Y=GATE_539_I0_OUT
+
+# gate type: NOT; name: GATE_539_I3
+.gate INVX1 A=GATE_539_I0_OUT Y=GATE_539
+
+
+
+# gate type: NAND; name: GATE_540_I0
+.gate NAND2X1 A=GATE_540_I1_OUT B=GATE_271 Y=GATE_540_I0_OUT
+
+# gate type: NOT; name: GATE_540_I3
+.gate INVX1 A=GATE_540_I0_OUT Y=GATE_540
+
+# gate type: NOT; name: GATE_540_I1
+.gate INVX1 A=GATE_254 Y=GATE_540_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_541_I0
+.gate NAND2X1 A=GATE_279 B=GATE_311 Y=GATE_541_I0_OUT
+
+# gate type: NOT; name: GATE_541_I3
+.gate INVX1 A=GATE_541_I0_OUT Y=GATE_541
+
+
+
+# gate type: NAND; name: GATE_542_I0
+.gate NAND2X1 A=GATE_314 B=GATE_368 Y=GATE_542_I0_OUT
+
+# gate type: NOT; name: GATE_542_I3
+.gate INVX1 A=GATE_542_I0_OUT Y=GATE_542
+
+
+
+# gate type: NAND; name: GATE_543_I0
+.gate NAND2X1 A=GATE_372 B=GATE_437 Y=GATE_543_I0_OUT
+
+# gate type: NOT; name: GATE_543_I3
+.gate INVX1 A=GATE_543_I0_OUT Y=GATE_543
+
+
+
+# gate type: NAND; name: GATE_544_I0
+.gate NAND2X1 A=GATE_440 B=GATE_523 Y=GATE_544_I0_OUT
+
+# gate type: NOT; name: GATE_544_I3
+.gate INVX1 A=GATE_544_I0_OUT Y=GATE_544
+
+
+
+# gate type: NAND; name: GATE_545_I0
+.gate NAND2X1 A=GATE_524 B=GATE_525 Y=GATE_545_I0_OUT
+
+# gate type: NOT; name: GATE_545_I3
+.gate INVX1 A=GATE_545_I0_OUT Y=GATE_545
+
+
+
+# gate type: NAND; name: GATE_546_I0
+.gate NAND2X1 A=GATE_526 B=GATE_527 Y=GATE_546_I0_OUT
+
+# gate type: NOT; name: GATE_546_I3
+.gate INVX1 A=GATE_546_I0_OUT Y=GATE_546
+
+
+
+# gate type: NAND; name: GATE_547_I0
+.gate NAND2X1 A=GATE_528 B=GATE_529 Y=GATE_547_I0_OUT
+
+# gate type: NOT; name: GATE_547_I3
+.gate INVX1 A=GATE_547_I0_OUT Y=GATE_547
+
+
+
+# gate type: NAND; name: GATE_548_I0
+.gate NAND2X1 A=GATE_530 B=GATE_547 Y=GATE_548_I0_OUT
+
+# gate type: NOT; name: GATE_548_I3
+.gate INVX1 A=GATE_548_I0_OUT Y=GATE_548
+
+
+
+# gate type: NAND; name: GATE_549_I0
+.gate NAND2X1 A=GATE_545 B=GATE_546 Y=GATE_549_I0_OUT
+
+# gate type: NOT; name: GATE_549_I3
+.gate INVX1 A=GATE_549_I0_OUT Y=GATE_549
+
+
+
+# gate type: NAND; name: GATE_550_I0
+.gate NAND2X1 A=GATE_543 B=GATE_544 Y=GATE_550_I0_OUT
+
+# gate type: NOT; name: GATE_550_I3
+.gate INVX1 A=GATE_550_I0_OUT Y=GATE_550
+
+
+
+# gate type: NAND; name: GATE_551_I0
+.gate NAND2X1 A=GATE_541 B=GATE_542 Y=GATE_551_I0_OUT
+
+# gate type: NOT; name: GATE_551_I3
+.gate INVX1 A=GATE_551_I0_OUT Y=GATE_551
+
+
+
+# gate type: NAND; name: GATE_552_I0
+.gate NAND2X1 A=GATE_539 B=GATE_540 Y=GATE_552_I0_OUT
+
+# gate type: NOT; name: GATE_552_I3
+.gate INVX1 A=GATE_552_I0_OUT Y=GATE_552
+
+
+
+# gate type: NAND; name: GATE_553_I0
+.gate NAND2X1 A=GATE_105 B=GATE_127 Y=GATE_553_I0_OUT
+
+# gate type: NOT; name: GATE_553_I3
+.gate INVX1 A=GATE_553_I0_OUT Y=GATE_553
+
+
+
+# gate type: NAND; name: GATE_554_I0
+.gate NAND2X1 A=GATE_258 B=GATE_480 Y=GATE_554_I0_OUT
+
+# gate type: NOT; name: GATE_554_I3
+.gate INVX1 A=GATE_554_I0_OUT Y=GATE_554
+
+
+
+# gate type: NAND; name: GATE_555_I0
+.gate NAND2X1 A=GATE_482 B=GATE_485 Y=GATE_555_I0_OUT
+
+# gate type: NOT; name: GATE_555_I3
+.gate INVX1 A=GATE_555_I0_OUT Y=GATE_555
+
+
+
+# gate type: NAND; name: GATE_556_I0
+.gate NAND2X1 A=GATE_488 B=GATE_489 Y=GATE_556_I0_OUT
+
+# gate type: NOT; name: GATE_556_I3
+.gate INVX1 A=GATE_556_I0_OUT Y=GATE_556
+
+
+
+# gate type: NAND; name: GATE_557_I0
+.gate NAND2X1 A=GATE_492 B=GATE_493 Y=GATE_557_I0_OUT
+
+# gate type: NOT; name: GATE_557_I3
+.gate INVX1 A=GATE_557_I0_OUT Y=GATE_557
+
+
+
+# gate type: NAND; name: GATE_558_I0
+.gate NAND2X1 A=GATE_516 B=GATE_519 Y=GATE_558_I0_OUT
+
+# gate type: NOT; name: GATE_558_I3
+.gate INVX1 A=GATE_558_I0_OUT Y=GATE_558
+
+
+
+# gate type: NAND; name: GATE_559_I0
+.gate NAND2X1 A=GATE_522 B=GATE_558 Y=GATE_559_I0_OUT
+
+# gate type: NOT; name: GATE_559_I3
+.gate INVX1 A=GATE_559_I0_OUT Y=GATE_559
+
+
+
+# gate type: NAND; name: GATE_560_I0
+.gate NAND2X1 A=GATE_556 B=GATE_557 Y=GATE_560_I0_OUT
+
+# gate type: NOT; name: GATE_560_I3
+.gate INVX1 A=GATE_560_I0_OUT Y=GATE_560
+
+
+
+# gate type: NAND; name: GATE_561_I0
+.gate NAND2X1 A=GATE_554 B=GATE_555 Y=GATE_561_I0_OUT
+
+# gate type: NOT; name: GATE_561_I3
+.gate INVX1 A=GATE_561_I0_OUT Y=GATE_561
+
+
+
+# gate type: NAND; name: GATE_562_I0
+.gate NAND2X1 A=GATE_552 B=GATE_553 Y=GATE_562_I0_OUT
+
+# gate type: NOT; name: GATE_562_I3
+.gate INVX1 A=GATE_562_I0_OUT Y=GATE_562
+
+
+
+# gate type: NAND; name: GATE_563_I0
+.gate NAND2X1 A=GATE_550 B=GATE_551 Y=GATE_563_I0_OUT
+
+# gate type: NOT; name: GATE_563_I3
+.gate INVX1 A=GATE_563_I0_OUT Y=GATE_563
+
+
+
+# gate type: NAND; name: GATE_564_I0
+.gate NAND2X1 A=GATE_548 B=GATE_549 Y=GATE_564_I0_OUT
+
+# gate type: NOT; name: GATE_564_I3
+.gate INVX1 A=GATE_564_I0_OUT Y=GATE_564
+
+
+
+# gate type: NAND; name: GATE_565_I0
+.gate NAND2X1 A=GATE_169 B=GATE_302 Y=GATE_565_I0_OUT
+
+# gate type: NOT; name: GATE_565_I3
+.gate INVX1 A=GATE_565_I0_OUT Y=GATE_565
+
+
+
+# gate type: NAND; name: GATE_566_I0
+.gate NAND2X1 A=GATE_534 B=GATE_538 Y=GATE_566_I0_OUT
+
+# gate type: NOT; name: GATE_566_I3
+.gate INVX1 A=GATE_566_I0_OUT Y=GATE_566
+
+
+
+# gate type: NAND; name: GATE_567_I0
+.gate NAND2X1 A=GATE_565 B=GATE_566 Y=GATE_567_I0_OUT
+
+# gate type: NOT; name: GATE_567_I3
+.gate INVX1 A=GATE_567_I0_OUT Y=GATE_567
+
+
+
+# gate type: NAND; name: GATE_568_I0
+.gate NAND2X1 A=GATE_563 B=GATE_564 Y=GATE_568_I0_OUT
+
+# gate type: NOT; name: GATE_568_I3
+.gate INVX1 A=GATE_568_I0_OUT Y=GATE_568
+
+
+
+# gate type: NAND; name: GATE_569_I0
+.gate NAND2X1 A=GATE_561 B=GATE_562 Y=GATE_569_I0_OUT
+
+# gate type: NOT; name: GATE_569_I3
+.gate INVX1 A=GATE_569_I0_OUT Y=GATE_569
+
+
+
+# gate type: NAND; name: GATE_570_I0
+.gate NAND2X1 A=GATE_559 B=GATE_560 Y=GATE_570_I0_OUT
+
+# gate type: NOT; name: GATE_570_I3
+.gate INVX1 A=GATE_570_I0_OUT Y=GATE_570
+
+
+
+# gate type: NAND; name: GATE_571_I0
+.gate NAND2X1 A=GATE_123 B=GATE_266 Y=GATE_571_I0_OUT
+
+# gate type: NOT; name: GATE_571_I3
+.gate INVX1 A=GATE_571_I0_OUT Y=GATE_571
+
+
+
+# gate type: NAND; name: GATE_572_I0
+.gate NAND2X1 A=GATE_403 B=GATE_500 Y=GATE_572_I0_OUT
+
+# gate type: NOT; name: GATE_572_I3
+.gate INVX1 A=GATE_572_I0_OUT Y=GATE_572
+
+
+
+# gate type: NAND; name: GATE_573_I0
+.gate NAND2X1 A=GATE_509 B=GATE_515 Y=GATE_573_I0_OUT
+
+# gate type: NOT; name: GATE_573_I3
+.gate INVX1 A=GATE_573_I0_OUT Y=GATE_573
+
+
+
+# gate type: NAND; name: GATE_574_I0
+.gate NAND2X1 A=GATE_572 B=GATE_573 Y=GATE_574_I0_OUT
+
+# gate type: NOT; name: GATE_574_I3
+.gate INVX1 A=GATE_574_I0_OUT Y=GATE_574
+
+
+
+# gate type: NAND; name: GATE_575_I0
+.gate NAND2X1 A=GATE_570 B=GATE_571 Y=GATE_575_I0_OUT
+
+# gate type: NOT; name: GATE_575_I3
+.gate INVX1 A=GATE_575_I0_OUT Y=GATE_575
+
+
+
+# gate type: NAND; name: GATE_576_I0
+.gate NAND2X1 A=GATE_568 B=GATE_569 Y=GATE_576_I0_OUT
+
+# gate type: NOT; name: GATE_576_I3
+.gate INVX1 A=GATE_576_I0_OUT Y=GATE_576
+
+
+
+# gate type: NAND; name: GATE_577_I0
+.gate NAND2X1 A=GATE_567 B=GATE_576 Y=GATE_577_I0_OUT
+
+# gate type: NOT; name: GATE_577_I3
+.gate INVX1 A=GATE_577_I0_OUT Y=GATE_577
+
+
+
+# gate type: NAND; name: GATE_578_I0
+.gate NAND2X1 A=GATE_574 B=GATE_575 Y=GATE_578_I0_OUT
+
+# gate type: NOT; name: GATE_578_I3
+.gate INVX1 A=GATE_578_I0_OUT Y=GATE_578
+
+
+
+# gate type: NAND; name: GATE_579_I0
+.gate NAND2X1 A=GATE_577 B=GATE_578 Y=GATE_579
+
+
+
+# gate type: NAND; name: GATE_580_I0
+.gate NAND2X1 A=INPUT_6 B=GATE_1 Y=GATE_580_I0_OUT
+
+# gate type: NOT; name: GATE_580_I3
+.gate INVX1 A=GATE_580_I0_OUT Y=GATE_580
+
+
+
+# gate type: NAND; name: GATE_581_I0
+.gate NAND2X1 A=GATE_132 B=GATE_580 Y=GATE_581
+
+
+
+# gate type: NAND; name: GATE_582_I0
+.gate NAND2X1 A=GATE_30 B=GATE_48 Y=GATE_582
+
+
+
+# gate type: NAND; name: GATE_583_I0
+.gate NAND2X1 A=GATE_5 B=GATE_50 Y=GATE_583
+
+
+
+# gate type: NAND; name: GATE_584_I0
+.gate NAND2X1 A=GATE_21 B=GATE_292 Y=GATE_584
+
+
+
+# gate type: NAND; name: GATE_585_I0
+.gate NAND2X1 A=GATE_69 B=GATE_128 Y=GATE_585
+
+
+
+# gate type: NAND; name: GATE_586_I0
+.gate NAND2X1 A=GATE_586_I1_OUT B=GATE_29 Y=GATE_586_I0_OUT
+
+# gate type: NOT; name: GATE_586_I3
+.gate INVX1 A=GATE_586_I0_OUT Y=GATE_586
+
+# gate type: NOT; name: GATE_586_I1
+.gate INVX1 A=INPUT_7 Y=GATE_586_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_587_I0
+.gate NAND2X1 A=GATE_142 B=GATE_586 Y=GATE_587
+
+
+
+# gate type: NAND; name: GATE_588_I0
+.gate NAND2X1 A=GATE_21 B=GATE_128 Y=GATE_588
+
+
+
+# gate type: NAND; name: GATE_589_I0
+.gate NAND2X1 A=GATE_589_I1_OUT B=GATE_589_I2_OUT Y=GATE_589
+
+# gate type: NOT; name: GATE_589_I1
+.gate INVX1 A=GATE_37 Y=GATE_589_I1_OUT
+
+# gate type: NOT; name: GATE_589_I2
+.gate INVX1 A=GATE_101 Y=GATE_589_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_590_I0
+.gate NAND2X1 A=GATE_63 B=GATE_589 Y=GATE_590
+
+
+
+# gate type: NAND; name: GATE_591_I0
+.gate NAND2X1 A=GATE_422 B=GATE_588 Y=GATE_591_I0_OUT
+
+# gate type: NOT; name: GATE_591_I3
+.gate INVX1 A=GATE_591_I0_OUT Y=GATE_591
+
+
+
+# gate type: NAND; name: GATE_592_I0
+.gate NAND2X1 A=GATE_590 B=GATE_591 Y=GATE_592_I0_OUT
+
+# gate type: NOT; name: GATE_592_I3
+.gate INVX1 A=GATE_592_I0_OUT Y=GATE_592
+
+
+
+# gate type: NAND; name: GATE_593_I0
+.gate NAND2X1 A=GATE_94 B=GATE_185 Y=GATE_593
+
+
+
+# gate type: NAND; name: GATE_594_I0
+.gate NAND2X1 A=GATE_25 B=GATE_248 Y=GATE_594
+
+
+
+# gate type: NAND; name: GATE_595_I0
+.gate NAND2X1 A=GATE_595_I1_OUT B=GATE_595_I2_OUT Y=GATE_595
+
+# gate type: NOT; name: GATE_595_I1
+.gate INVX1 A=GATE_43 Y=GATE_595_I1_OUT
+
+# gate type: NOT; name: GATE_595_I2
+.gate INVX1 A=GATE_327 Y=GATE_595_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_596_I0
+.gate NAND2X1 A=GATE_9 B=GATE_595 Y=GATE_596
+
+
+
+# gate type: NAND; name: GATE_597_I0
+.gate NAND2X1 A=GATE_597_I1_OUT B=GATE_597_I2_OUT Y=GATE_597_I0_OUT
+
+# gate type: NOT; name: GATE_597_I3
+.gate INVX1 A=GATE_597_I0_OUT Y=GATE_597
+
+# gate type: NOT; name: GATE_597_I1
+.gate INVX1 A=GATE_45 Y=GATE_597_I1_OUT
+
+# gate type: NOT; name: GATE_597_I2
+.gate INVX1 A=GATE_292 Y=GATE_597_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_598_I0
+.gate NAND2X1 A=GATE_35 B=GATE_598_I2_OUT Y=GATE_598_I0_OUT
+
+# gate type: NOT; name: GATE_598_I3
+.gate INVX1 A=GATE_598_I0_OUT Y=GATE_598
+
+# gate type: NOT; name: GATE_598_I2
+.gate INVX1 A=GATE_597 Y=GATE_598_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_599_I0
+.gate NAND2X1 A=GATE_30 B=GATE_103 Y=GATE_599
+
+
+
+# gate type: NAND; name: GATE_600_I0
+.gate NAND2X1 A=GATE_14 B=GATE_46 Y=GATE_600
+
+
+
+# gate type: NAND; name: GATE_601_I0
+.gate NAND2X1 A=GATE_599 B=GATE_600 Y=GATE_601_I0_OUT
+
+# gate type: NOT; name: GATE_601_I3
+.gate INVX1 A=GATE_601_I0_OUT Y=GATE_601
+
+
+
+# gate type: NAND; name: GATE_602_I0
+.gate NAND2X1 A=GATE_11 B=GATE_48 Y=GATE_602
+
+
+
+# gate type: NAND; name: GATE_603_I0
+.gate NAND2X1 A=GATE_69 B=GATE_158 Y=GATE_603
+
+
+
+# gate type: NAND; name: GATE_604_I0
+.gate NAND2X1 A=GATE_602 B=GATE_603 Y=GATE_604_I0_OUT
+
+# gate type: NOT; name: GATE_604_I3
+.gate INVX1 A=GATE_604_I0_OUT Y=GATE_604
+
+
+
+# gate type: NAND; name: GATE_605_I0
+.gate NAND2X1 A=GATE_605_I1_OUT B=GATE_605_I2_OUT Y=GATE_605
+
+# gate type: NOT; name: GATE_605_I1
+.gate INVX1 A=GATE_101 Y=GATE_605_I1_OUT
+
+# gate type: NOT; name: GATE_605_I2
+.gate INVX1 A=GATE_118 Y=GATE_605_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_606_I0
+.gate NAND2X1 A=GATE_17 B=GATE_605 Y=GATE_606
+
+
+
+# gate type: NAND; name: GATE_607_I0
+.gate NAND2X1 A=GATE_607_I1_OUT B=GATE_607_I2_OUT Y=GATE_607
+
+# gate type: NOT; name: GATE_607_I1
+.gate INVX1 A=GATE_14 Y=GATE_607_I1_OUT
+
+# gate type: NOT; name: GATE_607_I2
+.gate INVX1 A=GATE_72 Y=GATE_607_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_608_I0
+.gate NAND2X1 A=GATE_58 B=GATE_607 Y=GATE_608
+
+
+
+# gate type: NAND; name: GATE_609_I0
+.gate NAND2X1 A=GATE_609_I1_OUT B=GATE_609_I2_OUT Y=GATE_609
+
+# gate type: NOT; name: GATE_609_I1
+.gate INVX1 A=GATE_39 Y=GATE_609_I1_OUT
+
+# gate type: NOT; name: GATE_609_I2
+.gate INVX1 A=GATE_46 Y=GATE_609_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_610_I0
+.gate NAND2X1 A=GATE_4 B=GATE_610_I2_OUT Y=GATE_610_I0_OUT
+
+# gate type: NOT; name: GATE_610_I3
+.gate INVX1 A=GATE_610_I0_OUT Y=GATE_610
+
+# gate type: NOT; name: GATE_610_I2
+.gate INVX1 A=GATE_53 Y=GATE_610_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_611_I0
+.gate NAND2X1 A=GATE_609 B=GATE_610 Y=GATE_611
+
+
+
+# gate type: NAND; name: GATE_612_I0
+.gate NAND2X1 A=GATE_39 B=GATE_54 Y=GATE_612
+
+
+
+# gate type: NAND; name: GATE_613_I0
+.gate NAND2X1 A=GATE_613_I1_OUT B=GATE_613_I2_OUT Y=GATE_613
+
+# gate type: NOT; name: GATE_613_I1
+.gate INVX1 A=GATE_76 Y=GATE_613_I1_OUT
+
+# gate type: NOT; name: GATE_613_I2
+.gate INVX1 A=GATE_132 Y=GATE_613_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_614_I0
+.gate NAND2X1 A=GATE_21 B=GATE_613 Y=GATE_614
+
+
+
+# gate type: NAND; name: GATE_615_I0
+.gate NAND2X1 A=GATE_17 B=GATE_103 Y=GATE_615
+
+
+
+# gate type: NAND; name: GATE_616_I0
+.gate NAND2X1 A=GATE_37 B=GATE_50 Y=GATE_616
+
+
+
+# gate type: NAND; name: GATE_617_I0
+.gate NAND2X1 A=GATE_617_I1_OUT B=GATE_27 Y=GATE_617_I0_OUT
+
+# gate type: NOT; name: GATE_617_I3
+.gate INVX1 A=GATE_617_I0_OUT Y=GATE_617
+
+# gate type: NOT; name: GATE_617_I1
+.gate INVX1 A=INPUT_3 Y=GATE_617_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_618_I0
+.gate NAND2X1 A=GATE_35 B=GATE_617 Y=GATE_618
+
+
+
+# gate type: NAND; name: GATE_619_I0
+.gate NAND2X1 A=GATE_527 B=GATE_612 Y=GATE_619_I0_OUT
+
+# gate type: NOT; name: GATE_619_I3
+.gate INVX1 A=GATE_619_I0_OUT Y=GATE_619
+
+
+
+# gate type: NAND; name: GATE_620_I0
+.gate NAND2X1 A=GATE_615 B=GATE_616 Y=GATE_620_I0_OUT
+
+# gate type: NOT; name: GATE_620_I3
+.gate INVX1 A=GATE_620_I0_OUT Y=GATE_620
+
+
+
+# gate type: NAND; name: GATE_621_I0
+.gate NAND2X1 A=GATE_618 B=GATE_620 Y=GATE_621_I0_OUT
+
+# gate type: NOT; name: GATE_621_I3
+.gate INVX1 A=GATE_621_I0_OUT Y=GATE_621
+
+
+
+# gate type: NAND; name: GATE_622_I0
+.gate NAND2X1 A=GATE_614 B=GATE_619 Y=GATE_622_I0_OUT
+
+# gate type: NOT; name: GATE_622_I3
+.gate INVX1 A=GATE_622_I0_OUT Y=GATE_622
+
+
+
+# gate type: NAND; name: GATE_623_I0
+.gate NAND2X1 A=GATE_621 B=GATE_622 Y=GATE_623_I0_OUT
+
+# gate type: NOT; name: GATE_623_I3
+.gate INVX1 A=GATE_623_I0_OUT Y=GATE_623
+
+
+
+# gate type: NAND; name: GATE_624_I0
+.gate NAND2X1 A=GATE_65 B=GATE_292 Y=GATE_624
+
+
+
+# gate type: NAND; name: GATE_625_I0
+.gate NAND2X1 A=GATE_94 B=GATE_158 Y=GATE_625
+
+
+
+# gate type: NAND; name: GATE_626_I0
+.gate NAND2X1 A=GATE_5 B=GATE_35 Y=GATE_626
+
+
+
+# gate type: NAND; name: GATE_627_I0
+.gate NAND2X1 A=GATE_46 B=GATE_91 Y=GATE_627
+
+
+
+# gate type: NAND; name: GATE_628_I0
+.gate NAND2X1 A=GATE_625 B=GATE_626 Y=GATE_628_I0_OUT
+
+# gate type: NOT; name: GATE_628_I3
+.gate INVX1 A=GATE_628_I0_OUT Y=GATE_628
+
+
+
+# gate type: NAND; name: GATE_629_I0
+.gate NAND2X1 A=GATE_627 B=GATE_628 Y=GATE_629_I0_OUT
+
+# gate type: NOT; name: GATE_629_I3
+.gate INVX1 A=GATE_629_I0_OUT Y=GATE_629
+
+
+
+# gate type: NAND; name: GATE_630_I0
+.gate NAND2X1 A=GATE_482 B=GATE_624 Y=GATE_630_I0_OUT
+
+# gate type: NOT; name: GATE_630_I3
+.gate INVX1 A=GATE_630_I0_OUT Y=GATE_630
+
+
+
+# gate type: NAND; name: GATE_631_I0
+.gate NAND2X1 A=GATE_629 B=GATE_630 Y=GATE_631_I0_OUT
+
+# gate type: NOT; name: GATE_631_I3
+.gate INVX1 A=GATE_631_I0_OUT Y=GATE_631
+
+
+
+# gate type: NAND; name: GATE_632_I0
+.gate NAND2X1 A=GATE_117 B=GATE_632_I2_OUT Y=GATE_632_I0_OUT
+
+# gate type: NOT; name: GATE_632_I3
+.gate INVX1 A=GATE_632_I0_OUT Y=GATE_632
+
+# gate type: NOT; name: GATE_632_I2
+.gate INVX1 A=GATE_276 Y=GATE_632_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_633_I0
+.gate NAND2X1 A=GATE_289 B=GATE_633_I2_OUT Y=GATE_633_I0_OUT
+
+# gate type: NOT; name: GATE_633_I3
+.gate INVX1 A=GATE_633_I0_OUT Y=GATE_633
+
+# gate type: NOT; name: GATE_633_I2
+.gate INVX1 A=GATE_411 Y=GATE_633_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_634_I0
+.gate NAND2X1 A=GATE_427 B=GATE_581 Y=GATE_634_I0_OUT
+
+# gate type: NOT; name: GATE_634_I3
+.gate INVX1 A=GATE_634_I0_OUT Y=GATE_634
+
+
+
+# gate type: NAND; name: GATE_635_I0
+.gate NAND2X1 A=GATE_582 B=GATE_583 Y=GATE_635_I0_OUT
+
+# gate type: NOT; name: GATE_635_I3
+.gate INVX1 A=GATE_635_I0_OUT Y=GATE_635
+
+
+
+# gate type: NAND; name: GATE_636_I0
+.gate NAND2X1 A=GATE_584 B=GATE_585 Y=GATE_636_I0_OUT
+
+# gate type: NOT; name: GATE_636_I3
+.gate INVX1 A=GATE_636_I0_OUT Y=GATE_636
+
+
+
+# gate type: NAND; name: GATE_637_I0
+.gate NAND2X1 A=GATE_587 B=GATE_636 Y=GATE_637_I0_OUT
+
+# gate type: NOT; name: GATE_637_I3
+.gate INVX1 A=GATE_637_I0_OUT Y=GATE_637
+
+
+
+# gate type: NAND; name: GATE_638_I0
+.gate NAND2X1 A=GATE_634 B=GATE_635 Y=GATE_638_I0_OUT
+
+# gate type: NOT; name: GATE_638_I3
+.gate INVX1 A=GATE_638_I0_OUT Y=GATE_638
+
+
+
+# gate type: NAND; name: GATE_639_I0
+.gate NAND2X1 A=GATE_632 B=GATE_633 Y=GATE_639_I0_OUT
+
+# gate type: NOT; name: GATE_639_I3
+.gate INVX1 A=GATE_639_I0_OUT Y=GATE_639
+
+
+
+# gate type: NAND; name: GATE_640_I0
+.gate NAND2X1 A=GATE_230 B=GATE_264 Y=GATE_640_I0_OUT
+
+# gate type: NOT; name: GATE_640_I3
+.gate INVX1 A=GATE_640_I0_OUT Y=GATE_640
+
+
+
+# gate type: NAND; name: GATE_641_I0
+.gate NAND2X1 A=GATE_415 B=GATE_519 Y=GATE_641_I0_OUT
+
+# gate type: NOT; name: GATE_641_I3
+.gate INVX1 A=GATE_641_I0_OUT Y=GATE_641
+
+
+
+# gate type: NAND; name: GATE_642_I0
+.gate NAND2X1 A=GATE_536 B=GATE_594 Y=GATE_642_I0_OUT
+
+# gate type: NOT; name: GATE_642_I3
+.gate INVX1 A=GATE_642_I0_OUT Y=GATE_642
+
+
+
+# gate type: NAND; name: GATE_643_I0
+.gate NAND2X1 A=GATE_596 B=GATE_643_I2_OUT Y=GATE_643_I0_OUT
+
+# gate type: NOT; name: GATE_643_I3
+.gate INVX1 A=GATE_643_I0_OUT Y=GATE_643
+
+# gate type: NOT; name: GATE_643_I2
+.gate INVX1 A=GATE_598 Y=GATE_643_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_644_I0
+.gate NAND2X1 A=GATE_601 B=GATE_604 Y=GATE_644_I0_OUT
+
+# gate type: NOT; name: GATE_644_I3
+.gate INVX1 A=GATE_644_I0_OUT Y=GATE_644
+
+
+
+# gate type: NAND; name: GATE_645_I0
+.gate NAND2X1 A=GATE_606 B=GATE_608 Y=GATE_645_I0_OUT
+
+# gate type: NOT; name: GATE_645_I3
+.gate INVX1 A=GATE_645_I0_OUT Y=GATE_645
+
+
+
+# gate type: NAND; name: GATE_646_I0
+.gate NAND2X1 A=GATE_611 B=GATE_645 Y=GATE_646_I0_OUT
+
+# gate type: NOT; name: GATE_646_I3
+.gate INVX1 A=GATE_646_I0_OUT Y=GATE_646
+
+
+
+# gate type: NAND; name: GATE_647_I0
+.gate NAND2X1 A=GATE_643 B=GATE_644 Y=GATE_647_I0_OUT
+
+# gate type: NOT; name: GATE_647_I3
+.gate INVX1 A=GATE_647_I0_OUT Y=GATE_647
+
+
+
+# gate type: NAND; name: GATE_648_I0
+.gate NAND2X1 A=GATE_641 B=GATE_642 Y=GATE_648_I0_OUT
+
+# gate type: NOT; name: GATE_648_I3
+.gate INVX1 A=GATE_648_I0_OUT Y=GATE_648
+
+
+
+# gate type: NAND; name: GATE_649_I0
+.gate NAND2X1 A=GATE_639 B=GATE_640 Y=GATE_649_I0_OUT
+
+# gate type: NOT; name: GATE_649_I3
+.gate INVX1 A=GATE_649_I0_OUT Y=GATE_649
+
+
+
+# gate type: NAND; name: GATE_650_I0
+.gate NAND2X1 A=GATE_637 B=GATE_638 Y=GATE_650_I0_OUT
+
+# gate type: NOT; name: GATE_650_I3
+.gate INVX1 A=GATE_650_I0_OUT Y=GATE_650
+
+
+
+# gate type: NAND; name: GATE_651_I0
+.gate NAND2X1 A=GATE_439 B=GATE_592 Y=GATE_651_I0_OUT
+
+# gate type: NOT; name: GATE_651_I3
+.gate INVX1 A=GATE_651_I0_OUT Y=GATE_651
+
+
+
+# gate type: NAND; name: GATE_652_I0
+.gate NAND2X1 A=GATE_593 B=GATE_651 Y=GATE_652_I0_OUT
+
+# gate type: NOT; name: GATE_652_I3
+.gate INVX1 A=GATE_652_I0_OUT Y=GATE_652
+
+
+
+# gate type: NAND; name: GATE_653_I0
+.gate NAND2X1 A=GATE_649 B=GATE_650 Y=GATE_653_I0_OUT
+
+# gate type: NOT; name: GATE_653_I3
+.gate INVX1 A=GATE_653_I0_OUT Y=GATE_653
+
+
+
+# gate type: NAND; name: GATE_654_I0
+.gate NAND2X1 A=GATE_647 B=GATE_648 Y=GATE_654_I0_OUT
+
+# gate type: NOT; name: GATE_654_I3
+.gate INVX1 A=GATE_654_I0_OUT Y=GATE_654
+
+
+
+# gate type: NAND; name: GATE_655_I0
+.gate NAND2X1 A=GATE_100 B=GATE_646 Y=GATE_655_I0_OUT
+
+# gate type: NOT; name: GATE_655_I3
+.gate INVX1 A=GATE_655_I0_OUT Y=GATE_655
+
+
+
+# gate type: NAND; name: GATE_656_I0
+.gate NAND2X1 A=GATE_140 B=GATE_509 Y=GATE_656_I0_OUT
+
+# gate type: NOT; name: GATE_656_I3
+.gate INVX1 A=GATE_656_I0_OUT Y=GATE_656
+
+
+
+# gate type: NAND; name: GATE_657_I0
+.gate NAND2X1 A=GATE_623 B=GATE_631 Y=GATE_657_I0_OUT
+
+# gate type: NOT; name: GATE_657_I3
+.gate INVX1 A=GATE_657_I0_OUT Y=GATE_657
+
+
+
+# gate type: NAND; name: GATE_658_I0
+.gate NAND2X1 A=GATE_656 B=GATE_657 Y=GATE_658_I0_OUT
+
+# gate type: NOT; name: GATE_658_I3
+.gate INVX1 A=GATE_658_I0_OUT Y=GATE_658
+
+
+
+# gate type: NAND; name: GATE_659_I0
+.gate NAND2X1 A=GATE_654 B=GATE_655 Y=GATE_659_I0_OUT
+
+# gate type: NOT; name: GATE_659_I3
+.gate INVX1 A=GATE_659_I0_OUT Y=GATE_659
+
+
+
+# gate type: NAND; name: GATE_660_I0
+.gate NAND2X1 A=GATE_652 B=GATE_653 Y=GATE_660_I0_OUT
+
+# gate type: NOT; name: GATE_660_I3
+.gate INVX1 A=GATE_660_I0_OUT Y=GATE_660
+
+
+
+# gate type: NAND; name: GATE_661_I0
+.gate NAND2X1 A=GATE_659 B=GATE_660 Y=GATE_661_I0_OUT
+
+# gate type: NOT; name: GATE_661_I3
+.gate INVX1 A=GATE_661_I0_OUT Y=GATE_661
+
+
+
+# gate type: NAND; name: GATE_662_I0
+.gate NAND2X1 A=GATE_658 B=GATE_661 Y=GATE_662
+
+
+
+# gate type: NAND; name: GATE_663_I0
+.gate NAND2X1 A=GATE_663_I1_OUT B=GATE_663_I2_OUT Y=GATE_663
+
+# gate type: NOT; name: GATE_663_I1
+.gate INVX1 A=GATE_72 Y=GATE_663_I1_OUT
+
+# gate type: NOT; name: GATE_663_I2
+.gate INVX1 A=GATE_76 Y=GATE_663_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_664_I0
+.gate NAND2X1 A=GATE_2 B=GATE_663 Y=GATE_664
+
+
+
+# gate type: NAND; name: GATE_665_I0
+.gate NAND2X1 A=GATE_17 B=GATE_665_I2_OUT Y=GATE_665
+
+# gate type: NOT; name: GATE_665_I2
+.gate INVX1 A=GATE_119 Y=GATE_665_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_666_I0
+.gate NAND2X1 A=GATE_63 B=GATE_666_I2_OUT Y=GATE_666
+
+# gate type: NOT; name: GATE_666_I2
+.gate INVX1 A=GATE_263 Y=GATE_666_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_667_I0
+.gate NAND2X1 A=GATE_667_I1_OUT B=GATE_667_I2_OUT Y=GATE_667
+
+# gate type: NOT; name: GATE_667_I1
+.gate INVX1 A=GATE_25 Y=GATE_667_I1_OUT
+
+# gate type: NOT; name: GATE_667_I2
+.gate INVX1 A=GATE_156 Y=GATE_667_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_668_I0
+.gate NAND2X1 A=GATE_158 B=GATE_667 Y=GATE_668
+
+
+
+# gate type: NAND; name: GATE_669_I0
+.gate NAND2X1 A=GATE_39 B=GATE_101 Y=GATE_669
+
+
+
+# gate type: NAND; name: GATE_670_I0
+.gate NAND2X1 A=INPUT_2 B=GATE_3 Y=GATE_670_I0_OUT
+
+# gate type: NOT; name: GATE_670_I3
+.gate INVX1 A=GATE_670_I0_OUT Y=GATE_670
+
+
+
+# gate type: NAND; name: GATE_671_I0
+.gate NAND2X1 A=GATE_156 B=GATE_670 Y=GATE_671
+
+
+
+# gate type: NAND; name: GATE_672_I0
+.gate NAND2X1 A=GATE_669 B=GATE_671 Y=GATE_672_I0_OUT
+
+# gate type: NOT; name: GATE_672_I3
+.gate INVX1 A=GATE_672_I0_OUT Y=GATE_672
+
+
+
+# gate type: NAND; name: GATE_673_I0
+.gate NAND2X1 A=GATE_69 B=GATE_673_I2_OUT Y=GATE_673
+
+# gate type: NOT; name: GATE_673_I2
+.gate INVX1 A=GATE_326 Y=GATE_673_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_674_I0
+.gate NAND2X1 A=GATE_438 B=GATE_673 Y=GATE_674_I0_OUT
+
+# gate type: NOT; name: GATE_674_I3
+.gate INVX1 A=GATE_674_I0_OUT Y=GATE_674
+
+
+
+# gate type: NAND; name: GATE_675_I0
+.gate NAND2X1 A=GATE_675_I1_OUT B=GATE_597 Y=GATE_675
+
+# gate type: NOT; name: GATE_675_I1
+.gate INVX1 A=GATE_132 Y=GATE_675_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_676_I0
+.gate NAND2X1 A=GATE_25 B=GATE_132 Y=GATE_676
+
+
+
+# gate type: NAND; name: GATE_677_I0
+.gate NAND2X1 A=GATE_677_I1_OUT B=GATE_676 Y=GATE_677
+
+# gate type: NOT; name: GATE_677_I1
+.gate INVX1 A=GATE_11 Y=GATE_677_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_678_I0
+.gate NAND2X1 A=GATE_675 B=GATE_677 Y=GATE_678
+
+
+
+# gate type: NAND; name: GATE_679_I0
+.gate NAND2X1 A=GATE_50 B=GATE_185 Y=GATE_679
+
+
+
+# gate type: NAND; name: GATE_680_I0
+.gate NAND2X1 A=GATE_30 B=GATE_152 Y=GATE_680
+
+
+
+# gate type: NAND; name: GATE_681_I0
+.gate NAND2X1 A=GATE_35 B=GATE_158 Y=GATE_681
+
+
+
+# gate type: NAND; name: GATE_682_I0
+.gate NAND2X1 A=GATE_14 B=GATE_21 Y=GATE_682
+
+
+
+# gate type: NAND; name: GATE_683_I0
+.gate NAND2X1 A=GATE_11 B=GATE_41 Y=GATE_683
+
+
+
+# gate type: NAND; name: GATE_684_I0
+.gate NAND2X1 A=GATE_680 B=GATE_681 Y=GATE_684_I0_OUT
+
+# gate type: NOT; name: GATE_684_I3
+.gate INVX1 A=GATE_684_I0_OUT Y=GATE_684
+
+
+
+# gate type: NAND; name: GATE_685_I0
+.gate NAND2X1 A=GATE_682 B=GATE_683 Y=GATE_685_I0_OUT
+
+# gate type: NOT; name: GATE_685_I3
+.gate INVX1 A=GATE_685_I0_OUT Y=GATE_685
+
+
+
+# gate type: NAND; name: GATE_686_I0
+.gate NAND2X1 A=GATE_684 B=GATE_685 Y=GATE_686_I0_OUT
+
+# gate type: NOT; name: GATE_686_I3
+.gate INVX1 A=GATE_686_I0_OUT Y=GATE_686
+
+
+
+# gate type: NAND; name: GATE_687_I0
+.gate NAND2X1 A=GATE_687_I1_OUT B=GATE_687_I2_OUT Y=GATE_687
+
+# gate type: NOT; name: GATE_687_I1
+.gate INVX1 A=GATE_37 Y=GATE_687_I1_OUT
+
+# gate type: NOT; name: GATE_687_I2
+.gate INVX1 A=GATE_292 Y=GATE_687_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_688_I0
+.gate NAND2X1 A=GATE_30 B=GATE_687 Y=GATE_688
+
+
+
+# gate type: NAND; name: GATE_689_I0
+.gate NAND2X1 A=GATE_689_I1_OUT B=GATE_411 Y=GATE_689
+
+# gate type: NOT; name: GATE_689_I1
+.gate INVX1 A=INPUT_0 Y=GATE_689_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_690_I0
+.gate NAND2X1 A=GATE_688 B=GATE_689 Y=GATE_690_I0_OUT
+
+# gate type: NOT; name: GATE_690_I3
+.gate INVX1 A=GATE_690_I0_OUT Y=GATE_690
+
+
+
+# gate type: NAND; name: GATE_691_I0
+.gate NAND2X1 A=GATE_17 B=GATE_45 Y=GATE_691
+
+
+
+# gate type: NAND; name: GATE_692_I0
+.gate NAND2X1 A=GATE_13 B=GATE_35 Y=GATE_692
+
+
+
+# gate type: NAND; name: GATE_693_I0
+.gate NAND2X1 A=GATE_132 B=GATE_424 Y=GATE_693
+
+
+
+# gate type: NAND; name: GATE_694_I0
+.gate NAND2X1 A=GATE_22 B=GATE_46 Y=GATE_694
+
+
+
+# gate type: NAND; name: GATE_695_I0
+.gate NAND2X1 A=GATE_25 B=GATE_142 Y=GATE_695
+
+
+
+# gate type: NAND; name: GATE_696_I0
+.gate NAND2X1 A=GATE_156 B=GATE_235 Y=GATE_696
+
+
+
+# gate type: NAND; name: GATE_697_I0
+.gate NAND2X1 A=GATE_63 B=GATE_125 Y=GATE_697
+
+
+
+# gate type: NAND; name: GATE_698_I0
+.gate NAND2X1 A=GATE_13 B=GATE_156 Y=GATE_698_I0_OUT
+
+# gate type: NOT; name: GATE_698_I3
+.gate INVX1 A=GATE_698_I0_OUT Y=GATE_698
+
+
+
+# gate type: NAND; name: GATE_699_I0
+.gate NAND2X1 A=GATE_58 B=GATE_89 Y=GATE_699
+
+
+
+# gate type: NAND; name: GATE_700_I0
+.gate NAND2X1 A=GATE_43 B=GATE_235 Y=GATE_700
+
+
+
+# gate type: NAND; name: GATE_701_I0
+.gate NAND2X1 A=GATE_44 B=GATE_134 Y=GATE_701_I0_OUT
+
+# gate type: NOT; name: GATE_701_I3
+.gate INVX1 A=GATE_701_I0_OUT Y=GATE_701
+
+
+
+# gate type: NAND; name: GATE_702_I0
+.gate NAND2X1 A=GATE_166 B=GATE_311 Y=GATE_702_I0_OUT
+
+# gate type: NOT; name: GATE_702_I3
+.gate INVX1 A=GATE_702_I0_OUT Y=GATE_702
+
+
+
+# gate type: NAND; name: GATE_703_I0
+.gate NAND2X1 A=GATE_312 B=GATE_416 Y=GATE_703_I0_OUT
+
+# gate type: NOT; name: GATE_703_I3
+.gate INVX1 A=GATE_703_I0_OUT Y=GATE_703
+
+
+
+# gate type: NAND; name: GATE_704_I0
+.gate NAND2X1 A=GATE_484 B=GATE_525 Y=GATE_704_I0_OUT
+
+# gate type: NOT; name: GATE_704_I3
+.gate INVX1 A=GATE_704_I0_OUT Y=GATE_704
+
+
+
+# gate type: NAND; name: GATE_705_I0
+.gate NAND2X1 A=GATE_691 B=GATE_692 Y=GATE_705_I0_OUT
+
+# gate type: NOT; name: GATE_705_I3
+.gate INVX1 A=GATE_705_I0_OUT Y=GATE_705
+
+
+
+# gate type: NAND; name: GATE_706_I0
+.gate NAND2X1 A=GATE_693 B=GATE_694 Y=GATE_706_I0_OUT
+
+# gate type: NOT; name: GATE_706_I3
+.gate INVX1 A=GATE_706_I0_OUT Y=GATE_706
+
+
+
+# gate type: NAND; name: GATE_707_I0
+.gate NAND2X1 A=GATE_695 B=GATE_696 Y=GATE_707_I0_OUT
+
+# gate type: NOT; name: GATE_707_I3
+.gate INVX1 A=GATE_707_I0_OUT Y=GATE_707
+
+
+
+# gate type: NAND; name: GATE_708_I0
+.gate NAND2X1 A=GATE_697 B=GATE_708_I2_OUT Y=GATE_708_I0_OUT
+
+# gate type: NOT; name: GATE_708_I3
+.gate INVX1 A=GATE_708_I0_OUT Y=GATE_708
+
+# gate type: NOT; name: GATE_708_I2
+.gate INVX1 A=GATE_698 Y=GATE_708_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_709_I0
+.gate NAND2X1 A=GATE_699 B=GATE_700 Y=GATE_709_I0_OUT
+
+# gate type: NOT; name: GATE_709_I3
+.gate INVX1 A=GATE_709_I0_OUT Y=GATE_709
+
+
+
+# gate type: NAND; name: GATE_710_I0
+.gate NAND2X1 A=GATE_708 B=GATE_709 Y=GATE_710_I0_OUT
+
+# gate type: NOT; name: GATE_710_I3
+.gate INVX1 A=GATE_710_I0_OUT Y=GATE_710
+
+
+
+# gate type: NAND; name: GATE_711_I0
+.gate NAND2X1 A=GATE_706 B=GATE_707 Y=GATE_711_I0_OUT
+
+# gate type: NOT; name: GATE_711_I3
+.gate INVX1 A=GATE_711_I0_OUT Y=GATE_711
+
+
+
+# gate type: NAND; name: GATE_712_I0
+.gate NAND2X1 A=GATE_704 B=GATE_705 Y=GATE_712_I0_OUT
+
+# gate type: NOT; name: GATE_712_I3
+.gate INVX1 A=GATE_712_I0_OUT Y=GATE_712
+
+
+
+# gate type: NAND; name: GATE_713_I0
+.gate NAND2X1 A=GATE_702 B=GATE_703 Y=GATE_713_I0_OUT
+
+# gate type: NOT; name: GATE_713_I3
+.gate INVX1 A=GATE_713_I0_OUT Y=GATE_713
+
+
+
+# gate type: NAND; name: GATE_714_I0
+.gate NAND2X1 A=GATE_111 B=GATE_701 Y=GATE_714_I0_OUT
+
+# gate type: NOT; name: GATE_714_I3
+.gate INVX1 A=GATE_714_I0_OUT Y=GATE_714
+
+
+
+# gate type: NAND; name: GATE_715_I0
+.gate NAND2X1 A=GATE_227 B=GATE_300 Y=GATE_715_I0_OUT
+
+# gate type: NOT; name: GATE_715_I3
+.gate INVX1 A=GATE_715_I0_OUT Y=GATE_715
+
+
+
+# gate type: NAND; name: GATE_716_I0
+.gate NAND2X1 A=GATE_373 B=GATE_492 Y=GATE_716_I0_OUT
+
+# gate type: NOT; name: GATE_716_I3
+.gate INVX1 A=GATE_716_I0_OUT Y=GATE_716
+
+
+
+# gate type: NAND; name: GATE_717_I0
+.gate NAND2X1 A=GATE_590 B=GATE_604 Y=GATE_717_I0_OUT
+
+# gate type: NOT; name: GATE_717_I3
+.gate INVX1 A=GATE_717_I0_OUT Y=GATE_717
+
+
+
+# gate type: NAND; name: GATE_718_I0
+.gate NAND2X1 A=GATE_664 B=GATE_665 Y=GATE_718_I0_OUT
+
+# gate type: NOT; name: GATE_718_I3
+.gate INVX1 A=GATE_718_I0_OUT Y=GATE_718
+
+
+
+# gate type: NAND; name: GATE_719_I0
+.gate NAND2X1 A=GATE_666 B=GATE_668 Y=GATE_719_I0_OUT
+
+# gate type: NOT; name: GATE_719_I3
+.gate INVX1 A=GATE_719_I0_OUT Y=GATE_719
+
+
+
+# gate type: NAND; name: GATE_720_I0
+.gate NAND2X1 A=GATE_672 B=GATE_719 Y=GATE_720_I0_OUT
+
+# gate type: NOT; name: GATE_720_I3
+.gate INVX1 A=GATE_720_I0_OUT Y=GATE_720
+
+
+
+# gate type: NAND; name: GATE_721_I0
+.gate NAND2X1 A=GATE_717 B=GATE_718 Y=GATE_721_I0_OUT
+
+# gate type: NOT; name: GATE_721_I3
+.gate INVX1 A=GATE_721_I0_OUT Y=GATE_721
+
+
+
+# gate type: NAND; name: GATE_722_I0
+.gate NAND2X1 A=GATE_715 B=GATE_716 Y=GATE_722_I0_OUT
+
+# gate type: NOT; name: GATE_722_I3
+.gate INVX1 A=GATE_722_I0_OUT Y=GATE_722
+
+
+
+# gate type: NAND; name: GATE_723_I0
+.gate NAND2X1 A=GATE_713 B=GATE_714 Y=GATE_723_I0_OUT
+
+# gate type: NOT; name: GATE_723_I3
+.gate INVX1 A=GATE_723_I0_OUT Y=GATE_723
+
+
+
+# gate type: NAND; name: GATE_724_I0
+.gate NAND2X1 A=GATE_711 B=GATE_712 Y=GATE_724_I0_OUT
+
+# gate type: NOT; name: GATE_724_I3
+.gate INVX1 A=GATE_724_I0_OUT Y=GATE_724
+
+
+
+# gate type: NAND; name: GATE_725_I0
+.gate NAND2X1 A=GATE_151 B=GATE_710 Y=GATE_725_I0_OUT
+
+# gate type: NOT; name: GATE_725_I3
+.gate INVX1 A=GATE_725_I0_OUT Y=GATE_725
+
+
+
+# gate type: NAND; name: GATE_726_I0
+.gate NAND2X1 A=GATE_307 B=GATE_443 Y=GATE_726_I0_OUT
+
+# gate type: NOT; name: GATE_726_I3
+.gate INVX1 A=GATE_726_I0_OUT Y=GATE_726
+
+
+
+# gate type: NAND; name: GATE_727_I0
+.gate NAND2X1 A=GATE_678 B=GATE_679 Y=GATE_727_I0_OUT
+
+# gate type: NOT; name: GATE_727_I3
+.gate INVX1 A=GATE_727_I0_OUT Y=GATE_727
+
+
+
+# gate type: NAND; name: GATE_728_I0
+.gate NAND2X1 A=GATE_686 B=GATE_690 Y=GATE_728_I0_OUT
+
+# gate type: NOT; name: GATE_728_I3
+.gate INVX1 A=GATE_728_I0_OUT Y=GATE_728
+
+
+
+# gate type: NAND; name: GATE_729_I0
+.gate NAND2X1 A=GATE_727 B=GATE_728 Y=GATE_729_I0_OUT
+
+# gate type: NOT; name: GATE_729_I3
+.gate INVX1 A=GATE_729_I0_OUT Y=GATE_729
+
+
+
+# gate type: NAND; name: GATE_730_I0
+.gate NAND2X1 A=GATE_725 B=GATE_726 Y=GATE_730_I0_OUT
+
+# gate type: NOT; name: GATE_730_I3
+.gate INVX1 A=GATE_730_I0_OUT Y=GATE_730
+
+
+
+# gate type: NAND; name: GATE_731_I0
+.gate NAND2X1 A=GATE_723 B=GATE_724 Y=GATE_731_I0_OUT
+
+# gate type: NOT; name: GATE_731_I3
+.gate INVX1 A=GATE_731_I0_OUT Y=GATE_731
+
+
+
+# gate type: NAND; name: GATE_732_I0
+.gate NAND2X1 A=GATE_721 B=GATE_722 Y=GATE_732_I0_OUT
+
+# gate type: NOT; name: GATE_732_I3
+.gate INVX1 A=GATE_732_I0_OUT Y=GATE_732
+
+
+
+# gate type: NAND; name: GATE_733_I0
+.gate NAND2X1 A=GATE_405 B=GATE_720 Y=GATE_733_I0_OUT
+
+# gate type: NOT; name: GATE_733_I3
+.gate INVX1 A=GATE_733_I0_OUT Y=GATE_733
+
+
+
+# gate type: NAND; name: GATE_734_I0
+.gate NAND2X1 A=GATE_500 B=GATE_631 Y=GATE_734_I0_OUT
+
+# gate type: NOT; name: GATE_734_I3
+.gate INVX1 A=GATE_734_I0_OUT Y=GATE_734
+
+
+
+# gate type: NAND; name: GATE_735_I0
+.gate NAND2X1 A=GATE_674 B=GATE_734 Y=GATE_735_I0_OUT
+
+# gate type: NOT; name: GATE_735_I3
+.gate INVX1 A=GATE_735_I0_OUT Y=GATE_735
+
+
+
+# gate type: NAND; name: GATE_736_I0
+.gate NAND2X1 A=GATE_732 B=GATE_733 Y=GATE_736_I0_OUT
+
+# gate type: NOT; name: GATE_736_I3
+.gate INVX1 A=GATE_736_I0_OUT Y=GATE_736
+
+
+
+# gate type: NAND; name: GATE_737_I0
+.gate NAND2X1 A=GATE_730 B=GATE_731 Y=GATE_737_I0_OUT
+
+# gate type: NOT; name: GATE_737_I3
+.gate INVX1 A=GATE_737_I0_OUT Y=GATE_737
+
+
+
+# gate type: NAND; name: GATE_738_I0
+.gate NAND2X1 A=GATE_191 B=GATE_729 Y=GATE_738_I0_OUT
+
+# gate type: NOT; name: GATE_738_I3
+.gate INVX1 A=GATE_738_I0_OUT Y=GATE_738
+
+
+
+# gate type: NAND; name: GATE_739_I0
+.gate NAND2X1 A=GATE_737 B=GATE_738 Y=GATE_739_I0_OUT
+
+# gate type: NOT; name: GATE_739_I3
+.gate INVX1 A=GATE_739_I0_OUT Y=GATE_739
+
+
+
+# gate type: NAND; name: GATE_740_I0
+.gate NAND2X1 A=GATE_735 B=GATE_736 Y=GATE_740_I0_OUT
+
+# gate type: NOT; name: GATE_740_I3
+.gate INVX1 A=GATE_740_I0_OUT Y=GATE_740
+
+
+
+# gate type: NAND; name: GATE_741_I0
+.gate NAND2X1 A=GATE_739 B=GATE_740 Y=GATE_741
+
+
+
+# gate type: NAND; name: GATE_742_I0
+.gate NAND2X1 A=GATE_2 B=GATE_152 Y=GATE_742
+
+
+
+# gate type: NAND; name: GATE_743_I0
+.gate NAND2X1 A=GATE_43 B=GATE_125 Y=GATE_743
+
+
+
+# gate type: NAND; name: GATE_744_I0
+.gate NAND2X1 A=GATE_39 B=GATE_158 Y=GATE_744
+
+
+
+# gate type: NAND; name: GATE_745_I0
+.gate NAND2X1 A=GATE_72 B=GATE_156 Y=GATE_745
+
+
+
+# gate type: NAND; name: GATE_746_I0
+.gate NAND2X1 A=GATE_46 B=GATE_48 Y=GATE_746
+
+
+
+# gate type: NAND; name: GATE_747_I0
+.gate NAND2X1 A=GATE_3 B=GATE_698 Y=GATE_747
+
+
+
+# gate type: NAND; name: GATE_748_I0
+.gate NAND2X1 A=GATE_748_I1_OUT B=GATE_7 Y=GATE_748
+
+# gate type: NOT; name: GATE_748_I1
+.gate INVX1 A=INPUT_0 Y=GATE_748_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_749_I0
+.gate NAND2X1 A=GATE_749_I1_OUT B=GATE_748 Y=GATE_749
+
+# gate type: NOT; name: GATE_749_I1
+.gate INVX1 A=GATE_158 Y=GATE_749_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_750_I0
+.gate NAND2X1 A=GATE_2 B=GATE_749 Y=GATE_750
+
+
+
+# gate type: NAND; name: GATE_751_I0
+.gate NAND2X1 A=INPUT_5 B=GATE_49 Y=GATE_751_I0_OUT
+
+# gate type: NOT; name: GATE_751_I3
+.gate INVX1 A=GATE_751_I0_OUT Y=GATE_751
+
+
+
+# gate type: NAND; name: GATE_752_I0
+.gate NAND2X1 A=GATE_752_I1_OUT B=GATE_751 Y=GATE_752
+
+# gate type: NOT; name: GATE_752_I1
+.gate INVX1 A=GATE_184 Y=GATE_752_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_753_I0
+.gate NAND2X1 A=GATE_35 B=GATE_613 Y=GATE_753
+
+
+
+# gate type: NAND; name: GATE_754_I0
+.gate NAND2X1 A=GATE_58 B=GATE_663 Y=GATE_754
+
+
+
+# gate type: NAND; name: GATE_755_I0
+.gate NAND2X1 A=GATE_755_I1_OUT B=GATE_755_I2_OUT Y=GATE_755
+
+# gate type: NOT; name: GATE_755_I1
+.gate INVX1 A=GATE_103 Y=GATE_755_I1_OUT
+
+# gate type: NOT; name: GATE_755_I2
+.gate INVX1 A=GATE_158 Y=GATE_755_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_756_I0
+.gate NAND2X1 A=GATE_43 B=GATE_755 Y=GATE_756
+
+
+
+# gate type: NAND; name: GATE_757_I0
+.gate NAND2X1 A=GATE_757_I1_OUT B=GATE_757_I2_OUT Y=GATE_757
+
+# gate type: NOT; name: GATE_757_I1
+.gate INVX1 A=GATE_39 Y=GATE_757_I1_OUT
+
+# gate type: NOT; name: GATE_757_I2
+.gate INVX1 A=GATE_94 Y=GATE_757_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_758_I0
+.gate NAND2X1 A=GATE_235 B=GATE_757 Y=GATE_758
+
+
+
+# gate type: NAND; name: GATE_759_I0
+.gate NAND2X1 A=GATE_63 B=GATE_759_I2_OUT Y=GATE_759
+
+# gate type: NOT; name: GATE_759_I2
+.gate INVX1 A=GATE_326 Y=GATE_759_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_760_I0
+.gate NAND2X1 A=GATE_760_I1_OUT B=GATE_598 Y=GATE_760
+
+# gate type: NOT; name: GATE_760_I1
+.gate INVX1 A=INPUT_0 Y=GATE_760_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_761_I0
+.gate NAND2X1 A=INPUT_6 B=GATE_10 Y=GATE_761_I0_OUT
+
+# gate type: NOT; name: GATE_761_I3
+.gate INVX1 A=GATE_761_I0_OUT Y=GATE_761
+
+
+
+# gate type: NAND; name: GATE_762_I0
+.gate NAND2X1 A=GATE_45 B=GATE_761 Y=GATE_762
+
+
+
+# gate type: NAND; name: GATE_763_I0
+.gate NAND2X1 A=GATE_39 B=GATE_125 Y=GATE_763
+
+
+
+# gate type: NAND; name: GATE_764_I0
+.gate NAND2X1 A=GATE_11 B=GATE_14 Y=GATE_764
+
+
+
+# gate type: NAND; name: GATE_765_I0
+.gate NAND2X1 A=GATE_63 B=GATE_89 Y=GATE_765
+
+
+
+# gate type: NAND; name: GATE_766_I0
+.gate NAND2X1 A=GATE_2 B=GATE_77 Y=GATE_766
+
+
+
+# gate type: NAND; name: GATE_767_I0
+.gate NAND2X1 A=GATE_102 B=GATE_133 Y=GATE_767_I0_OUT
+
+# gate type: NOT; name: GATE_767_I3
+.gate INVX1 A=GATE_767_I0_OUT Y=GATE_767
+
+
+
+# gate type: NAND; name: GATE_768_I0
+.gate NAND2X1 A=GATE_762 B=GATE_763 Y=GATE_768_I0_OUT
+
+# gate type: NOT; name: GATE_768_I3
+.gate INVX1 A=GATE_768_I0_OUT Y=GATE_768
+
+
+
+# gate type: NAND; name: GATE_769_I0
+.gate NAND2X1 A=GATE_764 B=GATE_765 Y=GATE_769_I0_OUT
+
+# gate type: NOT; name: GATE_769_I3
+.gate INVX1 A=GATE_769_I0_OUT Y=GATE_769
+
+
+
+# gate type: NAND; name: GATE_770_I0
+.gate NAND2X1 A=GATE_768 B=GATE_769 Y=GATE_770_I0_OUT
+
+# gate type: NOT; name: GATE_770_I3
+.gate INVX1 A=GATE_770_I0_OUT Y=GATE_770
+
+
+
+# gate type: NAND; name: GATE_771_I0
+.gate NAND2X1 A=GATE_488 B=GATE_767 Y=GATE_771_I0_OUT
+
+# gate type: NOT; name: GATE_771_I3
+.gate INVX1 A=GATE_771_I0_OUT Y=GATE_771
+
+
+
+# gate type: NAND; name: GATE_772_I0
+.gate NAND2X1 A=GATE_766 B=GATE_771 Y=GATE_772_I0_OUT
+
+# gate type: NOT; name: GATE_772_I3
+.gate INVX1 A=GATE_772_I0_OUT Y=GATE_772
+
+
+
+# gate type: NAND; name: GATE_773_I0
+.gate NAND2X1 A=GATE_770 B=GATE_772 Y=GATE_773_I0_OUT
+
+# gate type: NOT; name: GATE_773_I3
+.gate INVX1 A=GATE_773_I0_OUT Y=GATE_773
+
+
+
+# gate type: NAND; name: GATE_774_I0
+.gate NAND2X1 A=GATE_90 B=GATE_108 Y=GATE_774_I0_OUT
+
+# gate type: NOT; name: GATE_774_I3
+.gate INVX1 A=GATE_774_I0_OUT Y=GATE_774
+
+
+
+# gate type: NAND; name: GATE_775_I0
+.gate NAND2X1 A=GATE_163 B=GATE_237 Y=GATE_775_I0_OUT
+
+# gate type: NOT; name: GATE_775_I3
+.gate INVX1 A=GATE_775_I0_OUT Y=GATE_775
+
+
+
+# gate type: NAND; name: GATE_776_I0
+.gate NAND2X1 A=GATE_776_I1_OUT B=GATE_304 Y=GATE_776_I0_OUT
+
+# gate type: NOT; name: GATE_776_I3
+.gate INVX1 A=GATE_776_I0_OUT Y=GATE_776
+
+# gate type: NOT; name: GATE_776_I1
+.gate INVX1 A=GATE_244 Y=GATE_776_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_777_I0
+.gate NAND2X1 A=GATE_777_I1_OUT B=GATE_495 Y=GATE_777_I0_OUT
+
+# gate type: NOT; name: GATE_777_I3
+.gate INVX1 A=GATE_777_I0_OUT Y=GATE_777
+
+# gate type: NOT; name: GATE_777_I1
+.gate INVX1 A=GATE_370 Y=GATE_777_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_778_I0
+.gate NAND2X1 A=GATE_510 B=GATE_696 Y=GATE_778_I0_OUT
+
+# gate type: NOT; name: GATE_778_I3
+.gate INVX1 A=GATE_778_I0_OUT Y=GATE_778
+
+
+
+# gate type: NAND; name: GATE_779_I0
+.gate NAND2X1 A=GATE_742 B=GATE_743 Y=GATE_779_I0_OUT
+
+# gate type: NOT; name: GATE_779_I3
+.gate INVX1 A=GATE_779_I0_OUT Y=GATE_779
+
+
+
+# gate type: NAND; name: GATE_780_I0
+.gate NAND2X1 A=GATE_744 B=GATE_745 Y=GATE_780_I0_OUT
+
+# gate type: NOT; name: GATE_780_I3
+.gate INVX1 A=GATE_780_I0_OUT Y=GATE_780
+
+
+
+# gate type: NAND; name: GATE_781_I0
+.gate NAND2X1 A=GATE_746 B=GATE_780 Y=GATE_781_I0_OUT
+
+# gate type: NOT; name: GATE_781_I3
+.gate INVX1 A=GATE_781_I0_OUT Y=GATE_781
+
+
+
+# gate type: NAND; name: GATE_782_I0
+.gate NAND2X1 A=GATE_778 B=GATE_779 Y=GATE_782_I0_OUT
+
+# gate type: NOT; name: GATE_782_I3
+.gate INVX1 A=GATE_782_I0_OUT Y=GATE_782
+
+
+
+# gate type: NAND; name: GATE_783_I0
+.gate NAND2X1 A=GATE_776 B=GATE_777 Y=GATE_783_I0_OUT
+
+# gate type: NOT; name: GATE_783_I3
+.gate INVX1 A=GATE_783_I0_OUT Y=GATE_783
+
+
+
+# gate type: NAND; name: GATE_784_I0
+.gate NAND2X1 A=GATE_774 B=GATE_775 Y=GATE_784_I0_OUT
+
+# gate type: NOT; name: GATE_784_I3
+.gate INVX1 A=GATE_784_I0_OUT Y=GATE_784
+
+
+
+# gate type: NAND; name: GATE_785_I0
+.gate NAND2X1 A=GATE_83 B=GATE_261 Y=GATE_785_I0_OUT
+
+# gate type: NOT; name: GATE_785_I3
+.gate INVX1 A=GATE_785_I0_OUT Y=GATE_785
+
+
+
+# gate type: NAND; name: GATE_786_I0
+.gate NAND2X1 A=GATE_369 B=GATE_485 Y=GATE_786_I0_OUT
+
+# gate type: NOT; name: GATE_786_I3
+.gate INVX1 A=GATE_786_I0_OUT Y=GATE_786
+
+
+
+# gate type: NAND; name: GATE_787_I0
+.gate NAND2X1 A=GATE_532 B=GATE_601 Y=GATE_787_I0_OUT
+
+# gate type: NOT; name: GATE_787_I3
+.gate INVX1 A=GATE_787_I0_OUT Y=GATE_787
+
+
+
+# gate type: NAND; name: GATE_788_I0
+.gate NAND2X1 A=GATE_747 B=GATE_750 Y=GATE_788_I0_OUT
+
+# gate type: NOT; name: GATE_788_I3
+.gate INVX1 A=GATE_788_I0_OUT Y=GATE_788
+
+
+
+# gate type: NAND; name: GATE_789_I0
+.gate NAND2X1 A=GATE_752 B=GATE_753 Y=GATE_789_I0_OUT
+
+# gate type: NOT; name: GATE_789_I3
+.gate INVX1 A=GATE_789_I0_OUT Y=GATE_789
+
+
+
+# gate type: NAND; name: GATE_790_I0
+.gate NAND2X1 A=GATE_754 B=GATE_756 Y=GATE_790_I0_OUT
+
+# gate type: NOT; name: GATE_790_I3
+.gate INVX1 A=GATE_790_I0_OUT Y=GATE_790
+
+
+
+# gate type: NAND; name: GATE_791_I0
+.gate NAND2X1 A=GATE_758 B=GATE_790 Y=GATE_791_I0_OUT
+
+# gate type: NOT; name: GATE_791_I3
+.gate INVX1 A=GATE_791_I0_OUT Y=GATE_791
+
+
+
+# gate type: NAND; name: GATE_792_I0
+.gate NAND2X1 A=GATE_788 B=GATE_789 Y=GATE_792_I0_OUT
+
+# gate type: NOT; name: GATE_792_I3
+.gate INVX1 A=GATE_792_I0_OUT Y=GATE_792
+
+
+
+# gate type: NAND; name: GATE_793_I0
+.gate NAND2X1 A=GATE_786 B=GATE_787 Y=GATE_793_I0_OUT
+
+# gate type: NOT; name: GATE_793_I3
+.gate INVX1 A=GATE_793_I0_OUT Y=GATE_793
+
+
+
+# gate type: NAND; name: GATE_794_I0
+.gate NAND2X1 A=GATE_784 B=GATE_785 Y=GATE_794_I0_OUT
+
+# gate type: NOT; name: GATE_794_I3
+.gate INVX1 A=GATE_794_I0_OUT Y=GATE_794
+
+
+
+# gate type: NAND; name: GATE_795_I0
+.gate NAND2X1 A=GATE_782 B=GATE_783 Y=GATE_795_I0_OUT
+
+# gate type: NOT; name: GATE_795_I3
+.gate INVX1 A=GATE_795_I0_OUT Y=GATE_795
+
+
+
+# gate type: NAND; name: GATE_796_I0
+.gate NAND2X1 A=GATE_148 B=GATE_781 Y=GATE_796_I0_OUT
+
+# gate type: NOT; name: GATE_796_I3
+.gate INVX1 A=GATE_796_I0_OUT Y=GATE_796
+
+
+
+# gate type: NAND; name: GATE_797_I0
+.gate NAND2X1 A=GATE_318 B=GATE_435 Y=GATE_797_I0_OUT
+
+# gate type: NOT; name: GATE_797_I3
+.gate INVX1 A=GATE_797_I0_OUT Y=GATE_797
+
+
+
+# gate type: NAND; name: GATE_798_I0
+.gate NAND2X1 A=GATE_538 B=GATE_592 Y=GATE_798_I0_OUT
+
+# gate type: NOT; name: GATE_798_I3
+.gate INVX1 A=GATE_798_I0_OUT Y=GATE_798
+
+
+
+# gate type: NAND; name: GATE_799_I0
+.gate NAND2X1 A=GATE_686 B=GATE_759 Y=GATE_799_I0_OUT
+
+# gate type: NOT; name: GATE_799_I3
+.gate INVX1 A=GATE_799_I0_OUT Y=GATE_799
+
+
+
+# gate type: NAND; name: GATE_800_I0
+.gate NAND2X1 A=GATE_760 B=GATE_799 Y=GATE_800_I0_OUT
+
+# gate type: NOT; name: GATE_800_I3
+.gate INVX1 A=GATE_800_I0_OUT Y=GATE_800
+
+
+
+# gate type: NAND; name: GATE_801_I0
+.gate NAND2X1 A=GATE_797 B=GATE_798 Y=GATE_801_I0_OUT
+
+# gate type: NOT; name: GATE_801_I3
+.gate INVX1 A=GATE_801_I0_OUT Y=GATE_801
+
+
+
+# gate type: NAND; name: GATE_802_I0
+.gate NAND2X1 A=GATE_795 B=GATE_796 Y=GATE_802_I0_OUT
+
+# gate type: NOT; name: GATE_802_I3
+.gate INVX1 A=GATE_802_I0_OUT Y=GATE_802
+
+
+
+# gate type: NAND; name: GATE_803_I0
+.gate NAND2X1 A=GATE_793 B=GATE_794 Y=GATE_803_I0_OUT
+
+# gate type: NOT; name: GATE_803_I3
+.gate INVX1 A=GATE_803_I0_OUT Y=GATE_803
+
+
+
+# gate type: NAND; name: GATE_804_I0
+.gate NAND2X1 A=GATE_791 B=GATE_792 Y=GATE_804_I0_OUT
+
+# gate type: NOT; name: GATE_804_I3
+.gate INVX1 A=GATE_804_I0_OUT Y=GATE_804
+
+
+
+# gate type: NAND; name: GATE_805_I0
+.gate NAND2X1 A=GATE_287 B=GATE_674 Y=GATE_805_I0_OUT
+
+# gate type: NOT; name: GATE_805_I3
+.gate INVX1 A=GATE_805_I0_OUT Y=GATE_805
+
+
+
+# gate type: NAND; name: GATE_806_I0
+.gate NAND2X1 A=GATE_804 B=GATE_805 Y=GATE_806_I0_OUT
+
+# gate type: NOT; name: GATE_806_I3
+.gate INVX1 A=GATE_806_I0_OUT Y=GATE_806
+
+
+
+# gate type: NAND; name: GATE_807_I0
+.gate NAND2X1 A=GATE_802 B=GATE_803 Y=GATE_807_I0_OUT
+
+# gate type: NOT; name: GATE_807_I3
+.gate INVX1 A=GATE_807_I0_OUT Y=GATE_807
+
+
+
+# gate type: NAND; name: GATE_808_I0
+.gate NAND2X1 A=GATE_800 B=GATE_801 Y=GATE_808_I0_OUT
+
+# gate type: NOT; name: GATE_808_I3
+.gate INVX1 A=GATE_808_I0_OUT Y=GATE_808
+
+
+
+# gate type: NAND; name: GATE_809_I0
+.gate NAND2X1 A=GATE_773 B=GATE_808 Y=GATE_809_I0_OUT
+
+# gate type: NOT; name: GATE_809_I3
+.gate INVX1 A=GATE_809_I0_OUT Y=GATE_809
+
+
+
+# gate type: NAND; name: GATE_810_I0
+.gate NAND2X1 A=GATE_806 B=GATE_807 Y=GATE_810_I0_OUT
+
+# gate type: NOT; name: GATE_810_I3
+.gate INVX1 A=GATE_810_I0_OUT Y=GATE_810
+
+
+
+# gate type: NAND; name: GATE_811_I0
+.gate NAND2X1 A=GATE_809 B=GATE_810 Y=GATE_811
+
+
+
+# gate type: NAND; name: GATE_812_I0
+.gate NAND2X1 A=GATE_812_I1_OUT B=GATE_262 Y=GATE_812
+
+# gate type: NOT; name: GATE_812_I1
+.gate INVX1 A=GATE_61 Y=GATE_812_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_813_I0
+.gate NAND2X1 A=GATE_813_I1_OUT B=GATE_813_I2_OUT Y=GATE_813
+
+# gate type: NOT; name: GATE_813_I1
+.gate INVX1 A=GATE_103 Y=GATE_813_I1_OUT
+
+# gate type: NOT; name: GATE_813_I2
+.gate INVX1 A=GATE_224 Y=GATE_813_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_814_I0
+.gate NAND2X1 A=GATE_2 B=GATE_813 Y=GATE_814
+
+
+
+# gate type: NAND; name: GATE_815_I0
+.gate NAND2X1 A=GATE_50 B=GATE_815_I2_OUT Y=GATE_815
+
+# gate type: NOT; name: GATE_815_I2
+.gate INVX1 A=GATE_184 Y=GATE_815_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_816_I0
+.gate NAND2X1 A=GATE_816_I1_OUT B=GATE_380 Y=GATE_816
+
+# gate type: NOT; name: GATE_816_I1
+.gate INVX1 A=INPUT_1 Y=GATE_816_I1_OUT
+
+
+
+# gate type: NAND; name: GATE_817_I0
+.gate NAND2X1 A=GATE_817_I1_OUT B=GATE_817_I2_OUT Y=GATE_817
+
+# gate type: NOT; name: GATE_817_I1
+.gate INVX1 A=GATE_4 Y=GATE_817_I1_OUT
+
+# gate type: NOT; name: GATE_817_I2
+.gate INVX1 A=GATE_142 Y=GATE_817_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_818_I0
+.gate NAND2X1 A=GATE_46 B=GATE_818_I2_OUT Y=GATE_818_I0_OUT
+
+# gate type: NOT; name: GATE_818_I3
+.gate INVX1 A=GATE_818_I0_OUT Y=GATE_818
+
+# gate type: NOT; name: GATE_818_I2
+.gate INVX1 A=GATE_53 Y=GATE_818_I2_OUT
+
+
+
+# gate type: NAND; name: GATE_819_I0
+.gate NAND2X1 A=GATE_817 B=GATE_818 Y=GATE_819
+
+
+
+# gate type: NAND; name: GATE_820_I0
+.gate NAND2X1 A=GATE_9 B=GATE_69 Y=GATE_820
+
+
+
+# gate type: NAND; name: GATE_821_I0
+.gate NAND2X1 A=GATE_63 B=GATE_101 Y=GATE_821
+
+
+
+# gate type: NAND; name: GATE_822_I0
+.gate NAND2X1 A=GATE_50 B=GATE_235 Y=GATE_822
+
+
+
+# gate type: NAND; name: GATE_823_I0
+.gate NAND2X1 A=GATE_25 B=GATE_232 Y=GATE_823
+
+
+
+# gate type: NAND; name: GATE_824_I0
+.gate NAND2X1 A=GATE_43 B=GATE_93 Y=GATE_824
+
+
+
+# gate type: NAND; name: GATE_825_I0
+.gate NAND2X1 A=GATE_54 B=GATE_94 Y=GATE_825
+
+
+
+# gate type: NAND; name: GATE_826_I0
+.gate NAND2X1 A=GATE_41 B=GATE_156 Y=GATE_826
+
+
+
+# gate type: NAND; name: GATE_827_I0
+.gate NAND2X1 A=GATE_406 B=GATE_597 Y=GATE_827
+
+
+
+# gate type: NAND; name: GATE_828_I0
+.gate NAND2X1 A=GATE_63 B=GATE_827 Y=GATE_828
+
+
+
+# gate type: NAND; name: GATE_829_I0
+.gate NAND2X1 A=GATE_107 B=GATE_141 Y=GATE_829_I0_OUT
+
+# gate type: NOT; name: GATE_829_I3
+.gate INVX1 A=GATE_829_I0_OUT Y=GATE_829
+
+
+
+# gate type: NAND; name: GATE_830_I0
+.gate NAND2X1 A=GATE_272 B=GATE_299 Y=GATE_830_I0_OUT
+
+# gate type: NOT; name: GATE_830_I3
+.gate INVX1 A=GATE_830_I0_OUT Y=GATE_830
+
+
+
+# gate type: NAND; name: GATE_831_I0
+.gate NAND2X1 A=GATE_422 B=GATE_432 Y=GATE_831_I0_OUT
+
+# gate type: NOT; name: GATE_831_I3
+.gate INVX1 A=GATE_831_I0_OUT Y=GATE_831
+
+
+
+# gate type: NAND; name: GATE_832_I0
+.gate NAND2X1 A=GATE_481 B=GATE_494 Y=GATE_832_I0_OUT
+
+# gate type: NOT; name: GATE_832_I3
+.gate INVX1 A=GATE_832_I0_OUT Y=GATE_832
+
+
+
+# gate type: NAND; name: GATE_833_I0
+.gate NAND2X1 A=GATE_510 B=GATE_676 Y=GATE_833_I0_OUT
+
+# gate type: NOT; name: GATE_833_I3
+.gate INVX1 A=GATE_833_I0_OUT Y=GATE_833
+
+
+
+# gate type: NAND; name: GATE_834_I0
+.gate NAND2X1 A=GATE_820 B=GATE_821 Y=GATE_834_I0_OUT
+
+# gate type: NOT; name: GATE_834_I3
+.gate INVX1 A=GATE_834_I0_OUT Y=GATE_834
+
+
+
+# gate type: NAND; name: GATE_835_I0
+.gate NAND2X1 A=GATE_822 B=GATE_823 Y=GATE_835_I0_OUT
+
+# gate type: NOT; name: GATE_835_I3
+.gate INVX1 A=GATE_835_I0_OUT Y=GATE_835
+
+
+
+# gate type: NAND; name: GATE_836_I0
+.gate NAND2X1 A=GATE_824 B=GATE_825 Y=GATE_836_I0_OUT
+
+# gate type: NOT; name: GATE_836_I3
+.gate INVX1 A=GATE_836_I0_OUT Y=GATE_836
+
+
+
+# gate type: NAND; name: GATE_837_I0
+.gate NAND2X1 A=GATE_826 B=GATE_836 Y=GATE_837_I0_OUT
+
+# gate type: NOT; name: GATE_837_I3
+.gate INVX1 A=GATE_837_I0_OUT Y=GATE_837
+
+
+
+# gate type: NAND; name: GATE_838_I0
+.gate NAND2X1 A=GATE_834 B=GATE_835 Y=GATE_838_I0_OUT
+
+# gate type: NOT; name: GATE_838_I3
+.gate INVX1 A=GATE_838_I0_OUT Y=GATE_838
+
+
+
+# gate type: NAND; name: GATE_839_I0
+.gate NAND2X1 A=GATE_832 B=GATE_833 Y=GATE_839_I0_OUT
+
+# gate type: NOT; name: GATE_839_I3
+.gate INVX1 A=GATE_839_I0_OUT Y=GATE_839
+
+
+
+# gate type: NAND; name: GATE_840_I0
+.gate NAND2X1 A=GATE_830 B=GATE_831 Y=GATE_840_I0_OUT
+
+# gate type: NOT; name: GATE_840_I3
+.gate INVX1 A=GATE_840_I0_OUT Y=GATE_840
+
+
+
+# gate type: NAND; name: GATE_841_I0
+.gate NAND2X1 A=GATE_183 B=GATE_829 Y=GATE_841_I0_OUT
+
+# gate type: NOT; name: GATE_841_I3
+.gate INVX1 A=GATE_841_I0_OUT Y=GATE_841
+
+
+
+# gate type: NAND; name: GATE_842_I0
+.gate NAND2X1 A=GATE_250 B=GATE_277 Y=GATE_842_I0_OUT
+
+# gate type: NOT; name: GATE_842_I3
+.gate INVX1 A=GATE_842_I0_OUT Y=GATE_842
+
+
+
+# gate type: NAND; name: GATE_843_I0
+.gate NAND2X1 A=GATE_496 B=GATE_522 Y=GATE_843_I0_OUT
+
+# gate type: NOT; name: GATE_843_I3
+.gate INVX1 A=GATE_843_I0_OUT Y=GATE_843
+
+
+
+# gate type: NAND; name: GATE_844_I0
+.gate NAND2X1 A=GATE_672 B=GATE_812 Y=GATE_844_I0_OUT
+
+# gate type: NOT; name: GATE_844_I3
+.gate INVX1 A=GATE_844_I0_OUT Y=GATE_844
+
+
+
+# gate type: NAND; name: GATE_845_I0
+.gate NAND2X1 A=GATE_814 B=GATE_815 Y=GATE_845_I0_OUT
+
+# gate type: NOT; name: GATE_845_I3
+.gate INVX1 A=GATE_845_I0_OUT Y=GATE_845
+
+
+
+# gate type: NAND; name: GATE_846_I0
+.gate NAND2X1 A=GATE_816 B=GATE_819 Y=GATE_846_I0_OUT
+
+# gate type: NOT; name: GATE_846_I3
+.gate INVX1 A=GATE_846_I0_OUT Y=GATE_846
+
+
+
+# gate type: NAND; name: GATE_847_I0
+.gate NAND2X1 A=GATE_845 B=GATE_846 Y=GATE_847_I0_OUT
+
+# gate type: NOT; name: GATE_847_I3
+.gate INVX1 A=GATE_847_I0_OUT Y=GATE_847
+
+
+
+# gate type: NAND; name: GATE_848_I0
+.gate NAND2X1 A=GATE_843 B=GATE_844 Y=GATE_848_I0_OUT
+
+# gate type: NOT; name: GATE_848_I3
+.gate INVX1 A=GATE_848_I0_OUT Y=GATE_848
+
+
+
+# gate type: NAND; name: GATE_849_I0
+.gate NAND2X1 A=GATE_841 B=GATE_842 Y=GATE_849_I0_OUT
+
+# gate type: NOT; name: GATE_849_I3
+.gate INVX1 A=GATE_849_I0_OUT Y=GATE_849
+
+
+
+# gate type: NAND; name: GATE_850_I0
+.gate NAND2X1 A=GATE_839 B=GATE_840 Y=GATE_850_I0_OUT
+
+# gate type: NOT; name: GATE_850_I3
+.gate INVX1 A=GATE_850_I0_OUT Y=GATE_850
+
+
+
+# gate type: NAND; name: GATE_851_I0
+.gate NAND2X1 A=GATE_837 B=GATE_838 Y=GATE_851_I0_OUT
+
+# gate type: NOT; name: GATE_851_I3
+.gate INVX1 A=GATE_851_I0_OUT Y=GATE_851
+
+
+
+# gate type: NAND; name: GATE_852_I0
+.gate NAND2X1 A=GATE_34 B=GATE_174 Y=GATE_852_I0_OUT
+
+# gate type: NOT; name: GATE_852_I3
+.gate INVX1 A=GATE_852_I0_OUT Y=GATE_852
+
+
+
+# gate type: NAND; name: GATE_853_I0
+.gate NAND2X1 A=GATE_325 B=GATE_534 Y=GATE_853_I0_OUT
+
+# gate type: NOT; name: GATE_853_I3
+.gate INVX1 A=GATE_853_I0_OUT Y=GATE_853
+
+
+
+# gate type: NAND; name: GATE_854_I0
+.gate NAND2X1 A=GATE_690 B=GATE_828 Y=GATE_854_I0_OUT
+
+# gate type: NOT; name: GATE_854_I3
+.gate INVX1 A=GATE_854_I0_OUT Y=GATE_854
+
+
+
+# gate type: NAND; name: GATE_855_I0
+.gate NAND2X1 A=GATE_853 B=GATE_854 Y=GATE_855_I0_OUT
+
+# gate type: NOT; name: GATE_855_I3
+.gate INVX1 A=GATE_855_I0_OUT Y=GATE_855
+
+
+
+# gate type: NAND; name: GATE_856_I0
+.gate NAND2X1 A=GATE_851 B=GATE_852 Y=GATE_856_I0_OUT
+
+# gate type: NOT; name: GATE_856_I3
+.gate INVX1 A=GATE_856_I0_OUT Y=GATE_856
+
+
+
+# gate type: NAND; name: GATE_857_I0
+.gate NAND2X1 A=GATE_849 B=GATE_850 Y=GATE_857_I0_OUT
+
+# gate type: NOT; name: GATE_857_I3
+.gate INVX1 A=GATE_857_I0_OUT Y=GATE_857
+
+
+
+# gate type: NAND; name: GATE_858_I0
+.gate NAND2X1 A=GATE_847 B=GATE_848 Y=GATE_858_I0_OUT
+
+# gate type: NOT; name: GATE_858_I3
+.gate INVX1 A=GATE_858_I0_OUT Y=GATE_858
+
+
+
+# gate type: NAND; name: GATE_859_I0
+.gate NAND2X1 A=GATE_243 B=GATE_391 Y=GATE_859_I0_OUT
+
+# gate type: NOT; name: GATE_859_I3
+.gate INVX1 A=GATE_859_I0_OUT Y=GATE_859
+
+
+
+# gate type: NAND; name: GATE_860_I0
+.gate NAND2X1 A=GATE_623 B=GATE_859 Y=GATE_860_I0_OUT
+
+# gate type: NOT; name: GATE_860_I3
+.gate INVX1 A=GATE_860_I0_OUT Y=GATE_860
+
+
+
+# gate type: NAND; name: GATE_861_I0
+.gate NAND2X1 A=GATE_857 B=GATE_858 Y=GATE_861_I0_OUT
+
+# gate type: NOT; name: GATE_861_I3
+.gate INVX1 A=GATE_861_I0_OUT Y=GATE_861
+
+
+
+# gate type: NAND; name: GATE_862_I0
+.gate NAND2X1 A=GATE_855 B=GATE_856 Y=GATE_862_I0_OUT
+
+# gate type: NOT; name: GATE_862_I3
+.gate INVX1 A=GATE_862_I0_OUT Y=GATE_862
+
+
+
+# gate type: NAND; name: GATE_863_I0
+.gate NAND2X1 A=GATE_773 B=GATE_862 Y=GATE_863_I0_OUT
+
+# gate type: NOT; name: GATE_863_I3
+.gate INVX1 A=GATE_863_I0_OUT Y=GATE_863
+
+
+
+# gate type: NAND; name: GATE_864_I0
+.gate NAND2X1 A=GATE_860 B=GATE_861 Y=GATE_864_I0_OUT
+
+# gate type: NOT; name: GATE_864_I3
+.gate INVX1 A=GATE_864_I0_OUT Y=GATE_864
+
+
+
+# gate type: NAND; name: GATE_865_I0
+.gate NAND2X1 A=GATE_863 B=GATE_864 Y=GATE_865
+
+
+# output 0
+
+# output 1
+
+# output 2
+
+# output 3
+
+# output 4
+
+# output 5
+
+# output 6
+
+# output 7
+
+.end

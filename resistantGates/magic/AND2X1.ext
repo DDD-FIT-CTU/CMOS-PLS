@@ -1,0 +1,36 @@
+timestamp 1601551481
+version 8.3
+tech scmos
+style TSMC0.18um(tsmc18)from:t11b
+scale 1000 1 2.5
+resistclasses 6700 7500 929000 929000 1 7700 7700 80 80 80 70 70 40
+parameters NMOS_MAGIC l=l w=w a1=as p1=ps a2=ad p2=pd
+parameters PMOS_MAGIC l=l w=w a1=as p1=ps a2=ad p2=pd
+node "xp_8_132#" 0 0 8 132 m1p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "xp_40_212#" 0 0 40 212 m1p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "xp_104_252#" 0 0 104 252 m1p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_36_24#" 45 0 36 24 ndif 960 184 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "Y" 46 328.649 88 24 ndif 800 120 1600 200 0 0 0 0 0 0 0 0 0 0 4960 776 0 0 0 0 0 0 0 0 0 0
+node "a_8_24#" 411 475.014 8 24 ndif 1600 200 1920 208 0 0 0 0 0 0 3120 776 0 0 6224 968 0 0 0 0 0 0 0 0 0 0
+node "B" 366 193.632 48 16 p 0 0 0 0 0 0 0 0 0 0 3168 792 0 0 704 120 0 0 0 0 0 0 0 0 0 0
+node "A" 355 246.06 8 148 pc 0 0 0 0 0 0 0 0 0 0 3264 792 0 0 512 96 0 0 0 0 0 0 0 0 0 0
+node "vdd" 1217 2079.36 -32 192 nw 512 128 3520 408 43776 840 0 0 0 0 0 0 0 0 6400 704 0 0 0 0 0 0 0 0 0 0
+substrate "gnd" 0 0 -8 -8 poc 1760 208 512 128 0 0 0 0 0 0 0 0 0 0 4928 520 0 0 0 0 0 0 0 0 0 0
+cap "A" "B" 260.613
+cap "vdd" "a_8_24#" 817.345
+cap "vdd" "Y" 383.295
+cap "A" "a_8_24#" 59.6016
+cap "B" "a_8_24#" 327.828
+cap "a_8_24#" "Y" 460.491
+cap "a_8_24#" "a_36_24#" 3.339
+cap "vdd" "A" 200.29
+cap "vdd" "B" 254.956
+device msubckt NMOS_MAGIC 80 24 81 25 l=8 w=40 "gnd" "a_8_24#" 16 0 "gnd" 40 "S" "Y" 40 "D"
+device msubckt NMOS_MAGIC 48 24 49 25 l=8 w=80 "gnd" "B" 16 0 "a_36_24#" 80 "D" "gnd" 80 "S"
+device msubckt NMOS_MAGIC 28 24 29 25 l=8 w=80 "gnd" "A" 16 0 "a_8_24#" 80 "D" "a_36_24#" 80 "S"
+device msubckt PMOS_MAGIC 92 296 93 297 l=8 w=80 "vdd" "a_8_24#" 16 0 "vdd" 80 "S" "Y" 80 "D"
+device msubckt PMOS_MAGIC 60 296 61 297 l=8 w=80 "vdd" "B" 16 0 "a_8_24#" 80 "D" "vdd" 80 "S"
+device msubckt PMOS_MAGIC 28 296 29 297 l=8 w=80 "vdd" "A" 16 0 "vdd" 80 "S" "a_8_24#" 80 "D"
+subcap "Y" -189.007
+subcap "a_8_24#" -96.222
+subcap "vdd" -350.748
